@@ -42,7 +42,7 @@
 <form action="/teams" method="GET">
 {% for i in range(6) %}
 <div class="container-fluid" >
-          <div class="row">
+          <div class="row" style="width:100%">
             <div class="col-2">
               <div style="margin: 10px;">
                 <h4>
@@ -78,6 +78,35 @@
               </div>
               <input name="happiness_{{i}}" type="number" id="happiness_{{i}}" value="255" min="0" max="255" step="1"/>
             </div>
+            <div class="col" style="">
+              {% for x in range(6) %}
+              <!-- row_stat (0 = hp, 1 = atk, 2 = def, 3 = spa, 4 = spd, 5 = spe) -->
+              <div class="row">
+              <div class="col-2" style="">
+              {% if x == 0 %} HP: {% endif %}
+              {% if x == 1 %} Attack: {% endif %}
+              {% if x == 2 %} Defense: {% endif %}
+              {% if x == 3 %} Sp. Atk.: {% endif %}
+              {% if x == 4 %} Sp. Def.: {% endif %}
+              {% if x == 5 %} Speed: {% endif %}
+            </div>
+            <div class="col-1" style="">
+              <p id="stat_{{i}}{{x}}" style="display:inline-block"><br></p>
+            </div>
+            <div class="col-3" style="">
+              <input type="number" name="points_{{i}}{{x}}" step="4" min="0" max="252" value="0" id="slider_{{i}}{{x}}">
+              <br>
+              </div>
+              <div class="col-1" style="">
+                <p id="realStat_{{i}}{{x}}" style="display:inline-block"><br></p>
+              </div>
+            </div>
+
+              {% endfor %}
+
+              Remaining Points:
+              <p id="rem{{i}}" style="display:inline-block">508</p>
+          </div>
           </div>
         </div>
         <hr>
@@ -97,6 +126,11 @@
 <ul id="abils">
   {% for x in mons %}
   <li style="display:none;">{{x[13]}}</li>
+  {% endfor %}
+</ul>
+<ul id="stats">
+  {% for x in mons %}
+  <li style="display:none;">{{x[6]}},{{x[7]}},{{x[8]}},{{x[9]}},{{x[10]}},{{x[11]}}</li>
   {% endfor %}
 </ul>
 
