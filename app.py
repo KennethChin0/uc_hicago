@@ -263,6 +263,12 @@ def teams():
         teams = c.execute("SELECT * FROM TEAMS WHERE username = (?)", (session["user"],))
         return render_template("teams.html", t = teams)
 
+@app.route("/teamProcess")
+def teamProcess():
+    #gets form data from html
+    #adds team into TEAM
+    return redirect(url_for('teams'))
+
 @app.route("/teambuilder")
 def teambuilder():
     with sqlite3.connect(DB_FILE) as connection:
