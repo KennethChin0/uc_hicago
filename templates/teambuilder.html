@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% extends "template.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+  .container {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+  }
+  .form-control {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    transition:.25s;
+  }
+  .form-control:focus {
+    width: 280px;
+  }
+</style>
+{% endblock %}
+
+{% block title %} | Login{% endblock %}
+
+{% block buttons %}
+<li class="nav-item">
+  <a href="{{ url_for('root') }}" class="nav-link">Home</a>
+</li>
+
+{% endblock %}
+
+{% block body %}
+
+{% if msg %}
+<h3>{{ msg }}</h3>
+{% endif %}
+<div id="page-container" style="position: relative; min-height: 100vh;">
+<div id="content-wrap" style="padding-bottom: 2.5rem;">
+<form action="/teams" method="GET">
+{% for i in range(6) %}
+<div class="container-fluid" >
+          <div class="row">
+            <div class="col-2">
+              <div style="margin: 10px;">
+                <h4>
+                  <input name="pokemon_{{i}}" id="pokemon_{{i}}" list="mons" autocomplete="off">
+                  <select name="ability_{{i}}" id="ability_{{i}}"> </select>
+                </h4>
+                <center>
+                <div id="pic_{{i}}">
+                  <!-- This is where the sprite appears -->
+                </div>
+                </center>
+              </div>
+            </div>
+            <div class="col-2" style="text-align: center">
+              {% for x in range(4) %}
+                <div class="row">
+                  <input name="move_{{i}}_{{x}}" id="move_{{i}}_{{x}}" list="moves">
+                </div>
+              {% endfor %}
+            </div>
+            <div class="col-2" style="text-align: center">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender_{{i}}" id="gender_{{i}}" value="male" checked>
+                <label class="form-check-label" for="gender_{{i}}">
+                  Male
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender_{{i}}" id="gender_{{i}}" value="female">
+                <label class="form-check-label" for="gender_{{i}}">
+                  Female
+                </label>
+              </div>
+              <input name="happiness_{{i}}" type="number" id="happiness_{{i}}" value="255" min="0" max="255" step="1"/>
+            </div>
+          </div>
+        </div>
+        <hr>
+{% endfor %}
+<center>
+<button class="btn btn-primary" type="submit">Save</button>
+</center>
+<br><br>
+</form>
+
+<datalist id="mons">
+{% for x in mons %}
+<option id="{{x[1]}}">{{x[1]}}</option>
+{% endfor %}
+</datalist>
+
+<ul id="abils">
+  {% for x in mons %}
+  <li style="display:none;">{{x[13]}}</li>
+  {% endfor %}
+</ul>
+
+<script src={{url_for('static', filename='teambuilder.js')}}></script>
+
+{% for message in get_flashed_messages() %}
+<br><br>
+<center><b>{{ message }}</b></center>
+{% endfor %}
+
+{% endblock %}
+
+</div>
+
+</div>

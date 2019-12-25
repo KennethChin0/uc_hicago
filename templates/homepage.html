@@ -1,0 +1,52 @@
+{% extends "template.html" %}
+
+{% block buttons %}
+{% if sessionstatus %}
+
+<li class="nav-item">
+  <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
+</li>
+{% else %}
+<li class="nav-item">
+  <a href="{{ url_for('login') }}" class="nav-link">Login</a>
+</li>
+
+<li class="nav-item">
+  <a href="{{ url_for('register') }}" class="nav-link">Register</a>
+</li>
+{% endif %}
+{% endblock %}
+
+{% block body %}
+<a href="{{ url_for('root') }}" class="nav-link" style="color: black; padding: 0px;">
+<div class="jumbotron text-center" style="background-color: #aed6f1; border-radius: 0; margin-top:-16px;">
+  <h1>Pokemon Showdown!</h1>
+</div>
+</a>
+
+{% if sessionstatus %}
+<form class="active-cyan-3 active-cyan-4" action="/teams" style="text-align: center; margin-bottom: 50px;">
+  <button class="btn btn-primary" type="submit">Teambuilder</button>
+</form>
+
+{% for message in get_flashed_messages() %}
+<br>
+<center>{{ message }}</center>
+{% endfor %}
+
+{% block searchresults %}
+{% endblock %}
+
+{% else %}
+<center>
+<a href="{{ url_for('login') }}"><button type="button" class="btn btn-success">Log In</button></a>
+<br><br>
+<p>Don't have an account? <a href="{{ url_for('register') }}">Register here.</a></p>
+</center>
+
+<center style="margin: 100px auto 100px; auto; max-width: 600px;">
+</center>
+<br><br><br>
+{% endif %}
+
+{% endblock %}

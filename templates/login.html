@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends "template.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+  .container {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+  }
+  .form-control {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    transition:.25s;
+  }
+  .form-control:focus {
+    width: 280px;
+  }
+</style>
+{% endblock %}
+
+{% block title %} | Login{% endblock %}
+
+{% block buttons %}
+<li class="nav-item">
+  <a href="{{ url_for('root') }}" class="nav-link">Home</a>
+</li>
+
+<li class="nav-item">
+  <a href="{{ url_for('register') }}" class="nav-link">Register</a>
+</li>
+{% endblock %}
+
+{% block body %}
+
+{% if msg %}
+<h3>{{ msg }}</h3>
+{% endif %}
+
+<center>
+  <form class="container" action="/login" method="GET">
+    Username<br>
+  	<input class="form-control" type="text" name="username" placeholder="Username"><br>
+    Password
+  	<input class="form-control" type="password" name="password" placeholder="Password"><br>
+  	<button class="btn btn-success" type="submit">Log In</button>
+  </form>
+  <br><br><br>
+</center>
+
+{% for message in get_flashed_messages() %}
+<br><br>
+<center><b>{{ message }}</b></center>
+{% endfor %}
+
+{% endblock %}
