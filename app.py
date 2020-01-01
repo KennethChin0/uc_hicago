@@ -95,12 +95,15 @@ if c.fetchone()[0] < 1:
                 minHits INTEGER,
                 maxHits INTEGER
                 );''')
-    req = Request("https://pokeapi.co/api/v2/move/?offset=0&limit=559", headers={'User-Agent': 'Mozilla/5.0'})
+    req = Request("https://pokeapi.co/api/v2/move/?offset=0&limit=728", headers={'User-Agent': 'Mozilla/5.0'})
     movesAPI = urllib.request.urlopen(req) #Only up to Gen 5
     movesResponse = movesAPI.read()
     movesData = json.loads(movesResponse)
+    count = 0
     # selecting specified information of each move and inserting it into the table
     for i in movesData['results']:
+        print(count)
+        count += 1
         req = Request(i['url'], headers={'User-Agent': 'Mozilla/5.0'})
         mAPI = urllib.request.urlopen(req)
         mResponse = mAPI.read()
@@ -274,8 +277,9 @@ def teambuilder():
     with sqlite3.connect(DB_FILE) as connection:
         c = connection.cursor()
         mons = c.execute("SELECT * FROM POKEMON;").fetchall()
+        moves = c.execute("SELECT * FROM MOVES;").fetchall()
         print (mons)
-        return render_template("teambuilder.html", mons = mons)
+        return render_template("teambuilder.html", mons = mons, moves = moves)
 
 if __name__ == "__main__":
     app.debug = True

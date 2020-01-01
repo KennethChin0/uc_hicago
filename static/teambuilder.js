@@ -6,6 +6,13 @@ var pokemon3 = document.getElementById('pokemon_3');
 var pokemon4 = document.getElementById('pokemon_4');
 var pokemon5 = document.getElementById('pokemon_5');
 
+var types0 = document.getElementById('types_0');
+var types1 = document.getElementById('types_1');
+var types2 = document.getElementById('types_2');
+var types3 = document.getElementById('types_3');
+var types4 = document.getElementById('types_4');
+var types5 = document.getElementById('types_5');
+
 var aList = document.getElementById('abils');
 var ability0 = document.getElementById('ability_0');
 var ability1 = document.getElementById('ability_1');
@@ -13,6 +20,46 @@ var ability2 = document.getElementById('ability_2');
 var ability3 = document.getElementById('ability_3');
 var ability4 = document.getElementById('ability_4');
 var ability5 = document.getElementById('ability_5');
+
+var mList = document.getElementById('moves');
+var mdList = document.getElementById('moveDescs');
+var moves0 = document.getElementById('moves0');
+var moves1 = document.getElementById('moves1');
+var moves2 = document.getElementById('moves2');
+var moves3 = document.getElementById('moves3');
+var moves4 = document.getElementById('moves4');
+var moves5 = document.getElementById('moves5');
+
+var moveDesc00 = document.getElementById('moveDesc00');
+var moveDesc01 = document.getElementById('moveDesc01');
+var moveDesc02 = document.getElementById('moveDesc02');
+var moveDesc03 = document.getElementById('moveDesc03');
+
+var moveDesc10 = document.getElementById('moveDesc10');
+var moveDesc11 = document.getElementById('moveDesc11');
+var moveDesc12 = document.getElementById('moveDesc12');
+var moveDesc13 = document.getElementById('moveDesc13');
+
+var moveDesc20 = document.getElementById('moveDesc20');
+var moveDesc21 = document.getElementById('moveDesc21');
+var moveDesc22 = document.getElementById('moveDesc22');
+var moveDesc23 = document.getElementById('moveDesc23');
+
+var moveDesc30 = document.getElementById('moveDesc30');
+var moveDesc31 = document.getElementById('moveDesc31');
+var moveDesc32 = document.getElementById('moveDesc32');
+var moveDesc33 = document.getElementById('moveDesc33');
+
+var moveDesc40 = document.getElementById('moveDesc40');
+var moveDesc41 = document.getElementById('moveDesc41');
+var moveDesc42 = document.getElementById('moveDesc42');
+var moveDesc43 = document.getElementById('moveDesc43');
+
+var moveDesc50 = document.getElementById('moveDesc50');
+var moveDesc51 = document.getElementById('moveDesc51');
+var moveDesc52 = document.getElementById('moveDesc52');
+var moveDesc53 = document.getElementById('moveDesc53');
+
 
 var sList = document.getElementById('stats');
 var stat00 = document.getElementById('stat_00');
@@ -155,10 +202,10 @@ var pic3 = document.getElementById('pic_3');
 var pic4 = document.getElementById('pic_4');
 var pic5 = document.getElementById('pic_5');
 
-var target;
+var target, tTar;
 var aTarget, aMon;
 var sTar0, sTar1, sTar2, sTar3, sTar4, sTar5, rsTar0, rsTar1, rsTar2, rsTar3, rsTar4, rsTar5, sMon, rsMon;
-const maxPoints = 508;
+var mTarget, mMon;
 
 var updateBaseStats = function(e, f) {
   if (f == 0) {
@@ -624,47 +671,163 @@ var updatePic = function(e, f) {
       pic0.removeChild(pic0.children[0]);
     }
     target = pic0;
+    tTar = types0;
   }
   if (f == 1) {
     if (pic1.childElementCount > 0) {
       pic1.removeChild(pic1.children[0]);
     }
     target = pic1;
+    tTar = types1;
   }
   if (f == 2) {
     if (pic2.childElementCount > 0) {
       pic2.removeChild(pic2.children[0]);
     }
     target = pic2;
+    tTar = types2;
   }
   if (f == 3) {
     if (pic3.childElementCount > 0) {
       pic3.removeChild(pic3.children[0]);
     }
     target = pic3;
+    tTar = types3;
   }
   if (f == 4) {
     if (pic4.childElementCount > 0) {
       pic4.removeChild(pic4.children[0]);
     }
     target = pic4;
+    tTar = types4;
   }
   if (f == 5) {
     if (pic5.childElementCount > 0) {
       pic5.removeChild(pic5.children[0]);
     }
     target = pic5;
+    tTar = types5;
   }
+  tTar.innerHTML = "";
   for (var i = 0; i < list.childElementCount; i++) {
     if (list.children[i].value.localeCompare(e.target.value.substring(0, 1).toUpperCase() + e.target.value.substring(1, e.target.value.length).toLowerCase()) == 0) {
       var img = document.createElement("img");
       img.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + (i + 1) + ".png";
       target.appendChild(img);
-      // console.log("FOUND");
+      var types = document.getElementById("types_" + e.target.value.substring(0, 1).toUpperCase() + e.target.value.substring(1, e.target.value.length).toLowerCase());
+      m = types.innerText.split(",");
+      // console.log(m[1]);
+      tTar.innerHTML = "<img src=\"/static/icons/" + m[0] + ".png\">";
+      if (m[1].localeCompare("None") != 0) tTar.innerHTML += "<img src=\"/static/icons/" + m[1] + ".png\">";
       break;
     }
   }
-}
+};
+
+var updateMoves = function(e, f) {
+  if (f == 0) {
+    mTarget = moves0;
+    mMon = pokemon0;
+  }
+  if (f == 1) {
+    mTarget = moves1;
+    mMon = pokemon1;
+  }
+  if (f == 2) {
+    mTarget = moves2;
+    mMon = pokemon2;
+  }
+  if (f == 3) {
+    mTarget = moves3;
+    mMon = pokemon3;
+  }
+  if (f == 4) {
+    mTarget = moves4;
+    mMon = pokemon4;
+  }
+  if (f == 5) {
+    mTarget = moves5;
+    mMon = pokemon5;
+  }
+  while (mTarget.childElementCount > 0) {
+    mTarget.removeChild(mTarget.children[0]);
+  }
+  // console.log(mdList.children[0].textContent);
+  for (var i = 0; i < list.childElementCount; i++) {
+    if (list.children[i].value.localeCompare(mMon.value.substring(0, 1).toUpperCase() + mMon.value.substring(1, mMon.value.length).toLowerCase()) == 0) {
+      var m = moves.children[i].textContent.split(",");
+      for (var x = 0; x < m.length; x++) {
+        var option = document.createElement("option");
+        option.value = m[x].charAt(0).toUpperCase() + m[x].substring(1);
+        for (var y = 0; y < mdList.children.length; y++) {
+          var d = mdList.children[y].textContent.split(",");
+          // console.log(d[0] +" : "+ option.value);
+          if (d[0].toLowerCase().localeCompare(option.value.toLowerCase()) == 0) {
+            option.innerText = d[0];
+            mTarget.appendChild(option);
+            // console.log(d);
+            break;
+          }
+        }
+        // option.textContent = m[x];
+      }
+      break;
+    }
+  }
+};
+
+var updateMoveDesc = function(e) {
+  var tar = 0;
+  if (parseInt(e.id.charAt(e.id.length - 2)) == 0) {
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 0) tar = moveDesc00;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 1) tar = moveDesc01;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 2) tar = moveDesc02;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 3) tar = moveDesc03;
+  }
+  if (parseInt(e.id.charAt(e.id.length - 2)) == 1) {
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 0) tar = moveDesc10;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 1) tar = moveDesc11;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 2) tar = moveDesc12;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 3) tar = moveDesc13;
+  }
+  if (parseInt(e.id.charAt(e.id.length - 2)) == 2) {
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 0) tar = moveDesc20;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 1) tar = moveDesc21;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 2) tar = moveDesc22;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 3) tar = moveDesc23;
+  }
+  if (parseInt(e.id.charAt(e.id.length - 2)) == 3) {
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 0) tar = moveDesc30;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 1) tar = moveDesc31;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 2) tar = moveDesc32;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 3) tar = moveDesc33;
+  }
+  if (parseInt(e.id.charAt(e.id.length - 2)) == 4) {
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 0) tar = moveDesc40;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 1) tar = moveDesc41;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 2) tar = moveDesc42;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 3) tar = moveDesc43;
+  }
+  if (parseInt(e.id.charAt(e.id.length - 2)) == 5) {
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 0) tar = moveDesc50;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 1) tar = moveDesc51;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 2) tar = moveDesc52;
+    if (parseInt(e.id.charAt(e.id.length - 1)) == 3) tar = moveDesc53;
+  }
+
+
+  for (var y = 0; y < mdList.children.length; y++) {
+    var d = mdList.children[y].textContent.split(",");
+    // console.log(d[0] +" : "+ option.value);
+    if (d[0].toLowerCase().localeCompare(e.value.toLowerCase()) == 0) {
+      tar.innerHTML = "<img src=\"/static/icons/" + d[1] + ".png\">" + "<img src=\"/static/icons/" + d[4] + ".png\">";
+      if (d[6] > 0) tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[6]);
+      else if (d[7] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[7]);
+      else tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5];
+      break;
+    }
+  }
+};
 
 var updateAbils = function(e, f) {
   if (f == 0) {
@@ -700,7 +863,7 @@ var updateAbils = function(e, f) {
       for (var x = 0; x < abilities.length; x++) {
         var option = document.createElement("option");
         option.value = abilities[x];
-        option.textContent = abilities[x];
+        option.textContent = abilities[x].charAt(0).toUpperCase() + abilities[x].substring(1);
         aTarget.appendChild(option);
       }
       break;
@@ -708,26 +871,34 @@ var updateAbils = function(e, f) {
   }
 };
 
-
-
 pokemon0.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
 pokemon1.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
 pokemon2.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
 pokemon3.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
 pokemon4.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
 pokemon5.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
+
 pokemon0.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
 pokemon1.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
 pokemon2.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
 pokemon3.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
 pokemon4.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
 pokemon5.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
+
+pokemon0.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
+pokemon1.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
+pokemon2.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
+pokemon3.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
+pokemon4.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
+pokemon5.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
+
 pokemon0.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
 pokemon1.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
 pokemon2.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
 pokemon3.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
 pokemon4.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
 pokemon5.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
+
 slider00.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
 slider01.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
 slider02.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
@@ -769,3 +940,33 @@ slider52.addEventListener('input', function(e){updateStats(e, this.id.charAt(thi
 slider53.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
 slider54.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
 slider55.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+
+move00.addEventListener('input', function(e){updateMoveDesc(this)});
+move01.addEventListener('input', function(e){updateMoveDesc(this)});
+move02.addEventListener('input', function(e){updateMoveDesc(this)});
+move03.addEventListener('input', function(e){updateMoveDesc(this)});
+
+move10.addEventListener('input', function(e){updateMoveDesc(this)});
+move11.addEventListener('input', function(e){updateMoveDesc(this)});
+move12.addEventListener('input', function(e){updateMoveDesc(this)});
+move13.addEventListener('input', function(e){updateMoveDesc(this)});
+
+move20.addEventListener('input', function(e){updateMoveDesc(this)});
+move21.addEventListener('input', function(e){updateMoveDesc(this)});
+move22.addEventListener('input', function(e){updateMoveDesc(this)});
+move23.addEventListener('input', function(e){updateMoveDesc(this)});
+
+move30.addEventListener('input', function(e){updateMoveDesc(this)});
+move31.addEventListener('input', function(e){updateMoveDesc(this)});
+move32.addEventListener('input', function(e){updateMoveDesc(this)});
+move33.addEventListener('input', function(e){updateMoveDesc(this)});
+
+move40.addEventListener('input', function(e){updateMoveDesc(this)});
+move41.addEventListener('input', function(e){updateMoveDesc(this)});
+move42.addEventListener('input', function(e){updateMoveDesc(this)});
+move43.addEventListener('input', function(e){updateMoveDesc(this)});
+
+move50.addEventListener('input', function(e){updateMoveDesc(this)});
+move51.addEventListener('input', function(e){updateMoveDesc(this)});
+move52.addEventListener('input', function(e){updateMoveDesc(this)});
+move53.addEventListener('input', function(e){updateMoveDesc(this)});

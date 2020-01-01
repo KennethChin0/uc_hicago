@@ -46,37 +46,47 @@
             <div class="col-2">
               <div style="margin: 10px;">
                 <h4>
-                  <input name="pokemon_{{i}}" id="pokemon_{{i}}" list="mons" autocomplete="off">
+                  <input name="pokemon_{{i}}" id="pokemon_{{i}}" list="mons" autocomplete="off" placeholder="Choose a Pokemon">
                   <select name="ability_{{i}}" id="ability_{{i}}"> </select>
                 </h4>
                 <center>
                 <div id="pic_{{i}}">
                   <!-- This is where the sprite appears -->
                 </div>
+                <div id="types_{{i}}">
+                  <!-- This is where the types appear -->
+                </div>
                 </center>
               </div>
             </div>
-            <div class="col-2" style="text-align: center">
+            <div class="col-1" style="text-align: center; margin-top:10px;">
               {% for x in range(4) %}
                 <div class="row">
-                  <input name="move_{{i}}_{{x}}" id="move_{{i}}_{{x}}" list="moves">
+                  <input name="move{{i}}{{x}}" id="move{{i}}{{x}}" list="moves{{i}}" style="width:155px;" autocomplete="off">
                 </div>
               {% endfor %}
             </div>
-            <div class="col-2" style="text-align: center">
+            <div class="col-4" style="margin-top:9px;">
+              {% for x in range(4) %}
+                <p id="moveDesc{{i}}{{x}}" style="font-size:12px; height:30px; padding-top:5px; margin-bottom:0px;">
+                </p>
+              {% endfor %}
+            </div>
+            <span class="border"></span>
+            <div class="col-1" style="text-align: center">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender_{{i}}" id="gender_{{i}}" value="male" checked>
+                <input class="form-check-input" type="radio" name="gender_{{i}}" id="genderM_{{i}}" value="male" checked>
                 <label class="form-check-label" for="gender_{{i}}">
                   Male
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender_{{i}}" id="gender_{{i}}" value="female">
+                <input class="form-check-input" type="radio" name="gender_{{i}}" id="genderF_{{i}}" value="female">
                 <label class="form-check-label" for="gender_{{i}}">
                   Female
                 </label>
               </div>
-              <input name="happiness_{{i}}" type="number" id="happiness_{{i}}" value="255" min="0" max="255" step="1"/>
+              <input name="happiness_{{i}}" type="number" id="happiness_{{i}}" value="255" min="0" max="255" step="1" style="width:65px"/>
             </div>
             <div class="col" style="">
               {% for x in range(6) %}
@@ -93,7 +103,7 @@
             <div class="col-1" style="">
               <p id="stat_{{i}}{{x}}" style="display:inline-block"><br></p>
             </div>
-            <div class="col-3" style="">
+            <div class="col-4" style="">
               <input type="number" name="points_{{i}}{{x}}" step="4" min="0" max="252" value="0" id="slider_{{i}}{{x}}">
               <br>
               </div>
@@ -122,7 +132,28 @@
 <option id="{{x[1]}}">{{x[1]}}</option>
 {% endfor %}
 </datalist>
+<datalist id="moves0"></datalist>
+<datalist id="moves1"></datalist>
+<datalist id="moves2"></datalist>
+<datalist id="moves3"></datalist>
+<datalist id="moves4"></datalist>
+<datalist id="moves5"></datalist>
 
+<ul id="types">
+  {% for x in mons %}
+  <li style="display:none;" id="types_{{x[1]}}">{{x[2]}},{{x[3]}}</li>
+  {% endfor %}
+</ul>
+<ul id="moves">
+  {% for x in mons %}
+  <li style="display:none;" id="moves_{{x[1]}}">{{x[12]}}</li>
+  {% endfor %}
+</ul>
+<ul id="moveDescs">
+  {% for x in moves %}
+  <li style="display:none;" id="moveDescs_{{x[1]}}">{{x[1]}},{{x[2]}},{{x[3]}},{{x[4]}},{{x[6]}},{{x[8]}},{{x[10]}},{{x[16]}}</li>
+  {% endfor %}
+</ul>
 <ul id="abils">
   {% for x in mons %}
   <li style="display:none;">{{x[13]}}</li>
