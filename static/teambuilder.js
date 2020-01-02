@@ -823,6 +823,7 @@ var updateMoveDesc = function(e) {
       tar.innerHTML = "<img src=\"/static/icons/" + d[1] + ".png\">" + "<img src=\"/static/icons/" + d[4] + ".png\">";
       if (d[6] > 0) tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[6]);
       else if (d[7] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[7]);
+      else if (d[8] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[8]);
       else tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5];
       break;
     }
