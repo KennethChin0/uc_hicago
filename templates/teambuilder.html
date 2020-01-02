@@ -46,7 +46,7 @@
             <div class="col-2">
               <div style="margin: 10px;">
                 <h4>
-                  <input name="pokemon_{{i}}" id="pokemon_{{i}}" list="mons" autocomplete="off" placeholder="Choose a Pokemon">
+                  <input name="pokemon_{{i}}" id="pokemon_{{i}}" list="mons" autocomplete="off" style="width:100%;" placeholder="Choose a Pokemon">
                   <select name="ability_{{i}}" id="ability_{{i}}"> </select>
                 </h4>
                 <center>
@@ -62,13 +62,13 @@
             <div class="col-1" style="text-align: center; margin-top:10px;">
               {% for x in range(4) %}
                 <div class="row">
-                  <input name="move{{i}}{{x}}" id="move{{i}}{{x}}" list="moves{{i}}" style="width:155px;" autocomplete="off">
+                  <input name="move{{i}}{{x}}" id="move{{i}}{{x}}" list="moves{{i}}" style="width:100%;" autocomplete="off">
                 </div>
               {% endfor %}
             </div>
             <div class="col-4" style="margin-top:9px;">
               {% for x in range(4) %}
-                <p id="moveDesc{{i}}{{x}}" style="font-size:12px; height:30px; padding-top:5px; margin-bottom:0px;">
+                <p id="moveDesc{{i}}{{x}}" style="font-size:12px; height:30px; margin-bottom:0px;">
                 </p>
               {% endfor %}
             </div>
@@ -104,7 +104,7 @@
               <p id="stat_{{i}}{{x}}" style="display:inline-block"><br></p>
             </div>
             <div class="col-4" style="">
-              <input type="number" name="points_{{i}}{{x}}" step="4" min="0" max="252" value="0" id="slider_{{i}}{{x}}">
+              <input type="number" name="points_{{i}}{{x}}" step="4" min="0" max="252" value="0" id="slider_{{i}}{{x}}" style="width:100%;">
               <br>
               </div>
               <div class="col-1" style="">
