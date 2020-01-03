@@ -93,17 +93,15 @@ if c.fetchone()[0] < 1:
                 minTurns INTEGER,
                 maxTurns INTEGER,
                 minHits INTEGER,
-                maxHits INTEGER
+                maxHits INTEGER,
+                accuracy INTEGER
                 );''')
     req = Request("https://pokeapi.co/api/v2/move/?offset=0&limit=728", headers={'User-Agent': 'Mozilla/5.0'})
     movesAPI = urllib.request.urlopen(req) #Only up to Gen 5
     movesResponse = movesAPI.read()
     movesData = json.loads(movesResponse)
-    count = 0
     # selecting specified information of each move and inserting it into the table
     for i in movesData['results']:
-        print(count)
-        count += 1
         req = Request(i['url'], headers={'User-Agent': 'Mozilla/5.0'})
         mAPI = urllib.request.urlopen(req)
         mResponse = mAPI.read()
@@ -137,9 +135,10 @@ if c.fetchone()[0] < 1:
         maxTurns = mData['meta']['max_turns']
         minHits = mData['meta']['min_hits']
         maxHits = mData['meta']['max_hits']
+        accuracy = mData['accuracy']
         ######################################
-        c.execute('INSERT INTO MOVES VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-        (id, name, type, power, pp, priority, cla, cat, desc, ail, ailChance, statChanges, critRate, drain, flinch, healing, statChance, minTurns, maxTurns, minHits, maxHits))
+        c.execute('INSERT INTO MOVES VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+        (id, name, type, power, pp, priority, cla, cat, desc, ail, ailChance, statChanges, critRate, drain, flinch, healing, statChance, minTurns, maxTurns, minHits, maxHits, accuracy))
 
 #Creates ABILITIES
 c.execute(" SELECT count(name) FROM sqlite_master WHERE type='table' AND name='ABILITIES' ")
@@ -278,7 +277,6 @@ def teambuilder():
         c = connection.cursor()
         mons = c.execute("SELECT * FROM POKEMON;").fetchall()
         moves = c.execute("SELECT * FROM MOVES;").fetchall()
-        print (mons)
         return render_template("teambuilder.html", mons = mons, moves = moves)
 
 if __name__ == "__main__":
