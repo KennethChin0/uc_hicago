@@ -64,14 +64,14 @@
             <div class="col-1" style="width:100%;">
               <div class="row"><b>Moves</b></div>
               {% for x in range(4) %}
-                <div class="row">
-                  <input name="move{{i}}{{x}}" id="move{{i}}{{x}}" list="moves{{i}}" style="width:100%;" autocomplete="off">
+                <div class="row" style="padding-bottom:10px;">
+                  <input name="move{{i}}{{x}}" id="move{{i}}{{x}}" list="moves{{i}}" style="width:100%; font-size:12px;" autocomplete="off">
                 </div>
               {% endfor %}
             </div>
             <div class="col-4" style="margin-top:25px;">
               {% for x in range(4) %}
-                <p id="moveDesc{{i}}{{x}}" style="font-size:12px; height:30px; margin-bottom:0px; line-height:10pt;">
+                <p id="moveDesc{{i}}{{x}}" style="font-size:12px; height:30px; margin-bottom:2px; line-height:10pt;">
                 </p>
               {% endfor %}
             </div>
@@ -110,7 +110,7 @@
               <p id="stat_{{i}}{{x}}" style="display:inline-block"><br></p>
             </div>
             <div class="col">
-              <input type="number" name="points_{{i}}{{x}}" step="4" min="0" max="252" value="0" id="slider_{{i}}{{x}}" style="width:100%;">
+              <input type="number" name="points_{{i}}{{x}}" step="4" min="0" max="252" autocomplete="off" value="0" id="slider_{{i}}{{x}}" style="width:100%;">
               <br>
               </div>
               <div class="col-1" style="">
@@ -157,7 +157,7 @@
 </ul>
 <ul id="moveDescs">
   {% for x in moves %}
-  <li style="display:none;" id="moveDescs_{{x[1]}}">{{x[1]}},{{x[2]}},{{x[3]}},{{x[4]}},{{x[6]}},{{x[8]}},{{x[10]}},{{x[16]}},{{x[14]}}</li>
+  <li style="display:none;" id="moveDescs_{{x[1]}}">{{x[1]}},{{x[2]}},{{x[3]}},{{x[4]}},{{x[6]}},{{x[8]}},{{x[10]}},{{x[16]}},{{x[14]}},{{x[21]}}</li>
   {% endfor %}
 </ul>
 <ul id="abils">

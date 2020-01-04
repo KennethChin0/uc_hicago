@@ -814,17 +814,16 @@ var updateMoveDesc = function(e) {
     if (parseInt(e.id.charAt(e.id.length - 1)) == 2) tar = moveDesc52;
     if (parseInt(e.id.charAt(e.id.length - 1)) == 3) tar = moveDesc53;
   }
-
-
+  if(tar.innerHTML != "") tar.innerHTML = "";
   for (var y = 0; y < mdList.children.length; y++) {
     var d = mdList.children[y].textContent.split(",");
     // console.log(d[0] +" : "+ option.value);
     if (d[0].toLowerCase().localeCompare(e.value.toLowerCase()) == 0) {
-      tar.innerHTML = "<img src=\"/static/icons/" + d[1] + ".png\">" + "<img src=\"/static/icons/" + d[4] + ".png\">";
-      if (d[6] > 0) tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[6]);
-      else if (d[7] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[7]);
-      else if (d[8] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[8]);
-      else tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>PP:</b> " + d[3] + " | " + d[5];
+      tar.innerHTML = "<img src=\"/static/icons/" + d[1] + ".png\">" + "<img src=\"/static/icons/" + d[4] + ".png\>";
+      if (d[6] > 0) tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>Accuracy:</b> " + d[9] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[6]);
+      else if (d[7] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>Accuracy:</b> " + d[9] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[7]);
+      else if (d[8] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>Accuracy:</b> " + d[9] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[8]);
+      else tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] +" <b>Accuracy:</b> " + d[9] +  " <b>PP:</b> " + d[3] + " | " + d[5];
       break;
     }
   }
