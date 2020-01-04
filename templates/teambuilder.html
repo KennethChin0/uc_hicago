@@ -40,6 +40,8 @@
 <div id="page-container" style="position: relative; min-height: 100vh;">
 <div id="content-wrap" style="padding-bottom: 2.5rem;">
 <form action="/teams" method="GET">
+<center><b>Team Name: </b><input name="teamname" id="teamname" autocomplete="off" style="font-size:16px;" value="Untitled"></center>
+<hr>
 {% for i in range(6) %}
 <div class="container-fluid" >
           <div class="row" style="width:100%">
@@ -69,9 +71,9 @@
                 </div>
               {% endfor %}
             </div>
-            <div class="col-4" style="margin-top:25px;">
+            <div class="col-4" style="margin-top:24px;">
               {% for x in range(4) %}
-                <p id="moveDesc{{i}}{{x}}" style="font-size:12px; height:30px; margin-bottom:2px; line-height:10pt;">
+                <p id="moveDesc{{i}}{{x}}" style="font-size:12px; height:30px; margin-bottom:4px;">
                 </p>
               {% endfor %}
             </div>
@@ -90,7 +92,7 @@
                   Female
                 </label>
               </div><br>
-              <b>Happiness</b>
+              <b>Happiness</b><br>
               <input name="happiness_{{i}}" type="number" id="happiness_{{i}}" value="255" min="0" max="255" step="1" style="width:65px"/>
             </div>
             <span class="border"></span>

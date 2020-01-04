@@ -160,6 +160,27 @@ if c.fetchone()[0] < 1:
         desc = aData['effect_entries'][0]['short_effect']
         c.execute('INSERT INTO ABILITIES VALUES (?, ?, ?)', (id, name, desc))
 
+#Creates BOT_TEAMS - For initial reading of movesets into DB BOT_TEAMS table
+c.execute(" SELECT count(name) FROM sqlite_master WHERE type='table' AND name='BOT_TEAMS' ")
+if c.fetchone()[0] < 1:
+    c.execute('''CREATE TABLE BOT_TEAMS(ID INTEGER PRIMARY KEY AUTOINCREMENT, team BLOB);''')
+    list = []
+    with open(os.getcwd()+'\\\\static\\\\BotMovesets.txt', 'r', encoding="utf-8") as file:
+        list = file.readlines()
+    index = 0
+    fin = []
+    for x in range(len(list)):
+        if (list[x] == "\n"):
+            list[x-1] = list[x-1].rstrip("\n")
+            sub = list[index:x]
+            end = ""
+            for y in sub:
+                end += y
+            fin.append(end)
+            index = x + 1
+    for x in fin:
+        c.execute('INSERT INTO BOT_TEAMS VALUES (?, ?)', (None, x))
+
 #Creates ITEMS - EXTRA
 # c.execute(" SELECT count(name) FROM sqlite_master WHERE type='table' AND name='ITEMS' ")
 # if c.fetchone()[0] < 1:

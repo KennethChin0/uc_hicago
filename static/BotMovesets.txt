@@ -1,0 +1,5483 @@
+Venusaur 
+Ability: Overgrow
+-Energy Ball/Grass Knot
+-Sludge Bomb/Hidden Power [Fire]
+-Leech Seed
+-Sleep Powder
+
+Charizard
+Ability: Blaze
+-Flare Blitz
+-Earthquake
+-Dragon Claw
+-Swords Dance/Dragon Dance
+
+Charizard
+Ability: Blaze
+-Belly Drum
+-Fire Punch
+-Dragon Claw
+-Earthquake
+
+Charizard
+Ability: Blaze
+-Belly Drum
+-Fire Punch
+-Dragon Claw/Earthqauke
+-Substitute
+
+Charizard
+Ability: Blaze
+-Flamethrower/Fire Blast/Overheat
+-Dragon Pulse
+-Focus Punch
+-Air Slash/Hidden Power [Grass/Electric]
+
+Blastoise
+Ability: Torrent
+-Surf
+-Rapid Spin
+-Roar/Haze
+-Toxic/Yawn/Counter/Mirror Coat/Ice Beam
+
+Blastoise
+Ability: Torrent
+-Surf
+-Toxic
+-Rest
+-Sleep Talk
+
+Butterfree
+Ability: Compoundeyes
+-Sleep Powder
+-Stun Spore
+-Bug Buzz
+-Tail Wind
+
+Butterfree
+Ability: Compoundeyes
+-Bug Buzz
+-Shadow Ball
+-Energy Ball
+-Hidden Power [Fire]/Sleep Powder
+
+Beedrill
+Ability: Swarm
+-Poison Jab
+-X-Scissor/U-Turn
+-Brick Break
+-Aerial Ace
+
+Beedrill
+Ability: Swarm
+-Substitute/Endure
+-X-Scissor
+-Endeavor
+-Poison Jab
+
+Beedrill
+Ability: Swarm
+-Agility
+-Baton Pass
+-X-Scissor
+-Swords Dance/Poison Jab
+
+Pidgeot
+Ability: Keen Eye/Tangled Feet
+-Brave Bird
+-Return/Double-Edge
+-Steel Wing
+-U-Turn
+
+Raticate
+Ability: Guts
+-Protect
+-Facade
+-Crunch
+-Super Fang/U-Turn
+
+Raticate
+Ability: Guts
+-Counter
+-Reversal
+-Endeavor
+-Quick Attack/Crunch
+
+Fearow
+Ability: Keen Eye
+-Drill Peck
+-Double-Edge
+-U-Turn
+-Quick Attack/Pursuit
+
+Arbok
+Ability: Intimidate
+-Gunk Shot
+-Crunch
+-Earthquake
+-Ice Fang
+
+Pikachu
+Ability: Static
+-Thunderbolt
+-Focus Punch/Brick Break
+-Grass Knot/Hidden Power [Ice]/Surf
+-Substitute
+
+Raichu
+Ability: Static
+-Thunderbolt
+-Substitute/Nasty Plot
+-Focus Punch
+-Hidden Power [Ice]/Surf/Grass Knot
+
+Raichu
+Ability: Static
+-Thunderbolt
+-Hidden Power [Ice]
+-Grass Knot/Surf
+-Focus Punch
+
+Sandslash
+Ability: Sand Veil
+-Earthquake
+-Stone Edge
+-Swords Dance
+-X-Scissor/Counter
+
+Sandslash
+Ability: Sand Veil
+-Earthquake
+-Stone Edge
+-Rapid Spin
+-Stealth Rock
+
+Nidoqueen
+Ability: Poison Point
+-Earthquake
+-Fire Blast
+-Toxic Spikes
+-Stealth Rock/Roar
+
+Nidoqueen
+Ability: Poison Point
+-Earthquake
+-Ice Punch
+-Rest
+-Sleep Talk
+
+Nidoking
+Ability: Poison Point
+-Earthquake
+-Stone Edge
+-Poison Jab/Megahorn
+-Sucker Punch
+
+Nidoking
+Ability: Poison Point
+-Earthquake
+-Stone Edge
+-Ice Beam
+-Thunderbolt
+
+Clefable
+Ability: Magic Guard
+-Thunderbolt
+-Ice Beam
+-Calm Mind
+-Softboiled
+
+Clefable
+Ability: Magic Guard
+-Focus Punch
+-Substitute
+-Thunderbolt
+-Ice Beam
+
+Clefable
+Ability: Magic Guard
+-Ice Beam
+-Thunderbolt
+-Flamethrower/Fire Blast
+-Grass Knot
+
+Clefable
+Ability: Magic Guard
+-Counter
+-Wish/Softboiled
+-Light Screen
+-Seismic Toss
+
+Clefable
+Ability: Magic Guard
+-Encore
+-Wish
+-Thunder Wave/Ice Beam
+-Seismic Toss
+
+Ninetales
+Ability: Flash Fire
+-Nasty Plot
+-Hypnosis
+-Flamethrower
+-Energy Ball
+
+Ninetales
+Ability: Flash Fire
+-Overheat/Fire Blast
+-Energy Ball
+-Dark Pulse
+-Hidden Power [Ice/Electric]
+
+Wigglytuff
+Ability: Cute Charm
+-Counter
+-Wish
+-Light Screen
+-Seismic Toss/Double-Edge
+
+Wigglytuff
+Ability: Cute Charm
+-Hyper Voice
+-Ice Beam
+-Thunderbolt
+-Focus Blast
+
+Wigglytuff
+Ability: Cute Charm
+-Double-Edge/Return
+-Gyro Ball
+-Ice Punch
+-Focus Punch
+
+Vileplume
+Ability: Chlorophyll
+-Sunny Day
+-Solarbeam
+-Sleep Powder
+-Sludge Bomb/Hidden Power [Fire/Ice]
+
+Vileplume
+Ability: Chlorophyll
+-Sludge Bomb/Energy Ball/Grass Knot
+-Sleep Powder
+-Aromatherapy
+-Moonlight/Stun Spore
+
+Parasect
+Ability: Dry Skin
+-Spore
+-X-Scissor
+-Swords Dance/Aromatherapy
+-Stun Spore/Brick Break
+
+Parasect
+Ability: Dry Skin
+-X-Scissor
+-Seed Bomb
+-Pursuit/Aerial Ace/Brick Break
+-Spore
+
+Venemoth
+Ability: Tinted Lens
+-Bug Buzz
+-Sludge Bomb
+-Psychic
+-Hidden Power [Fire]/Sleep Powder
+
+Venemoth
+Ability: Tinted Lens
+-Bug Buzz
+-Sleep Powder
+-Agility
+-Baton Pass
+
+Dugtrio
+Ability: Arena Trap
+-Earthquake
+-Stone Edge
+-Aerial Ace
+-Shadow Claw
+
+Persian
+Ability: Technician
+-Return
+-Bite
+-Aerial Ace
+-Hypnosis
+
+Persian
+Ability: Technician
+-Return
+-Fake Out
+-Bite
+-Aerial Ace/U-Turn
+
+Persian
+Ability: Technician
+-Swift
+-Water Pulse
+-Hypnosis
+-Nasty Plot
+
+Golduck
+Ability: Cloud Nine
+-Surf
+-Ice Beam
+-Calm Mind
+-Hypnosis
+
+Primeape
+Ability: Vital Spirit
+-Close Combat
+-Stone Edge
+-Ice Punch/Thunderpunch
+-U-Turn
+
+Primeape
+Ability: Anger Point
+-Reversal
+-Substitute
+-Stone Edge
+-Ice Punch
+
+Arcanine
+Ability: Intimidate
+-Flare Blitz
+-Extremespeed
+-Crunch
+-Thunder Fang
+
+Arcanine
+Ability: Intimidate
+-Overheat
+-Dragon Pulse
+-Hidden Power [Ground/Grass]
+-Extremespeed
+
+Arcanine
+Ability: Intimidate
+-Flare Blitz
+-Extremespeed
+-Howl
+-Thunder Fang
+
+Poliwrath
+Ability: Water Absorb
+-Focus Punch
+-Waterfall/Ice Punch
+-Substitute
+-Hypnosis
+
+Poliwrath
+Ability: Water Absorb
+-Belly Drum
+-Brick Break
+-Waterfall
+-Substitute/Rock Slide
+
+Alakazam
+Ability: Synchronize
+-Psychic
+-Focus Blast
+-Shadow Ball/Grass Knot/Hidden Power [Fire]
+-Trick
+
+Alakazam
+Ability: Synchronize
+-Psychic
+-Focus Blast
+-Grass Knot/Shadow Ball/Hidden Power [Fire]
+-Calm Mind
+
+Alakazam
+Ability: Inner Focus
+-Psychic
+-Focus Blast
+-Grass Knot/Shadow Ball/Hidden Power [Fire]
+-Counter
+
+Machamp
+Ability: No Guard
+-Dynamicpunch
+-Stone Edge
+-Ice Punch
+-Thunderpunch/Bulk Up
+
+Machamp
+Ability: Guts
+-Close Combat
+-Stone Edge
+-Ice Punch
+-Thunderpunch/Facade
+
+Machamp
+Ability: Guts
+-Close Combat/Dynamicpunch
+-Stone Edge
+-Rest
+-Sleep Talk
+
+Victreebel
+Ability: Chlorophyll
+-Solarbeam
+-Sludge Bomb/Hidden Power [Fire]
+-Sunny Day
+-Sleep Powder
+
+Victreebel
+Ability: Chlorophyll
+-Energy Ball/Sludge Bomb
+-Knock Off
+-Sleep Powder
+-Stun Spore
+
+Tentacruel
+Ability: Liquid Ooze
+-Surf
+-Toxic Spies
+-Rapid Spin
+-Knock Off/Ice Beam/Sludge Bomb
+
+Tentacruel
+Ability: Clear Body
+-Poison Jab
+-Waterfall
+-Swords Dance
+-Knock Off/Substitute
+
+Tentacruel
+Ability: Liquid Ooze
+-Surf/Hydro Pump
+-Ice Beam
+-Sludge Bomb
+-Giga Drain / hidden Power [Electric]
+
+Golem
+Ability: Rock Head
+-Stone Edge
+-Earthquake
+-Double-Edge/Fire Punch
+-Explosion
+
+Rapidash
+Ability: Flash Fire
+-Flare Blitz
+-Megahorn
+-Hypnosis
+-Will-o-wisp
+
+Rapidash
+Ability: Flash Fire
+-Flare Blitz
+-Agility
+-Baton Pass
+-Hypnosis
+
+Slowbro
+Ability: Own Tempo
+-Ice Beam
+-Hidden Power [Electric]
+-Surf/Calm Mind
+-Slack Off
+
+Farfetch'd
+Ability: Inner Focus
+-Flail
+-Night Slash/Steel Wing
+-Endure/Substitute
+-Swords Dance
+
+Dodrio
+Ability: Early Bird
+-Brave Bird
+-Return
+-Steel Wing
+-Quick Attack
+
+Dodrio
+Ability: Early Bird
+-Flail
+-Endeavor/Drill Peck
+-Substitute/Endure
+-Agility
+
+Dewgong
+Ability: Hydration
+-Surf
+-Ice Beam/Encore
+-Rest
+-Rain Dance
+
+Muk
+Ability: Sticky Hold
+-Focus Punch
+-Substitute
+-Gunk Shot/Poison Jab
+-Shadow Punch
+
+Muk
+Ability: Sticky Hold
+-Curse
+-Gunk Shot/Poison Jab
+-Fire Punch/Brick Break/Ice Punch
+-Explosion
+
+Muk
+Ability: Sticky Hold
+-Gunk Shot/Poison Jab
+-Explosion
+-Shadow Punch/Ice Punch
+-Focus Punch/Fire Punch
+
+Cloyster
+Ability: Shell Armor
+-Ice Shard/Ice Beam/Avalanche
+-Explosion
+-Spikes
+-Rapid Spin
+
+Gengar
+Ability: Levitate
+-Shadow Ball
+-Thunderbolt
+-Focus Blast
+-Hidden Power [Ice]/Hypnosis
+
+Gengar
+Ability: Levitate
+-Shadow Ball
+-Thunderbolt
+-Explosion/Hidden Power [Ice]
+-Focus Punch/Focus Blast/Hypnosis
+
+Gengar
+Ability: Levitate
+-Hypnosis
+-Will-o-wisp
+-Shadow Ball
+-Thunderbolt
+
+Gengar
+Ability: Levitate
+-Shadow Ball
+-Thunderbolt
+-Substitute
+-Focus Punch
+
+Gengar
+Ability: Levitate
+-Counter
+-Hypnosis
+-Shadow Ball
+-Explosion
+
+Hypno
+Ability: Insomnia
+-Psychic
+-Shadow Ball/Hidden Power [Fighting]
+-Nasty Plot
+-Baton Pass/Wish
+
+Hypno
+Ability: Insomnia
+-Seismic Toss
+-Wish
+-Reflect
+-Thunder Wave
+
+Hypno
+Ability: Insomnia
+-Psychic
+-Shadow Ball
+-Hidden Power [Fighting]
+-Switcheroo
+
+Kingler
+Ability: Hyper Cutter
+-Crabhammer
+-X-Scissor
+-Rock Slide/Knock Off
+-Swords Dance
+
+Kingler
+Ability: Hyper Cutter
+-Crabhammer
+-Flail
+-Substitute/Endure
+-Swords Dance
+
+Electrode
+Ability: Soundproof
+-Thunderbolt
+-Explosion
+-Substitute
+-Hidden Power [Grass/Ice]
+
+Electrode
+Ability: Soundproof
+-Thunder
+-Explosion
+-Rain Dance
+-Taunt
+
+Exeggutor
+Ability: Chlorophyll
+-Solarbeam
+-Sunny Day
+-Psychic/Hidden Power [Fire]/Sleep Powder
+-Explosion
+
+Exeggutor
+Ability: Chlorophyll
+-Leaf Storm
+-Psychic
+-Explosion
+-Hidden Power [Fire/Ice]/Grass Knot
+
+Marowak
+Ability: Rock Head
+-Bonemerang/Earthquake
+-Stone Edge
+-Double-Edge
+-Swords Dance/Fire Punch
+
+Hitmonchan
+Ability: Iron Fist
+-Close Combat
+-Ice Punch
+-Mach Punch
+-Thunderpunch
+
+Hitmonchan
+Ability: Iron Fist
+-Focus Punch
+-Substitute
+-Mach Punch
+-Ice Punch/Thunderpunch/Stone Edge
+
+Hitmonlee
+Ability: Limber
+-Close Combat
+-Stone Edge
+-Blaze Kick
+-Mach Punch
+
+Hitmonlee
+Ability: Limber
+-Reversal
+-Stone Edge
+-Substitute/Endure/Counter
+-Bulk Up
+
+Weezing
+Ability: Levitate
+-Sludge Bomb
+-Fire Blast/Thunderbolt/Will-o-wisp
+-Haze
+-Pain Split
+
+Weezing
+Ability: Levitate
+-Sludge Bomb
+-Fire Blast
+-Thunderbolt/Shadow Ball
+-Explosion
+
+Kangaskhan
+Ability: Early Bird/Scrappy
+-Return
+-Focus Punch
+-Sucker Punch
+-Substitute
+
+Kangaskhan
+Ability: Scrappy
+-Reversal
+-Endeavor
+-Return
+-Substitute/Endure
+
+Kangaskhan
+Ability: Scrappy
+-Return
+-Earthquake
+-Focus Punch
+-Fake Out/Sucker Punch
+
+Seaking
+Ability: Swift Swim/Water Veil
+-Agility
+-Substitute/Endure
+-Flail
+-Waterfall
+
+Seaking
+Ability: Swift Swim/Water Veil
+-Waterfall
+-Megahorn
+-Double-Edge
+-Flail/Hydro Pump
+
+Starmie
+Ability: Natural Cure
+-Surf
+-Thunderbolt/Ice Beam
+-Rapid Spin
+-Recover
+
+Starmie
+Ability: Natural Cure
+-Surf
+-Thunderbolt
+-Ice Beam
+-Grass Knot/Psychic
+
+Mr. Mime
+Ability: Filter
+-Psychic
+-Thunderbolt
+-Trick
+-Focus Blast/Shadow Ball
+
+Mr. Mime
+Ability: Soundproof
+-Psychic
+-Calm Mind
+-Substitute/Hypnosis
+-Baton Pass
+
+Scyther
+Ability: Technician
+-Aerial Ace
+-Night Slash
+-X-Scissor/U-Turn
+-Brick Break
+
+Scyther
+Ability: Technician
+-Endure/Substitute
+-Swords Dance
+-Reversal
+-Night Slash/Aerial Ace/X-Scissor
+
+Scyther
+Ability: Technician
+-Counter
+-Reversal
+-Aerial Ace
+-X-Scissor/Swords Dance
+
+Scyther
+Ability: Technician
+-Swords Dance
+-Agility/Substitute
+-Baton Pass
+-Aerial Ace
+
+Jynx
+Ability: Forewarn
+-Ice Beam
+-Lovely Kiss
+-Calm Mind
+-Substitute
+
+Jynx
+Ability: Forewarn
+-Ice Beam
+-Psychic
+-Grass Knot
+-Focus Blast/Hidden Power [Fire/Fighting]
+
+Jynx
+Ability: Forewarn
+-Mean Look
+-Perish Song
+-Lovely Kiss
+-Substitute
+
+Pinsir
+Ability: Hyper Cutter
+-X-Scissor
+-Stone Edge
+-Close Combat/Earthquake
+-Swords Dance
+
+Pinsir
+Ability: Mold Breaker
+-X-Scissor
+-Stone Edge
+-Close Combat
+-Earthquake
+
+Pinsir
+Ability: Mold Breaker
+-Endure/Substitute
+-Flail
+-Earthquake
+-Swords Dance
+
+Tauros
+Ability: Intimidate
+-Return/Double-Edge
+-Earthquake
+-Stone Edge
+-Pursuit
+
+Tauros
+Ability: Anger Nerve
+-Return
+-Earthquake
+-Stone Edge
+-Substitute
+
+Gyarados
+Ability: Intimidate
+-Earthquake
+-Ice Fang/Waterfall
+-Taunt
+-Dragon Dance
+
+Gyarados
+Ability: Intimidate
+-Waterfall
+-Stone Edge
+-Ice Fang/Earthquake
+-Dragon Dance
+
+Gyarados
+Ability: Intimidate
+-Waterfall
+-Earthquake
+-Ice Fang
+-Stone Edge
+
+Lapras
+Ability: Water Absorb
+-Surf
+-Ice Beam
+-Thunderbolt
+-Sing/Toxic
+
+Lapras
+Ability: Water Absorb
+-Waterfall
+-Return
+-Dragon Dance
+-Substitute
+
+Lapras
+Ability: Shell Armor
+-Waterfall
+-Ice Shard
+-Curse
+-Rest
+
+Vaporeon
+Ability: Water Absorb
+-Surf
+-Wish
+-Protect
+-Ice Beam/Hidden Power [Electric]
+
+Vaporeon
+Ability: Water Absorb
+-Surf
+-Wish
+-Substitute/Acid Armor
+-Baton Pass
+
+Jolteon
+Ability: Volt Absorb
+-Thunderbolt
+-Hidden Power [Ice/Grass]
+-Substitute
+-Baton Pass
+
+Jolteon
+Ability: Volt Absorb
+-Thunderbolt
+-Hidden Power [Ice/Grass]
+-Shadow Ball
+-Baton Pass
+
+Jolteon
+Ability: Volt Absorb
+-Thunderbolt
+-Hidden Power [Ice/Grass]
+-Shadow Ball
+-Charge Beam
+
+Flareon
+Ability: Flash Fire
+-Return
+-Iron Tail
+-Fire Fang
+-Quick Attack
+
+Flareon
+Ability: Flash Fire
+-Flamethrower
+-Shadow Ball
+-Hidden Power [Ice/Grass]
+-Overheat
+
+Omastar
+Ability: Swift Swim
+-Rain Dance
+-Surf/Hydro Pump
+-Ice Beam
+-Hidden Power [Electric/Grass]
+
+Omastar
+Ability: Swift Swim
+-Surf/Hydro Pump
+-Ice Beam
+-Hidden Power [Electric/Grass]
+-Ancientpower
+
+Omastar
+Ability: Shell Armor
+-Surf
+-Ice Beam
+-Spikes/Stealth Rock
+-Knock Off
+
+Kabutops
+Ability: Swift Swim/Battle Armor
+-Rock Slide/Stone Edge
+-Waterfall
+-X-Scissor
+-Swords Dance
+
+Kabutops
+Ability: Swift Swim/Battle Armor
+-Stone Edge
+-Waterfall
+-X-Scissor
+-Aqua Jet
+
+Kabutops
+Ability: Swift Swim/Battle Armor
+-Swords Dance
+-Waterfall
+-Flail
+-Substitute/Endure
+
+Aerodactyl
+Ability: Pressure
+-Stone Edge
+-Earthquake
+-Taunt
+-Stealth Rock
+
+Aerodactyl
+Ability: Pressure
+-Stone Edge
+-Earthquake
+-Crunch/Pursuit
+-Aerial Ace/Ice Fang/Fire Fang
+
+Aerodactyl
+Ability: Pressure
+-Substitute
+-Protect
+-Fly
+-Rock Slide/Earthquake
+
+Snorlax
+Ability: Thick Fat
+-Return/Body Slam
+-Earthquake/Crunch
+-Curse
+-Rest
+
+Snorlax
+Ability: Thick Fat
+-Double-Edge/Body Slam
+-Earthquake/Crunch
+-Rest
+-Sleep Talk
+
+Snorlax
+Ability: Thick Fat
+-Body Slam/Return
+-Earthquake
+-Selfdestruct
+-Fire Punch/Pursuit/Crunch
+
+Articuno
+Ability: Pressure
+-Ice Beam
+-Roar/Heal Bell
+-Rest
+-Sleep Talk
+
+Articuno
+Ability: Pressure
+-Ice Beam
+-Reflect
+-Tail Wind/Heal Bell/Roar
+-Roost
+
+Zapdos
+Ability: Pressure
+-Thunderbolt
+-Heat Wave
+-Roost
+-Roar/Hidden Power [Ice/Grass]
+
+Zapdos
+Ability: Pressure
+-Thunderbolt
+-Hidden Power [Ice/Grass]
+-Heat Wave
+-Roost
+
+Zapdos
+Ability: Pressure
+-Thunderbolt
+-Agility
+-Baton Pass
+-Substitute/Hidden Power [Ice/Grass]
+
+Zapdos
+Ability: Pressure
+-Thunderbolt
+-Hidden Power [Ice/Grass]/Heat Wave
+-Rest
+-Sleep Talk
+
+Zapdos
+Ability: Pressure
+-Thunderbolt
+-Hidden Power [Ice/Grass]
+-Heat Wave
+-U-Turn
+
+Moltres
+Ability: Pressure
+-Overheat
+-Air Slash
+-Hidden Power [Ice/Grass]
+-Flamethrower/Fire Blast
+
+Moltres
+Ability: Pressure
+-Flamethrower/Fire Blast
+-Sunny Day
+-Solarbeam
+-Air Slash/Hidden Power [Ice]
+
+Dragonite
+Ability: Inner Focus
+-Draco Meteor
+-Superpower
+-Fire Blast/Flamethrower
+-Roost/Thunderbolt
+
+Dragonite
+Ability: Inner Focus
+-Outrage
+-Earthquake
+-Fire Blast
+-Dragon Dance
+
+Dragonite
+Ability: Inner Focus
+-Outrage
+-Earthquake
+-Fire Punch
+-Aqua Tail
+
+Dragonite
+Ability: Inner Focus
+-Draco Meteor
+-Flamethrower
+-Focus Punch/Superpower
+-Dragon Pulse
+
+Dragonite
+Ability: Inner Focus
+-Substitute
+-Focus Punch
+-Dragon Pulse
+-Flamethrower
+
+Dragonite
+Ability: Inner Focus
+-Dragon Pulse
+-Toxic/Thunder Wave
+-Roost
+-Light Screen/Heal Bell
+
+Mewtwo
+Ability: Pressure
+-Ice Beam
+-Thunderbolt/Recover
+-Taunt
+-Calm Mind
+
+Mewtwo
+Ability: Pressure
+-Shadow Ball
+-Ice Beam
+-Thunder
+-Focus Punch/Aura Sphere
+
+Mewtwo
+Ability: Pressure
+-Ice Punch
+-Earthquake/Fire Blast
+-Bulk Up
+-Brick Break/Selfdestruct
+
+Mew
+Ability: Synchronize
+-Nasty Plot
+-Baton Pass
+-Hypnosis
+-Substitute/Taunt/Dark Pulse
+
+Mew
+Ability: Synchronize
+-Swords Dance
+-Baton Pass
+-Substitute/Hypnosis
+-Taunt/Shadow Claw
+
+Mew
+Ability: Synchronize
+-Dark Pulse
+-Ice Beam/Grass Knot
+-Nasty Plot
+-Taunt/Baton Pass/Hypnosis
+
+Mew
+Ability: Synchronize
+-Earthquake
+-Shadow Claw
+-Swords Dance
+-Taunt/Baton Pass/Hypnosis
+
+Mew
+Ability: Synchronize
+-Transform
+-Hypnosis
+-Reflect/Light Screen
+-Softboiled
+
+Meganium
+Ability: Overgrow
+-Energy Ball
+-Aromatherapy
+-Leech Seed
+-Reflect/Light Screen
+
+Typhlosion
+Ability: Blaze
+-Eruption
+-Focus Punch
+-Hidden Power [Ice]
+-Overheat
+
+Typhlosion
+Ability: Blaze
+-Flamethrower/Fire Blast
+-Focus Punch
+-Hidden Power [Ice]
+-Overheat
+
+Typhlosion
+Ability: Blaze
+-Flamethrower/Fire Blast
+-Solarbeam
+-Hidden Power [Ice]
+-Sunny Day
+
+Feraligatr
+Ability: Torrent
+-Waterfall
+-Ice Punch
+-Earthquake
+-Dragon Dance/Swords Dance
+
+Feraligatr
+Ability: Torrent
+-Waterfall
+-Ice Punch
+-Earthquake
+-Rock Slide
+
+Furret
+Ability: Run Away/Keen Eye
+-Return/Double-Edge
+-Focus Punch
+-Shadow Claw/Sucker Punch
+-Trick
+
+Noctowl
+Ability: Insomnia
+-Air Slash
+-Hypnosis
+-Reflect
+-Roost
+
+Ledian
+Ability: Swarm/Early Bird
+-Agility/Swords Dance
+-Substitute
+-Baton Pass
+-Ice Punch/Thunderpunch
+
+Ledian
+Ability: Swarm/Early Bird
+-Bug Buzz
+-Reflect
+-Light Screen
+-Knock Off
+
+Ariados
+Ability: Insomnia
+-Poison Jab
+-Agility
+-Spider Web
+-Baton Pass
+
+Crobat
+Ability: Inner Focus
+-Cross Poison
+-Brave Bird
+-U-Turn
+-Pursuit
+
+Crobat
+Ability: Inner Focus
+-Cross Poison
+-U-Turn
+-Hypnosis
+-Roost
+
+Crobat
+Ability: Inner Focus
+-Sludge Bomb
+-Air Slash
+-Hypnosis/Hidden Power [Fighting]
+-Nasty Plot
+
+Lanturn
+Ability: Volt Absorb
+-Surf
+-Thunderbolt
+-Ice Beam
+-Thunder Wave
+
+Lanturn
+Ability: Volt Absorb
+-Surf
+-Thunderbolt/Ice Beam
+-Rest
+-Sleep Talk
+
+Xatu
+Ability: Synchronize
+-U-Turn
+-Thunder Wave
+-Reflect/Light Screen
+-Wish
+
+Xatu
+Ability: Synchronize
+-Calm Mind
+-Baton Pass
+-Roost/Wish
+-Psychic
+
+Xatu
+Ability: Synchronize
+-Psychic
+-Grass Knot
+-Hidden Power [Fighting]
+-Shadow Ball
+
+Ampharos
+Ability: Static
+-Thunderbolt
+-Substitute
+-Focus Punch
+-Hidden Power [Grass/Ice]/Signal Beam
+
+Bellossom
+Ability: Chlorophyll
+-Energy Ball/Grass Knot
+-Sleep Powder
+-Stun Spore
+-Synthesis/Hidden Power [Fire/Ice]/Leech Seed
+
+Bellossom
+Ability: Chlorophyll
+-Sunny Day
+-Solarbeam
+-Hidden Power [Fire]
+-Sleep Powder
+
+Azumarill
+Ability: Huge Power
+-Waterfall
+-Substitute
+-Focus Punch
+-Ice Punch
+
+Azumarill
+Ability: Huge Power
+-Waterfall
+-Ice Punch
+-Focus Punch
+-Body Slam/Aqua Jet
+
+Sudowoodo
+Ability: Rock Head
+-Stone Edge
+-Earthquake
+-Wood Hammer
+-Explosion
+
+Politoed
+Ability: Water Absorb
+-Surf
+-Ice Beam
+-Hypnosis
+-Hidden Power [Electric]/Counter/Toxic
+
+Politoed
+Ability: Water Absorb
+-Substitute
+-Belly Drum
+-Waterfall
+-Return/Earthquake
+
+Jumpluff
+Ability: Chlorophyll
+-Sleep Powder
+-Substitute
+-Leech Seed
+-Encore/Aerial Ace/U-Turn
+
+Sunflora
+Ability: Chlorophyll/Solar Power
+-Solarbeam
+-Sludge Bomb
+-Hidden Power [Fire]
+-Sunny Day
+
+Sunflora
+Ability: Chlorophyll/Solar Power
+-Leaf Storm
+-Sludge Bomb
+-Hidden Power [Fire/Ice]
+-Energy Ball/Grasswhistle
+
+Quagsire
+Ability: Water Absorb
+-Curse
+-Earthquake
+-Waterfall
+-Ice Punch/Ice Beam
+
+Quagsire
+Ability: Water Absorb
+-Counter
+-Earthquake
+-Waterfall/Surf/Ice Beam
+-Toxic/Protect
+
+Espeon
+Ability: Synchronize
+-Psychic
+-Calm Mind
+-Substitute
+-Baton Pass
+
+Espeon
+Ability: Synchronize
+-Psychic
+-Shadow Ball
+-Grass Knot
+-Hidden Power [Fighting/Fire]
+
+Umbreon
+Ability: Synchronize
+-Mean Look
+-Baton Pass
+-Taunt/Charm
+-Wish
+
+Slowking
+Ability: Own Tempo
+-Surf
+-Ice Beam / Grass Knot / Hidden Power [Electric]
+-Nasty Plot
+-Slack Off
+
+Slowking
+Ability: Own Tempo
+-Surf
+-Ice Beam
+-Psychic
+-Grass Knot/Hidden Power [Electric]
+
+Wobbuffet
+Ability: Shadow Tag
+-Counter
+-Mirror Coat
+-Encore
+-Charm/Safeguard
+
+Girafarig
+Ability: Inner Focus/Early Bird
+-Agility
+-Baton Pass
+-Calm Mind/Substitute
+-Psychic
+
+Girafarig
+Ability: Inner Focus/Early Bird
+-Psychic
+-Thunderbolt
+-Grass Knot/Energy Ball
+-Shadow Ball/Hidden Power [Fire/Fighting]
+
+Forretress
+Ability: Sturdy
+-Earthquake/Gyro Ball
+-Spikes
+-Rapid Spin
+-Explosion
+
+Dunsparce
+Ability: Serene Grace/Run Away
+-Glare/Thunder Wave/Body Slam
+-Headbutt
+-Bite/Rock Slide
+-Earthquake
+
+Dunsparce
+Ability: Serene Grace/Run Away
+-Charge Beam/Calm Mind
+-Ice Beam
+-Ancientpower/Water Pulse
+-Thunder Wave/Glare/Thunder
+
+Steelix
+Ability: Sturdy/Rock Head
+-Stealth Rock
+-Roar/Toxic
+-Earthquake
+-Explosion/Gyro Ball/Stone Edge
+
+Granbull
+Ability: Intimidate
+-Return
+-Earthquake
+-Crunch
+-Close Combat
+
+Granbull
+Ability: Intimidate
+-Return
+-Earthquake
+-Fire Fang
+-Bulk Up
+
+Qwilfish
+Adamant Nature
+-Waterfall/Aqua Tail
+-Poison Jab
+-Explosion
+-Swords Dance/Rain Dance
+
+Qwilfish
+Ability: Swift Swim
+-Flail
+-Waterfall/Swords Dance
+-Endure/Substitute
+-Destiny Bond
+
+Qwilfish
+Ability: Swift Swim
+-Spikes
+-Thunder Wave
+-Destiny Bond
+-Waterfall
+
+Scizor
+Ability: Technician
+-Bullet Punch
+-Swords Dance
+-X-Scissor/Roost
+-Superpower/Brick Break
+
+Scizor
+Ability: Technician
+-Bullet Punch
+-Superpower/Brick Break
+-U-Turn
+-Pursuit
+
+Scizor
+Ability: Technician
+-Agility/Swords Dance/Iron Defense
+-Substitute/Roost
+-X-Scissor/Bullet Punch
+-Baton Pass
+
+Scizor
+Ability: Swarm
+-Agility
+-Endure
+-Reversal
+-Night Slash/X-Scissor
+
+Shuckle
+Ability: Sturdy/Gluttony
+-Knock Off
+-Stealth Rock
+-Toxic
+-Protect/Rest
+
+Heracross
+Ability: Guts
+-Megahorn
+-Close Combat
+-Stone Edge
+-Pursuit
+
+Heracross
+Ability: Guts
+-Megahorn
+-Close Combat
+-Stone Edge
+-Swords Dance
+
+Heracross
+Ability: Swarm
+-Megahorn
+-Stone Edge
+-Swords Dance
+-Substitute
+
+Heracross
+Ability: Swarm
+-Substitute/Endure
+-Reversal
+-Megahorn
+-Swords Dance/Night Slash
+
+Heracross
+Ability: Guts
+-Megahorn/Close Combat
+-Stone Edge
+-Rest
+-Sleep Talk
+
+Ursaring
+Ability: Quick Feet
+-Return
+-Earthquake
+-Shadow Claw/Stone Edge
+-Swords Dance
+
+Ursaring
+Ability: Quick Feet
+-Return
+-Earthquake
+-Shadow Claw/Stone Edge
+-Fire Punch
+
+Ursaring
+Ability: Guts
+-Return
+-Stone Edge/Earthquake
+-Rest
+-Sleep Talk
+
+Magcargo
+Ability: Flame Body
+-Lava Plume/Flamethrower/Fire Blast
+-Stealth Rock
+-Yawn
+-Reflect/Light Screen
+
+Magcargo
+Ability: Flame Body
+-Overheat
+-Ancientpower
+-Earth Power
+-Hidden Power [Ice/Electric]
+
+Corsola
+Ability: Natural Cure
+-Surf
+-Stealth Rock
+-Reflect/Light Screen
+-Toxic/Recover
+
+Octillery
+Ability: Suction Cups
+-Surf
+-Ice Beam
+-Flamethrower/Fire Blast
+-Energy Ball
+
+Octillery
+Ability: Suction Cups
+-Waterfall
+-Return
+-Rock Blast
+-Flamethrower/Fire Blast
+
+Delibird
+Ability: Hustle
+-Aerial Ace
+-Ice Shard
+-Focus Punch
+-Ice Punch
+
+Delibird
+Ability: Vital Spirit
+-Counter
+-Thief
+-Quick Attack
+-Seismic Toss
+
+Mantine
+Ability: Water Absorb
+-Surf
+-Haze
+-Toxic
+-Ice Beam/Hidden Power [Electric]
+
+Mantine
+Ability: Swift Swim
+-Surf/Hydro Pump
+-Ice Beam
+-Hidden Power [Electric]
+-Rain Dance
+
+Skarmory
+Ability: Keen Eye/Sturdy
+-Drill Peck/Brave Bird
+-Spikes
+-Roost
+-Whirlwind
+
+Houndoom
+Ability: Flash Fire
+-Flamethrower
+-Dark Pulse
+-Nasty Plot
+-Substitute/Hidden Power [Grass/Ice/Fighting]
+
+Houndoom
+Ability: Flash Fire
+-Overheat
+-Dark Pulse
+-Hidden Power [Grass/Ice/Fighting]
+-Flamethrower
+
+Kingdra
+Ability: Swift Swim
+-Surf/Hydro Pump
+-Ice Beam
+-Rain Dance
+-Dragon Pulse
+
+Kingdra
+Ability: Swift Swim
+-Surf/Hydro Pump
+-Watefall
+-Dragon Pulse/Draco Meteor
+-Rain Dance
+
+Kingdra
+Ability: Swift Swim
+-Dragon Dance
+-Outrage
+-Waterfall
+-Substitute/Hydro Pump
+
+Kingdra
+Ability: Sniper
+-Surf
+-Ice Beam
+-Dragon Pulse
+-Draco Meteor
+
+Kingdra
+Ability: Sniper
+-Outrage
+-Dragon Dance
+-Rest
+-Sleep Talk
+
+Donphan
+Ability: Sturdy
+-Earthquake
+-Ice Shard/Stone Edge
+-Rapid Spin
+-Knock Off/Stealth Rock/Roar
+
+Donphan
+Ability: Sturdy
+-Earthquake
+-Ice Shard
+-Stone Edge
+-Rapid Spin/Fire Fang
+
+Stantler
+Ability: Intimidate
+-Return/Double-Edge
+-Earthquake
+-Iron Tail
+-Me First
+
+Stantler
+Ability: Intimidate
+-Return/Double-Edge
+-Earthquake
+-Iron Tail
+-Hypnosis
+
+Stantler
+Ability: Intimidate
+-Return/Double-Edge
+-Earthquake
+-Hypnosis
+-Thunder Wave
+
+Smeargle
+Ability: Own Tempo
+-Spore
+-Substitute
+-Belly Drum
+-Baton Pass
+
+Smeargle
+Ability: Own Tempo
+-Spore
+-Ingrain
+-Substitute/Mean Look
+-Baton Pass
+
+Smeargle
+Ability: Own Tempo
+-Counter
+-Endeavor
+-Spore
+-Extremespeed
+
+Smeargle
+Ability: Own Tempo
+-Endure
+-Spore
+-Endeavor
+-Extremespeed/Dragon Rage
+
+Hitmontop
+Ability: Technician
+-Fake Out
+-Mach Punch
+-Bullet Punch/Sucker Punch
+-Close Combat
+
+Hitmontop
+Ability: Technician
+-Mach Punch
+-Stone Edge
+-Close Combat
+-Aerial Ace/Earthquake
+
+Hitmontop
+Ability: Intimidate
+-Hi Jump Kick/Close Combat
+-Stone Edge
+-Rapid Spin
+-Mach Punch
+
+Miltank
+Ability: Scrappy
+-Return/Body Slam
+-Milk Drink
+-Heal Bell
+-Earthquake
+
+Miltank
+Ability: Scrappy
+-Return/Body Slam
+-Curse
+-Milk Drink
+-Earthquake
+
+Miltank
+Ability: Scrappy
+-Return
+-Earthquake
+-Hammer Arm/Focus Punch
+-Fire Punch/Zen Headbutt
+
+Blissey
+Ability: Natural Cure
+-Ice Beam
+-Seismic Toss
+-Softboiled
+-Aromatherapy/Thunder Wave/Sing
+
+Blissey
+Ability: Serene Grace
+-Ice Beam
+-Thunderbolt
+-Calm Mind
+-Softboiled
+
+Blissey
+Ability: Natural Cure
+-Seismic Toss
+-Ice Beam/Thunder Wave/Sing
+-Wish
+-Protect
+
+Raikou
+Ability: Pressure
+-Thunderbolt
+-Hidden Power [Ice/Grass]
+-Substitute
+-Calm Mind
+
+Raikou
+Ability: Pressure
+-Thunderbolt
+-Hidden Power [Ice/Grass]
+-Rest
+-Sleep Talk
+
+Entei
+Ability: Pressure
+-Fire Fang
+-Stone Edge
+-Return/Iron Tail
+-Will-o-Wisp
+
+Entei
+Ability: Pressure
+-Fire Fang
+-Stone Edge
+-Return
+-Iron Tail
+
+Entei
+Ability: Pressure
+-Sunny Day
+-Lava Plume/Flamethrower/Fire Blast
+-Solarbeam
+-Hidden Power [Fighting/Ground]
+
+Suicune
+Ability: Pressure
+-Surf
+-Roar/Ice Beam/Hidden Power [Electric]
+-Calm Mind
+-Rest
+
+Suicune
+Ability: Pressure
+-Surf
+-Ice Beam/Hidden Power [Electric]
+-Rest
+-Sleep Talk
+
+Tyranitar
+Ability: Sandstream
+-Stone Edge
+-Earthquake
+-Crunch
+-Pursuit/Focus Punch
+
+Tyranitar
+Ability: Sandstream
+-Stone Edge
+-Earthquake
+-Dragon Dance
+-Crunch/Taunt
+
+Tyranitar
+Ability: Sandstream
+-Focus Punch
+-Substitute
+-Thunderbolt
+-Dark Pulse
+
+Tyranitar
+Ability: Sandstream
+-Dark Pulse
+-Thunderbolt
+-Ice Beam
+-Focus Punch
+
+Lugia
+Ability: Pressure
+-Reflect
+-Whirlwind
+-Roost
+-Toxic/Ice Beam
+
+Lugia
+Ability: Pressure
+-Ice Beam
+-Calm Mind
+-Roost
+-Toxic
+
+Lugia
+Ability: Pressure
+-Aeroblast
+-Ice Beam
+-Thunder
+-Shadow Ball
+
+Celebi
+Ability: Natural Cure
+-Psychic/Energy Ball
+-Recover
+-Heal Bell
+-Leech Seed
+
+Celebi
+Ability: Natural Cure
+-Psychic/Energy Ball
+-Calm Mind
+-Recover
+-Baton Pass
+
+Celebi
+Ability: Natural Cure
+-Seed Bomb
+-Swords Dance
+-Recover
+-Baton Pass
+
+Celebi
+Ability: Natural Cure
+-Psychic
+-Leaf Storm
+-Hidden Power [Fighting/Fire]/Earth Power
+-Shadow Ball/Trick
+
+Celebi
+Ability: Natural Cure
+-Psychic
+-Grass Knot/Recover
+-Hidden Power [Fighting/Fire]/Earth Power
+-Calm Mind
+
+Sceptile
+Ability: Overgrow
+-Energy Ball
+-Leech Seed
+-Substitute
+-Dragon Pulse/Hidden Power [Fire/Ice]
+
+Sceptile
+Ability: Overgrow
+-Leaf Storm
+-Dragon Pulse
+-Focus Blast
+-Energy Ball/Grass Knot/Hidden Power [Fire/Ice]
+
+Sceptile
+Ability: Overgrow
+-Leaf Blade
+-Dragon Claw
+-Earthquake/Thunderpunch
+-Swords Dance
+
+Sceptile
+Ability: Overgrow
+-Leaf Blade
+-Dragon Claw
+-Thunderpunch
+-Earthquake/Focus Punch
+
+Blaziken
+Ability: Blaze
+-Flare Blitz
+-Sky Uppercut
+-Stone Edge
+-Swords Dance
+
+Blaziken
+Ability: Blaze
+-Flare Blitz
+-Sky Uppercut
+-Stone Edge
+-Thunderpunch
+
+Blaziken
+Ability: Blaze
+-Substitute/Endure
+-Reversal
+-Blaze Kick
+-Swords Dance
+
+Blaziken
+Ability: Blaze
+-Agility
+-Substitute/Swords Dance
+-Blaze Kick/Focus Punch
+-Baton Pass
+
+Swampert
+Ability: Torrent
+-Earthquake
+-Avalanche
+-Waterfall/Stone Edge
+-Stealth Rock/Protect
+
+Swampert
+Ability: Torrent
+-Earthquake
+-Ice Beam
+-Surf/Hydro Pump
+-Stealth Rock/Protect/Hidden Power [Electric]
+
+Swampert
+Ability: Torrent
+-Earthquake
+-Avalanche/Ice Beam/Stone Edge
+-Rest
+-Sleep Talk
+
+Swampert
+Ability: Torrent
+-Earthquake
+-Avalanche
+-Curse
+-Rest/Waterfall/Hydro Pump
+
+Mightyena
+Ability: Intimidate/Quick Feet
+-Crunch
+-Fire Fang
+-Ice Fang
+-Thunder Fang
+
+Mightyena
+Ability: Quick Feet
+-Facade
+-Crunch
+-Fire Fang
+-Protect/Howl
+
+Linnone
+Ability: Gluttony
+-Return
+-Shadow Claw
+-Iron Tail
+-Belly Drum
+
+Linoone
+Ability: Gluttony
+-Return
+-Shadow Claw
+-Iron Tail
+-Trick
+
+Beautifly
+Ability: Swarm
+-Bug Buzz
+-Energy Ball
+-Shadow Ball
+-Psychic/Stun Spore
+
+Dustox
+Ability: Shield Dust
+-Bug Buzz
+-Sludge Bomb
+-Shadow Ball
+-Energy Ball/Toxic
+
+Ludicolo
+Ability: Swift Swim
+-Rain Dance
+-Hydro Pump/Surf
+-Ice Beam
+-Energy Ball/Grass Knot
+
+Ludicolo
+Ability: Swift Swim
+-Surf
+-Ice Beam
+-Leech Seed
+-Protect/Toxic
+
+Shiftry
+Ability: Early Bird/Chlorophyll
+-Sunny Day
+-Solarbeam
+-Hidden Power [Fire/Ice]
+-Explosion
+
+Shiftry
+Ability: Chlorophyll
+-Nasty Plot
+-Dark Pulse
+-Energy Ball/Grass Knot
+-Hidden Power[Fire/Ice]
+
+Shiftry
+Ability: Chlorophyll
+-Leaf Storm
+-Dark Pulse
+-Hidden Power[Fire/Ice]
+-Energy Ball/Grass Knot/Explosion
+
+Swellow
+Ability: Guts
+-Facade
+-Brave Bird
+-U-Turn
+-Protect
+
+Swellow
+Ability: Guts
+-Return/Double-Edge
+-Brave Bird
+-U-Turn
+-Facade/Quick Attack
+
+Swellow
+Ability: Guts
+-Aerial Ace
+-Substitute
+-Endeavor
+-Return/Baton Pass
+
+Pelipper
+Ability: Keen Eye
+-Surf
+-Knock Off
+-Ice Beam/Roost
+-Toxic/Hidden Power [Electric]/Shock Wave
+
+Pelipper
+Ability: Keen Eye
+-Surf
+-Ice Beam
+-Air Slash
+-Hidden Power [Electric]/Shock Wave
+
+Gardevoir
+Ability: Trace
+-Psychic
+-Thunderbolt/Grass Knot
+-Calm Mind
+-Hypnosis/Will-o-wisp
+
+Gardevoir
+Ability: Trace
+-Psychic
+-Wish
+-Thunderbolt/Grass Knot
+-Hypnosis/Will-o-wisp
+
+Gardevoir
+Ability: Trace
+-Psychic
+-Thunderbolt/Grass Knot
+-Shadow Ball
+-Focus Blast/Hidden Power [Fighting/Fire]
+
+Masquerain
+Ability: Intimidate
+-Bug Buzz
+-Hydro Pump
+-Air Slash
+-Ice Beam
+
+Masquerain
+Ability: Intimidate
+-Agility
+-Baton Pass
+-Bug Buzz
+-Substitute/Hydro Pump
+
+Breloom
+Ability: Poison Heal
+-Spore
+-Focus Punch
+-Stone Edge
+-Seed Bomb/Mach Punch
+
+Breloom
+Ability: Poison Heal
+-Spore
+-Focus Punch
+-Substitute
+-Leech Seed
+
+Breloom
+Ability: Poison Heal
+-Sky Uppercut
+-Stone Edge
+-Seed Bomb
+-Mach Punch
+
+Slaking
+Ability: Truant
+-Return
+-Earthquake
+-Shadow Claw/Pursuit
+-Focus Punch/Fire Punch
+
+Ninjask
+Ability: Speed Boost
+-X-Scissor
+-Substitute
+-Swords Dance
+-Baton Pass
+
+Ninjask
+Ability: Speed Boost
+-Swords Dance
+-X-Scissor
+-Protect
+-Baton Pass
+
+Ninjask
+Ability: Speed Boost
+-X-Scissor
+-Aerial Ace
+-Night Slash
+-U-Turn
+
+Shedinja
+Ability: Wonder Guard
+-Shadow Claw/Shadow Sneak
+-X-Scissor
+-Will-o-wisp
+-Swords Dance
+
+Shedinja
+Ability: Wonder Guard
+-Shadow Claw
+-X-Scissor
+-Aerial Ace
+-Shadow Sneak
+
+Exploud
+Ability: Soundproof
+-Return/Body Slam
+-Earthquake
+-Howl
+-Crunch/Overheat
+
+Exploud
+Ability: Soundproof
+-Return/Body Slam
+-Earthquake
+-Crunch
+-Overheat
+
+Exploud
+Ability: Soundproof
+-Hyper Voice
+-Shadow Ball
+-Surf
+-Focus Blast
+
+Hariyama
+Ability: Thick Fat
+-Substitute
+-Focus Punch
+-Stone Edge
+-Knock Off
+
+Hariyama
+Ability: Guts
+-Cross Chop
+-Stone Edge
+-Rest
+-Sleep Talk
+
+Hariyama
+Ability: Guts
+-Cross Chop
+-Stone Edge
+-Ice Punch
+-Thunderpunch
+
+Hariyama
+Ability: Thick Fat
+-Cross Chop
+-Stone Edge
+-Knock Off
+-Whirlwind
+
+Delcatty
+Ability: Cute Charm
+-Return/Body Slam
+-Calm Mind
+-Substitute
+-Baton Pass
+
+Delcatty
+Ability: Normal Skin
+-Thunder Wave
+-Return
+-Heal Bell
+-Wish
+
+Sableye
+Ability: Keen Eye/Stall
+-Seismic Toss/Night Shade
+-Will-o-wisp
+-Knock Off
+-Recover
+
+Sableye
+Ability: Keen Eye/Stall
+-Dark Pulse/Shadow Ball
+-Hidden Power [Fighting]
+-Nasty Plot
+-Recover
+
+Mawile
+Ability: Intimidate
+-Swords Dance
+-Baton Pass
+-Taunt
+-Iron Head/Substitute
+
+Mawile
+Ability: Hyper Cutter
+-Iron Head
+-Focus Punch
+-Crunch/Sucker Punch
+-Swords Dance
+
+Mawile
+Ability: Hyper Cutter
+-Iron Head
+-Focus Punch
+-Crunch/Sucker Punch
+-Fire Fang
+
+Aggron
+Ability: Rock Head/Sturdy
+-Stone Edge
+-Earthquake/Focus Punch
+-Iron Head
+-Avalanche
+
+Aggron
+Ability: Rock Head/Sturdy
+-Stone Edge/Rock Slide
+-Focus Punch
+-Substitute
+-Thunder Wave
+
+Aggron
+Ability: Rock Head/Sturdy
+-Metal Burst
+-Taunt/Protect
+-Stone Edge
+-Earthquake/Focus Punch
+
+Medicham
+Ability: Pure Power
+-Hi Jump Kick/Brick Break
+-Psycho Cut
+-Thunderpunch
+-Ice Punch
+
+Medicham
+Ability: Pure Power
+-Reversal
+-Psycho Cut
+-Ice Punch/Thunderpunch
+-Endure/Substitute
+
+Manectric
+Ability: Static
+-Thunderbolt
+-Flamethrower
+-Substitute/Charge Beam
+-Hidden Power [Ice/Grass]
+
+Plusle
+Ability: Plus
+-Thunderbolt
+-Substitute
+-Nasty Plot/Agility
+-Baton Pass
+
+Plusle
+Ability: Plus
+-Thunderbolt
+-Hidden Power [Ice]
+-Grass Knot
+-Substitute
+
+Minun
+Ability: Minus
+-Thunderbolt
+-Substitute
+-Nasty Plot/Agility
+-Baton Pass
+
+Minun
+Ability: Minus
+-Thunderbolt
+-Hidden Power [Ice]
+-Grass Knot
+-Substitute
+
+Volbeat
+Ability: Swarm
+-U-Turn
+-Zen Headbutt
+-Focus Punch
+-Trick
+
+Volbeat
+Ability: Swarm
+-Tail Glow
+-Baton Pass
+-Substitute/Bug Buzz
+-Thunderbolt
+
+Illumise
+Ability: Tinted Lens
+-Bug Buzz
+-Thunder Wave
+-Wish
+-Charm/Growth
+
+Illumise
+Ability: Tinted Lens
+-Bug Buzz
+-Shadow Ball
+-Thunder
+-Giga Drain/Hidden Power [Fire]
+
+Swalot
+Ability: Liquid Ooze/Sticky Hold
+-Gunk Shot
+-Counter
+-Earthquake
+-Explosion
+
+Swalot
+Ability: Liquid Ooze/Sticky Hold
+-Gunk Shot
+-Earthquake
+-Curse
+-Pain Split/Explosion
+
+Swalot
+Ability: Liquid Ooze/Sticky Hold
+-Gunk Shot
+-Earthquake
+-Explosion
+-Fire Punch
+
+Swalot
+Ability: Liquid Ooze/Sticky Hold
+-Sludge Bomb
+-Ice Beam
+-Giga Drain
+-Hidden Power [Fire]
+
+Sharpedo
+Ability: Rough Skin
+-Crunch/Night Slash
+-Waterfall
+-Earthquake
+-Aqua Jet/Ice Fang
+
+Sharpedo
+Ability: Rough Skin
+-Hydro Pump/Surf
+-Dark Pulse
+-Ice Beam
+-Hidden Power [Electric]
+
+Wailord
+Ability: Water Veil
+-Curse
+-Earthquake
+-Avalanche
+-Rest/Waterfall
+
+Wailord
+Ability: Water Veil
+-Water Spout
+-Ice Beam
+-Rest
+-Sleep Talk
+
+Wailord
+Ability: Water Veil
+-Waterfall
+-Avalanche
+-Earthquake
+-Selfdestruct
+
+Camerupt
+Ability: Solid Rock
+-Overheat
+-Earth Power
+-Hidden Power [Ice/Electric]
+-Lava Plume/Flamethrower
+
+Camerupt
+Ability: Solid Rock
+-Earthquake
+-Stone Edge
+-Overheat
+-Explosion
+
+Camerupt
+Ability: Solid Rock
+-Eruption
+-Earthquake
+-Hidden Power [Ice]
+-Stone Edge/Explosion
+
+Torkoal
+Ability: White Smoke
+-Lava Plume/Flamethrower
+-Rest
+-Sleep Talk
+-Toxic/Rapid Spin
+
+Torkoal
+Ability: White Smoke
+-Overheat
+-Hidden Power [Ice/Grass]
+-Sludge Bomb
+-Flamethrower/Lava Plume
+
+Grumpig
+Ability: Thick Fat
+-Psychic
+-Shadow Ball
+-Focus Blast/Energy Ball
+-Trick
+
+Grumpig
+Ability: Thick Fat
+-Psychic
+-Shadow Ball
+-Calm Mind
+-Substitute/Focus Blast
+
+Spinda
+Ability: Own Tempo/Tangled Feet
+-Double-Edge
+-Focus Punch
+-Faint Attack/Fake Out
+-Trick
+
+Spinda
+Ability: Own Tempo/Tangled Feet
+-Hypnosis
+-Calm Mind
+-Taunt
+-Baton Pass
+
+Spinda
+Ability: Own Tempo/Tangled Feet
+-Counter
+-Return
+-Faint Attack
+-Focus Punch
+
+Flygon
+Ability: Levitate
+-Earthquake
+-Dragon Claw
+-U-Turn
+-Roost
+
+Flygon
+Ability: Levitate
+-Earthquake
+-Outrage
+-Stone Edge/Fire Punch/Fire Blast
+-U-Turn
+
+Flygon
+Ability: Levitate
+-Earthquake
+-Stone Edge
+-U-Turn
+-Outrage
+
+Cacturne
+Ability: Sand Veil
+-Substitute
+-Focus Punch
+-Leech Seed
+-Sucker Punch
+
+Cacturne
+Ability: Sand Veil
+-Grass Knot
+-Dark Pulse
+-Focus Blast
+-Hidden Power [Ice]
+
+Cacturne
+Ability: Sand Veil
+-Counter
+-Sucker Punch
+-Seed Bomb
+-Swords Dance
+
+Altaria
+Ability: Natural Cure
+-Dragon Claw
+-Earthquake
+-Roost/Rest
+-Sing/Heal Bell
+
+Altaria
+Ability: Natural Cure
+-Outrage
+-Earthquake
+-Dragon Dance
+-Roost/Rest
+
+Zangoose
+Ability: Immunity
+-Return
+-Shadow Claw
+-Close Combat
+-Swords Dance
+
+Zangoose
+Ability: Immunity
+-Return
+-Shadow Claw
+-Close Combat
+-Quick Attack/Fire Punch
+
+Zangoose
+Ability: Immunity
+-Flail
+-Shadow Claw
+-Substitute/Endure
+-Swords Dance/Close Combat
+
+Seviper
+Ability: Shed Skin
+-Poison Jab
+-Earthquake
+-Crunch
+-Glare
+
+Seviper
+Ability: Shed Skin
+-Sludge Bomb
+-Flamethrower
+-Giga Drain
+-Dark Pulse/Glare
+
+Lunatone
+Ability: Levitate
+-Calm Mind
+-Psychic
+-Hypnosis
+-Grass Knot/Ice Beam/Baton Pass
+
+Lunatone
+Ability: Levitate
+-Psychic
+-Ice Beam
+-Grass Knot
+-Shadow Ball/Hidden Power [Fighting]
+
+Solrock
+Ability: Levitate
+-Earthquake
+-Stone Edge
+-Explosion
+-Overheat/Fire Blast/Grass Knot
+
+Solrock
+Ability: Levitate
+-Stone Edge
+-Substitute/Earthquake
+-Rock Polish
+-Baton Pass
+
+Whiscash
+Ability: Anticipation
+-Earthquake
+-Waterfall/Surf
+-Stone Edge
+-Amnesia/Toxic
+
+Whiscash
+Ability: Anticipation
+-Waterfall
+-Stone Edge
+-Earthquake
+-Zen Headbutt
+
+Crawdaunt
+Ability: Hyper Cutter
+-Crabhammer
+-Night Slash/Crunch
+-Aerial Ace
+-Superpower
+
+Crawdaunt
+Ability: Hyper Cutter
+-Crabhammer
+-Night Slash/Crunch
+-Aerial Ace
+-Swords Dance
+
+Claydol
+Ability: Levitate
+-Earth Power
+-Ice Beam
+-Reflect/Light Screen
+-Rapid Spin
+
+Cradily
+Ability: Suction Cups
+-Stone Edge
+-Earthquake
+-Swords Dance
+-Recover
+
+Cradily
+Ability: Suction Cups
+-Stone Edge
+-Earthquake/Stealth Rock
+-Toxic
+-Recover
+
+Armaldo
+Ability: Battle Armor
+-Rock Blast/Stone Edge
+-X-Scissor
+-Earthquake
+-Swords Dance
+
+Armaldo
+Ability: Battle Armor
+-Rock Blast/Stone Edge
+-X-Scissor
+-Earthquake
+-Knock Off
+
+Milotic
+Ability: Marvel Scale
+-Surf
+-Ice Beam
+-Recover
+-Hypnosis/Toxic/Hidden Power [Electric]
+
+Milotic
+Ability: Marvel Scale
+-Surf
+-Ice Beam
+-Rest
+-Sleep Talk
+
+Castform
+Ability: Forecast
+-Rain Dance
+-Weather Ball
+-Thunder
+-Ice Beam
+
+Castform
+Ability: Forecast
+-Sunny Day
+-Weather Ball/Fire Blast
+-Solarbeam
+-Ice Beam
+
+Castform
+Ability: Forecast
+-Hail
+-Blizzard
+-Thunderbolt
+-Flamethrower
+
+Kecleon
+Ability: Color Change
+-Focus Punch/Brick Break
+-Sucker Punch/Shadow Claw
+-Return
+-Trick
+
+Kecleon
+Ability: Color Change
+-Ice Beam
+-Thunderbolt
+-Nasty Plot/Thunder Wave
+-Trick
+
+Banette
+Ability: Insomnia/Frisk
+-Shadow Sneak
+-Will-o-wisp/Thunder Wave
+-Knock off
+-Destiny Bond
+
+Banette
+Ability: Frisk
+-Trick
+-Shadow Sneak
+-Thunderbolt
+-Will-o-wisp/Destiny Bond
+
+Tropius
+Ability: Chlorophyll/Solar Power
+-Leaf Storm
+-Air Slash
+-Hidden Power [Fire]
+-Energy Ball
+
+Tropius
+Ability: Chlorophyll
+-Leaf Blade
+-Earthquake
+-Swords Dance
+-Roost
+
+Chimecho
+Ability: Levitate
+-Psychic
+-Heal Bell
+-Hypnosis
+-Wish
+
+Absol
+Ability: Super Luck
+-Night Slash/Sucker Punch
+-Psycho Cut
+-Stone Edge
+-Swords Dance
+
+Absol
+Ability: Super Luck
+-Night Slash
+-Psycho Cut
+-Stone Edge
+-Sucker Punch/Pursuit
+
+Absol
+Ability: Super Luck
+-Night Slash
+-Swords Dance
+-Baton Pass
+-Taunt
+
+Absol
+Ability: Super Luck
+-Thunderbolt
+-Ice Beam
+-Calm Mind
+-Baton Pass
+
+Glalie
+Ability: Inner Focus/Ice Body
+-Spikes
+-Ice Shard/Ice Fang
+-Earthquake
+-Explosion
+
+Walrein
+Ability: Ice Body
+-Substitute
+-Protect
+-Roar
+-Blizzard/Surf/Toxic
+
+Walrein
+Ability: Thick Fat
+-Earthquake/Waterfall
+-Avalanche
+-Curse
+-Rest
+
+Walrein
+Ability: Thick Fat
+-Earthquake/Waterfall
+-Avalanche
+-Rest
+-Sleep Talk
+
+Huntail
+Ability: Swift Swim
+-Waterfall
+-Ice Fang
+-Crunch
+-Return/Body Slam
+
+Huntail
+Ability: Swift Swim
+-Waterfall
+-Ice Fang
+-Crunch
+-Rain Dance
+
+Huntail
+Ability: Swift Swim
+-Waterfall
+-Ice Fang
+-Iron Defense
+-Baton Pass
+
+Gorebyss
+Ability: Swift Swim
+-Surf/Hydro Pump
+-Ice Beam
+-Hidden Power [Electric]
+-Rain Dance
+
+Gorebyss
+Ability: Swift Swim
+-Surf/Hydro Pump
+-Ice Beam
+-Hidden Power Electric
+-Shadow Ball
+
+Gorebyss
+Ability: Swift Swim
+-Surf
+-Iron Defense/Amnesia
+-Agility
+-Baton Pass
+
+Relicanth
+Ability: Rock Head/Swift Swim
+-Head Smash
+-Waterfall/Aqua Tail
+-Earthquake
+-Double-Edge
+
+Relicanth
+Ability: Rock Head
+-Head Smash
+-Waterfall/Aqua Tail
+-Rest
+-Sleep Talk
+
+Luvdisc
+Ability: Swift Swim
+-Attract
+-Sweet Kiss
+-Charm
+-Toxic/Surf
+
+Salamence
+Ability: Intimidate
+-Outrage
+-Earthquake
+-Fire Blast
+-Dragon Dance
+
+Salamence
+Ability: Intimidate
+-Draco Meteor
+-Earthquake/Brick Break
+-Fire Blast
+-Outrage/Roost
+
+Salamence
+Ability: Intimidate
+-Draco Meteor
+-Flamethrower
+-Hydro Pump
+-Dragon Pulse
+
+Salamence
+Ability: Intimidate
+-Outrage
+-Fire Blast
+-Earthquake
+-Stone Edge/Aqua Tail
+
+Salamence
+Ability: Intimidate
+-Outrage
+-Earthquake
+-Hydro Pump
+-Fire Blast
+
+Metagross
+Ability: Clear Body
+-Meteor Mash
+-Earthquake
+-Explosion
+-Agility
+
+Metagross
+Ability: Clear Body
+-Meteor Mash
+-Earthquake
+-Explosion
+-Thunderpunch/Pursuit/Bullet Punch
+
+Metagross
+Ability: Clear Body
+-Stealth Rock
+-Meteor Mash
+-Bullet Punch
+-Explosion/Earthquake
+
+Metagross
+Ability: Clear Body
+-Meteor Mash
+-Explosion
+-Earthquake/Stealth Rock
+-Trick
+
+Metagross
+Ability: Clear Body
+-Meteor Mash
+-Earthquake
+-Rest
+-Sleep Talk
+
+Regirock
+Ability: Clear Body
+-Stone Edge
+-Earthquake/Hammer Arm
+-Thunder Wave
+-Stealth Rock
+
+Regirock
+Ability: Clear Body
+-Stone Edge
+-Earthquake/Hammer Arm
+-Explosion
+-Ice Punch
+
+Regirock
+Ability: Clear Body
+-Stone Edge
+-Earthquake/Hammer Arm
+-Rest
+-Sleep Talk
+
+Regice
+Ability: Clear Body
+-Ice Beam
+-Thunderbolt
+-Rest
+-Sleep Talk
+
+Registeel
+Ability: Clear Body
+-Earthquake/Superpower
+-Ice Punch
+-Explosion
+-Thunder/Thunder Wave
+
+Registeel
+Ability: Clear Body
+-Earthquake/Superpower
+-Ice Punch
+-Explosion
+-Thunder/Thunder Wave
+
+Latias
+Ability: Levitate
+-Dragon Pulse
+-Calm Mind
+-Recover
+-Refresh/Reflect/Substitute
+
+Latias
+Ability: Levitate
+-Dragon Pulse
+-Surf
+-Calm Mind/Thunderbolt/Hidden Power [Fire]
+-Recover
+
+Latias
+Ability: Levitate
+-Draco Meteor
+-Surf
+-Hidden Power [Fire]
+-Trick
+
+Latias
+Ability: Levitate
+-Ice Beam
+-Thunder
+-Calm Mind
+-Recover
+
+Latias
+Ability: Levitate
+-Dragon Pulse
+-Calm Mind
+-Recover
+-Refresh/Thunder
+
+Latias
+Ability: Levitate
+-Dragon Pulse
+-Grass Knot
+-Wish
+-Protect
+
+Latios
+Ability: Levitate
+-Dragon Pulse
+-Thunder
+-Calm Mind
+-Recover
+
+Latios
+Ability: Levitate
+-Dragon Pulse
+-Calm Mind
+-Recover
+-Safeguard
+
+Latios
+Ability: Levitate
+-Draco Meteor
+-Grass Knot
+-Hidden Power [Fire]
+-Recover
+
+Kyogre
+Ability: Drizzle
+-Water Spout
+-Ice Beam
+-Thunder
+-Waterfall/Aqua Tail
+
+Kyogre
+Ability: Drizzle
+-Surf
+-Thunder
+-Ice Beam
+-Calm Mind
+
+Kyogre
+Ability: Drizzle
+-Surf
+-Ice Beam/Thunder
+-Substitute
+-Calm Mind
+
+Kyogre
+Ability: Drizzle
+-Water Spout
+-Ice Beam
+-Rest
+-Sleep Talk
+
+Kyogre
+Ability: Drizzle
+-Surf
+-Ice Beam
+-Thunder
+-Water Spout
+
+Groudon
+Ability: Drought
+-Earthquake
+-Stone Edge
+-Dragon Claw
+-Swords Dance
+
+Groudon
+Ability: Drought
+-Earthquake
+-Stone Edge
+-Dragon Claw
+-Overheat
+
+Groudon
+Ability: Drought
+-Earthquake
+-Stone Edge/Dragon Claw
+-Rest
+-Sleep Talk
+
+Rayquaza
+Ability: Air Lock
+-Outrage
+-Earthquake
+-Overheat
+-Dragon Dance
+
+Rayquaza
+Ability: Air Lock
+-Dragon Claw
+-Earthquake
+-Extreme Speed
+-Crunch
+
+Rayquaza
+Ability: Air Lock
+-Draco Meteor
+-Thunderbolt
+-Fire Blast
+-Dragon Pulse
+
+Jirachi
+Ability: Serene Grace
+-Iron Head
+-Trick
+-Stealth Rock
+-Zen Headbutt/U-Turn/Fire Punch
+
+Jirachi
+Ability: Serene Grace
+-Zen Headbutt
+-U-Turn
+-Wish
+-Reflect
+
+Jirachi
+Ability: Serene Grace
+-Psychic
+-Thunder/Thunderbolt
+-Calm Mind
+-Substitute/Wish
+
+Jirachi
+Ability: Serene Grace
+-Psychic
+-Thunder/Thunderbolt
+-Grass Knot
+-Hidden Power [Fire]
+
+Torterra
+Ability: Overgrow
+-Earthquake
+-Wood Hammer
+-Stone Edge
+-Crunch
+
+Torterra
+Ability: Overgrow
+-Seed Bomb/Wood Hammer
+-Earthquake
+-Stone Edge
+-Swords Dance
+
+Torterra
+Ability: Overgrow
+-Earthquake
+-Stone Edge
+-Wood Hammer/Leech Seed
+-Stealth Rock
+
+Infernape
+Ability: Blaze
+-Flamethrower
+-Close Combat
+-Grass Knot
+-Nasty Plot/Hidden Power [Ice]
+
+Infernape
+Ability: Blaze
+-Close Combat
+-Flare Blitz
+-Stone Edge/Thunderpunch
+-Swords Dance
+
+Infernape
+Ability: Blaze
+-Fake Out
+-Stealth Rock
+-Fire Blast/Overheat
+-Close Combat
+
+Inferanape
+Ability: Blaze
+-Flare Blitz
+-Close Combat
+-Thunderpunch
+-Stone Edge
+
+Empoleon
+Ability: Torrent
+-Surf
+-Ice Beam/Grass Knot
+-Substitute
+-Agility
+
+Empoleon
+Ability: Torrent
+-Surf
+-Ice Beam
+-Grass Knot
+-Stealth Rock/Roar
+
+Empoleon
+Ability: Torrent
+-Surf
+-Ice Beam/Grass Knot
+-Rest
+-Sleep Talk
+
+Empoleon
+Ability: Torrent
+-Surf
+-Ice Beam
+-Grass Knot
+-Hidden Power [Ground/Electric]
+
+Empoleon
+Ability: Torrent
+-Aqua Jet
+-Earthquake
+-Swords Dance
+-Avalanche/Drill Peck
+
+Empoleon
+Ability: Torrent
+-Flail
+-Waterfall
+-Substitute/Endure
+-Agility
+
+Staraptor
+Ability: Intimidate
+-Brave Bird
+-Return/Double-Edge
+-Close Combat
+-U-Turn
+
+Bibarel
+Ability: Simple
+-Curse
+-Quick Attack
+-Waterfall
+-Taunt/Return
+
+Bibarel
+Ability: Simple
+-Return
+-Waterfall/Aqua Tail
+-Thunder Wave
+-Endure
+
+Bibarel
+Ability: Unaware
+-Return
+-Waterfall
+-Superpower
+-Thunder
+
+Bibarel
+Ability: Simple
+-Super Fang
+-Waterfall
+-Thunder Wave/Yawn
+-Amnesia/Stealth Rock
+
+Kricketune
+Ability: Swarm
+-X-Scissor
+-Brick Break
+-Aerial Ace
+-Sing
+
+Luxray
+Ability: Intimidate
+-Spark
+-Ice Fang
+-Fire Fang
+-Crunch
+
+Roserade
+Ability: Natural Cure
+-Grass Knot
+-Hidden Power [Fire]
+-Toxic Spikes
+-Sleep Powder
+
+Roserade
+Ability: Natural Cure
+-Leaf Storm
+-Sludge Bomb
+-Shadow Ball
+-Sleep Powder/Hidden Power [Fire/Ice]
+
+Roserade
+Ability: Natural Cure
+-Sunny Day/Rain Dance
+-Energy Ball
+-Sleep Powder/Hidden Power [Ice]
+-Weather Ball
+
+Rampardos
+Ability: Mold Breaker
+-Stone Edge
+-Earthquake
+-Pursuit/Crunch
+-Head Smash
+
+Rampardos
+Ability: Mold Breaker
+-Stone Edge
+-Earthquake
+-Head Smash/Crunch
+-Rock Polish
+
+Bastiodon
+Ability: Mold Breaker
+-Metal Burst
+-Stone Edge
+-Curse
+-Taunt
+
+Bastiodon
+Ability: Mold Breaker
+-Stone Edge
+-Roar/Toxic
+-Rest
+-Sleep Talk
+
+Wurmadam (Steel)
+Ability: Anticipation
+-Stealth Rock
+-Metal Sound
+-Flash Cannon
+-Toxic
+
+Wurmadam (Ground)
+Ability: Anticipation
+-Earthquake
+-Rock Blast
+-Toxic
+-Protect
+
+Wurmadam (Grass)
+Ability: Anticipation
+-Leaf Storm
+-Hidden Power [Ice/Fire]
+-Shadow Ball
+-Psychic/Energy Ball
+
+Mothim
+Ability: Anticipation
+-Bug Buzz
+-Air Slash
+-Hidden Power [Ground]
+-Shadow Ball/Energy Ball
+
+Vespiquen
+Ability: Anticipation
+-Attack Order
+-Aerial Ace/Defend Order
+-Toxic
+-Roost
+
+Pachirisu
+Ability: Pick Up
+-Super Fang
+-Substitute
+-Thunder Wave
+-Thunderbolt/Covet
+
+Floatzel
+Ability: Swift Swim
+-Water fall
+-Ice Fang
+-Crunch
+-Brick Break/Aqua Jet
+
+Floatzel
+Ability: Swift Swim
+-Substitute
+-Bulk Up
+-Baton Pass
+-Waterfall
+
+Cherrim
+Ability: Flower Gift
+-Sunny Day
+-Energy Ball
+-Hidden Power [Fire]
+-Grasswhistle
+
+Gastrodon
+Ability: Water Lure/Sticky Hold
+-Surf
+-Recover
+-Earthquake
+-Ice Beam
+
+Ambipom
+Ability: Technician
+-Fake Out
+-U-Turn
+-Brick Break
+-Shadow Claw
+
+Ambipom
+Ability: Technician
+-Return
+-Fake Out/U-Turn
+-Brick Break/Focus Punch
+-Shadow Claw
+
+Ambipom
+Ability: Technician
+-Thunderbolt
+-Substitute/Taunt
+-Nasty Plot
+-Baton Pass
+
+Drifblim
+Ability: Unburden
+-Thunderbolt
+-Substitute
+-Calm Mind/Hypnosis
+-Baton Pass
+
+Drifblim
+Ability: Aftermath
+-Shadow Ball
+-Thunderbolt
+-Hidden Power [Fighting]
+-Hypnosis
+
+Lopunny
+Ability: Klutz
+- Return
+- Sky Uppercut
+- Ice Punch
+- Switcheroo
+
+Mismagius
+Ability: Levitate
+-Shadow Ball
+-Thunderbolt/Hidden Power [Fighting]
+-Calm Mind
+-Will-o-wisp/Substitute
+
+Mismagius
+Ability: Levitate
+-Shadow Ball
+-Thunderbolt
+-Hidden Power [Fighting]
+-Energy Ball
+
+Mismagius
+Ability: Levitate
+-Mean Look
+-Perish Song
+-Protect
+-Taunt/Pain Split
+
+Honchkrow
+Ability: Insomnia
+-Drill Peck
+-Night Slash
+-Superpower
+-Sucker Punch
+
+Honchkrow
+Ability: Insomnia
+-Dark Pulse
+-Hidden Power [Flying]
+-Heat Wave
+-Superpower
+
+Honhkrow
+Lonely/Hasty Nature
+-Sucker Punch
+-Drill Peck
+-Superpower
+-Heat Wave
+
+Honchkrow
+Ability: Super Luck
+-Night Slash
+-Sucker Punch
+-Drill Peck/Superpower
+-Substitute
+
+Purugly
+Ability: Thick Fat
+-Return
+-Fake Out
+-Hypnosis
+-Shadow Claw/U-Turn
+
+Purugly
+Ability: Thick Fat
+-Return
+-Shadow Claw
+-Iron Tail
+-Fake Out/U-Turn
+
+Skuntank
+Ability: Aftermath
+-Crunch/Night Slash
+-Poison Jab
+-Fire Blast
+-Explosion
+
+Bronzong
+Ability: Levitate
+-Gyro Ball
+-Hypnosis
+-Stealth Rock/Trick Room
+-Earthquake
+
+Bronzong
+Ability: Levitate
+-Gyro Ball
+-Reflect
+-Light Screen
+-Explosion/Stealth Rock
+
+Bronzong
+Ability: Levitate
+-Gyro Ball
+-Trick
+-Earthquake/Explosion
+-Stealth Rock
+
+Bronzong
+Ability: Levitate
+-Gyro Ball
+-Earthquake
+-Rest
+-Sleep Talk
+
+Chatot
+Ability: Keen Eye/Tangled Feet
+-Chatter
+-Hyper Voice
+-Nasty Plot
+-Encore
+
+Spiritomb
+Ability: Pressure
+-Sucker Punch
+-Pursuit
+-Pain Split
+-Will-o-wisp
+
+Spiritomb
+Ability: Pressure
+-Shadow Ball
+-Hidden Power [Fighting]
+-Hypnosis
+-Nasty Plot/Calm Mind
+
+Garchomp
+Ability: Sand Veil
+-Dragon Claw
+-Earthquake
+-Swords Dance
+-Fire Fang
+
+Garchomp
+Ability: Sand Veil
+-Outrage
+-Earthquake
+-Stone Edge
+-Fire Fang/Fire Blast
+
+Garchomp
+Ability: Sand Veil
+-Outrage
+-Earthquake
+-Stone Edge
+-Fire Fang
+
+Lucario
+Ability: Steadfast
+-Close Combat
+-Extremespeed
+-Crunch/Stone Edge/Ice Punch
+-Swords Dance
+
+Lucario
+Ability: Steadfast
+-Close Combat
+-Crunch
+-Stone-Edge
+-Blaze Kick/Bullet Punch/Extremespeed
+
+Lucario
+Ability: Steadfast
+-Reversal
+-Endure/Substitute
+-Crunch
+-Swords Dance
+
+Lucario
+Ability: Steadfast
+-Aura Sphere
+-Shadow Ball
+-Dragon Pulse
+-Psychic
+
+Hippowdon
+Ability: Sandstream
+-Earthquake
+-Slack Off
+-Ice Fang/Stone Edge
+-Stealth Rock/Roar
+
+Drapion
+Ability: Sniper
+-Night Slash
+-Brick Break
+-Fire Fang
+-Swords Dance
+
+Drapion
+Ability: Sniper
+-Night Slash
+-Brick Break
+-Fire Fang
+-Cross Poison
+
+Drapion
+Ability: Battle Armor
+-Nigh Slash
+-Brick Break/Fire Fang
+-Knock Off
+-Toxic Spikes
+
+Toxicroak
+Ability: Dry Skin
+-Poison Jab
+-Stone Edge
+-Cross Chop
+-Swords Dance
+
+Toxicroak
+Ability: Dry Skin
+-Poison Jab
+-Stone Edge
+-Cross Chop
+-Sucker Punch
+
+Toxicroak
+Ability: Dry Skin
+-Focus Blast
+-Dark Pulse
+-Vacuum Wave/Hidden Power [Flying]
+-Nasty Plot
+
+Carnivine
+Ability: Levitate
+-Power Whip
+-Crunch
+-Sleep Powder
+-Swords Dance
+
+Lumineon
+Modest Nature
+-Surf
+-Ice Beam
+-Rain Dance
+-Hidden Power [Electric/Grass]
+
+Abomasnow
+Ability: Snow Warning
+-Seed Bomb/Wood Hammer
+-Ice Punch/Ice Shard
+-Earthquake
+-Swords Dance
+
+Abomasnow
+Ability: Snow Warning
+-Earthquake
+-Seed Bomb/Wood Hammer
+-Ice Punch/Ice Shard
+-Focus Punch
+
+Abomasnow
+Ability: Snow Warning
+-Blizzard
+-Energy Ball
+-Hidden Power[Fire]
+-Focus Punch
+
+Abomasnow
+Ability: Snow Warning
+-Substitute
+-Leech Seed
+-Blizzard
+-Focus Punch
+
+Weavile
+Ability: Pressure
+-Night Slash
+-Ice Punch
+-Brick Break
+-Pusuit
+
+Weavile
+Ability: Pressure
+-Night Slash
+-Ice Punch
+-Brick Break
+-Swords Dance
+
+Magnezone
+Ability: Magnet Pull
+-Thunderbolt/Discharge
+-Hidden Power [Grass/Ice]
+-Substitute
+-Magnet Rise/Thunder Wave
+
+Magnezone
+Ability: Magnet Pull
+-Thunderbolt/Discharge
+-Hidden Power [Grass/Ice]
+-Rest
+-Sleep Talk
+
+Magnezone
+Ability: Magnet Pull
+-Thunderbolt/Discharge
+-Hidden Power [Grass/Ice]
+-Flash Cannon
+-Explosion
+
+Lickilicky
+Ability: Own Tempo
+-Body Slam
+-Knock Off
+-Earthquake
+-Wish/Explosion
+
+Lickilicky
+Ability: Own Tempo
+-Curse
+-Return
+-Gyro Ball
+-Wish/Earthquake
+
+Lickilicky
+Ability: Own Tempo
+-Swords Dance
+-Body Slam/Return
+-Earthquake
+-Gyro Ball/Explosion
+
+Lickilicky
+Ability: Own Tempo
+-Body Slam/Return
+-Earthquake
+-Gyro Ball
+-Fire Blast/Explosion
+
+Lickilicky
+Ability: Own Tempo
+-Body Slam
+-Earthquake
+-Rest
+-Sleep Talk
+
+Rhyperior
+Ability: Solid Rock
+-Earthquake
+-Stone Edge
+-Megahorn/Avalanche/Substitute
+-Swords Dance
+
+Rhyperior
+Ability: Solid Rock
+-Earthquake
+-Stone Edge
+-Megahorn/Avalanche
+-Stealth Rock/Roar
+
+Rhyperior
+Ability: Solid Rock
+-Earthquake
+-Stone Edge
+-Megahorn
+-Avalanche
+
+Tangrowth
+Ability: Chlorophyll/Leaf Guard
+-Power Whip
+-Leech Seed
+-Sleep Powder
+-Knock Off
+
+Tangrowth
+Ability: Chlorophyll/Leaf Guard
+-Power Whip
+-Earthquake
+-Rock Slide
+-Swords Dance
+
+Tangrowth
+Ability: Chlorophyll
+-Solarbeam
+-Hidden Power [Fire]
+-Sunny Day
+-Sleep Powder/Morning Sun
+
+Electivire
+Ability: Motor Engine
+-Thunderbolt/Thunderpunch
+-Ice Punch
+-Cross Chop
+-Earthquake/Hidden Power [Grass]
+
+Electivire
+Ability: Motor Engine
+-Thunderpunch
+-Ice Punch
+-Cross Chop
+-Earthquake
+
+Magmortar
+Ability: Flash Fire
+-Flamethrower/Fire Blast
+-Thunderbolt
+-Focus Punch/Cross Chop
+-Will-o-wisp/Hidden Power [Ice/Grass]
+
+Magmortar
+Ability: Flash Fire
+-Flamethrower/Lava Plume
+-Thunderbolt
+-Focus Punch
+-Hidden Power [Grass/Ice]
+
+Magmortar
+Ability: Flash Fire
+-Flamethrower
+-Solarbeam
+-Sunny Day
+-Will-o-wisp
+
+Togekiss
+Ability: Serene Grace
+-Air Slash
+-Thunder Wave
+-Aura Sphere
+-Wish/Roost
+
+Togekiss
+Ability: Serene Grace
+-Air Slash
+-Wish/Roost
+-Nasty Plot
+-Baton Pass
+
+Togekiss
+Ability: Serene Grace
+-Tri-Attack
+-Air Slash
+-Aura Sphere
+-Grass Knot
+
+Yanmega
+Ability: Speed Boost
+-Bug Buzz
+-Air Slash
+-Protect
+-Hypnosis/Hidden Power [Ice]
+
+Yanmega
+Ability: Tinted Lens
+-Bug Buzz
+-Air Slash
+-Hidden Power [Ice]
+-Shadow Ball
+
+Leafeon
+Ability: Leaf Guard
+-Leaf Blade
+-Swords Dance
+-Baton Pass
+-Synthesis/Grasswhistle
+
+Leafeon
+Ability: Leaf Guard
+-Leaf Blade
+-X-Scissor
+-Aerial Ace
+-Return
+
+Glaceon
+Ability: Snow Cloak
+-Ice Beam
+-Hidden Power [Electric/Fighting]
+-Wish
+-Fake Tears
+
+Glaceon
+Ability: Snow Cloak
+-Ice Beam
+-Hidden Power [Fighting]
+-Shadow Ball
+-Blizzard
+
+Gliscor
+Ability: Sand Veil
+-Earthquake
+-Aerial Ace
+-Roost
+-Knock Off/Stealth Rock
+
+Gliscor
+Ability: Hyper Cutter
+-Earthquake
+-Aerial Ace
+-Stone Edge
+-U-Turn
+
+Gliscor
+Ability: Sand Veil
+-Earthquake
+-Swords Dance
+-Taunt
+-Baton Pass
+
+Mamoswine
+Ability: Snow Cloak
+-Earthquake
+-Stone Edge
+-Ice Shard
+-Superpower
+
+Mamoswine
+Ability: Snow Cloak
+-Curse
+-Earthquake
+-Ice Shard
+-Stone Edge/Avalanche
+
+Mamoswine
+Ability: Snow Cloak
+-Earthquake
+-Avalanche/Ice Fang
+-Rest
+-Sleep Talk
+
+Mamoswine
+Ability: Snow Cloak
+-Stealth Rock
+-Endeavor
+-Ice Shard
+-Earthquake
+
+Porygon-Z
+Ability: Download/Adaptability
+Ability: Adaptability
+-Tri-Attack
+-Thunderbolt/Dark Pulse
+-Ice Beam/Hidden Power [Fighting]
+
+Porygon-Z
+Ability: Adaptability
+Ability: Adaptability
+-Tri-Attack
+-Thunderbolt
+-Ice Beam
+
+Gallade
+Ability: Steadfast
+-Psycho Cut
+-Close Combat
+-Night Slash
+-Swords Dance/Hypnosis/Thunder Wave/Will-o-wisp
+
+Gallade
+Ability: Steadfast
+-Close Combat
+-Psycho Cut
+-Night Slash
+-Stone Edge/Hypnosis/Thunder Wave/Will-o-wisp
+
+Probopass
+Ability: Magnet Pull
+-Thunder
+-Taunt/Thunder Wave
+-Earth Power
+-Explosion/Magnet Rise
+
+Dusknoir
+Ability: Pressure
+-Shadow Sneak
+-Thunderpunch
+-Will-o-wisp/Fire Punch
+-Pain Split
+
+Dusknoir
+Ability: Pressure
+-Shadow Sneak
+-Thunderpunch
+-Ice Punch
+-Focus Punch
+
+Dusknoir
+Ability: Pressure
+-Ice Punch/Shadow Punch
+-Thunderpunch
+-Rest
+-Sleep Talk
+
+Froslass
+Ability: Snow Cloak
+-Ice Beam
+-Thunderbolt
+-Spikes
+-Destiny Bond
+
+Froslass
+Ability: Snow Cloak
+-Ice Beam
+-Thunderbolt
+-Shadow Ball
+-Hidden Power [Fighting]
+
+Rotom
+Ability: Levitate
+-Thunderbolt
+-Shadow Ball
+-Thunder Wave
+-Will-o-wisp
+
+Rotom
+Ability: Levitate
+-Thunderbolt
+-Shadow Ball
+-Trick
+-Hidden Power [Ice/Grass]
+
+Uxie
+Ability: Levitate
+-Stealth Rock
+-Trick
+-U-Turn
+-Reflect/Thunder Wave
+
+Uxie
+Ability: Levitate
+-Psychic/Thunderbolt
+-U-Turn
+-Stealth Rock
+-Yawn
+
+Uxie
+Ability: Levitate
+-Psychic/Grass Knot
+-Thunderbolt
+-Rest
+-Sleep Talk
+
+Mesprit
+Ability: Levitate
+-Psychic
+-Thunderbolt
+-Ice Beam
+-Calm Mind
+
+Mesprit
+Ability: Levitate
+-Psychic
+-Thunderbolt
+-Ice Beam
+-Grass Knot
+
+Mesprit
+Ability: Levitate
+-Thunderbolt
+-Ice Beam
+-Psychic
+-U-Turn/Reflect/Light Screen
+
+Azelf
+Ability: Levitate
+-Stealth Rock
+-Taunt
+-Explosion
+-Fire Blast/Psychic
+
+Azelf
+Ability: Levitate
+-Psychic
+-Flamethrower
+-Nasty Plot
+-Hidden Power [Fighting]/Grass Knot
+
+Azelf
+Ability: Levitate
+-Psychic
+-Flamethrower
+-Hidden Power [Fighting]/Grass Knot
+-Explosion/U-Turn/Trick
+
+Azelf
+Ability: Levitate
+-Zen Headbutt
+-Fire Punch
+-Explosion
+-U-Turn/Trick
+
+Dialga
+Ability: Pressure
+-Draco Meteor
+-Overheat
+-Aura Sphere
+-Thunder/Dragon Pulse
+
+Dialga
+Ability: Pressure
+-Dragon Claw
+-Earthquake
+-Stone Edge/Shadow Claw
+-Bulk Up
+
+Dialga
+Ability: Pressure
+-Dragon Claw/Dragon Pulse
+-Bulk Up/Earth Power/Toxic
+-Rest
+-Sleep Talk
+
+Palkia
+Ability: Pressure
+-Spacial Rend
+-Surf
+-Thunder
+-Aqua Tail
+
+Palkia
+Ability: Pressure
+-Dragon Claw
+-Aqua Tail
+-Earthquake
+-Bulk Up
+
+Palkia
+Ability: Pressure
+-Aqua Tail
+-Dragon Claw
+-Earthquake
+-Stone Edge
+
+Heatran
+Ability: Flash Fire
+-Flamethrower/Fire Blast/Overheat
+-Dragon Pulse
+-Earth Power
+-Explosion/Hidden Power [Electric]
+
+Heatran
+Ability: Flash Fire
+-Fire Blast
+-Earth Power
+-Will-o-wisp
+-Substitute
+
+Heatran
+Ability: Flash Fire
+-Stealth Rock
+-Fire Blast
+-Earth Power
+-Explosion
+
+Heatran
+Ability: Flash Fire
+-Fire Blast/Lave Plume
+-Earth Power
+-Rest
+-Sleep Talk
+
+Regigigas
+Ability: Slow Start
+-Return
+-Substitute
+-Thunder Wave
+-Knock Off/Focus Punch/Confuse Ray
+
+Giratina
+Ability: Pressure
+-Dragon Pulse
+-Shadow Ball
+-Will-o-wisp
+-Calm Mind
+
+Giratina
+Ability: Pressure
+-Dragon Pulse
+-Calm Mind
+-Rest
+-Sleep Talk
+
+Giratina
+Ability: Pressure
+-Draco Meteor
+-Shadow Ball
+-Aura Sphere
+-Thunder
+
+Cresselia
+Ability: Levitate
+-Ice Beam
+-Charge Beam/Grass Knot
+-Reflect
+-Moonlight/Thunder Wave
+
+Cresselia
+Ability: Levitate
+-Psychic
+-Ice Beam
+-Calm Mind
+-Moonlight/Grass Knot
+
+Cresselia
+Ability: Levitate
+-Ice Beam
+-Charge Beam/Thunder Wave
+-Rest
+-Sleep Talk
+
+Phione
+Ability: Hydration
+-Surf
+-Ice Beam/Grass Knot/Hidden Power [Electric]
+-Rest
+-Rain Dance
+
+Manaphy
+Ability: Hydration
+-Surf
+-Ice Beam
+-Grass Knot
+-Tail Glow
+
+Manaphy
+Ability: Hydration
+-Surf
+-Ice Beam/Grass Knot
+-Tail Glow
+-Rest
+
+Darkrai
+Ability: Nightmare
+-Dark Void
+-Dark Pulse
+-Substitute/Taunt
+-Nasty Plot
+
+Darkrai
+Ability: Nightmare
+-Dark Void
+-Dark Pulse
+-Focus Punch
+-Thunder/Spacial Rend
+
+Darkrai
+Ability: Nightmare
+-Dark Pulse
+-Thunder
+-Focus Punch
+-Ice Beam/Spacial Rend/Dark Void
+
+Shaymin
+Ability: Natural Cure
+-Seed Flare
+-Substitute/Aromatherapy
+-Leech Seed
+-Rest
+
+Shaymin
+Ability: Natural Cure
+-Seed Flare
+-Hidden Power [Fire/Ice]
+-Psychic
+-Earth Power
+
+Shaymin
+Ability: Natural Cure
+-Seed Flare
+-Hidden Power [Fire/Ice]
+-Earth Power
+-Rest
+
+Arceus
+Ability: Multi-Type
+-Return/Extremspeed
+-Earthquake
+-Shadow Claw
+-Swords Dance
+
+Arceus
+Ability: Multi-Type
+-Return/Extremespeed
+-Earthquake
+-Shadow Claw
+-Stone Edge
+
+Arceus
+Ability: Multi-Type
+-Judgement
+-Substitute
+-Calm Mind
+-Recover
+
+Arceus
+Ability: Multi-Type
+-Dragon Claw
+-Substitute
+-Swords Dance
+-Recover
+
+Arceus
+Ability: Multi-Type
+-Dragon Claw
+-Brick Break
+-Recover
+-Reflect/Light Screen
+
+Arceus
+Ability: Multi-Type
+-Judgement
+-Shadow Ball/Ice Beam
+-Rest
+-Sleep Talk
+
+Serperior
+Ability: Overgrow
+- Return
+- Coil
+- Leaf Blade
+- Giga Drain / Leaf Storm / Dragon Tail
+
+Serperior
+Ability: Overgrow
+- Sunny Day
+- Solarbeam
+- Growth
+- Return
+
+Emboar
+Ability: Blaze
+- Heat Crash / Flare Blitz
+- Head Smash / Rock Slide
+- Wild Charge
+- Low Sweep / Hammer Arm
+
+Emboar
+Ability: Blaze
+- Flame Charge
+- Flamethrower / Fire Blast
+- Scald
+- Grass Knot
+
+Emboar
+Ability: Blaze
+- Work Up
+- Brick Break / Focus Blast
+- Heat Crash / Flamethrower
+- Grass Knot / Flamethrower
+
+Emboar
+Ability: Blaze
+- Sunny Day
+- Solarbeam
+- Flamethrower / Fire Blast
+- Heat Stamp / Low Sweep / Brick Break / Flame Charge
+
+Samurott
+Ability: Torrent
+- Swords Dance / Surf
+- Return / Aqua Jet
+- Megahorn / X-Scissor
+- Aqua Tail / Waterfall
+
+Samurott
+Ability: Torrent
+- Scald / Surf
+- Blizzard
+- Grass Knot
+- Return / Aqua Jet / Aqua Tail / Waterfall / Megahorn
+
+Watchog
+Ability: Keen Eyes
+- Retaliate / Return / Super Fang
+- Hypnosis / Attract
+- Confuse Ray / Attract
+- Crunch / Return
+
+Watchog
+Ability: Analytic
+- Cut
+- Strength
+- Rock Smash
+- Flash
+
+Stoutland
+Ability: Intimidate
+- Return / Retaliate
+- Crunch
+- Ice Fang / Fire Fang
+- Wild Charge / Thunder Fang
+
+Stoutland
+Ability: Intimidate
+- Work Up
+- Return
+- Crunch
+- Wild Charge / Fire Fang
+
+Stoutland
+Ability: Intimidate
+- Thunder Wave
+- Roar
+- Return
+- Crunch / Fire Fang
+
+Liepard
+Ability: Limber
+- Fake Out
+- Night Slash
+- Return
+- Hone Claws / Attract / Sucker Punch
+
+Liepard
+Ability: Limber
+- Fake Out / Return / Night Slash
+- Nasty Plot
+- Shadow Ball
+- Grass Knot
+
+Liepard
+Ability: Limber
+- Fake Out
+- Attract
+- Assist
+- Night Slash / Return
+
+Simisage
+Ability: Gluttony
+- Acrobatics
+- Seed Bomb
+- Crunch
+- Brick Break / Return
+
+Simisage
+Ability: Gluttony
+- Work Up
+- Grass Knot
+- Focus Blast / Brick Break
+- Return / Seed Bomb
+
+Simisage
+Ability: Gluttony
+- Leech Seed
+- Protect
+- Dig
+- Seed Bomb / Return
+
+Simisear
+Ability: Gluttony
+- Acrobatics
+- Flame Burst / Fire Blast
+- Crunch
+- Brick Break / Return
+
+Simisear
+Ability: Gluttony
+- Flame Burst / Fire Blast
+- Yawn / Will-o-Wisp / Work Up
+- Focus Blast / Brick Break
+- Grass Knot
+
+Simisear
+Ability: Gluttony
+- Sunny Day
+- Solarbeam
+- Flame Burst / Fire Blast
+- Return / Brick Break / Crunch
+
+Simipour
+Ability: Gluttony
+- Acrobatics
+- Surf / Scald
+- Crunch
+- Brick Break / Return
+
+Simipour
+Ability: Gluttony
+- Surf / Scald
+- Blizzard / Work Up
+- Focus Blast / Brick Break
+- Grass Knot
+
+Simipour
+Ability: Gluttony
+- Hail
+- Blizzard
+- Scald / Surf
+- Grass Knot / Focus Blast
+
+Musharna
+Ability: Synchronize
+- Hypnosis / Yawn
+- Nightmare
+- Dream Eater
+- Psychic / Psyshock / Shadow Ball
+
+Musharna
+Ability: Synchronize
+- Calm Mind / Charge Beam
+- Shadow Ball / Psyshock
+- Psychic / Psyshock
+- Thunder Wave / Moonlight
+
+Musharna
+Ability: Synchronize
+- Yawn / Hypnosis
+- Lucky Chant
+- Thunder Wave
+- Psychic / Psyshock
+
+Musharna
+Ability: Synchronize
+- Reflect
+- Light Screen
+- Safeguard
+- Psychic / Psyshock
+
+Unfezant
+Ability: Super Luck
+- Return
+- Quick Attack / Work Up
+- Fly /Air Slash / Aerial Ace
+- Roost
+
+Unfezant
+Ability: Big Pecks
+- Featherdance
+- Roost
+- Fly / Air Slash
+- Return / Quick Attack
+
+Zebstrika
+Ability: Lightningrod
+- Flame Charge / Volt Switch
+- Thunderbolt / Discharge
+- Wild Charge / Spark
+- Return / Stomp / Quick Attack
+
+Zebstrika
+Ability: Lightningrod
+- Rain Dance
+- Thunder
+- Volt Switch / Wild Charge / Spark
+- Return / Quick Attack
+
+Gigalith
+Ability: Sturdy
+- Return
+- Rock Slide / Rock Blast / Smack Down
+- Bulldoze
+- Stone Edge / Stealth Rock
+
+Gigalith
+Ability: Sturdy
+- Power Gem
+- Flash Cannon
+- Solarbeam
+- Stealth Rock / Explosion
+
+Swoobat
+Ability: Unaware
+- Calm Mind / Attract
+- Shadow Ball / Attract
+- Psychic
+- Air Slash
+
+Swoobat
+Ability: Unaware
+- Attract
+- Heart Stamp
+- Fly
+- Return
+
+Excadrill
+Ability: Sand Rush
+- Swords Dance / Hone Claws
+- Earthquake
+- Rock Slide
+- Sandstorm / X-Scissor / Brick Break / Return
+
+Audino
+Ability: Regenerate
+- Thunder Wave
+- Charge Beam / Work Up
+- Shadow Ball / Return
+- Grass Knot / Surf / Fire Blast
+
+Audino
+Ability: Healer
+- Helping Hand
+- Heal Pulse
+- Refresh
+- Return / Last Resort
+
+Conkeldurr
+Ability: Guts
+- Bulk Up
+- Hammer Arm / Brick Break
+- Rock Slide / Stone Edge
+- Payback / Return / Facade
+
+Seismitoad
+Ability: Swift Swim
+- Rain Dance
+- Surf / Scald
+- Grass Knot
+- Focus Blast / Sludge Bomb / Sludge Wave
+
+Seismitoad
+Ability: Poison Touch
+- Drain Punch
+- Return
+- Bulldoze / Dig
+- Surf / Scald
+
+Throh
+Ability: Guts
+- Bulk Up
+- Body Slam / Return
+- Storm Throw / Brick Break
+- Rock Slide / Payback
+
+Throh
+Ability: Guts
+- Bulk Up
+- Circle Throw
+- Storm Throw / Revenge / Rock Slide
+- Payback / Rock Slide
+
+Sawk
+Ability: Sturdy
+- Bulk Up
+- Close Combat / Brick Break
+- Payback / Return
+- Rock Slide
+
+Sawk
+Ability: Sturdy
+- Counter
+- Reversal
+- Return
+- Rock Slide / Payback
+
+Leavanny
+Ability: Swarm
+- Swords Dance
+- Leaf Blade / X-Scissor
+- X-Scissor / Aerial Ace
+- Return / Shadow Claw
+
+Leavanny
+Ability: Chlorophyll
+- Sunny Day
+- Solarbeam
+- X-Scissor
+- Return / Shadow Claw
+
+Leavanny
+Ability: Swarm
+- Leaf Storm
+- X-Scissor
+- Leaf Blade
+- Return / Shadow Claw
+
+Scolipede
+Ability: Swarm
+- Megahorn / X-Scissor
+- Poison Tail / Bulldoze
+- Return / Double-Edge
+- Rock Slide / Screech
+
+Scolipede
+Ability: Swarm
+- Agility
+- Baton Pass
+- Return / Double-Edge
+- Megahorn / X-Scissor
+
+Scolipede
+Ability: Swarm
+- Toxic
+- Protect
+- Dig
+- Megahorn / X-Scissor
+
+Whimsicott
+Ability: Prankster
+- Sunny Day
+- Growth
+- Solarbeam
+- Shadow Ball / Return / Hurricane
+
+Whimsicott
+Ability: Prankster
+- Substitute / Cotton Guard
+- Poisonpowder / Protect
+- Leech Seed
+- Giga Drain
+
+Lilligant
+Ability: Own Tempo
+- Sleep Powder
+- Quiver Dance
+- Petal Dance
+- Synthesis / Giga Drain
+
+Lilligant
+Ability: Chlorophyll
+- Sunny Day
+- Growth / Sleep Powder
+- Solarbeam
+- Return
+
+Basculin
+Ability: Adaptability
+- Waterfall / Aqua Tail / Surf
+- Double-Edge / Return
+- Crunch
+- Aqua Jet
+
+Krookodile
+Ability: Moxie
+- Crunch
+- Earthquake / Dig / Bulldoze
+- Brick Break
+- Return / Rock Slide / Smack Down / Dragon Claw
+
+Darmanitan
+Ability: Sheer Force
+- Flare Blitz / Fire Punch
+- Rock Slide
+- Brick Break
+- Bulldoze
+
+Maractus
+Ability: Water Absorb
+- Cotton Guard / Acupressure
+- Needle Arm / Giga Drain
+- Sucker Punch
+- Return
+
+Maractus
+Ability: Chlorophyll
+- Sunny Day
+- Growth
+- Solarbeam
+- Return
+
+Crustle
+Ability: Sturdy
+- Shell Smash
+- X-Scissor
+- Rock Slide / Smack Down
+- Dig / Return / Shadow Claw / Flail
+
+Crustle
+Ability: Sturdy
+- Cut
+- Strength
+- Rock Smash
+- Stealth Rocks / Whatever
+
+Scrafty
+Ability: Moxie
+- Hi Jump Kick / Brick Break
+- Crunch / Payback
+- Return
+- Rock Slide / Dragon Claw / Swagger
+
+What Is This I Don't EvenSigilyph
+Ability: Magic Guard
+- Cosmic Power / Hypnosis
+- Psychic
+- Air Slash
+- Shadow Ball / Flash Cannon / Miracle Eye
+
+Sigilyph
+Ability: Magic Guard
+- Charge Beam
+- Psychic
+- Air Slash
+- Shadow Ball / Flash Cannon
+
+Sigilyph
+Ability: Magic Guard
+- Reflect
+- Light Screen
+- Psychic / Tailwind
+- Air Slash
+
+Sigilyph
+Ability: Magic Guard
+- Thunder Wave
+- Whirlwind
+- Air Slash
+- Psychic / Hypnosis
+
+Cofagrigus
+Ability: Mummy
+- Will-o-Wisp
+- Shadow Ball / Hex
+- Grass Knot
+- Protect
+
+Cofagrigus
+Ability: Mummy
+- Curse
+- Protect
+- Will-o-Wisp
+- Shadow Ball / Hex
+
+Carracosta
+Ability: Solid Rock
+- Shell Smash
+- Waterfall / Aqua Tail / Aqua Jet
+- Rock Slide
+- Surf / Crunch / Dig / Return
+
+Carracosta
+Ability: Solid Rock
+- Curse
+- Aqua Jet
+- Rock Slide
+- Waterfall / Aqua Tail / Return / Dig / Surf
+
+Archeops
+Ability: Defeatist
+- Rock Slide
+- Acrobatics
+- U-turn
+- Dig / Return / Dragon Claw
+
+Garbodor
+Ability: Aftermath
+- Body Slam / Return
+- Stockpile
+- Acid Spray / Gunk Shot / Swallow
+- Sludge Bomb / Sludge Wave / Swallow / Payback
+
+Garbodor
+Ability: Aftermath
+- Toxic / Toxic Spikes
+- Protect
+- Clear Smog
+- Sludge Bomb / Return
+
+Zoroark
+Ability: Illusion
+- U-turn / Hone Claws
+- Night Slash
+- Low Sweep / Focus Blast
+- Return
+
+Zoroark
+Ability: Illusion
+- Nasty Plot
+- Night Daze / Shadow Ball
+- Focus Blast / Night Slash / Return
+- Grass Knot
+
+Cinccino
+Ability: Technician
+- Work Up / Return
+- Tail Slap
+- Bullet Seed
+- Rock Blast
+
+Gothitelle
+Ability: Frisk
+- Charge Beam
+- Grass Knot / Shadow Ball / Thunderbolt / Thunder Wave
+- Psychic / Shadow Ball
+- Psyshock / Shadow Ball
+
+Gothitelle
+Ability: Frisk
+- Reflect
+- Light Screen
+- Thunder Wave / Psyshock
+- Psychic
+
+Gothitelle
+Ability: Frisk
+- Low Sweep / Brick Break
+- Return
+- Payback
+- Tickle / Rock Tomb / Rock Slide
+
+Reuniclus
+Ability: Magic Guard
+- Recover
+- Shadow Ball / Grass Knot / Flash Cannon / Thunder Wave
+- Psychic
+- Psyshock / Focus Blast
+
+Reuniclus
+Ability: Magic Guard
+- Reflect
+- Light Screen
+- Thunder Wave / Recover
+- Psychic / Psyshock
+
+Swanna
+Ability: Big Pecks
+- Rain Dance
+- Surf / Scald
+- Hurricane
+- Roost / Air Slash
+
+Swanna
+Ability: Big Pecks
+- Fly / Brave Bird
+- Surf / Scald
+- Return
+- Roost
+
+Swanna
+Ability: Big Pecks
+- Featherdance
+- Roost
+- Scald / Aqua Ring
+- Air Slash / Fly / Protect
+
+Vanilluxe
+Ability: Ice Body
+- Ice Beam
+- Flash Cannon
+- Acid Armor
+- Avalanche / Mirror Coat / Frost Breath
+
+Vanilluxe
+Ability: Icy Body
+-Hail
+-Blizzard
+-Flash Cannon
+-Acid Armor/ Ice Beam
+
+Sawsbuck
+Ability: Sap Sipper
+- Horn Leech
+- Jump Kick / Megahorn
+- Return / Double-Edge
+- Wild Charge / Megahorn
+
+Sawsbuck
+Ability: Sap Sipper
+- Horn Leech
+- Jump Kick / Megahorn
+- Return / Double-Edge
+- Wild Charge / Megahorn
+
+Sawsbuck
+Ability: Sap Sipper
+- Leech Seed
+- Protect
+- Horn Leech
+- Return / Charm
+
+Sawsbuck
+Ability: Chlorophyll
+- Sunny Day
+- Solarbeam
+- Return
+- Megahorn / Horn Leech / Jump Kick
+
+Emolga
+Ability: Static
+- Double Team
+- Charge Beam
+- Discharge / Thunderbolt
+- Acrobatics
+
+Emolga
+Ability: Static
+- Volt Switch
+- Acrobatics
+- Discharge / Thunderbolt
+- Encore / Light Screen
+
+Escavalier
+Ability: Overcoat
+- Swords Dance
+- X-Scissor
+- Iron Head
+- Return
+
+Amoonguss
+Ability: Effect Spore
+- Toxic
+- Ingrain / Synthesis / Return
+- Giga Drain
+- Protect / Clear Smog
+
+Amoonguss
+Ability: Effect Spore
+- Sunny Day
+- Solarbeam
+- Growth
+- Return / Toxic
+
+Amoongus
+Ability: Effect Spore
+- Spore
+- Giga Drain
+- Return
+- Payback
+
+Jellicent
+Ability: Water Absorb
+- Surf / Scald
+- Shadow Ball / Hex
+- Recover
+- Brine / Ominous Wind / Blizzard / Hydro Pump / Will-o-Wisp
+
+Alomomola
+Ability: Regenerator
+- Wish
+- Protect
+- Aqua Jet / Waterfall
+- Return / Scald
+
+Alomomola
+Ability: Healer
+- Heal Pulse
+- Helping Hand
+- Return / Safeguard / Wide Guard
+- Waterfall / Aqua Jet
+
+Galvantula
+Ability: Compoundeyes
+- Thunder
+- Signal Beam
+- Sucker Punch / Thunder Wave
+- Return
+
+Galvantula
+Ability: Compound Eyes
+- Rain Dance
+- Thunder
+- Signal Beam
+- Sucker Punch / Return / Thunder Wave
+
+Galvantula
+Ability: Compound Eyes
+- Agility
+- Electroball
+- Signal Beam / Bug Buzz
+- Sucker Punch / Return / Thunder Wave
+
+Ferrothorn
+Ability: Iron Barbs
+- Curse / Thunder Wave
+- Power Whip
+- Iron Head / Gyro Ball
+- Payback / Return
+
+Klinklang
+Ability: Whatever
+- Charge Beam / Metal Sound
+- Autotomize / Thunder Wave
+- Thunderbolt / Discharge
+- Flash Cannon
+
+Klinklang
+Ability: Whatever
+- Shift Gear
+- Gear Grind
+- Return
+- Thunderbolt / Discharge / Volt Switch
+
+Eelektross
+Ability: Levitate
+- Acid Spray / Charge Beam
+- Thunderbolt / Discharge
+- Grass Knot / Crunch
+- Thunder Wave / Flash Cannon
+
+Eelektross
+Ability: Levitate
+- Coil / Return
+- Wild Charge
+- Crunch
+- Acrobatics / Return
+
+Eelektross
+Ability: Levitate
+- Coil / Return
+- Wild Charge
+- Crunch
+- Acrobatics / Return
+
+Beheeyem
+Ability: Synchronize
+- Calm Mind / Charge Beam / Thunder Wave
+- Psychic
+- Shadow Ball / Thunderbolt
+- Recover
+
+Beeheeyem
+Ability: Synchronize
+- Reflect
+- Light Screen
+- Thunder Wave / Recover
+- Psychic
+
+Chandelure
+Ability: Flame Body
+- Flame Burst
+- Shadow Ball / Hex
+- Will-o-Wisp
+- Fire Blast
+
+Chandelure
+Ability: Flame Body
+- Sunny Day
+- Solarbeam
+- Flame Burst / Fire Blast
+- Shadow Ball
+
+Haxorus
+Ability: Mold Breaker
+- Dragon Dance / Swords Dance
+- Dragon Claw
+- Shadow Claw / X-Scissor / Return
+- Brick Break / Dig / Return
+
+Beartic
+Ability: Snow Cloak
+- Icicle Crash
+- Brick Break / Dig / Bulldoze
+- Shadow Claw / Rock Slide
+- Return
+
+Beartic
+Ability: Snow Cloak
+- Hail
+- Blizzard
+- Brick Break / Return
+- Icicle Drop
+
+Cryogonal
+Ability: Levitate
+- Acid Armor
+- Ice Beam
+- Confuse Ray / Frost Breath / Solarbeam
+- Recover
+
+Cryogonal
+Ability: Levitate
+- Reflect
+- Light Screen
+- Recover
+- Ice Beam
+
+Accelgor
+Ability: Hydration
+- Double Team / U-turn
+- Acid Spray / Swift
+- Bug Buzz
+- Giga Drain
+
+Stunfisk
+Ability: Static
+- Discharge / Thunderbolt
+- Surf / Scald
+- Mud Bomb / Dig
+- Sludge Bomb / Sludge Wave / Thunder Wave
+
+Mienshao
+Ability: Regeneration
+- Fake Out
+- Drain Punch / Brick Break
+- U-turn
+- Rock Slide
+
+Druddigon
+Ability: Sheer Force
+- Hone Claws
+- Crunch / Rock Slide
+- Revenge / Rock Climb
+- Dragon Claw
+
+Druddigon
+Ability: Rough Skin
+- Dragon Tail
+- Dragon Claw / Hone Claws
+- Revenge / Superpower / Dig
+- Payback / Crunch
+
+Golurk
+Ability: Iron Fist
+- Shadow Punch
+- Earthquake
+- Rock Slide / Return
+- Brick Break / Heavy Slam
+
+Bisharp
+Ability: Defiant
+- X-Scissor / Thunder Wave
+- Night Slash
+- Iron Head
+- Brick Break / Thunder Wave
+
+Bouffalant
+Ability: Reckless
+- Head Charge
+- Wild Charge
+- Revenge
+- Megahorn
+
+Braviary
+Ability: Sheer Force
+- Return / Hone Claws / Work Up
+- Fly / Aerial Ace / Sky Drop
+- Shadow Claw
+- Rock Slide / Superpower
+
+Mandibuzz
+Ability: Overcoat
+- Nasty Plot
+- Air Slash
+- Dark Pulse
+- Flatter / Fly / Bone Rush
+
+Heatmor
+Ability: Flash Fire
+- Sunny Day
+- Solarbeam
+- Flame Burst / Flamethrower
+- Return / Dig / Shadow Claw / Rock Tomb
+
+Durant
+Ability: Hustle
+- X-Scissor
+- Iron Head
+- Crunch
+- Dig / Aerial Ace
+
+Hydreigon
+Ability: Levitate
+- Dragon Pulse
+- Crunch
+- Surf
+- Fire Blast / Acrobatics
+
+Deino / Zweilous
+Ability: Hustle
+- Thunder Wave / Work Up
+- Crunch
+- Dragon Rush / Dragon Pulse
+- Body Slam / Return
+
+Volcarona
+Ability: Flame Body
+- Quiver Dance
+- Heat Wave
+- Silver Wind / Bug Bite
+- Double-Edge / Return / Hyper Beam
+
+Volcarona
+Ability: Flame Body
+- Sunny Day
+- Solarbeam
+- Heat Wave
+- Quiver Dance
+
+Larvesta
+Ability: Flame Body
+- Flame Charge
+- Bug Bite
+- Double-Edge / Return
+- Wild Charge
+
+Cobalion
+Ability: Justified
+- Swords Dance / Volt Switch
+- Sacred Sword
+- Iron Head
+- X-Scissor / Return
+
+Terrakion
+Ability: Justified
+- Swords Dance
+- Sacred Sword
+- Rock Slide
+- X-Scissor / Bulldoze / Return
+
+Virizion
+Ability: Justified
+- Swords Dance / Work Up
+- Giga Drain
+- Sacred Sword
+- Return / X-Scissor / Aerial Ace
+
+Virizion
+Ability: Justified
+- Sunny Day
+- Solarbeam
+- Sacred Sword
+- Return / X-Scissor / Aerial Ace
+
+Tornadus
+Ability: Prankster
+- Air Slash
+- Extrasensory / Brick Break
+- Crunch
+- Acrobatics / Grass Knot
+
+Thundurus
+Ability: Prankster
+- Charge Beam / Volt Switch
+- Thunderbolt / Discharge
+- Grass Knot
+- Brick Break / Return / Fly / Wild Charge
+
+Reshiram
+Ability: Turboblaze
+- Dragonbreath
+- Slash
+- Extrasensory
+- Fusion Flare
+
+Zekrom
+Ability: Teravolt
+- Dragonbreath
+- Slash
+- Zen Headbutt
+- Fusion Bolt
+
+END [This file was created from resources found at https://www.scribd.com/document/78489638/B-W-Ingame-Moveset-Guide and https://gamefaqs.gamespot.com/ds/960099-pokemon-heartgold-version/faqs/59299
+using a parsing program written by Calvin]
