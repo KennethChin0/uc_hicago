@@ -634,9 +634,9 @@ var updateStats = function(e, f, g) {
     rsMon = pokemon5;
     rTar = rem5;
   }
-  if (isNaN(parseInt(e.target.value)) || parseInt(e.target.value) < 0) ev = 0;
-  else if (parseInt(e.target.value) > 252) ev = 252;
-  else ev = parseInt(e.target.value);
+  if (isNaN(parseInt(e.value)) || parseInt(e.value) < 0) ev = 0;
+  else if (parseInt(e.value) > 252) ev = 252;
+  else ev = parseInt(e.value);
   for (var i = 0; i < list.childElementCount; i++) {
     if (list.children[i].value.localeCompare(rsMon.value.substring(0, 1).toUpperCase() + rsMon.value.substring(1, rsMon.value.length).toLowerCase()) == 0) {
       var s = stats.children[i].textContent.split(",");
@@ -710,11 +710,11 @@ var updatePic = function(e, f) {
   }
   tTar.innerHTML = "";
   for (var i = 0; i < list.childElementCount; i++) {
-    if (list.children[i].value.localeCompare(e.target.value.substring(0, 1).toUpperCase() + e.target.value.substring(1, e.target.value.length).toLowerCase()) == 0) {
+    if (list.children[i].value.localeCompare(e.value.substring(0, 1).toUpperCase() + e.value.substring(1, e.value.length).toLowerCase()) == 0) {
       var img = document.createElement("img");
       img.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + (i + 1) + ".png";
       target.appendChild(img);
-      var types = document.getElementById("types_" + e.target.value.substring(0, 1).toUpperCase() + e.target.value.substring(1, e.target.value.length).toLowerCase());
+      var types = document.getElementById("types_" + e.value.substring(0, 1).toUpperCase() + e.value.substring(1, e.value.length).toLowerCase());
       m = types.innerText.split(",");
       // console.log(m[1]);
       tTar.innerHTML = "<img src=\"/static/icons/" + m[0] + ".png\">";
@@ -760,7 +760,7 @@ var updateMoves = function(e, f) {
         var option = document.createElement("option");
         option.value = m[x].charAt(0).toUpperCase() + m[x].substring(1);
         for (var y = 0; y < mdList.children.length; y++) {
-          var d = mdList.children[y].textContent.split(",");
+          var d = mdList.children[y].textContent.split(";");
           // console.log(d[0] +" : "+ option.value);
           if (d[0].toLowerCase().localeCompare(option.value.toLowerCase()) == 0) {
             option.innerText = d[0];
@@ -816,10 +816,10 @@ var updateMoveDesc = function(e) {
   }
   if(tar.innerHTML != "") tar.innerHTML = "";
   for (var y = 0; y < mdList.children.length; y++) {
-    var d = mdList.children[y].textContent.split(",");
+    var d = mdList.children[y].textContent.split(";");
     // console.log(d[0] +" : "+ option.value);
     if (d[0].toLowerCase().localeCompare(e.value.toLowerCase()) == 0) {
-      tar.innerHTML = "<img src=\"/static/icons/" + d[1] + ".png\">" + "<img src=\"/static/icons/" + d[4] + ".png\>";
+      tar.innerHTML = "<img src=\"/static/icons/" + d[1] + ".png\">" + "<img src=\"/static/icons/" + d[4] + ".png\">";
       if (d[6] > 0) tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>Accuracy:</b> " + d[9] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[6]);
       else if (d[7] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>Accuracy:</b> " + d[9] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[7]);
       else if (d[8] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>Accuracy:</b> " + d[9] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[8]);
@@ -866,80 +866,84 @@ var updateAbils = function(e, f) {
         option.textContent = abilities[x].charAt(0).toUpperCase() + abilities[x].substring(1);
         aTarget.appendChild(option);
       }
-      break;
+      return;
     }
   }
+  var option = document.createElement("option");
+  option.value = "None";
+  option.textContent = "None";
+  aTarget.appendChild(option);
 };
 
-pokemon0.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
-pokemon1.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
-pokemon2.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
-pokemon3.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
-pokemon4.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
-pokemon5.addEventListener('input', function(e){updatePic(e, this.id.charAt(e.target.id.length - 1))});
+pokemon0.addEventListener('input', function(e){updatePic(this, this.id.charAt(this.id.length - 1))});
+pokemon1.addEventListener('input', function(e){updatePic(this, this.id.charAt(this.id.length - 1))});
+pokemon2.addEventListener('input', function(e){updatePic(this, this.id.charAt(this.id.length - 1))});
+pokemon3.addEventListener('input', function(e){updatePic(this, this.id.charAt(this.id.length - 1))});
+pokemon4.addEventListener('input', function(e){updatePic(this, this.id.charAt(this.id.length - 1))});
+pokemon5.addEventListener('input', function(e){updatePic(this, this.id.charAt(this.id.length - 1))});
 
-pokemon0.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
-pokemon1.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
-pokemon2.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
-pokemon3.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
-pokemon4.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
-pokemon5.addEventListener('input', function(e){updateAbils(e, this.id.charAt(this.id.length - 1))});
+pokemon0.addEventListener('input', function(e){updateAbils(this, this.id.charAt(this.id.length - 1))});
+pokemon1.addEventListener('input', function(e){updateAbils(this, this.id.charAt(this.id.length - 1))});
+pokemon2.addEventListener('input', function(e){updateAbils(this, this.id.charAt(this.id.length - 1))});
+pokemon3.addEventListener('input', function(e){updateAbils(this, this.id.charAt(this.id.length - 1))});
+pokemon4.addEventListener('input', function(e){updateAbils(this, this.id.charAt(this.id.length - 1))});
+pokemon5.addEventListener('input', function(e){updateAbils(this, this.id.charAt(this.id.length - 1))});
 
-pokemon0.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
-pokemon1.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
-pokemon2.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
-pokemon3.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
-pokemon4.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
-pokemon5.addEventListener('input', function(e){updateMoves(e, this.id.charAt(this.id.length - 1))});
+pokemon0.addEventListener('input', function(e){updateMoves(this, this.id.charAt(this.id.length - 1))});
+pokemon1.addEventListener('input', function(e){updateMoves(this, this.id.charAt(this.id.length - 1))});
+pokemon2.addEventListener('input', function(e){updateMoves(this, this.id.charAt(this.id.length - 1))});
+pokemon3.addEventListener('input', function(e){updateMoves(this, this.id.charAt(this.id.length - 1))});
+pokemon4.addEventListener('input', function(e){updateMoves(this, this.id.charAt(this.id.length - 1))});
+pokemon5.addEventListener('input', function(e){updateMoves(this, this.id.charAt(this.id.length - 1))});
 
-pokemon0.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
-pokemon1.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
-pokemon2.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
-pokemon3.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
-pokemon4.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
-pokemon5.addEventListener('input', function(e){updateBaseStats(e, this.id.charAt(this.id.length - 1))});
+pokemon0.addEventListener('input', function(e){updateBaseStats(this, this.id.charAt(this.id.length - 1))});
+pokemon1.addEventListener('input', function(e){updateBaseStats(this, this.id.charAt(this.id.length - 1))});
+pokemon2.addEventListener('input', function(e){updateBaseStats(this, this.id.charAt(this.id.length - 1))});
+pokemon3.addEventListener('input', function(e){updateBaseStats(this, this.id.charAt(this.id.length - 1))});
+pokemon4.addEventListener('input', function(e){updateBaseStats(this, this.id.charAt(this.id.length - 1))});
+pokemon5.addEventListener('input', function(e){updateBaseStats(this, this.id.charAt(this.id.length - 1))});
 
-slider00.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider01.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider02.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider03.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider04.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider05.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider00.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider01.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider02.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider03.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider04.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider05.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
 
-slider10.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider11.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider12.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider13.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider14.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider15.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider10.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider11.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider12.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider13.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider14.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider15.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
 
-slider20.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider21.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider22.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider23.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider24.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider25.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider20.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider21.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider22.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider23.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider24.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider25.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
 
-slider30.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider31.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider32.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider33.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider34.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider35.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider30.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider31.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider32.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider33.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider34.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider35.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
 
-slider40.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider41.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider42.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider43.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider44.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider45.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider40.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider41.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider42.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider43.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider44.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider45.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
 
-slider50.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider51.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider52.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider53.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider54.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
-slider55.addEventListener('input', function(e){updateStats(e, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider50.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider51.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider52.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider53.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider54.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
+slider55.addEventListener('input', function(e){updateStats(this, this.id.charAt(this.id.length - 1), this.id.charAt(this.id.length - 2))});
 
 move00.addEventListener('input', function(e){updateMoveDesc(this)});
 move01.addEventListener('input', function(e){updateMoveDesc(this)});
@@ -970,3 +974,106 @@ move50.addEventListener('input', function(e){updateMoveDesc(this)});
 move51.addEventListener('input', function(e){updateMoveDesc(this)});
 move52.addEventListener('input', function(e){updateMoveDesc(this)});
 move53.addEventListener('input', function(e){updateMoveDesc(this)});
+
+// -------------------------------------------------------------------------- //
+
+window.addEventListener('DOMContentLoaded', updatePic(pokemon0, pokemon0.id.charAt(pokemon0.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updatePic(pokemon1, pokemon1.id.charAt(pokemon1.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updatePic(pokemon2, pokemon2.id.charAt(pokemon2.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updatePic(pokemon3, pokemon3.id.charAt(pokemon3.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updatePic(pokemon4, pokemon4.id.charAt(pokemon4.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updatePic(pokemon5, pokemon5.id.charAt(pokemon5.id.length - 1)));
+
+window.addEventListener('DOMContentLoaded', updateAbils(pokemon0, pokemon0.id.charAt(pokemon0.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateAbils(pokemon1, pokemon1.id.charAt(pokemon1.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateAbils(pokemon2, pokemon2.id.charAt(pokemon2.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateAbils(pokemon3, pokemon3.id.charAt(pokemon3.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateAbils(pokemon4, pokemon4.id.charAt(pokemon4.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateAbils(pokemon5, pokemon5.id.charAt(pokemon5.id.length - 1)));
+
+window.addEventListener('DOMContentLoaded', updateMoves(pokemon0, pokemon0.id.charAt(pokemon0.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateMoves(pokemon1, pokemon1.id.charAt(pokemon1.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateMoves(pokemon2, pokemon2.id.charAt(pokemon2.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateMoves(pokemon3, pokemon3.id.charAt(pokemon3.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateMoves(pokemon4, pokemon4.id.charAt(pokemon4.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateMoves(pokemon5, pokemon5.id.charAt(pokemon5.id.length - 1)));
+
+window.addEventListener('DOMContentLoaded', updateBaseStats(pokemon0, pokemon0.id.charAt(pokemon0.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateBaseStats(pokemon1, pokemon1.id.charAt(pokemon1.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateBaseStats(pokemon2, pokemon2.id.charAt(pokemon2.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateBaseStats(pokemon3, pokemon3.id.charAt(pokemon3.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateBaseStats(pokemon4, pokemon4.id.charAt(pokemon4.id.length - 1)));
+window.addEventListener('DOMContentLoaded', updateBaseStats(pokemon5, pokemon5.id.charAt(pokemon5.id.length - 1)));
+
+window.addEventListener('DOMContentLoaded', updateStats(slider00, slider00.id.charAt(slider00.id.length - 1), slider00.id.charAt(slider00.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider01, slider01.id.charAt(slider01.id.length - 1), slider01.id.charAt(slider01.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider02, slider02.id.charAt(slider02.id.length - 1), slider02.id.charAt(slider02.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider03, slider03.id.charAt(slider03.id.length - 1), slider03.id.charAt(slider03.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider04, slider04.id.charAt(slider04.id.length - 1), slider04.id.charAt(slider04.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider05, slider05.id.charAt(slider05.id.length - 1), slider05.id.charAt(slider05.id.length - 2)));
+
+window.addEventListener('DOMContentLoaded', updateStats(slider10, slider10.id.charAt(slider10.id.length - 1), slider10.id.charAt(slider10.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider11, slider11.id.charAt(slider11.id.length - 1), slider11.id.charAt(slider11.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider12, slider12.id.charAt(slider12.id.length - 1), slider12.id.charAt(slider12.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider13, slider13.id.charAt(slider13.id.length - 1), slider13.id.charAt(slider13.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider14, slider14.id.charAt(slider14.id.length - 1), slider14.id.charAt(slider14.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider15, slider15.id.charAt(slider15.id.length - 1), slider15.id.charAt(slider15.id.length - 2)));
+
+window.addEventListener('DOMContentLoaded', updateStats(slider20, slider20.id.charAt(slider20.id.length - 1), slider20.id.charAt(slider20.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider21, slider21.id.charAt(slider21.id.length - 1), slider21.id.charAt(slider21.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider22, slider22.id.charAt(slider22.id.length - 1), slider22.id.charAt(slider22.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider23, slider23.id.charAt(slider23.id.length - 1), slider23.id.charAt(slider23.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider24, slider24.id.charAt(slider24.id.length - 1), slider24.id.charAt(slider24.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider25, slider25.id.charAt(slider25.id.length - 1), slider25.id.charAt(slider25.id.length - 2)));
+
+window.addEventListener('DOMContentLoaded', updateStats(slider35, slider35.id.charAt(slider35.id.length - 1), slider35.id.charAt(slider35.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider30, slider30.id.charAt(slider30.id.length - 1), slider30.id.charAt(slider30.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider31, slider31.id.charAt(slider31.id.length - 1), slider31.id.charAt(slider31.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider32, slider32.id.charAt(slider32.id.length - 1), slider32.id.charAt(slider32.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider33, slider33.id.charAt(slider33.id.length - 1), slider33.id.charAt(slider33.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider34, slider34.id.charAt(slider34.id.length - 1), slider34.id.charAt(slider34.id.length - 2)));
+
+
+window.addEventListener('DOMContentLoaded', updateStats(slider40, slider40.id.charAt(slider40.id.length - 1), slider40.id.charAt(slider40.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider41, slider41.id.charAt(slider41.id.length - 1), slider41.id.charAt(slider41.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider42, slider42.id.charAt(slider42.id.length - 1), slider42.id.charAt(slider42.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider43, slider43.id.charAt(slider43.id.length - 1), slider43.id.charAt(slider43.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider44, slider44.id.charAt(slider44.id.length - 1), slider44.id.charAt(slider44.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider45, slider45.id.charAt(slider45.id.length - 1), slider45.id.charAt(slider45.id.length - 2)));
+
+window.addEventListener('DOMContentLoaded', updateStats(slider50, slider50.id.charAt(slider50.id.length - 1), slider50.id.charAt(slider50.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider51, slider51.id.charAt(slider51.id.length - 1), slider51.id.charAt(slider51.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider52, slider52.id.charAt(slider52.id.length - 1), slider52.id.charAt(slider52.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider53, slider53.id.charAt(slider53.id.length - 1), slider53.id.charAt(slider53.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider54, slider54.id.charAt(slider54.id.length - 1), slider54.id.charAt(slider54.id.length - 2)));
+window.addEventListener('DOMContentLoaded', updateStats(slider55, slider55.id.charAt(slider55.id.length - 1), slider55.id.charAt(slider55.id.length - 2)));
+
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move00));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move01));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move02));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move03));
+
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move10));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move11));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move12));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move13));
+
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move20));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move21));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move22));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move23));
+
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move30));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move31));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move32));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move33));
+
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move40));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move41));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move42));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move43));
+
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move50));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move51));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move52));
+window.addEventListener('DOMContentLoaded', updateMoveDesc(move53));

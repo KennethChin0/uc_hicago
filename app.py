@@ -283,13 +283,84 @@ def addUser(user, pswd, conf):
 def teams():
     with sqlite3.connect(DB_FILE) as connection:
         c = connection.cursor()
-        teams = c.execute("SELECT * FROM TEAMS WHERE username = (?)", (session["user"],))
-        return render_template("teams.html", t = teams)
+        teams = c.execute("SELECT * FROM TEAMS WHERE username = (?)", (session["user"],)).fetchall()
+        info = []
+        for i in teams:
+            init = []
+            id = i[0]
+            init.append(id)
+            list = i[2].split("\n")
+            x = 1
+            teamname = list[0]
+            init.append(teamname)
+            while (x < len(list)):
+                temp = []
+                pokemon = list[x].split("(")[0]
+                ability = list[x+1].split("Ability: ")[1]
+                move0 = list[x+4][2:]
+                move1 = list[x+5][2:]
+                move2 = list[x+6][2:]
+                move3 = list[x+7][2:]
+                gender = list[x].split("(")[1][0:-1]
+                happiness = int(list[x+2].split("Happiness: ")[1])
+                EVs = list[x+3].split("EVs: ")[1].split("/")
+                points0 = int(EVs[0])
+                points1 = int(EVs[1])
+                points2 = int(EVs[2])
+                points3 = int(EVs[3])
+                points4 = int(EVs[4])
+                points5 = int(EVs[5])
+                temp.append(pokemon)
+                temp.append(ability)
+                temp.append(move0)
+                temp.append(move1)
+                temp.append(move2)
+                temp.append(move3)
+                temp.append(gender)
+                temp.append(happiness)
+                temp.append(points0)
+                temp.append(points1)
+                temp.append(points2)
+                temp.append(points3)
+                temp.append(points4)
+                temp.append(points5)
+                init.append(temp)
+                x += 8
+            info.append(init)
+            info.reverse()
+        return render_template("teams.html", t = info)
 
 @app.route("/teamProcess")
 def teamProcess():
-    #gets form data from html
-    #adds team into TEAM
+    with sqlite3.connect(DB_FILE) as connection:
+        c = connection.cursor()
+        if ("rid" in request.args.keys()):
+            c.execute("DELETE FROM TEAMS WHERE id = (?);", (request.args['rid'],))
+            return redirect(url_for('teams'))
+    dict = request.args
+    list = []
+    for key in dict:
+        list.append(dict[key])
+    team = "{}".format(list[0])
+    print(list)
+    x = 1
+    while (x < len(list) - 1):
+        if (list[x] != ""):
+            format = """\n{}({})
+Ability: {}
+Happiness: {}
+EVs: {}/{}/{}/{}/{}/{}
+- {}
+- {}
+- {}
+- {}""".format(list[x], list[x+6], list[x+1], list[x+7], list[x+8], list[x+9], list[x+10], list[x+11], list[x+12], list[x+13], list[x+2], list[x+3], list[x+4], list[x+5])
+            team += format
+        x += 14
+    with sqlite3.connect(DB_FILE) as connection:
+        c = connection.cursor()
+        if ("id" in request.args.keys()):
+            c.execute("DELETE FROM TEAMS WHERE id = (?);", (request.args['id'],))
+        c.execute("INSERT INTO TEAMS VALUES(?,?,?);",(None, session["user"], team))
     return redirect(url_for('teams'))
 
 @app.route("/teambuilder")
@@ -298,6 +369,279 @@ def teambuilder():
         c = connection.cursor()
         mons = c.execute("SELECT * FROM POKEMON;").fetchall()
         moves = c.execute("SELECT * FROM MOVES;").fetchall()
+        if (len(request.args) > 0):
+            p1 = ""
+            a1 = ""
+            m01 = ""
+            m11 = ""
+            m21 = ""
+            m31 = ""
+            g1 = ""
+            h1 = ""
+            hp1 = ""
+            atk1 = ""
+            def1 = ""
+            spa1 = ""
+            spd1 = ""
+            spe1 = ""
+            p2 = ""
+            a2 = ""
+            m02 = ""
+            m12 = ""
+            m22 = ""
+            m32 = ""
+            g2 = ""
+            h2 = ""
+            hp2 = ""
+            atk2 = ""
+            def2 = ""
+            spa2 = ""
+            spd2 = ""
+            spe2 = ""
+            p3 = ""
+            a3 = ""
+            m03 = ""
+            m13 = ""
+            m23 = ""
+            m33 = ""
+            g3 = ""
+            h3 = ""
+            hp3 = ""
+            atk3 = ""
+            def3 = ""
+            spa3 = ""
+            spd3 = ""
+            spe3 = ""
+            p4 = ""
+            a4 = ""
+            m04 = ""
+            m14 = ""
+            m24 = ""
+            m34 = ""
+            g4 = ""
+            h4 = ""
+            hp4 = ""
+            atk4 = ""
+            def4 = ""
+            spa4 = ""
+            spd4 = ""
+            spe4 = ""
+            p5 = ""
+            a5 = ""
+            m05 = ""
+            m15 = ""
+            m25 = ""
+            m35 = ""
+            g5 = ""
+            h5 = ""
+            hp5 = ""
+            atk5 = ""
+            def5 = ""
+            spa5 = ""
+            spd5 = ""
+            spe5 = ""
+            p6 = ""
+            a6 = ""
+            m06 = ""
+            m16 = ""
+            m26 = ""
+            m36 = ""
+            g6 = ""
+            h6 = ""
+            hp6 = ""
+            atk6 = ""
+            def6 = ""
+            spa6 = ""
+            spd6 = ""
+            spe6 = ""
+            if ("p1" in request.args.keys()):
+                p1 = request.args["p1"]
+            if ("a1" in request.args.keys()):
+                a1 = request.args["a1"]
+            if ("m01" in request.args.keys()):
+                m01 = request.args["m01"]
+            if ("m11" in request.args.keys()):
+                m11 = request.args["m11"]
+            if ("m21" in request.args.keys()):
+                m21 = request.args["m21"]
+            if ("m31" in request.args.keys()):
+                m31 = request.args["m31"]
+            if ("g1" in request.args.keys()):
+                g1 = request.args["g1"]
+            if ("h1" in request.args.keys()):
+                h1 = request.args["h1"]
+            if ("hp1" in request.args.keys()):
+                hp1 = request.args["hp1"]
+            if ("atk1" in request.args.keys()):
+                atk1 = request.args["atk1"]
+            if ("def1" in request.args.keys()):
+                def1 = request.args["def1"]
+            if ("spa1" in request.args.keys()):
+                spa1 = request.args["spa1"]
+            if ("spd1" in request.args.keys()):
+                spd1 = request.args["spd1"]
+            if ("spe1" in request.args.keys()):
+                spe1 = request.args["spe1"]
+
+            if ("p2" in request.args.keys()):
+                p2 = request.args["p2"]
+            if ("a2" in request.args.keys()):
+                a2 = request.args["a2"]
+            if ("m02" in request.args.keys()):
+                m02 = request.args["m02"]
+            if ("m12" in request.args.keys()):
+                m12 = request.args["m12"]
+            if ("m22" in request.args.keys()):
+                m22 = request.args["m22"]
+            if ("m32" in request.args.keys()):
+                m32 = request.args["m32"]
+            if ("g2" in request.args.keys()):
+                g2 = request.args["g2"]
+            if ("h2" in request.args.keys()):
+                h2 = request.args["h2"]
+            if ("hp2" in request.args.keys()):
+                hp2 = request.args["hp2"]
+            if ("atk2" in request.args.keys()):
+                atk2 = request.args["atk2"]
+            if ("def2" in request.args.keys()):
+                def2 = request.args["def2"]
+            if ("spa2" in request.args.keys()):
+                spa2 = request.args["spa2"]
+            if ("spd2" in request.args.keys()):
+                spd2 = request.args["spd2"]
+            if ("spe2" in request.args.keys()):
+                spe2 = request.args["spe2"]
+
+            if ("p3" in request.args.keys()):
+                p3 = request.args["p3"]
+            if ("a3" in request.args.keys()):
+                a3 = request.args["a3"]
+            if ("m03" in request.args.keys()):
+                m03 = request.args["m03"]
+            if ("m13" in request.args.keys()):
+                m13 = request.args["m13"]
+            if ("m23" in request.args.keys()):
+                m23 = request.args["m23"]
+            if ("m33" in request.args.keys()):
+                m33 = request.args["m33"]
+            if ("g3" in request.args.keys()):
+                g3 = request.args["g3"]
+            if ("h3" in request.args.keys()):
+                h3 = request.args["h3"]
+            if ("hp3" in request.args.keys()):
+                hp3 = request.args["hp3"]
+            if ("atk3" in request.args.keys()):
+                atk3 = request.args["atk3"]
+            if ("def3" in request.args.keys()):
+                def3 = request.args["def3"]
+            if ("spa3" in request.args.keys()):
+                spa3 = request.args["spa3"]
+            if ("spd3" in request.args.keys()):
+                spd3 = request.args["spd3"]
+            if ("spe3" in request.args.keys()):
+                spe3 = request.args["spe3"]
+
+            if ("p4" in request.args.keys()):
+                p4 = request.args["p4"]
+            if ("a4" in request.args.keys()):
+                a4 = request.args["a4"]
+            if ("m04" in request.args.keys()):
+                m04 = request.args["m04"]
+            if ("m14" in request.args.keys()):
+                m14 = request.args["m14"]
+            if ("m24" in request.args.keys()):
+                m24 = request.args["m24"]
+            if ("m34" in request.args.keys()):
+                m34 = request.args["m34"]
+            if ("g4" in request.args.keys()):
+                g4 = request.args["g4"]
+            if ("h4" in request.args.keys()):
+                h4 = request.args["h4"]
+            if ("hp4" in request.args.keys()):
+                hp4 = request.args["hp4"]
+            if ("atk4" in request.args.keys()):
+                atk4 = request.args["atk4"]
+            if ("def4" in request.args.keys()):
+                def4 = request.args["def4"]
+            if ("spa4" in request.args.keys()):
+                spa4 = request.args["spa4"]
+            if ("spd4" in request.args.keys()):
+                spd4 = request.args["spd4"]
+            if ("spe4" in request.args.keys()):
+                spe4 = request.args["spe4"]
+
+            if ("p5" in request.args.keys()):
+                p5 = request.args["p5"]
+            if ("a5" in request.args.keys()):
+                a5 = request.args["a5"]
+            if ("m05" in request.args.keys()):
+                m05 = request.args["m05"]
+            if ("m15" in request.args.keys()):
+                m15 = request.args["m15"]
+            if ("m25" in request.args.keys()):
+                m25 = request.args["m25"]
+            if ("m35" in request.args.keys()):
+                m35 = request.args["m35"]
+            if ("g5" in request.args.keys()):
+                g5 = request.args["g5"]
+            if ("h5" in request.args.keys()):
+                h5 = request.args["h5"]
+            if ("hp5" in request.args.keys()):
+                hp5 = request.args["hp5"]
+            if ("atk5" in request.args.keys()):
+                atk5 = request.args["atk5"]
+            if ("def5" in request.args.keys()):
+                def5 = request.args["def5"]
+            if ("spa5" in request.args.keys()):
+                spa5 = request.args["spa5"]
+            if ("spd5" in request.args.keys()):
+                spd5 = request.args["spd5"]
+            if ("spe5" in request.args.keys()):
+                spe5 = request.args["spe5"]
+
+            if ("p6" in request.args.keys()):
+                p6 = request.args["p6"]
+            if ("a6" in request.args.keys()):
+                a6 = request.args["a6"]
+            if ("m06" in request.args.keys()):
+                m06 = request.args["m06"]
+            if ("m16" in request.args.keys()):
+                m16 = request.args["m16"]
+            if ("m26" in request.args.keys()):
+                m26 = request.args["m26"]
+            if ("m36" in request.args.keys()):
+                m36 = request.args["m36"]
+            if ("g6" in request.args.keys()):
+                g6 = request.args["g6"]
+            if ("h6" in request.args.keys()):
+                h6 = request.args["h6"]
+            if ("hp6" in request.args.keys()):
+                hp6 = request.args["hp6"]
+            if ("atk6" in request.args.keys()):
+                atk6 = request.args["atk6"]
+            if ("def6" in request.args.keys()):
+                def6 = request.args["def6"]
+            if ("spa6" in request.args.keys()):
+                spa6 = request.args["spa6"]
+            if ("spd6" in request.args.keys()):
+                spd6 = request.args["spd6"]
+            if ("spe6" in request.args.keys()):
+                spe6 = request.args["spe6"]
+            return render_template("teambuilder.html", mons = mons, moves = moves,
+            id = request.args["id"], teamname = request.args["teamname"],
+            p1 = p1, a1 = a1, m01 = m01, m11 = m11, m21 = m21, m31 = m31,
+            g1 = g1, h1 = h1, hp1 = hp1, atk1 = atk1, def1 = def1, spa1 = spa1, spd1 = spd1, spe1 = spe1,
+            p2 = p2, a2 = a2, m02 = m02, m12 = m12, m22 = m22, m32 = m32,
+            g2 = g2, h2 = h2, hp2 = hp2, atk2 = atk2, def2 = def2, spa2 = spa2, spd2 = spd2, spe2 = spe2,
+            p3 = p3, a3 = a3, m03 = m03, m13 = m13, m23 = m23, m33 = m33,
+            g3 = g3, h3 = h3, hp3 = hp3, atk3 = atk3, def3 = def3, spa3 = spa3, spd3 = spd3, spe3 = spe3,
+            p4 = p4, a4 = a4, m04 = m04, m14 = m14, m24 = m24, m34 = m34,
+            g4 = g4, h4 = h4, hp4 = hp4, atk4 = atk4, def4 = def4, spa4 = spa4, spd4 = spd4, spe4 = spe4,
+            p5 = p5, a5 = a5, m05 = m05, m15 = m15, m25 = m25, m35 = m35,
+            g5 = g5, h5 = h5, hp5 = hp5, atk5 = atk5, def5 = def5, spa5 = spa5, spd5 = spd5, spe5 = spe5,
+            p6 = p6, a6 = a6, m06 = m06, m16 = m16, m26 = m26, m36 = m36,
+            g6 = g6, h6 = h6, hp6 = hp6, atk6 = atk6, def6 = def6, spa6 = spa6, spd6 = spd6, spe6 = spe6,
+            )
         return render_template("teambuilder.html", mons = mons, moves = moves)
 
 if __name__ == "__main__":

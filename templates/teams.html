@@ -10,6 +10,7 @@
     top:50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
+    width:33%;
   }
   .form-control {
     width: 200px;
@@ -38,12 +39,48 @@
 <h3>{{ msg }}</h3>
 {% endif %}
 
-<center>
-  <form class="container" action="/teambuilder" method="GET">
+<div class="container" style="text-align:center;">
+  <form action="/teambuilder" method="GET">
   	<button class="btn btn-success" type="+"> &#8853; New Team</button>
   </form>
   <br><br><br>
-</center>
+  {% for x in t %}
+  <div class="row">
+    <div class="col" style="text-align:center;">
+  <form action="/teambuilder" method="GET">
+    <input type="hidden" name="id" value="{{x[0]}}">
+    <input type="hidden" name="teamname" value="{{x[1]}}">
+  {% for y in x[2:] %}
+    <input type="hidden" name="p{{loop.index}}" value="{{y[0]}}">
+    <input type="hidden" name="a{{loop.index}}" value="{{y[1]}}">
+    <input type="hidden" name="m0{{loop.index}}" value="{{y[2]}}">
+    <input type="hidden" name="m1{{loop.index}}" value="{{y[3]}}">
+    <input type="hidden" name="m2{{loop.index}}" value="{{y[4]}}">
+    <input type="hidden" name="m3{{loop.index}}" value="{{y[5]}}">
+    <input type="hidden" name="g{{loop.index}}" value="{{y[6]}}">
+    <input type="hidden" name="h{{loop.index}}" value="{{y[7]}}">
+    <input type="hidden" name="hp{{loop.index}}" value="{{y[8]}}">
+    <input type="hidden" name="atk{{loop.index}}" value="{{y[9]}}">
+    <input type="hidden" name="def{{loop.index}}" value="{{y[10]}}">
+    <input type="hidden" name="spa{{loop.index}}" value="{{y[11]}}">
+    <input type="hidden" name="spd{{loop.index}}" value="{{y[12]}}">
+    <input type="hidden" name="spe{{loop.index}}" value="{{y[13]}}">
+  {% endfor %}
+  <button class="btn btn-primary" type="+">{{x[1]}}</button> <br> <br>
+  </form>
+</div>
+<div class="col" style="text-align:center;">
+<form action="/teamProcess" method="GET">
+  <input type="hidden" name="rid" value="{{x[0]}}">
+  <button class="btn btn-danger" type="+">Remove</button>
+</form>
+</div>
+
+</div>
+  {% endfor %}
+
+
+</div>
 
 {% for message in get_flashed_messages() %}
 <br><br>
