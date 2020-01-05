@@ -363,6 +363,63 @@ EVs: {}/{}/{}/{}/{}/{}
         c.execute("INSERT INTO TEAMS VALUES(?,?,?);",(None, session["user"], team))
     return redirect(url_for('teams'))
 
+@app.route("/chooseteam")
+def chooseteam():
+    with sqlite3.connect(DB_FILE) as connection:
+        c = connection.cursor()
+        teams = c.execute("SELECT * FROM TEAMS WHERE username = (?)", (session["user"],)).fetchall()
+        info = []
+        for i in teams:
+            init = []
+            id = i[0]
+            init.append(id)
+            list = i[2].split("\n")
+            x = 1
+            teamname = list[0]
+            init.append(teamname)
+            while (x < len(list)):
+                temp = []
+                pokemon = list[x].split("(")[0]
+                ability = list[x+1].split("Ability: ")[1]
+                move0 = list[x+4][2:]
+                move1 = list[x+5][2:]
+                move2 = list[x+6][2:]
+                move3 = list[x+7][2:]
+                gender = list[x].split("(")[1][0:-1]
+                happiness = int(list[x+2].split("Happiness: ")[1])
+                EVs = list[x+3].split("EVs: ")[1].split("/")
+                points0 = int(EVs[0])
+                points1 = int(EVs[1])
+                points2 = int(EVs[2])
+                points3 = int(EVs[3])
+                points4 = int(EVs[4])
+                points5 = int(EVs[5])
+                temp.append(pokemon)
+                temp.append(ability)
+                temp.append(move0)
+                temp.append(move1)
+                temp.append(move2)
+                temp.append(move3)
+                temp.append(gender)
+                temp.append(happiness)
+                temp.append(points0)
+                temp.append(points1)
+                temp.append(points2)
+                temp.append(points3)
+                temp.append(points4)
+                temp.append(points5)
+                init.append(temp)
+                x += 8
+            info.append(init)
+            info.reverse()
+            return render_template("chooseteam.html", t = info)
+
+@app.route("/battle")
+def battle():
+    with sqlite3.connect(DB_FILE) as connection:
+        c = connection.cursor()
+        return render_template("battle.html")
+
 @app.route("/teambuilder")
 def teambuilder():
     with sqlite3.connect(DB_FILE) as connection:
