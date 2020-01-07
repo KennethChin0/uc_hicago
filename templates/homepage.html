@@ -19,18 +19,18 @@
 
 {% block body %}
 <a href="{{ url_for('root') }}" class="nav-link" style="color: black; padding: 0px;">
-<div class="jumbotron text-center" style="background-color: #aed6f1; border-radius: 0; margin-top:-16px;">
-  <h1>Pokemon Showdown!</h1>
+<div class="jumbotron text-center" style="background-color: transparent; border-radius: 0; margin-top:-16px; opacity: 0.7;">
+  <h1 style ="color: white; font-size: 100px;">Pokemon Showdown!</h1>
 </div>
 </a>
 
 {% if sessionstatus %}
 <form class="active-cyan-3 active-cyan-4" action="/chooseteam" style="text-align: center; margin-bottom: 50px;">
-  <button class="btn btn-primary" type="submit">Battle</button>
+  <button class="btn btn-info" type="submit">Battle</button>
 </form>
 
 <form class="active-cyan-3 active-cyan-4" action="/teams" style="text-align: center; margin-bottom: 50px;">
-  <button class="btn btn-primary" type="submit">Teambuilder</button>
+  <button class="btn btn-info" type="submit">Teambuilder</button>
 </form>
 
 {% for message in get_flashed_messages() %}
@@ -43,7 +43,7 @@
 
 {% else %}
 <center>
-<a href="{{ url_for('login') }}"><button type="button" class="btn btn-success">Log In</button></a>
+<a href="{{ url_for('login') }}"><button type="button" class="btn btn-info">Log In</button></a>
 <br><br>
 <p>Don't have an account? <a href="{{ url_for('register') }}">Register here.</a></p>
 </center>

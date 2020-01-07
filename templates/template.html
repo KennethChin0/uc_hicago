@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <style>
+    .bg {
+      background-image: url("http://wallpaperheart.com/wp-content/uploads/2018/04/cool-pokemon-wallpapers-3.jpg");
+      height: 100%;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      /* background-size: cover;
+      background-origin: content-box; */
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      background-size: cover;
+      /* opacity: 0.2; */
+    }
+
+</style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -13,28 +28,24 @@
     {% block head %} {% endblock %}
     {% block css %} {% endblock %}
   </head>
-  <body style="font-family: 'Helvetica', 'Arial', sans-serif;">
+  <body class = "bg" style="font-family: 'Helvetica', 'Arial', sans-serif;">
+      <br><br><br>
 
-
-    <br><br><br>
     {% block body %}
     {% endblock %}
-    <footer style="position: absolute; bottom: 0; padding: 5px; margin-top: 0; width: 100%; background: rgba(0, 0, 0, 0.75); color: white; text-align: center; border-top: solid; border-color:lightgray; border-width: 5px;">
+    <footer style="position: absolute; bottom: 0; padding: 5px; margin-top: 0; width: 100%; background: #00171F; color: white; text-align: center; border-top: solid; border-color: black; border-width: 2px;">
        &copy Team UC Hicago - Brandon Chen, Kenneth Chin, Calvin Chu, <br> "Did you apply to UC Hicago?"
     </footer>
-    <nav class="navbar navbar-expand navbar-light" style="background-color: #5dade2; position:fixed; right:0;width: 100%; top:0;">
+    <nav class="navbar navbar-expand navbar-light" style="background-color: #095256; position:fixed; right:0;width: 100%; top:0;">
       {% if sessionstatus %}
       <p class="nav navbar-nav" style="float:left;"></p>
       {% endif %}
-      <a href=" {{ url_for('root') }}"><h6 style="margin-top:6px; font-family: Carter One; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; color: black;">Showdown Factory</h6></a>
-      <ul class="nav navbar-nav ml-auto" style="">
+      <a href=" {{ url_for('root') }}"><img src = "https://www.pngarts.com/files/4/Pokeball-PNG-Image-Transparent-Background.png" style="width:42px;height:42px;"></a>
+      <ul class="nav navbar-nav ml-auto">
 
           {% block buttons %}
           {% endblock %}
         </ul>
-      </div>
     </nav>
-
   </body>
-
 </html>
