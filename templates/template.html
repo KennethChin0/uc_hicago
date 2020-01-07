@@ -10,9 +10,15 @@
       /* background-size: cover;
       background-origin: content-box; */
       background-attachment: fixed;
-      background-position: 50% 50%;
+      background-position: 50% 10%;
       background-size: cover;
+      background-color: rgba(238, 238, 238, 0.81) !important;
+      background-blend-mode: color;
+      /* height: 20%; */
       /* opacity: 0.2; */
+    }
+    .bg background{
+      opacity: 0;
     }
 
 </style>
@@ -33,8 +39,8 @@
 
     {% block body %}
     {% endblock %}
-    <footer style="position: absolute; bottom: 0; padding: 5px; margin-top: 0; width: 100%; background: #00171F; color: white; text-align: center; border-top: solid; border-color: black; border-width: 2px;">
-       &copy Team UC Hicago - Brandon Chen, Kenneth Chin, Calvin Chu, <br> "Did you apply to UC Hicago?"
+    <footer style="position: absolute; bottom: 0; padding: 5px; margin-top: 0;  width: 100%; background: #00171F; color: white; text-align: center; border-top: solid; border-color: black; border-width: 2px;">
+      "Did you apply to UC Hicago?"        &copy Team UC Hicago - Brandon Chen, Kenneth Chin, Calvin Chu
     </footer>
     <nav class="navbar navbar-expand navbar-light" style="background-color: #095256; position:fixed; right:0;width: 100%; top:0;">
       {% if sessionstatus %}
