@@ -1,3 +1,10 @@
+hicago -- Kenneth Chin(PM), Brandon Chen, Calvin Chu
+SoftDev1 pd9
+P #02 — The End
+
+KennethC-- 2019-12-29 22:50
+Initialized repo, linked submodule
+
 BrandonC -- 2019-1-5
 Created sitemap for design doc
 
@@ -6,3 +13,11 @@ Added a route and button to choose team to battle. Able to select team but battl
 
 BrandonC -- 2019-1-7
 Edited sitemap for design doc to fix minor detail that could lead to confusion. Added new background picture.
+
+all -- 2020-01-07 10:00
+Updated design doc (revision 0) 
+    - Design doc revisions:
+        -clarified arrows in design doc
+        -added routes to the component map
+        -clarified roles and responsibilities
+        -specified details of the project (our vision)
