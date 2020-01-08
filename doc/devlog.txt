@@ -12,7 +12,7 @@ BrandonC -- 2020-1-6
 Added a route and button to choose team to battle. Able to select team but battle is empty. All info are brought over though.
 
 BrandonC -- 2020-1-7
-Edited sitemap for design doc to fix minor detail that could lead to confusion. Added new background picture.
+Edited sitemap for design doc to fix minor detail that could lead to confusion. Added new background picture. Drew flag.
 
 all -- 2020-01-07 10:00
 Updated design doc (revision 0) 
