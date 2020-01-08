@@ -3,7 +3,7 @@
   <head>
     <style>
     .bg {
-      background-image: url("https://i.pinimg.com/564x/03/41/f3/0341f31ee7876772293af367fcb6e6a3.jpg");
+      background-image: url("static/images/background.jpg");
       height: 100%;
       width: auto;
       background-position: center bottom;
@@ -43,7 +43,7 @@
       {% if sessionstatus %}
       <p class="nav navbar-nav" style="float:left;"></p>
       {% endif %}
-      <a href=" {{ url_for('root') }}"><img src = "https://www.pngarts.com/files/4/Pokeball-PNG-Image-Transparent-Background.png" style="width:42px;height:42px;"></a>
+      <a href=" {{ url_for('root') }}"><img src = "static/images/pokeball.png" style="width:42px;height:42px;"></a>
       <ul class="nav navbar-nav ml-auto">
 
           {% block buttons %}
