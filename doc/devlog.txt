@@ -1,1 +1,8 @@
+BrandonC -- 2019-1-5
+Created sitemap for design doc
 
+BrandonC -- 2019-1-6
+Added a route and button to choose team to battle. Able to select team but battle is empty. All info are brought over though.
+
+BrandonC -- 2019-1-7
+Edited sitemap for design doc to fix minor detail that could lead to confusion. Added new background picture.
