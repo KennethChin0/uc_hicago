@@ -412,7 +412,11 @@ def chooseteam():
                 x += 8
             info.append(init)
             info.reverse()
-            return render_template("chooseteam.html", t = info)
+            bot_teams = []
+            temp = c.execute("SELECT * FROM BOT_TEAMS;").fetchall()
+            for x in temp:
+                bot_teams.append(x[1])
+            return render_template("chooseteam.html", t = info, b = bot_teams)
 
 @app.route("/battle")
 def battle():

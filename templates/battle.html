@@ -1,12 +1,73 @@
 {% extends "template.html" %}
+{% block css %}
+<style>
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px
+  }
+#canvas {
+  position:relative;
+  width:35%;
+  display:inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align:center;
+}
+#dummy{
+  padding-top: 75%;
+}
+#element {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border:solid 5px;
+  color:black;
+  background-image: url('https://play.pokemonshowdown.com/fx/bg-mountain.png');
+  background-size: 100% 100%;
+}
+</style>
+{% endblock %}
+
 {% block buttons %}
 
 <li class="nav-item">
   <a href="{{ url_for('root') }}" class="nav-link">Home</a>
 </li>
 
+
 {% endblock %}
 
 {% block body %}
+<div id="canvas">
+<div id="dummy"></div>
+<div id="element">
+</div>
+</div>
+
+<ul id="mons">
+{% for x in mons %}
+<li style="display:none;" id="{{x[1]}}">{{x[1]}}</li>
+{% endfor %}
+</ul>
+
+<ul id="moves">
+  {% for x in moves %}
+  <li style="display:none;" id="{{x[1]}}">{{x[1]}};{{x[2]}};{{x[3]}};{{x[4]}};{{x[5]}};{{x[6]}};{{x[7]}};{{x[8]}};{{x[9]}};{{x[10]}};{{x[11]}};{{x[12]}};{{x[13]}};{{x[14]}};{{x[15]}};{{x[16]}};{{x[17]}};{{x[18]}};{{x[19]}};{{x[20]}};{{x[21]}}</li>
+  {% endfor %}
+</ul>
+
+<ul id="myTeam">
+  <li style="display:none;" id="0">{{p1}},{{a1}},{{m01}},{{m11}},{{m21}},{{m31}},{{g1}},{{h1}},{{hp1}},{{atk1}},{{def1}},{{spa1}},{{spd1}},{{spe1}}</li>
+  <li style="display:none;" id="1">{{p2}},{{a2}},{{m02}},{{m12}},{{m22}},{{m32}},{{g2}},{{h2}},{{hp2}},{{atk2}},{{def2}},{{spa2}},{{spd2}},{{spe2}}</li>
+  <li style="display:none;" id="2">{{p3}},{{a3}},{{m03}},{{m13}},{{m23}},{{m33}},{{g3}},{{h3}},{{hp3}},{{atk3}},{{def3}},{{spa3}},{{spd3}},{{spe3}}</li>
+  <li style="display:none;" id="3">{{p4}},{{a4}},{{m04}},{{m14}},{{m24}},{{m34}},{{g4}},{{h4}},{{hp4}},{{atk4}},{{def4}},{{spa4}},{{spd4}},{{spe4}}</li>
+  <li style="display:none;" id="4">{{p5}},{{a5}},{{m05}},{{m15}},{{m25}},{{m35}},{{g5}},{{h5}},{{hp5}},{{atk5}},{{def5}},{{spa5}},{{spd5}},{{spe5}}</li>
+  <li style="display:none;" id="5">{{p6}},{{a6}},{{m06}},{{m16}},{{m26}},{{m36}},{{g6}},{{h6}},{{hp6}},{{atk6}},{{def6}},{{spa6}},{{spd6}},{{spe6}}</li>
+</ul>
 
 {% endblock %}
