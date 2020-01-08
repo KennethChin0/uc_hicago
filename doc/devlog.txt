@@ -6,11 +6,45 @@ chinK -- 2019-12-29 22:50
 Initialized repo, linked submodule
 
 chuC --2019-1-1 18:35
-Created app.py
-Made teambuilder
+Created app.py, set up all the databases and preliminary routes, successfully pulled from PokeAPI, added HTML files
+Started work on teambuilder:
+    - form layout
+    - Pokemon autocomplete
+    - update sprite on Pokemon input
+    - update abilities on Pokemon input
+
+chuC --2019-1-2 19:07
+Continued work on teambuilder:
+    - added the stats form panel and its functionality
+        - updates base stats on Pokemon input
+        - updates real (calculated) stats on EV inputs
+        - updates the number of remaining points to be used on EV inputs
+        
+chuC --2019-1-3 15:44
+Continued work on teambuilder:
+    - tweaked layout / format
+    - minor bug fixes with replacing %effect_chance
+Updated database to pull accuracy information for moves
+
+chuC --2019-1-4 17:38
+Created a new table in database to store viable Pokemon movesets to be used by the bot
+    - Found sources online for the teams, downloaded them as files, created a simple parsing/reading/writing program to extract the 
+      movesets into Bot_Movesets.txt (found in static directory; sources linked at end of file)
+Continued work on teambuilder:
+    - tweaked layout / format
+    
+chuC --2019-1-5 20:12
+implemented team saving to DB, displaying teamnames on teams page (on buttons), editting + removing teams
+ran some tests on the editting features (get dem bugs)
+Finalized teambuilder:
+    - Editting will put values from the saved teams into the appropriate fields
 
 chenB -- 2020-1-5 20:35
 Created sitemap for design doc
+
+chuC --2019-1-6 21:35
+Finalized teambuilder:
+    - Fixed a bug that thew an error (caught by chenB - Gotta catch 'em all!)
 
 chenB -- 2020-1-6 23:22
 Added a route and button to choose team to battle. Able to select team but battle is empty. All info are brought over though.
