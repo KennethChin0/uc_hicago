@@ -1,5 +1,4 @@
-# Showdown Factory
-# by hicago
+# Showdown Factory  by hicago
 Roster: Kenneth Chin(PM), Brandon Chen, Calvin Chu
 
 ## Website purpose:
