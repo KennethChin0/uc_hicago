@@ -416,7 +416,25 @@ def chooseteam():
             temp = c.execute("SELECT * FROM BOT_TEAMS;").fetchall()
             for x in temp:
                 bot_teams.append(x[1])
-            return render_template("chooseteam.html", t = info, b = bot_teams)
+            mons = c.execute("SELECT * FROM POKEMON;").fetchall()
+            moves = c.execute("SELECT * FROM MOVES;").fetchall()
+            gen = generateTeam()
+            return render_template("chooseteam.html", t = info, b = bot_teams, mons = mons, moves = moves, gen = gen)
+
+def generateTeam():
+    with sqlite3.connect(DB_FILE) as connection:
+        c = connection.cursor()
+        gen = []
+        info = []
+        g = c.execute("SELECT * FROM BOT_TEAMS;").fetchall()
+        for x in range(6):
+            p = random.choice(g)
+            while p in gen:
+                p = random.choice(g)
+            gen.append(p)
+        for i in gen:
+            list = i[1].split("\n")
+        return gen
 
 @app.route("/battle")
 def battle():

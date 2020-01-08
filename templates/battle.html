@@ -15,6 +15,7 @@
   left: 50%;
   transform: translateX(-50%);
   text-align:center;
+  margin-bottom:.5%;
 }
 #dummy{
   padding-top: 75%;
@@ -30,6 +31,27 @@
   background-image: url('https://play.pokemonshowdown.com/fx/bg-mountain.png');
   background-size: 100% 100%;
 }
+.buttons {
+  height:25%;
+  position: relative;
+}
+.moves {
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align:center;
+  width:35%;
+  height:25%;
+}
+.team {
+  position:absolute;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  text-align:center;
+  width:50%;
+  height:25%;
+}
+
 </style>
 {% endblock %}
 
@@ -48,7 +70,22 @@
 <div id="element">
 </div>
 </div>
-
+<div class="buttons">
+  <div class="moves">
+<button type="button" class="btn btn-light" id="m0" style="width:24%; height:100%; padding:0;">Light</button>
+<button type="button" class="btn btn-light" id="m1" style="width:24%; height:100%; padding:0;">Light</button>
+<button type="button" class="btn btn-light" id="m2" style="width:24%; height:100%; padding:0;">Light</button>
+<button type="button" class="btn btn-light" id="m3" style="width:24%; height:100%; padding:0;">Light</button>
+</div>
+<div class="team">
+  <button type="button" class="btn btn-light" id="one" style="width:16%; height:75%; padding:0; font-size:12px;">Light</button>
+  <button type="button" class="btn btn-light" id="two" style="width:16%; height:75%; padding:0; font-size:12px;">Light</button>
+  <button type="button" class="btn btn-light" id="tre" style="width:16%; height:75%; padding:0; font-size:12px;">Light</button>
+  <button type="button" class="btn btn-light" id="for" style="width:16%; height:75%; padding:0; font-size:12px;">Light</button>
+  <button type="button" class="btn btn-light" id="fiv" style="width:16%; height:75%; padding:0; font-size:12px;">Light</button>
+  <button type="button" class="btn btn-light" id="six" style="width:16%; height:75%; padding:0; font-size:12px;">Light</button>
+  </div>
+</div>
 <ul id="mons">
 {% for x in mons %}
 <li style="display:none;" id="{{x[1]}}">{{x[1]}}</li>
@@ -68,6 +105,15 @@
   <li style="display:none;" id="3">{{p4}},{{a4}},{{m04}},{{m14}},{{m24}},{{m34}},{{g4}},{{h4}},{{hp4}},{{atk4}},{{def4}},{{spa4}},{{spd4}},{{spe4}}</li>
   <li style="display:none;" id="4">{{p5}},{{a5}},{{m05}},{{m15}},{{m25}},{{m35}},{{g5}},{{h5}},{{hp5}},{{atk5}},{{def5}},{{spa5}},{{spd5}},{{spe5}}</li>
   <li style="display:none;" id="5">{{p6}},{{a6}},{{m06}},{{m16}},{{m26}},{{m36}},{{g6}},{{h6}},{{hp6}},{{atk6}},{{def6}},{{spa6}},{{spd6}},{{spe6}}</li>
+</ul>
+
+<ul id="enemyTeam">
+  <li style="display:none;" id="6">{{p1}},{{a1}},{{m01}},{{m11}},{{m21}},{{m31}},{{g1}},{{h1}},{{hp1}},{{atk1}},{{def1}},{{spa1}},{{spd1}},{{spe1}}</li>
+  <li style="display:none;" id="7">{{p2}},{{a2}},{{m02}},{{m12}},{{m22}},{{m32}},{{g2}},{{h2}},{{hp2}},{{atk2}},{{def2}},{{spa2}},{{spd2}},{{spe2}}</li>
+  <li style="display:none;" id="8">{{p3}},{{a3}},{{m03}},{{m13}},{{m23}},{{m33}},{{g3}},{{h3}},{{hp3}},{{atk3}},{{def3}},{{spa3}},{{spd3}},{{spe3}}</li>
+  <li style="display:none;" id="9">{{p4}},{{a4}},{{m04}},{{m14}},{{m24}},{{m34}},{{g4}},{{h4}},{{hp4}},{{atk4}},{{def4}},{{spa4}},{{spd4}},{{spe4}}</li>
+  <li style="display:none;" id="10">{{p5}},{{a5}},{{m05}},{{m15}},{{m25}},{{m35}},{{g5}},{{h5}},{{hp5}},{{atk5}},{{def5}},{{spa5}},{{spd5}},{{spe5}}</li>
+  <li style="display:none;" id="11">{{p6}},{{a6}},{{m06}},{{m16}},{{m26}},{{m36}},{{g6}},{{h6}},{{hp6}},{{atk6}},{{def6}},{{spa6}},{{spd6}},{{spe6}}</li>
 </ul>
 
 {% endblock %}
