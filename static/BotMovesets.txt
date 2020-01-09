@@ -1490,7 +1490,7 @@ Ability: Intimidate
 -Bulk Up
 
 Qwilfish
-Adamant Nature
+Ability: Swift Swim
 -Waterfall/Aqua Tail
 -Poison Jab
 -Explosion
@@ -3604,7 +3604,7 @@ Ability: Insomnia
 -Superpower
 
 Honhkrow
-Lonely/Hasty Nature
+Ability: Insomnia
 -Sucker Punch
 -Drill Peck
 -Superpower
@@ -3793,7 +3793,7 @@ Ability: Levitate
 -Swords Dance
 
 Lumineon
-Modest Nature
+Ability: Storm Drain
 -Surf
 -Ice Beam
 -Rain Dance
@@ -5288,7 +5288,7 @@ Ability: Snow Cloak
 - Hail
 - Blizzard
 - Brick Break / Return
-- Icicle Drop
+- Icicle Crash
 
 Cryogonal
 Ability: Levitate
