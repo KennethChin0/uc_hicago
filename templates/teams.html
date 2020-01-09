@@ -9,8 +9,11 @@
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
-    background-color: transparent;
-    width:33%;
+    background-color: #fdfbfb;
+    opacity: .9;
+    width:50%;
+    padding: 20px;
+    border-radius: 25px;
   }
   .form-control {
     width: 200px;
@@ -40,13 +43,17 @@
 {% endif %}
 
 <div class="container" style="text-align:center;">
+  <div class = "row">
+    <div class="col">
   <form action="/teambuilder" method="GET">
-  	<button class="btn btn-success" type="+"> &#8853; New Team</button>
+  	<button class="btn btn-outline-success btn-rounded waves-effect btn-block" type="+"> &#8853; New Team</button>
   </form>
-  <br><br><br>
+</div>
+</div>
+  <br><br>
   {% for x in t %}
   <div class="row">
-    <div class="col" style="text-align:center;">
+    <div class="col-10" style="text-align:center;">
   <form action="/teambuilder" method="GET">
     <input type="hidden" name="id" value="{{x[0]}}">
     <input type="hidden" name="teamname" value="{{x[1]}}">
@@ -66,13 +73,13 @@
     <input type="hidden" name="spd{{loop.index}}" value="{{y[12]}}">
     <input type="hidden" name="spe{{loop.index}}" value="{{y[13]}}">
   {% endfor %}
-  <button class="btn btn-primary" type="+">{{x[1]}}</button> <br> <br>
+  <button class="btn btn-outline-primary btn-rounded waves-effect btn-block" type="+">{{x[1]}}</button> <br> <br>
   </form>
 </div>
 <div class="col" style="text-align:center;">
 <form action="/teamProcess" method="GET">
   <input type="hidden" name="rid" value="{{x[0]}}">
-  <button class="btn btn-info" type="+">Remove</button>
+  <button class="btn btn-outline-danger btn-rounded waves-effect btn-block" type="+">Remove</button>
 </form>
 </div>
 

@@ -25,14 +25,20 @@
 </a>
 
 {% if sessionstatus %}
-<div class="buttons" style="height:100%">
+<div class="container">
+<div class="buttons" style="height:1000px;  ">
+<div class="row">
+  <div class="col-sm">
 <form class="active-cyan-3 active-cyan-4" action="/chooseteam" style="text-align: center; margin-bottom: 50px;">
-  <button class="btn btn-info" type="submit">Battle</button>
+  <button class="btn btn-outline-secondary btn-rounded waves-effect btn-block" type="submit">Battle</button>
 </form>
-
+</div>
+<div class="col-sm">
 <form class="active-cyan-3 active-cyan-4" action="/teams" style="text-align: center; margin-bottom: 50px;">
-  <button class="btn btn-info" type="submit">Teambuilder</button>
+  <button class="btn btn-outline-primary btn-rounded waves-effect btn-block" type="submit">Teambuilder</button>
 </form>
+</div>
+</div>
 </div>
 
 {% for message in get_flashed_messages() %}
