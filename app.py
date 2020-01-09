@@ -4,6 +4,7 @@
 # 12/22/2019
 
 from flask import Flask, render_template, request, session, redirect, url_for, redirect
+import random
 import sqlite3
 import os
 from flask import flash
@@ -418,10 +419,11 @@ def chooseteam():
                 bot_teams.append(x[1])
             mons = c.execute("SELECT * FROM POKEMON;").fetchall()
             moves = c.execute("SELECT * FROM MOVES;").fetchall()
-            gen = generateTeam()
+            gen = generateTeam(84)
+            print(gen)
             return render_template("chooseteam.html", t = info, b = bot_teams, mons = mons, moves = moves, gen = gen)
 
-def generateTeam():
+def generateTeam(w):
     with sqlite3.connect(DB_FILE) as connection:
         c = connection.cursor()
         gen = []
@@ -431,10 +433,41 @@ def generateTeam():
             p = random.choice(g)
             while p in gen:
                 p = random.choice(g)
-            gen.append(p)
+            gen.append(p[1])
         for i in gen:
-            list = i[1].split("\n")
-        return gen
+            temp = []
+            list = i.split("\n")
+            pokemon = list[0]
+            ability = random.choice(list[1].split("Ability: ")[1].strip().split("/")).strip()
+            move0 = random.choice(list[2].split("-")[1].strip().split("/")).strip()
+            move1 = random.choice(list[3].split("-")[1].strip().split("/")).strip()
+            move2 = random.choice(list[4].split("-")[1].strip().split("/")).strip()
+            move3 = random.choice(list[5].split("-")[1].strip().split("/")).strip()
+            gender = random.choice(["male", "female"])
+            happiness = 255
+            points0 = w
+            points1 = w
+            points2 = w
+            points3 = w
+            points4 = w
+            points5 = w
+            temp.append(pokemon)
+            temp.append(ability)
+            temp.append(move0)
+            temp.append(move1)
+            temp.append(move2)
+            temp.append(move3)
+            temp.append(gender)
+            temp.append(happiness)
+            temp.append(points0)
+            temp.append(points1)
+            temp.append(points2)
+            temp.append(points3)
+            temp.append(points4)
+            temp.append(points5)
+            info.append(temp)
+        info.reverse()
+        return info
 
 @app.route("/battle")
 def battle():
