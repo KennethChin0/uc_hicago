@@ -415,6 +415,41 @@ def chooseteam():
             info.reverse()
         return render_template("chooseteam.html", t = info)
 
+def parsePokemonName(content):
+    allpokemons = []
+    list1 = content.split("\n")
+    temp1 = list1[1]
+    temp10 = temp1.split("(")
+    allpokemons.append(temp10[0])
+    #allpokemons[0] = temp10[0]
+
+    temp2 = list1[9]
+    temp20 = temp2.split("(")
+    allpokemons.append(temp20[0])
+    #allpokemons[1] = temp20[0]
+
+    temp3 = list1[17]
+    temp30 = temp3.split("(")
+    allpokemons.append(temp30[0])
+    #allpokemons[2] = temp30[0]
+
+    temp4 = list1[25]
+    temp40 = temp4.split("(")
+    allpokemons.append(temp40[0])
+    #allpokemons[3] = temp40[0]
+
+    temp5 = list1[33]
+    temp50 = temp5.split("(")
+    allpokemons.append(temp50[0])
+    #allpokemons[4] = temp50[0]
+
+    temp6 = list1[41]
+    temp60 = temp6.split("(")
+    allpokemons.append(temp60[0])
+    #allpokemons[5] = temp60[0]
+
+    return allpokemons
+
 @app.route("/battle")
 def battle():
     with sqlite3.connect(DB_FILE) as connection:
@@ -427,6 +462,17 @@ def battle():
         moves = c.execute("SELECT * FROM MOVES;").fetchall()
         gen = generateTeam(84)
         id = c.execute("SELECT * FROM TEAMS WHERE username = (?) AND id = (?);", (session['user'], request.args['id'])).fetchall()
+
+        #print("===============================")
+        pokemonpics = c.execute("SELECT CONTENT FROM TEAMS WHERE username = (?) AND id = (?);", (session['user'], request.args['id'])).fetchall()
+        #print("Content is \n")
+        #print(pokemonpics)
+        #print("\n\n")
+        #print("POKEMONS:")
+        allPokemonNames = parsePokemonName(pokemonpics[0][0])
+        #print(parsePokemonName(pokemonpics[0][0]))
+        #print("===============================")
+
         # REMINDER TO PRINT ERROR MESSAGE IF NO MATCHES AND REDIRECT APPROPRIATELY
         info = []
         list = id[0][2].split("\n")
