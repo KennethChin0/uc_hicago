@@ -18,7 +18,7 @@ Python3 and pip is required to run the project
 `$ ./<name>/bin/activate`
 
 ### Clone the project and install requirments.txt:
-`$ git clone git@github.com:KennethChin0/uc_hicago.git`  
+`$ git clone https://github.com/KennethChin0/uc_hicago.git`  
 After activating the virutal environment:  
 `(venv)$ cd uc_hicago`    
 `(venv)$ pip3 install -r doc/requirements.txt`  
