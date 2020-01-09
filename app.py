@@ -421,7 +421,7 @@ def chooseteam():
             moves = c.execute("SELECT * FROM MOVES;").fetchall()
             gen = generateTeam(84)
             print(gen)
-            return render_template("chooseteam.html", t = info, b = bot_teams, mons = mons, moves = moves, gen = gen)
+        return render_template("chooseteam.html", t = info, b = bot_teams, mons = mons, moves = moves, gen = gen)
 
 def generateTeam(w):
     with sqlite3.connect(DB_FILE) as connection:
