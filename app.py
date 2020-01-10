@@ -507,6 +507,58 @@ def battle():
         tempo12 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[1],)).fetchall()
         p2spe = tempo12[0][0]
 
+        tempo13 = c.execute("SELECT hp FROM POKEMON WHERE name = (?)", (allPokemonNames[2],)).fetchall()
+        p3hp = tempo13[0][0]
+        tempo14 = c.execute("SELECT atk FROM POKEMON WHERE name = (?)", (allPokemonNames[2],)).fetchall()
+        p3atk = tempo14[0][0]
+        tempo15 = c.execute("SELECT def FROM POKEMON WHERE name = (?)", (allPokemonNames[2],)).fetchall()
+        p3def = tempo15[0][0]
+        tempo16 = c.execute("SELECT spa FROM POKEMON WHERE name = (?)", (allPokemonNames[2],)).fetchall()
+        p3spa = tempo16[0][0]
+        tempo17 = c.execute("SELECT spd FROM POKEMON WHERE name = (?)", (allPokemonNames[2],)).fetchall()
+        p3spd = tempo17[0][0]
+        tempo18 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[2],)).fetchall()
+        p3spe = tempo18[0][0]
+
+        tempo19 = c.execute("SELECT hp FROM POKEMON WHERE name = (?)", (allPokemonNames[3],)).fetchall()
+        p4hp = tempo19[0][0]
+        tempo20 = c.execute("SELECT atk FROM POKEMON WHERE name = (?)", (allPokemonNames[3],)).fetchall()
+        p4atk = tempo20[0][0]
+        tempo21 = c.execute("SELECT def FROM POKEMON WHERE name = (?)", (allPokemonNames[3],)).fetchall()
+        p4def = tempo21[0][0]
+        tempo22 = c.execute("SELECT spa FROM POKEMON WHERE name = (?)", (allPokemonNames[3],)).fetchall()
+        p4spa = tempo22[0][0]
+        tempo23 = c.execute("SELECT spd FROM POKEMON WHERE name = (?)", (allPokemonNames[3],)).fetchall()
+        p4spd = tempo23[0][0]
+        tempo24 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[3],)).fetchall()
+        p4spe = tempo24[0][0]
+
+        tempo25 = c.execute("SELECT hp FROM POKEMON WHERE name = (?)", (allPokemonNames[4],)).fetchall()
+        p5hp = tempo25[0][0]
+        tempo26 = c.execute("SELECT atk FROM POKEMON WHERE name = (?)", (allPokemonNames[4],)).fetchall()
+        p5atk = tempo26[0][0]
+        tempo27 = c.execute("SELECT def FROM POKEMON WHERE name = (?)", (allPokemonNames[4],)).fetchall()
+        p5def = tempo27[0][0]
+        tempo28 = c.execute("SELECT spa FROM POKEMON WHERE name = (?)", (allPokemonNames[4],)).fetchall()
+        p5spa = tempo28[0][0]
+        tempo29 = c.execute("SELECT spd FROM POKEMON WHERE name = (?)", (allPokemonNames[4],)).fetchall()
+        p5spd = tempo29[0][0]
+        tempo30 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[4],)).fetchall()
+        p5spe = tempo30[0][0]
+
+        tempo31 = c.execute("SELECT hp FROM POKEMON WHERE name = (?)", (allPokemonNames[5],)).fetchall()
+        p6hp = tempo31[0][0]
+        tempo32 = c.execute("SELECT atk FROM POKEMON WHERE name = (?)", (allPokemonNames[5],)).fetchall()
+        p6atk = tempo32[0][0]
+        tempo33 = c.execute("SELECT def FROM POKEMON WHERE name = (?)", (allPokemonNames[5],)).fetchall()
+        p6def = tempo33[0][0]
+        tempo34 = c.execute("SELECT spa FROM POKEMON WHERE name = (?)", (allPokemonNames[5],)).fetchall()
+        p6spa = tempo34[0][0]
+        tempo35 = c.execute("SELECT spd FROM POKEMON WHERE name = (?)", (allPokemonNames[5],)).fetchall()
+        p6spd = tempo35[0][0]
+        tempo36 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[5],)).fetchall()
+        p6spe = tempo36[0][0]
+
         #print(parsePokemonName(pokemonpics[0][0]))
         #print("===============================")
 
