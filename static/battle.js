@@ -166,12 +166,12 @@ var setup = function() {
   m2.innerText = p0.move3;
   m3.innerText = p0.move4;
   // one.className = "btn btn-light disabled";
-  one.innerText = p0.name;
-  two.innerText = p1.name;
-  tre.innerText = p2.name;
-  fou.innerText = p3.name;
-  fiv.innerText = p4.name;
-  six.innerText = p5.name;
+  //one.innerText = p0.name;
+  //two.innerText = p1.name;
+  //tre.innerText = p2.name;
+  //fou.innerText = p3.name;
+  //fiv.innerText = p4.name;
+  //six.innerText = p5.name;
 };
 
 setup();
