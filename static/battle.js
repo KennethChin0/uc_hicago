@@ -81,14 +81,13 @@ var enHealth = document.getElementById("enHealth");
 var p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, game;
 
 var getEnStats = function(e) {
-  for (var y = 0; y < mons.children.length; y++) {
-    var d = mons.children[y].textContent.split(",");
-    if (d[0].toLowerCase().localeCompare(e[0].toLowerCase()) == 0) {
-      tar.innerHTML = "<img src=\"/static/icons/" + d[1] + ".png\">" + "<img src=\"/static/icons/" + d[4] + ".png\">";
-      if (d[6] > 0) tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>Accuracy:</b> " + d[9] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[6]);
-      else if (d[7] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>Accuracy:</b> " + d[9] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[7]);
-      else if (d[8] > 0)tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] + " <b>Accuracy:</b> " + d[9] + " <b>PP:</b> " + d[3] + " | " + d[5].replace("$effect_chance", d[8]);
-      else tar.innerHTML = tar.innerHTML + " <b>Power:</b> " + d[2] +" <b>Accuracy:</b> " + d[9] +  " <b>PP:</b> " + d[3] + " | " + d[5];
+  var out = [];
+  for (var i = 0; i < list.childElementCount; i++) {
+    var monInfo = list.children[i].value.split(",");
+    if (list.children[i].value.localeCompare(e[0].substring(0, 1).toUpperCase() + e[0].substring(1, e[0].length).toLowerCase()) == 0) {
+      
+      var img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + (i + 1) + ".png";
+
       break;
     }
   }
