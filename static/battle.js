@@ -84,17 +84,34 @@ var getEnStats = function(e) {
   var out = [];
   for (var i = 0; i < list.childElementCount; i++) {
     var monInfo = list.children[i].value.split(",");
-    if (list.children[i].value.localeCompare(e[0].substring(0, 1).toUpperCase() + e[0].substring(1, e[0].length).toLowerCase()) == 0) {
-      
-      var img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + (i + 1) + ".png";
-
+    if (monInfo[0].localeCompare(e[0].substring(0, 1).toUpperCase() + e[0].substring(1, e[0].length).toLowerCase()) == 0) {
+      var f = monInfo[3];
+      var b = monInfo[4];
+      var type1 = monInfo[1];
+      var type2 = monInfo[2];
+      var b1 = monInfo[5];
+      var b2 = monInfo[6];
+      var b3 = monInfo[7];
+      var b4 = monInfo[8];
+      var b5 = monInfo[9];
+      var b6 = monInfo[10];
+      out.push(b1);
+      out.push(b2);
+      out.push(b3);
+      out.push(b4);
+      out.push(b5);
+      out.push(b6);
+      out.push(f);
+      out.push(b);
+      out.push(type1);
+      out.push(type2);
       break;
     }
   }
-  return ;
+  return out;
 };
 
-function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, spe, b1, b2, b3, b4, b5, b6, i, b) {
+function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, spe, b1, b2, b3, b4, b5, b6, i, b, type1, type2) {
   this.name = poke;
   this.ability = abil;
   this.move1 = m1;
