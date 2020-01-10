@@ -31,6 +31,25 @@
   background-image: url('https://play.pokemonshowdown.com/fx/bg-mountain.png');
   background-size: 100% 100%;
 }
+#myInfo {
+  position:absolute;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: light-gray;
+}
+#enInfo {
+  position:absolute;
+  width: 30%;
+  height: 10%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: light-gray;
+}
 .buttons {
   height:25%;
   position: relative;
@@ -65,9 +84,14 @@
 {% endblock %}
 
 {% block body %}
-<div id="canvas">
+<div id="canvas" style="position:relative;">
 <div id="dummy"></div>
-<div id="element">
+<div id="element"></div>
+<div id="myInfo">
+  <progress id="myHP" value="100" max="100" style="position:absolute; right:0; bottom: 0;"></progress>
+</div>
+<div id="enInfo">
+  <progress id="enHP" value="100" max="100" style="position:absolute;"></progress>
 </div>
 </div>
 <div class="buttons">
@@ -88,7 +112,7 @@
 </div>
 <ul id="mons">
 {% for x in mons %}
-<li style="display:none;" id="{{x[1]}}">{{x[1]}}</li>
+<li style="display:none;" id="{{x[1]}}">{{x[1]}},{{x[2]}},{{x[3]}},{{x[4]}},{{x[5]}},{{x[6]}},{{x[6]}},{{x[7]}},{{x[8]}},{{x[9]}},{{x[10]}},{{x[12]}}</li>
 {% endfor %}
 </ul>
 
