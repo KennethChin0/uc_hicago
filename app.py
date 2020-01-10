@@ -420,32 +420,32 @@ def parsePokemonName(content):
     list1 = content.split("\n")
     temp1 = list1[1]
     temp10 = temp1.split("(")
-    allpokemons.append(temp10[0])
+    allpokemons.append(temp10[0].capitalize())
     #allpokemons[0] = temp10[0]
 
     temp2 = list1[9]
     temp20 = temp2.split("(")
-    allpokemons.append(temp20[0])
+    allpokemons.append(temp20[0].capitalize())
     #allpokemons[1] = temp20[0]
 
     temp3 = list1[17]
     temp30 = temp3.split("(")
-    allpokemons.append(temp30[0])
+    allpokemons.append(temp30[0].capitalize())
     #allpokemons[2] = temp30[0]
 
     temp4 = list1[25]
     temp40 = temp4.split("(")
-    allpokemons.append(temp40[0])
+    allpokemons.append(temp40[0].capitalize())
     #allpokemons[3] = temp40[0]
 
     temp5 = list1[33]
     temp50 = temp5.split("(")
-    allpokemons.append(temp50[0])
+    allpokemons.append(temp50[0].capitalize())
     #allpokemons[4] = temp50[0]
 
     temp6 = list1[41]
     temp60 = temp6.split("(")
-    allpokemons.append(temp60[0])
+    allpokemons.append(temp60[0].capitalize())
     #allpokemons[5] = temp60[0]
 
     return allpokemons
@@ -493,6 +493,7 @@ def battle():
         p1spd = tempo5[0][0]
         tempo6 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[0],)).fetchall()
         p1spe = tempo6[0][0]
+        base1 = [p1hp, p1atk, p1def, p1spa, p1spd, p1spe]
 
         tempo7 = c.execute("SELECT hp FROM POKEMON WHERE name = (?)", (allPokemonNames[1],)).fetchall()
         p2hp = tempo7[0][0]
@@ -506,6 +507,7 @@ def battle():
         p2spd = tempo11[0][0]
         tempo12 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[1],)).fetchall()
         p2spe = tempo12[0][0]
+        base2 = [p2hp, p2atk, p2def, p2spa, p2spd, p2spe]
 
         tempo13 = c.execute("SELECT hp FROM POKEMON WHERE name = (?)", (allPokemonNames[2],)).fetchall()
         p3hp = tempo13[0][0]
@@ -519,6 +521,7 @@ def battle():
         p3spd = tempo17[0][0]
         tempo18 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[2],)).fetchall()
         p3spe = tempo18[0][0]
+        base3 = [p3hp, p3atk, p3def, p3spa, p3spd, p3spe]
 
         tempo19 = c.execute("SELECT hp FROM POKEMON WHERE name = (?)", (allPokemonNames[3],)).fetchall()
         p4hp = tempo19[0][0]
@@ -532,6 +535,7 @@ def battle():
         p4spd = tempo23[0][0]
         tempo24 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[3],)).fetchall()
         p4spe = tempo24[0][0]
+        base4 = [p4hp, p4atk, p4def, p4spa, p4spd, p4spe]
 
         tempo25 = c.execute("SELECT hp FROM POKEMON WHERE name = (?)", (allPokemonNames[4],)).fetchall()
         p5hp = tempo25[0][0]
@@ -545,6 +549,7 @@ def battle():
         p5spd = tempo29[0][0]
         tempo30 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[4],)).fetchall()
         p5spe = tempo30[0][0]
+        base5 = [p5hp, p5atk, p5def, p5spa, p5spd, p5spe]
 
         tempo31 = c.execute("SELECT hp FROM POKEMON WHERE name = (?)", (allPokemonNames[5],)).fetchall()
         p6hp = tempo31[0][0]
@@ -558,6 +563,7 @@ def battle():
         p6spd = tempo35[0][0]
         tempo36 = c.execute("SELECT spe FROM POKEMON WHERE name = (?)", (allPokemonNames[5],)).fetchall()
         p6spe = tempo36[0][0]
+        base6 = [p6hp, p6atk, p6def, p6spa, p6spd, p6spe]
 
         #print(parsePokemonName(pokemonpics[0][0]))
         #print("===============================")
@@ -600,7 +606,7 @@ def battle():
             info.append(temp)
             x += 8
         # print(gen)
-        return render_template("battle.html", b = bot_teams, mons = mons, moves = moves, gen = gen, team = info)
+        return render_template("battle.html", b = bot_teams, mons = mons, moves = moves, gen = gen, team = info, base1 = base1, base2 = base2, base3 = base3, base4 = base4, base5 = base5, base6 = base6, front = allFrontPics, back = allBackPics)
 
 def generateTeam(w):
     with sqlite3.connect(DB_FILE) as connection:

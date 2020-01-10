@@ -33,22 +33,35 @@
 }
 #myInfo {
   position:absolute;
-  width: 30%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: light-gray;
+  width: 40%;
+  height: 15%;
+  bottom: 20%;
+  right: 15%;
+  border: solid 3px;
+  border-radius: 20px;
+  background-color: lightgray;
+  box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.5);
 }
 #enInfo {
   position:absolute;
-  width: 30%;
-  height: 10%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: light-gray;
+  width: 40%;
+  height: 15%;
+  top: 15%;
+  left: 12%;
+  border: solid 3px;
+  border-radius: 20px;
+  background-color: lightgray;
+  box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.5);
+}
+#myName, #enName {
+  position:absolute;
+  top: 8%;
+  left: 6%;
+}
+#myHealth, #enHealth {
+  position:absolute;
+  bottom: 10%;
+  right: 6%;
 }
 .buttons {
   height:25%;
@@ -88,10 +101,14 @@
 <div id="dummy"></div>
 <div id="element"></div>
 <div id="myInfo">
-  <progress id="myHP" value="100" max="100" style="position:absolute; right:0; bottom: 0;"></progress>
+  <p id="myName" style="font-size: 20px;">Name: </p>
+  <progress id="myHP" value="100" max="100" style="position:absolute; left:5%; bottom: 9%; height:40%; width:60%;"></progress>
+  <p id="myHealth" style="font-size: 20px; margin:0; text-align:center;">100/100</p>
 </div>
 <div id="enInfo">
-  <progress id="enHP" value="100" max="100" style="position:absolute;"></progress>
+  <p id="enName" style="font-size: 20px;">Name: </p>
+  <progress id="enHP" value="100" max="100" style="position:absolute; left:5%; bottom: 9%; height:40%; width:60%;""></progress>
+  <p id="enHealth" style="font-size: 20px; margin:0; text-align:center;">100/100</p>
 </div>
 </div>
 <div class="buttons">
@@ -120,6 +137,33 @@
   {% for x in moves %}
   <li style="display:none;" id="{{x[1]}}">{{x[1]}};{{x[2]}};{{x[3]}};{{x[4]}};{{x[5]}};{{x[6]}};{{x[7]}};{{x[8]}};{{x[9]}};{{x[10]}};{{x[11]}};{{x[12]}};{{x[13]}};{{x[14]}};{{x[15]}};{{x[16]}};{{x[17]}};{{x[18]}};{{x[19]}};{{x[20]}};{{x[21]}}</li>
   {% endfor %}
+</ul>
+
+<ul id="base">
+  <li style="display:none;" id="base1">{{base1}}</li>
+  <li style="display:none;" id="base2">{{base2}}</li>
+  <li style="display:none;" id="base3">{{base3}}</li>
+  <li style="display:none;" id="base4">{{base4}}</li>
+  <li style="display:none;" id="base5">{{base5}}</li>
+  <li style="display:none;" id="base6">{{base6}}</li>
+</ul>
+
+<ul id="front">
+  <li style="display:none;" id="front1">{{front[0]}}</li>
+  <li style="display:none;" id="front2">{{front[1]}}</li>
+  <li style="display:none;" id="front3">{{front[2]}}</li>
+  <li style="display:none;" id="front4">{{front[3]}}</li>
+  <li style="display:none;" id="front5">{{front[4]}}</li>
+  <li style="display:none;" id="front6">{{front[5]}}</li>
+</ul>
+
+<ul id="back">
+  <li style="display:none;" id="back1">{{back[0]}}</li>
+  <li style="display:none;" id="back2">{{back[1]}}</li>
+  <li style="display:none;" id="back3">{{back[2]}}</li>
+  <li style="display:none;" id="back4">{{back[3]}}</li>
+  <li style="display:none;" id="back5">{{back[4]}}</li>
+  <li style="display:none;" id="back6">{{back[5]}}</li>
 </ul>
 
 <ul id="myTeam">
