@@ -470,6 +470,18 @@ def battle():
         #print("\n\n")
         #print("POKEMONS:")
         allPokemonNames = parsePokemonName(pokemonpics[0][0])
+        allFrontPics = []
+        allBackPics = []
+        for i in allPokemonNames:
+            frontpic = c.execute("SELECT fsrpite FROM POKEMON WHERE name = (?)", (i,)).fetchall()
+            backpic = c.execute("SELECT bsprite FROM POKEMON WHERE name = (?)", (i,)).fetchall()
+            #print(frontpic)
+            #print(backpic)
+            #print("\n\n")
+            allFrontPics.append(frontpic[0][0])
+            allBackPics.append(backpic[0][0])
+
+
         #print(parsePokemonName(pokemonpics[0][0]))
         #print("===============================")
 
