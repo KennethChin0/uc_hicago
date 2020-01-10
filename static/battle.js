@@ -29,6 +29,8 @@ var pList9 = pokemon9.innerText.split(",");
 var pList10 = pokemon10.innerText.split(",");
 var pList11 = pokemon11.innerText.split(",");
 
+var screen = document.getElementById("element");
+
 var p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11;
 
 function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, spe) {
@@ -44,6 +46,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   this.currentHP;
   this.hpStat, this.atkStat, this.defStat, this.spaStat, this.spdStat, this.speStat;
   this.status = "";
+  this.sprite = ["https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/143.png"]
   // EVS
   this.hp = hp;
   this.atk = atk;
@@ -67,7 +70,16 @@ var setup = function() {
   if (pokemon9) {p9 = new Pokemon(pList9[0], pList9[1], pList9[2], pList9[3], pList9[4], pList9[5], pList9[6], pList9[7], pList9[8], pList9[9], pList9[10], pList9[11], pList9[12], pList9[13])};
   if (pokemon10) {p10 = new Pokemon(pList10[0], pList10[1], pList10[2], pList10[3], pList10[4], pList10[5], pList10[6], pList10[7], pList10[8], pList10[9], pList10[10], pList10[11], pList10[12], pList10[13])};
   if (pokemon11) {p11 = new Pokemon(pList11[0], pList11[1], pList11[2], pList11[3], pList11[4], pList11[5], pList11[6], pList11[7], pList11[8], pList11[9], pList11[10], pList11[11], pList11[12], pList11[13])};
-
+  var img = document.createElement("img");
+  img.src = p0.sprite;
+  img.id="my";
+  img.style="position:absolute; left: 3%; bottom: 5%; width: 35%;";
+  screen.appendChild(img);
+  var imgEN = document.createElement("img");
+  imgEN.src = p0.sprite;
+  imgEN.id="en";
+  imgEN.style="position:absolute; right: 7%; top: 10%; width: 35%;";
+  screen.appendChild(imgEN);
 };
 
 setup();
