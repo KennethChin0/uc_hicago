@@ -56,8 +56,8 @@ chenB -- 2020-1-7 19:16
 Edited sitemap for design doc to fix minor detail that could lead to confusion. Added new background picture. Drew flag.
 
 chenB -- 2020-1-9 20:45
-Was able to get all images of your chosen team pokemons (both back and front) to be displayed in the battle page. Was also able to get basic stats of your team
-pokemon for use in html
+Was able to get all images of your chosen team pokemons (both back and front) to be displayed in the battle page. 
+Was also able to get basic stats of your team pokemon for use in battle page as well.
 
 all -- 2020-01-07 10:00
 Updated design doc (revision 0) 
