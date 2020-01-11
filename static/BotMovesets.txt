@@ -23,7 +23,7 @@ Charizard
 Ability: Blaze
 -Belly Drum
 -Fire Punch
--Dragon Claw/Earthqauke
+-Dragon Claw/Earthquake
 -Substitute
 
 Charizard
@@ -52,7 +52,7 @@ Ability: Compoundeyes
 -Sleep Powder
 -Stun Spore
 -Bug Buzz
--Tail Wind
+-Tailwind
 
 Butterfree
 Ability: Compoundeyes
@@ -435,7 +435,7 @@ Ability: Chlorophyll
 Tentacruel
 Ability: Liquid Ooze
 -Surf
--Toxic Spies
+-Toxic Spikes
 -Rapid Spin
 -Knock Off/Ice Beam/Sludge Bomb
 
@@ -1003,7 +1003,7 @@ Snorlax
 Ability: Thick Fat
 -Body Slam/Return
 -Earthquake
--Selfdestruct
+-Self-destruct
 -Fire Punch/Pursuit/Crunch
 
 Articuno
@@ -1017,7 +1017,7 @@ Articuno
 Ability: Pressure
 -Ice Beam
 -Reflect
--Tail Wind/Heal Bell/Roar
+-Tailwind/Heal Bell/Roar
 -Roost
 
 Zapdos
@@ -1130,7 +1130,7 @@ Ability: Pressure
 -Ice Punch
 -Earthquake/Fire Blast
 -Bulk Up
--Brick Break/Selfdestruct
+-Brick Break/Self-destruct
 
 Mew
 Ability: Synchronize
@@ -2530,7 +2530,7 @@ Ability: Water Veil
 -Waterfall
 -Avalanche
 -Earthquake
--Selfdestruct
+-Self-destruct
 
 Camerupt
 Ability: Solid Rock
@@ -2585,7 +2585,7 @@ Spinda
 Ability: Own Tempo/Tangled Feet
 -Double-Edge
 -Focus Punch
--Faint Attack/Fake Out
+-Feint Attack/Fake Out
 -Trick
 
 Spinda
@@ -2599,7 +2599,7 @@ Spinda
 Ability: Own Tempo/Tangled Feet
 -Counter
 -Return
--Faint Attack
+-Feint Attack
 -Focus Punch
 
 Flygon
@@ -2956,7 +2956,7 @@ Gorebyss
 Ability: Swift Swim
 -Surf/Hydro Pump
 -Ice Beam
--Hidden Power Electric
+-Hidden Power
 -Shadow Ball
 
 Gorebyss
@@ -3818,7 +3818,7 @@ Ability: Pressure
 -Night Slash
 -Ice Punch
 -Brick Break
--Pusuit
+-Pursuit
 
 Weavile
 Ability: Pressure
@@ -4490,7 +4490,7 @@ Ability: Blaze
 - Sunny Day
 - Solar-beam
 - Flamethrower / Fire Blast
-- Heat Stamp / Low Sweep / Brick Break / Flame Charge
+- Heat Crash / Low Sweep / Brick Break / Flame Charge
 
 Samurott
 Ability: Torrent
@@ -4831,7 +4831,7 @@ Ability: Prankster
 Whimsicott
 Ability: Prankster
 - Substitute / Cotton Guard
-- Poisonpowder / Protect
+- Poison-powder / Protect
 - Leech Seed
 - Giga Drain
 
@@ -4896,7 +4896,7 @@ Ability: Sturdy
 - Cut
 - Strength
 - Rock Smash
-- Stealth Rocks / Whatever
+- Stealth Rock
 
 Scrafty
 Ability: Moxie
@@ -5181,7 +5181,7 @@ Ability: Compound Eyes
 Galvantula
 Ability: Compound Eyes
 - Agility
-- Electroball
+- Electro-ball
 - Signal Beam / Bug Buzz
 - Sucker Punch / Return / Thunder Wave
 
