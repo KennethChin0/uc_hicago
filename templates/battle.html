@@ -102,12 +102,19 @@
 <div id="element"></div>
 <div id="myInfo">
   <p id="myName" style="font-size: 1vw;">Name: </p>
-  <progress id="myHP" value="100" max="100" style="position:absolute; left:5%; bottom: 9%; height:40%; width:60%;"></progress>
+  <div class="progress" style="position:absolute; left:5%; bottom: 16%; height:30%; width:60%;">
+     <div class="progress-bar" id="myHP" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:100%; background-color:limegreen;">
+     </div>
+  </div>
+  <!-- <progress id="myHP" value="100" max="100" style="position:absolute; left:5%; bottom: 9%; height:40%; width:60%;"></progress> -->
   <p id="myHealth" style="font-size: 1vw; margin:0; text-align:center;">100/100</p>
 </div>
 <div id="enInfo">
   <p id="enName" style="font-size: 1vw;">Name: </p>
-  <progress id="enHP" value="100" max="100" style="position:absolute; left:5%; bottom: 9%; height:40%; width:60%;""></progress>
+  <div class="progress" style="position:absolute; left:5%; bottom: 16%; height:30%; width:60%;">
+     <div class="progress-bar" id="enHP" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:100%; background-color:limegreen;">
+     </div>
+  </div>
   <p id="enHealth" style="font-size: 1vw; margin:0; text-align:center;">100/100</p>
 </div>
 </div>
@@ -129,13 +136,13 @@
 </div>
 <ul id="mons">
 {% for x in mons %}
-<li  id="{{x[1]}}">{{x[1]}},{{x[2]}},{{x[3]}},{{x[4]}},{{x[5]}},{{x[6]}},{{x[6]}},{{x[7]}},{{x[8]}},{{x[9]}},{{x[10]}},{{x[12]}}</li>
+<li style="display:none;" id="{{x[1]}}">{{x[1]}},{{x[2]}},{{x[3]}},{{x[4]}},{{x[5]}},{{x[6]}},{{x[6]}},{{x[7]}},{{x[8]}},{{x[9]}},{{x[10]}},{{x[12]}}</li>
 {% endfor %}
 </ul>
 
 <ul id="moves">
   {% for x in moves %}
-  <li style="display:none;" id="{{x[1]}}">{{x[1]}};{{x[2]}};{{x[3]}};{{x[4]}};{{x[5]}};{{x[6]}};{{x[7]}};{{x[8]}};{{x[9]}};{{x[10]}};{{x[11]}};{{x[12]}};{{x[13]}};{{x[14]}};{{x[15]}};{{x[16]}};{{x[17]}};{{x[18]}};{{x[19]}};{{x[20]}};{{x[21]}}</li>
+  <li id="{{x[1]}}">{{x[1]}};{{x[2]}};{{x[3]}};{{x[4]}};{{x[5]}};{{x[6]}};{{x[7]}};{{x[8]}};{{x[9]}};{{x[10]}};{{x[11]}};{{x[12]}};{{x[13]}};{{x[14]}};{{x[15]}};{{x[16]}};{{x[17]}};{{x[18]}};{{x[19]}};{{x[20]}};{{x[21]}}</li>
   {% endfor %}
 </ul>
 

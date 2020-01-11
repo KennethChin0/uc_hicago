@@ -1,4 +1,4 @@
-Venusaur 
+Venusaur
 Ability: Overgrow
 -Energy Ball/Grass Knot
 -Sludge Bomb/Hidden Power [Fire]
@@ -31,7 +31,7 @@ Ability: Blaze
 -Flamethrower/Fire Blast/Overheat
 -Dragon Pulse
 -Focus Punch
--Air Slash/Hidden Power [Grass/Electric]
+-Air Slash/Hidden Power [Grass]
 
 Blastoise
 Ability: Torrent
@@ -185,7 +185,7 @@ Ability: Magic Guard
 -Thunderbolt
 -Ice Beam
 -Calm Mind
--Softboiled
+-Soft-boiled
 
 Clefable
 Ability: Magic Guard
@@ -204,7 +204,7 @@ Ability: Magic Guard
 Clefable
 Ability: Magic Guard
 -Counter
--Wish/Softboiled
+-Wish/Soft-boiled
 -Light Screen
 -Seismic Toss
 
@@ -227,7 +227,7 @@ Ability: Flash Fire
 -Overheat/Fire Blast
 -Energy Ball
 -Dark Pulse
--Hidden Power [Ice/Electric]
+-Hidden Power [Ice]
 
 Wigglytuff
 Ability: Cute Charm
@@ -253,9 +253,9 @@ Ability: Cute Charm
 Vileplume
 Ability: Chlorophyll
 -Sunny Day
--Solarbeam
+-Solar-beam
 -Sleep Powder
--Sludge Bomb/Hidden Power [Fire/Ice]
+-Sludge Bomb/Hidden Power [Fire]
 
 Vileplume
 Ability: Chlorophyll
@@ -278,14 +278,14 @@ Ability: Dry Skin
 -Pursuit/Aerial Ace/Brick Break
 -Spore
 
-Venemoth
+Venomoth
 Ability: Tinted Lens
 -Bug Buzz
 -Sludge Bomb
 -Psychic
 -Hidden Power [Fire]/Sleep Powder
 
-Venemoth
+Venomoth
 Ability: Tinted Lens
 -Bug Buzz
 -Sleep Powder
@@ -331,7 +331,7 @@ Primeape
 Ability: Vital Spirit
 -Close Combat
 -Stone Edge
--Ice Punch/Thunderpunch
+-Ice Punch/Thunder Punch
 -U-Turn
 
 Primeape
@@ -344,7 +344,7 @@ Ability: Anger Point
 Arcanine
 Ability: Intimidate
 -Flare Blitz
--Extremespeed
+-Extreme-speed
 -Crunch
 -Thunder Fang
 
@@ -352,13 +352,13 @@ Arcanine
 Ability: Intimidate
 -Overheat
 -Dragon Pulse
--Hidden Power [Ground/Grass]
--Extremespeed
+-Hidden Power [Ground]
+-Extreme-speed
 
 Arcanine
 Ability: Intimidate
 -Flare Blitz
--Extremespeed
+-Extreme-speed
 -Howl
 -Thunder Fang
 
@@ -399,28 +399,28 @@ Ability: Inner Focus
 
 Machamp
 Ability: No Guard
--Dynamicpunch
+-Dynamic-punch
 -Stone Edge
 -Ice Punch
--Thunderpunch/Bulk Up
+-Thunder Punch/Bulk Up
 
 Machamp
 Ability: Guts
 -Close Combat
 -Stone Edge
 -Ice Punch
--Thunderpunch/Facade
+-Thunder Punch/Facade
 
 Machamp
 Ability: Guts
--Close Combat/Dynamicpunch
+-Close Combat/Dynamic-punch
 -Stone Edge
 -Rest
 -Sleep Talk
 
 Victreebel
 Ability: Chlorophyll
--Solarbeam
+-Solar-beam
 -Sludge Bomb/Hidden Power [Fire]
 -Sunny Day
 -Sleep Powder
@@ -481,7 +481,7 @@ Ability: Own Tempo
 -Surf/Calm Mind
 -Slack Off
 
-Farfetch'd
+Farfetchd
 Ability: Inner Focus
 -Flail
 -Night Slash/Steel Wing
@@ -612,7 +612,7 @@ Ability: Soundproof
 -Thunderbolt
 -Explosion
 -Substitute
--Hidden Power [Grass/Ice]
+-Hidden Power [Ice]
 
 Electrode
 Ability: Soundproof
@@ -623,7 +623,7 @@ Ability: Soundproof
 
 Exeggutor
 Ability: Chlorophyll
--Solarbeam
+-Solar-beam
 -Sunny Day
 -Psychic/Hidden Power [Fire]/Sleep Powder
 -Explosion
@@ -633,7 +633,7 @@ Ability: Chlorophyll
 -Leaf Storm
 -Psychic
 -Explosion
--Hidden Power [Fire/Ice]/Grass Knot
+-Hidden Power [Fire]/Grass Knot
 
 Marowak
 Ability: Rock Head
@@ -647,14 +647,14 @@ Ability: Iron Fist
 -Close Combat
 -Ice Punch
 -Mach Punch
--Thunderpunch
+-Thunder Punch
 
 Hitmonchan
 Ability: Iron Fist
 -Focus Punch
 -Substitute
 -Mach Punch
--Ice Punch/Thunderpunch/Stone Edge
+-Ice Punch/Thunder Punch/Stone Edge
 
 Hitmonlee
 Ability: Limber
@@ -733,14 +733,14 @@ Ability: Natural Cure
 -Ice Beam
 -Grass Knot/Psychic
 
-Mr. Mime
+Mr-mime
 Ability: Filter
 -Psychic
 -Thunderbolt
 -Trick
 -Focus Blast/Shadow Ball
 
-Mr. Mime
+Mr-mime
 Ability: Soundproof
 -Psychic
 -Calm Mind
@@ -787,7 +787,7 @@ Ability: Forewarn
 -Ice Beam
 -Psychic
 -Grass Knot
--Focus Blast/Hidden Power [Fire/Fighting]
+-Focus Blast/Hidden Power [Fighting]
 
 Jynx
 Ability: Forewarn
@@ -890,21 +890,21 @@ Ability: Water Absorb
 Jolteon
 Ability: Volt Absorb
 -Thunderbolt
--Hidden Power [Ice/Grass]
+-Hidden Power [Ice]
 -Substitute
 -Baton Pass
 
 Jolteon
 Ability: Volt Absorb
 -Thunderbolt
--Hidden Power [Ice/Grass]
+-Hidden Power [Grass]
 -Shadow Ball
 -Baton Pass
 
 Jolteon
 Ability: Volt Absorb
 -Thunderbolt
--Hidden Power [Ice/Grass]
+-Hidden Power [Ice]
 -Shadow Ball
 -Charge Beam
 
@@ -919,7 +919,7 @@ Flareon
 Ability: Flash Fire
 -Flamethrower
 -Shadow Ball
--Hidden Power [Ice/Grass]
+-Hidden Power [Ice]
 -Overheat
 
 Omastar
@@ -927,14 +927,14 @@ Ability: Swift Swim
 -Rain Dance
 -Surf/Hydro Pump
 -Ice Beam
--Hidden Power [Electric/Grass]
+-Hidden Power [Grass]
 
 Omastar
 Ability: Swift Swim
 -Surf/Hydro Pump
 -Ice Beam
--Hidden Power [Electric/Grass]
--Ancientpower
+-Hidden Power [Electric]
+-Ancient-power
 
 Omastar
 Ability: Shell Armor
@@ -1025,12 +1025,12 @@ Ability: Pressure
 -Thunderbolt
 -Heat Wave
 -Roost
--Roar/Hidden Power [Ice/Grass]
+-Roar/Hidden Power [Grass]
 
 Zapdos
 Ability: Pressure
 -Thunderbolt
--Hidden Power [Ice/Grass]
+-Hidden Power [Ice]
 -Heat Wave
 -Roost
 
@@ -1039,19 +1039,19 @@ Ability: Pressure
 -Thunderbolt
 -Agility
 -Baton Pass
--Substitute/Hidden Power [Ice/Grass]
+-Substitute/Hidden Power [Grass]
 
 Zapdos
 Ability: Pressure
 -Thunderbolt
--Hidden Power [Ice/Grass]/Heat Wave
+-Hidden Power [Ice]/Heat Wave
 -Rest
 -Sleep Talk
 
 Zapdos
 Ability: Pressure
 -Thunderbolt
--Hidden Power [Ice/Grass]
+-Hidden Power [Grass]
 -Heat Wave
 -U-Turn
 
@@ -1059,14 +1059,14 @@ Moltres
 Ability: Pressure
 -Overheat
 -Air Slash
--Hidden Power [Ice/Grass]
+-Hidden Power [Ice]
 -Flamethrower/Fire Blast
 
 Moltres
 Ability: Pressure
 -Flamethrower/Fire Blast
 -Sunny Day
--Solarbeam
+-Solar-beam
 -Air Slash/Hidden Power [Ice]
 
 Dragonite
@@ -1165,7 +1165,7 @@ Ability: Synchronize
 -Transform
 -Hypnosis
 -Reflect/Light Screen
--Softboiled
+-Soft-boiled
 
 Meganium
 Ability: Overgrow
@@ -1191,7 +1191,7 @@ Ability: Blaze
 Typhlosion
 Ability: Blaze
 -Flamethrower/Fire Blast
--Solarbeam
+-Solar-beam
 -Hidden Power [Ice]
 -Sunny Day
 
@@ -1228,7 +1228,7 @@ Ability: Swarm/Early Bird
 -Agility/Swords Dance
 -Substitute
 -Baton Pass
--Ice Punch/Thunderpunch
+-Ice Punch/Thunder Punch
 
 Ledian
 Ability: Swarm/Early Bird
@@ -1305,19 +1305,19 @@ Ability: Static
 -Thunderbolt
 -Substitute
 -Focus Punch
--Hidden Power [Grass/Ice]/Signal Beam
+-Hidden Power [Ice]/Signal Beam
 
 Bellossom
 Ability: Chlorophyll
 -Energy Ball/Grass Knot
 -Sleep Powder
 -Stun Spore
--Synthesis/Hidden Power [Fire/Ice]/Leech Seed
+-Synthesis/Hidden Power [Fire]/Leech Seed
 
 Bellossom
 Ability: Chlorophyll
 -Sunny Day
--Solarbeam
+-Solar-beam
 -Hidden Power [Fire]
 -Sleep Powder
 
@@ -1365,7 +1365,7 @@ Ability: Chlorophyll
 
 Sunflora
 Ability: Chlorophyll/Solar Power
--Solarbeam
+-Solar-beam
 -Sludge Bomb
 -Hidden Power [Fire]
 -Sunny Day
@@ -1374,8 +1374,8 @@ Sunflora
 Ability: Chlorophyll/Solar Power
 -Leaf Storm
 -Sludge Bomb
--Hidden Power [Fire/Ice]
--Energy Ball/Grasswhistle
+-Hidden Power [Fire]
+-Energy Ball/Grass-whistle
 
 Quagsire
 Ability: Water Absorb
@@ -1403,7 +1403,7 @@ Ability: Synchronize
 -Psychic
 -Shadow Ball
 -Grass Knot
--Hidden Power [Fighting/Fire]
+-Hidden Power [Fighting]
 
 Umbreon
 Ability: Synchronize
@@ -1445,7 +1445,7 @@ Ability: Inner Focus/Early Bird
 -Psychic
 -Thunderbolt
 -Grass Knot/Energy Ball
--Shadow Ball/Hidden Power [Fire/Fighting]
+-Shadow Ball/Hidden Power [Fighting]
 
 Forretress
 Ability: Sturdy
@@ -1465,7 +1465,7 @@ Dunsparce
 Ability: Serene Grace/Run Away
 -Charge Beam/Calm Mind
 -Ice Beam
--Ancientpower/Water Pulse
+-Ancient-power/Water Pulse
 -Thunder Wave/Glare/Thunder
 
 Steelix
@@ -1611,9 +1611,9 @@ Ability: Flame Body
 Magcargo
 Ability: Flame Body
 -Overheat
--Ancientpower
+-Ancient-power
 -Earth Power
--Hidden Power [Ice/Electric]
+-Hidden Power [Ice]
 
 Corsola
 Ability: Natural Cure
@@ -1676,13 +1676,13 @@ Ability: Flash Fire
 -Flamethrower
 -Dark Pulse
 -Nasty Plot
--Substitute/Hidden Power [Grass/Ice/Fighting]
+-Substitute/Hidden Power [Grass]
 
 Houndoom
 Ability: Flash Fire
 -Overheat
 -Dark Pulse
--Hidden Power [Grass/Ice/Fighting]
+-Hidden Power [Ice]
 -Flamethrower
 
 Kingdra
@@ -1695,7 +1695,7 @@ Ability: Swift Swim
 Kingdra
 Ability: Swift Swim
 -Surf/Hydro Pump
--Watefall
+-Waterfall
 -Dragon Pulse/Draco Meteor
 -Rain Dance
 
@@ -1774,14 +1774,14 @@ Ability: Own Tempo
 -Counter
 -Endeavor
 -Spore
--Extremespeed
+-Extreme-speed
 
 Smeargle
 Ability: Own Tempo
 -Endure
 -Spore
 -Endeavor
--Extremespeed/Dragon Rage
+-Extreme-speed/Dragon Rage
 
 Hitmontop
 Ability: Technician
@@ -1799,7 +1799,7 @@ Ability: Technician
 
 Hitmontop
 Ability: Intimidate
--Hi Jump Kick/Close Combat
+-High Jump Kick/Close Combat
 -Stone Edge
 -Rapid Spin
 -Mach Punch
@@ -1829,7 +1829,7 @@ Blissey
 Ability: Natural Cure
 -Ice Beam
 -Seismic Toss
--Softboiled
+-Soft-boiled
 -Aromatherapy/Thunder Wave/Sing
 
 Blissey
@@ -1837,7 +1837,7 @@ Ability: Serene Grace
 -Ice Beam
 -Thunderbolt
 -Calm Mind
--Softboiled
+-Soft-boiled
 
 Blissey
 Ability: Natural Cure
@@ -1849,14 +1849,14 @@ Ability: Natural Cure
 Raikou
 Ability: Pressure
 -Thunderbolt
--Hidden Power [Ice/Grass]
+-Hidden Power [Ice]
 -Substitute
 -Calm Mind
 
 Raikou
 Ability: Pressure
 -Thunderbolt
--Hidden Power [Ice/Grass]
+-Hidden Power [Grass]
 -Rest
 -Sleep Talk
 
@@ -1878,8 +1878,8 @@ Entei
 Ability: Pressure
 -Sunny Day
 -Lava Plume/Flamethrower/Fire Blast
--Solarbeam
--Hidden Power [Fighting/Ground]
+-Solar-beam
+-Hidden Power [Ground]
 
 Suicune
 Ability: Pressure
@@ -1969,14 +1969,14 @@ Celebi
 Ability: Natural Cure
 -Psychic
 -Leaf Storm
--Hidden Power [Fighting/Fire]/Earth Power
+-Hidden Power [Fighting]/Earth Power
 -Shadow Ball/Trick
 
 Celebi
 Ability: Natural Cure
 -Psychic
 -Grass Knot/Recover
--Hidden Power [Fighting/Fire]/Earth Power
+-Hidden Power [Fire]/Earth Power
 -Calm Mind
 
 Sceptile
@@ -1984,27 +1984,27 @@ Ability: Overgrow
 -Energy Ball
 -Leech Seed
 -Substitute
--Dragon Pulse/Hidden Power [Fire/Ice]
+-Dragon Pulse/Hidden Power [Ice]
 
 Sceptile
 Ability: Overgrow
 -Leaf Storm
 -Dragon Pulse
 -Focus Blast
--Energy Ball/Grass Knot/Hidden Power [Fire/Ice]
+-Energy Ball/Grass Knot/Hidden Power [Fire]
 
 Sceptile
 Ability: Overgrow
 -Leaf Blade
 -Dragon Claw
--Earthquake/Thunderpunch
+-Earthquake/Thunder Punch
 -Swords Dance
 
 Sceptile
 Ability: Overgrow
 -Leaf Blade
 -Dragon Claw
--Thunderpunch
+-Thunder Punch
 -Earthquake/Focus Punch
 
 Blaziken
@@ -2019,7 +2019,7 @@ Ability: Blaze
 -Flare Blitz
 -Sky Uppercut
 -Stone Edge
--Thunderpunch
+-Thunder Punch
 
 Blaziken
 Ability: Blaze
@@ -2077,7 +2077,7 @@ Ability: Quick Feet
 -Fire Fang
 -Protect/Howl
 
-Linnone
+Linoone
 Ability: Gluttony
 -Return
 -Shadow Claw
@@ -2122,8 +2122,8 @@ Ability: Swift Swim
 Shiftry
 Ability: Early Bird/Chlorophyll
 -Sunny Day
--Solarbeam
--Hidden Power [Fire/Ice]
+-Solar-beam
+-Hidden Power [Fire]
 -Explosion
 
 Shiftry
@@ -2131,13 +2131,13 @@ Ability: Chlorophyll
 -Nasty Plot
 -Dark Pulse
 -Energy Ball/Grass Knot
--Hidden Power[Fire/Ice]
+-Hidden Power[Ice]
 
 Shiftry
 Ability: Chlorophyll
 -Leaf Storm
 -Dark Pulse
--Hidden Power[Fire/Ice]
+-Hidden Power[Ice]
 -Energy Ball/Grass Knot/Explosion
 
 Swellow
@@ -2194,7 +2194,7 @@ Ability: Trace
 -Psychic
 -Thunderbolt/Grass Knot
 -Shadow Ball
--Focus Blast/Hidden Power [Fighting/Fire]
+-Focus Blast/Hidden Power [Fighting]
 
 Masquerain
 Ability: Intimidate
@@ -2313,7 +2313,7 @@ Ability: Guts
 -Cross Chop
 -Stone Edge
 -Ice Punch
--Thunderpunch
+-Thunder Punch
 
 Hariyama
 Ability: Thick Fat
@@ -2394,16 +2394,16 @@ Ability: Rock Head/Sturdy
 
 Medicham
 Ability: Pure Power
--Hi Jump Kick/Brick Break
+-High Jump Kick/Brick Break
 -Psycho Cut
--Thunderpunch
+-Thunder Punch
 -Ice Punch
 
 Medicham
 Ability: Pure Power
 -Reversal
 -Psycho Cut
--Ice Punch/Thunderpunch
+-Ice Punch/Thunder Punch
 -Endure/Substitute
 
 Manectric
@@ -2411,7 +2411,7 @@ Ability: Static
 -Thunderbolt
 -Flamethrower
 -Substitute/Charge Beam
--Hidden Power [Ice/Grass]
+-Hidden Power [Ice]
 
 Plusle
 Ability: Plus
@@ -2536,7 +2536,7 @@ Camerupt
 Ability: Solid Rock
 -Overheat
 -Earth Power
--Hidden Power [Ice/Electric]
+-Hidden Power [Ice]
 -Lava Plume/Flamethrower
 
 Camerupt
@@ -2563,7 +2563,7 @@ Ability: White Smoke
 Torkoal
 Ability: White Smoke
 -Overheat
--Hidden Power [Ice/Grass]
+-Hidden Power [Grass]
 -Sludge Bomb
 -Flamethrower/Lava Plume
 
@@ -2809,7 +2809,7 @@ Castform
 Ability: Forecast
 -Sunny Day
 -Weather Ball/Fire Blast
--Solarbeam
+-Solar-beam
 -Ice Beam
 
 Castform
@@ -3034,7 +3034,7 @@ Ability: Clear Body
 -Meteor Mash
 -Earthquake
 -Explosion
--Thunderpunch/Pursuit/Bullet Punch
+-Thunder Punch/Pursuit/Bullet Punch
 
 Metagross
 Ability: Clear Body
@@ -3299,7 +3299,7 @@ Infernape
 Ability: Blaze
 -Close Combat
 -Flare Blitz
--Stone Edge/Thunderpunch
+-Stone Edge/Thunder Punch
 -Swords Dance
 
 Infernape
@@ -3309,11 +3309,11 @@ Ability: Blaze
 -Fire Blast/Overheat
 -Close Combat
 
-Inferanape
+Infernape
 Ability: Blaze
 -Flare Blitz
 -Close Combat
--Thunderpunch
+-Thunder Punch
 -Stone Edge
 
 Empoleon
@@ -3342,7 +3342,7 @@ Ability: Torrent
 -Surf
 -Ice Beam
 -Grass Knot
--Hidden Power [Ground/Electric]
+-Hidden Power [Ground]
 
 Empoleon
 Ability: Torrent
@@ -3419,7 +3419,7 @@ Ability: Natural Cure
 -Leaf Storm
 -Sludge Bomb
 -Shadow Ball
--Sleep Powder/Hidden Power [Fire/Ice]
+-Sleep Powder/Hidden Power [Ice]
 
 Roserade
 Ability: Natural Cure
@@ -3456,24 +3456,10 @@ Ability: Mold Breaker
 -Rest
 -Sleep Talk
 
-Wurmadam (Steel)
-Ability: Anticipation
--Stealth Rock
--Metal Sound
--Flash Cannon
--Toxic
-
-Wurmadam (Ground)
-Ability: Anticipation
--Earthquake
--Rock Blast
--Toxic
--Protect
-
-Wurmadam (Grass)
+Wormadam-plant
 Ability: Anticipation
 -Leaf Storm
--Hidden Power [Ice/Fire]
+-Hidden Power [Ice]
 -Shadow Ball
 -Psychic/Energy Ball
 
@@ -3500,7 +3486,7 @@ Ability: Pick Up
 
 Floatzel
 Ability: Swift Swim
--Water fall
+-Waterfall
 -Ice Fang
 -Crunch
 -Brick Break/Aqua Jet
@@ -3517,7 +3503,7 @@ Ability: Flower Gift
 -Sunny Day
 -Energy Ball
 -Hidden Power [Fire]
--Grasswhistle
+-Grass-whistle
 
 Gastrodon
 Ability: Water Lure/Sticky Hold
@@ -3603,7 +3589,7 @@ Ability: Insomnia
 -Heat Wave
 -Superpower
 
-Honhkrow
+Honchkrow
 Ability: Insomnia
 -Sucker Punch
 -Drill Peck
@@ -3711,7 +3697,7 @@ Ability: Sand Veil
 Lucario
 Ability: Steadfast
 -Close Combat
--Extremespeed
+-Extreme-speed
 -Crunch/Stone Edge/Ice Punch
 -Swords Dance
 
@@ -3720,7 +3706,7 @@ Ability: Steadfast
 -Close Combat
 -Crunch
 -Stone-Edge
--Blaze Kick/Bullet Punch/Extremespeed
+-Blaze Kick/Bullet Punch/Extreme-speed
 
 Lucario
 Ability: Steadfast
@@ -3759,7 +3745,7 @@ Ability: Sniper
 
 Drapion
 Ability: Battle Armor
--Nigh Slash
+-Night Slash
 -Brick Break/Fire Fang
 -Knock Off
 -Toxic Spikes
@@ -3797,7 +3783,7 @@ Ability: Storm Drain
 -Surf
 -Ice Beam
 -Rain Dance
--Hidden Power [Electric/Grass]
+-Hidden Power [Grass]
 
 Abomasnow
 Ability: Snow Warning
@@ -3844,21 +3830,21 @@ Ability: Pressure
 Magnezone
 Ability: Magnet Pull
 -Thunderbolt/Discharge
--Hidden Power [Grass/Ice]
+-Hidden Power [Grass]
 -Substitute
 -Magnet Rise/Thunder Wave
 
 Magnezone
 Ability: Magnet Pull
 -Thunderbolt/Discharge
--Hidden Power [Grass/Ice]
+-Hidden Power [Ice]
 -Rest
 -Sleep Talk
 
 Magnezone
 Ability: Magnet Pull
 -Thunderbolt/Discharge
--Hidden Power [Grass/Ice]
+-Hidden Power [Grass]
 -Flash Cannon
 -Explosion
 
@@ -3934,21 +3920,21 @@ Ability: Chlorophyll/Leaf Guard
 
 Tangrowth
 Ability: Chlorophyll
--Solarbeam
+-Solar-beam
 -Hidden Power [Fire]
 -Sunny Day
 -Sleep Powder/Morning Sun
 
 Electivire
 Ability: Motor Engine
--Thunderbolt/Thunderpunch
+-Thunderbolt/Thunder Punch
 -Ice Punch
 -Cross Chop
 -Earthquake/Hidden Power [Grass]
 
 Electivire
 Ability: Motor Engine
--Thunderpunch
+-Thunder Punch
 -Ice Punch
 -Cross Chop
 -Earthquake
@@ -3958,19 +3944,19 @@ Ability: Flash Fire
 -Flamethrower/Fire Blast
 -Thunderbolt
 -Focus Punch/Cross Chop
--Will-o-wisp/Hidden Power [Ice/Grass]
+-Will-o-wisp/Hidden Power [Ice]
 
 Magmortar
 Ability: Flash Fire
 -Flamethrower/Lava Plume
 -Thunderbolt
 -Focus Punch
--Hidden Power [Grass/Ice]
+-Hidden Power [Grass]
 
 Magmortar
 Ability: Flash Fire
 -Flamethrower
--Solarbeam
+-Solar-beam
 -Sunny Day
 -Will-o-wisp
 
@@ -4014,7 +4000,7 @@ Ability: Leaf Guard
 -Leaf Blade
 -Swords Dance
 -Baton Pass
--Synthesis/Grasswhistle
+-Synthesis/Grass-whistle
 
 Leafeon
 Ability: Leaf Guard
@@ -4026,7 +4012,7 @@ Ability: Leaf Guard
 Glaceon
 Ability: Snow Cloak
 -Ice Beam
--Hidden Power [Electric/Fighting]
+-Hidden Power [Electric]
 -Wish
 -Fake Tears
 
@@ -4086,16 +4072,16 @@ Ability: Snow Cloak
 -Ice Shard
 -Earthquake
 
-Porygon-Z
+Porygon-z
 Ability: Download/Adaptability
-Ability: Adaptability
+-Agility
 -Tri-Attack
 -Thunderbolt/Dark Pulse
 -Ice Beam/Hidden Power [Fighting]
 
-Porygon-Z
+Porygon-z
 Ability: Adaptability
-Ability: Adaptability
+-Nasty Plot
 -Tri-Attack
 -Thunderbolt
 -Ice Beam
@@ -4124,21 +4110,21 @@ Ability: Magnet Pull
 Dusknoir
 Ability: Pressure
 -Shadow Sneak
--Thunderpunch
+-Thunder Punch
 -Will-o-wisp/Fire Punch
 -Pain Split
 
 Dusknoir
 Ability: Pressure
 -Shadow Sneak
--Thunderpunch
+-Thunder Punch
 -Ice Punch
 -Focus Punch
 
 Dusknoir
 Ability: Pressure
 -Ice Punch/Shadow Punch
--Thunderpunch
+-Thunder Punch
 -Rest
 -Sleep Talk
 
@@ -4168,7 +4154,7 @@ Ability: Levitate
 -Thunderbolt
 -Shadow Ball
 -Trick
--Hidden Power [Ice/Grass]
+-Hidden Power [Ice]
 
 Uxie
 Ability: Levitate
@@ -4305,7 +4291,7 @@ Ability: Flash Fire
 
 Heatran
 Ability: Flash Fire
--Fire Blast/Lave Plume
+-Fire Blast/Lava Plume
 -Earth Power
 -Rest
 -Sleep Talk
@@ -4317,21 +4303,21 @@ Ability: Slow Start
 -Thunder Wave
 -Knock Off/Focus Punch/Confuse Ray
 
-Giratina
+Giratina-altered
 Ability: Pressure
 -Dragon Pulse
 -Shadow Ball
 -Will-o-wisp
 -Calm Mind
 
-Giratina
+Giratina-altered
 Ability: Pressure
 -Dragon Pulse
 -Calm Mind
 -Rest
 -Sleep Talk
 
-Giratina
+Giratina-altered
 Ability: Pressure
 -Draco Meteor
 -Shadow Ball
@@ -4401,44 +4387,44 @@ Ability: Nightmare
 -Focus Punch
 -Ice Beam/Spacial Rend/Dark Void
 
-Shaymin
+Shaymin-land
 Ability: Natural Cure
 -Seed Flare
 -Substitute/Aromatherapy
 -Leech Seed
 -Rest
 
-Shaymin
+Shaymin-land
 Ability: Natural Cure
 -Seed Flare
--Hidden Power [Fire/Ice]
+-Hidden Power [Fire]
 -Psychic
 -Earth Power
 
-Shaymin
+Shaymin-land
 Ability: Natural Cure
 -Seed Flare
--Hidden Power [Fire/Ice]
+-Hidden Power [Ice]
 -Earth Power
 -Rest
 
 Arceus
 Ability: Multi-Type
--Return/Extremspeed
+-Return/Extreme-speed
 -Earthquake
 -Shadow Claw
 -Swords Dance
 
 Arceus
 Ability: Multi-Type
--Return/Extremespeed
+-Return/Extreme-speed
 -Earthquake
 -Shadow Claw
 -Stone Edge
 
 Arceus
 Ability: Multi-Type
--Judgement
+-Judgment
 -Substitute
 -Calm Mind
 -Recover
@@ -4459,7 +4445,7 @@ Ability: Multi-Type
 
 Arceus
 Ability: Multi-Type
--Judgement
+-Judgment
 -Shadow Ball/Ice Beam
 -Rest
 -Sleep Talk
@@ -4474,7 +4460,7 @@ Ability: Overgrow
 Serperior
 Ability: Overgrow
 - Sunny Day
-- Solarbeam
+- Solar-beam
 - Growth
 - Return
 
@@ -4502,7 +4488,7 @@ Ability: Blaze
 Emboar
 Ability: Blaze
 - Sunny Day
-- Solarbeam
+- Solar-beam
 - Flamethrower / Fire Blast
 - Heat Stamp / Low Sweep / Brick Break / Flame Charge
 
@@ -4614,7 +4600,7 @@ Ability: Gluttony
 Simisear
 Ability: Gluttony
 - Sunny Day
-- Solarbeam
+- Solar-beam
 - Flame Burst / Fire Blast
 - Return / Brick Break / Crunch
 
@@ -4676,7 +4662,7 @@ Ability: Super Luck
 
 Unfezant
 Ability: Big Pecks
-- Featherdance
+- Feather-dance
 - Roost
 - Fly / Air Slash
 - Return / Quick Attack
@@ -4706,7 +4692,7 @@ Gigalith
 Ability: Sturdy
 - Power Gem
 - Flash Cannon
-- Solarbeam
+- Solar-beam
 - Stealth Rock / Explosion
 
 Swoobat
@@ -4803,7 +4789,7 @@ Ability: Swarm
 Leavanny
 Ability: Chlorophyll
 - Sunny Day
-- Solarbeam
+- Solar-beam
 - X-Scissor
 - Return / Shadow Claw
 
@@ -4839,7 +4825,7 @@ Whimsicott
 Ability: Prankster
 - Sunny Day
 - Growth
-- Solarbeam
+- Solar-beam
 - Shadow Ball / Return / Hurricane
 
 Whimsicott
@@ -4860,10 +4846,10 @@ Lilligant
 Ability: Chlorophyll
 - Sunny Day
 - Growth / Sleep Powder
-- Solarbeam
+- Solar-beam
 - Return
 
-Basculin
+Basculin-red-striped
 Ability: Adaptability
 - Waterfall / Aqua Tail / Surf
 - Double-Edge / Return
@@ -4877,7 +4863,7 @@ Ability: Moxie
 - Brick Break
 - Return / Rock Slide / Smack Down / Dragon Claw
 
-Darmanitan
+Darmanitan-standard
 Ability: Sheer Force
 - Flare Blitz / Fire Punch
 - Rock Slide
@@ -4895,7 +4881,7 @@ Maractus
 Ability: Chlorophyll
 - Sunny Day
 - Growth
-- Solarbeam
+- Solar-beam
 - Return
 
 Crustle
@@ -4914,12 +4900,12 @@ Ability: Sturdy
 
 Scrafty
 Ability: Moxie
-- Hi Jump Kick / Brick Break
+- High Jump Kick / Brick Break
 - Crunch / Payback
 - Return
 - Rock Slide / Dragon Claw / Swagger
 
-What Is This I Don't EvenSigilyph
+Sigilyph
 Ability: Magic Guard
 - Cosmic Power / Hypnosis
 - Psychic
@@ -5068,7 +5054,7 @@ Ability: Big Pecks
 
 Swanna
 Ability: Big Pecks
-- Featherdance
+- Feather-dance
 - Roost
 - Scald / Aqua Ring
 - Air Slash / Fly / Protect
@@ -5111,7 +5097,7 @@ Ability: Sap Sipper
 Sawsbuck
 Ability: Chlorophyll
 - Sunny Day
-- Solarbeam
+- Solar-beam
 - Return
 - Megahorn / Horn Leech / Jump Kick
 
@@ -5146,11 +5132,11 @@ Ability: Effect Spore
 Amoonguss
 Ability: Effect Spore
 - Sunny Day
-- Solarbeam
+- Solar-beam
 - Growth
 - Return / Toxic
 
-Amoongus
+Amoonguss
 Ability: Effect Spore
 - Spore
 - Giga Drain
@@ -5248,7 +5234,7 @@ Ability: Synchronize
 - Shadow Ball / Thunderbolt
 - Recover
 
-Beeheeyem
+Beheeyem
 Ability: Synchronize
 - Reflect
 - Light Screen
@@ -5265,7 +5251,7 @@ Ability: Flame Body
 Chandelure
 Ability: Flame Body
 - Sunny Day
-- Solarbeam
+- Solar-beam
 - Flame Burst / Fire Blast
 - Shadow Ball
 
@@ -5294,7 +5280,7 @@ Cryogonal
 Ability: Levitate
 - Acid Armor
 - Ice Beam
-- Confuse Ray / Frost Breath / Solarbeam
+- Confuse Ray / Frost Breath / Solar-beam
 - Recover
 
 Cryogonal
@@ -5377,7 +5363,7 @@ Ability: Overcoat
 Heatmor
 Ability: Flash Fire
 - Sunny Day
-- Solarbeam
+- Solar-beam
 - Flame Burst / Flamethrower
 - Return / Dig / Shadow Claw / Rock Tomb
 
@@ -5395,7 +5381,7 @@ Ability: Levitate
 - Surf
 - Fire Blast / Acrobatics
 
-Deino / Zweilous
+Zweilous
 Ability: Hustle
 - Thunder Wave / Work Up
 - Crunch
@@ -5412,7 +5398,7 @@ Ability: Flame Body
 Volcarona
 Ability: Flame Body
 - Sunny Day
-- Solarbeam
+- Solar-beam
 - Heat Wave
 - Quiver Dance
 
@@ -5447,18 +5433,18 @@ Ability: Justified
 Virizion
 Ability: Justified
 - Sunny Day
-- Solarbeam
+- Solar-beam
 - Sacred Sword
 - Return / X-Scissor / Aerial Ace
 
-Tornadus
+Tornadus-incarnate
 Ability: Prankster
 - Air Slash
 - Extrasensory / Brick Break
 - Crunch
 - Acrobatics / Grass Knot
 
-Thundurus
+Thundurus-incarnate
 Ability: Prankster
 - Charge Beam / Volt Switch
 - Thunderbolt / Discharge
@@ -5467,14 +5453,14 @@ Ability: Prankster
 
 Reshiram
 Ability: Turboblaze
-- Dragonbreath
+- Dragon-breath
 - Slash
 - Extrasensory
 - Fusion Flare
 
 Zekrom
 Ability: Teravolt
-- Dragonbreath
+- Dragon-breath
 - Slash
 - Zen Headbutt
 - Fusion Bolt
