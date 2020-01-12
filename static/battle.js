@@ -148,8 +148,8 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     search = search.substring(0, a) + search.substring(b + 1);
     if (search.charAt(search.length - 1) == "-") search = search.substring(0, search.length - 1);
   }
-  console.log(this.name + ": " + m1 + " " + m2 + " " + m3 + " " + m4 + " ");
-  console.log("1: " + search);
+  // console.log(this.name + ": " + m1 + " " + m2 + " " + m3 + " " + m4 + " ");
+  // console.log("1: " + search);
   var moveInfo = document.getElementById(search).innerText.split(";");
   this.move1 = moveInfo;
   search = (m2.substring(0, 1).toUpperCase() + m2.substring(1).toLowerCase()).split(" ").join('-');
@@ -159,7 +159,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     search = search.substring(0, a) + search.substring(b + 1);
     if (search.charAt(search.length - 1) == "-") search = search.substring(0, search.length - 1);
   }
-  console.log("2: " + search);
+  // console.log("2: " + search);
   moveInfo = document.getElementById(search).innerText.split(";");
   this.move2 = moveInfo;
   search = (m3.substring(0, 1).toUpperCase() + m3.substring(1).toLowerCase()).split(" ").join('-');
@@ -169,7 +169,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     search = search.substring(0, a) + search.substring(b + 1);
     if (search.charAt(search.length - 1) == "-") search = search.substring(0, search.length - 1);if (search.charAt(search.length - 1) == "-") search = search.substring(0, search.length - 1);
   }
-  console.log("3: " + search);
+  // console.log("3: " + search);
   moveInfo = document.getElementById(search).innerText.split(";");
   this.move3 = moveInfo;
   search = (m4.substring(0, 1).toUpperCase() + m4.substring(1).toLowerCase()).split(" ").join('-');
@@ -179,7 +179,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     search = search.substring(0, a) + search.substring(b + 1);
     if (search.charAt(search.length - 1) == "-") search = search.substring(0, search.length - 1);
   }
-  console.log("4: " + search);
+  // console.log("4: " + search);
   moveInfo = document.getElementById(search).innerText.split(";");
   this.move4 = moveInfo;
   // console.log(this.name + ": " + this.move1 + " " + this.move2 + " " + this.move3 + " " + this.move4);
@@ -197,11 +197,17 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   this.spaStat = 2 * parseInt(b4) + 36 + spa / 4;
   this.spdStat = 2 * parseInt(b5) + 36 + spd / 4;
   this.speStat = 2 * parseInt(b6) + 36 + spe / 4;
-  this.status = "";
+  this.atkMod = 1;
+  this.defMod = 1;
+  this.spaMod = 1;
+  this.spdMod = 1;
+  this.speMod = 1;
+  this.accMod = 1;
+  this.evaMod = 1;
+  this.status = [];
   this.sprite = [i, b];
-  this.attack = function(e){
-
-  }
+  this.priority = 0;
+  this.critical = 1;
   // EVS
   this.hp = hp;
   this.atk = atk;
@@ -209,7 +215,58 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   this.spa = spa;
   this.spd = spd;
   this.spe = spe;
-}
+  //---------------------------------------------------------------------------------------
+  this.attack = function(name, target){
+    // console.log("PEW");
+    var d;
+    if (name.localeCompare("Quick-attack") == 0) {
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
+      target.currentHP -= Math.round(d);
+      console.log(target.currentHP);
+    }
+    if (name.localeCompare("Thunderbolt") == 0) {
+      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "electric", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+      console.log(d);
+    }
+
+  }
+  this.calcDam = function(pow, stat, target, targetStat, type, cat, critRate) {
+    var weather, crit, rand, stab, eff, burn, other;
+    //weather
+    if (type.localeCompare("water") == 0 && game.includes("rain")) weather = 1.5;
+    else if (type.localeCompare("fire") == 0 && game.includes("sun")) weather = 1.5;
+    else if (type.localeCompare("water") == 0 && game.includes("sun")) weather = .5;
+    else if (type.localeCompare("fire") == 0 && game.includes("rain")) weather = .5;
+    else weather = 1;
+    //crit
+    var prob = this.spe * this.critical * this.critRate / 512; //HCC = 4, with FE = 8
+    var random_boolean = Math.random() < prob;
+    if (random_boolean) crit = 2;
+    else crit = 1;
+    //rand
+    function getRandomFloat(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+    rand = parseFloat(getRandomFloat(.85,1).toFixed(2));
+    //stab
+    if ((type.localeCompare(this.type[0]) == 0) || (type.localeCompare(this.type[1]) == 0)) stab = 1.5;
+    else stab = 1;
+    //effectiveness
+    function effCalc(a1, d1, d2) {
+      return ((typeEffectiveness[typeIndex(a1)][typeIndex(d1)] / 2) * (typeEffectiveness[typeIndex(a1)][typeIndex(d2)] / 2));
+    }
+    eff = effCalc(type, target.type[0], target.type[1]);
+    //burn
+    if (status.includes("burn") && (cat.localeCompare("physical") == 0) && (name.localeCompare("Facade") != 0)) burn = .5;
+    else burn = 1;
+    //other
+    other = 1; //ATM WIP
+    var mod = weather * crit * rand * stab * eff * burn * other;
+    var dam = (((42 * pow * stat / targetStat) / 50) + 2) * mod;
+    return dam;
+  }
+};
 
 function Game(myCurr, enCurr, myTeam, enTeam) {
   this.weather=[]; //sun, rain, sand, hail
@@ -240,6 +297,7 @@ var setup = function() {
   if (pokemon11) {p11 = new Pokemon(pList11[0], pList11[1], pList11[2], pList11[3], pList11[4], pList11[5], pList11[6], pList11[7], pList11[8], pList11[9], pList11[10], pList11[11], pList11[12], pList11[13], pList11[14], pList11[15], pList11[16], pList11[17], pList11[18], pList11[19], pList11[20], pList11[21], pList11[22], pList11[23])};
   enTeam = [p6, p7, p8, p9, p10, p11];
   game = new Game(p0, p6, myTeam, enTeam);
+  // console.log(game);
   var img = document.createElement("img");
   img.src = p0.sprite[1];
   img.id="my";
@@ -286,26 +344,177 @@ var updateMyCurr = function(e) {
 var updateMyCanvas = function(e) {
   myImg.src = e.sprite[1];
 };
+
+var updateEnCurr = function(e) {
+  game.enCurr = e;
+  enName.innerText = e.name;
+  enHealth.innerText = e.currentHP + "/" + e.hpStat;
+  // console.log(e);
+  updateEnCanvas(e);
+};
 var updateEnCanvas = function(e) {
-  enImg.src = e.sprite[1];
+  enImg.src = e.sprite[0];
 };
-var updateHealthBar = function(e, hb, curr) {
-  enImg.src = e.sprite[1];
-  hb.style = "background-color:limegreen; width:" + curr + "%;";
+
+var updateHealthBar = function(e, hb) {
+  hb.style = "background-color:limegreen; width:" + Math.round(100 * e.currentHP / e.hpStat) + "%;";
 };
+
+var typeEffectiveness = [
+[2,2,2,2,2,1,2,0,1,2,2,2,2,2,2,2,2,2,2],
+[4,2,1,1,2,4,1,0,4,2,2,2,2,1,4,2,4,1,2],
+[2,4,2,2,2,1,4,2,1,2,2,4,1,2,2,2,2,2,2],
+[2,2,2,1,1,1,2,1,0,2,2,4,2,2,2,2,2,4,2],
+[2,2,0,4,2,4,1,2,4,4,2,1,4,2,2,2,2,2,2],
+[2,1,4,2,1,2,4,2,1,4,2,2,2,2,4,2,2,2,2],
+[2,1,1,1,2,2,2,1,1,1,2,4,2,4,2,2,4,1,2],
+[0,2,2,2,2,2,2,4,2,2,2,2,2,4,2,2,1,2,2],
+[2,2,2,2,2,4,2,2,1,1,1,2,1,2,4,2,2,4,2],
+[2,2,2,2,2,1,4,2,4,1,1,4,2,2,4,1,2,2,2],
+[2,2,2,2,4,4,2,2,2,4,1,1,2,2,2,1,2,2,2],
+[2,2,1,1,4,4,1,2,1,1,4,1,2,2,2,1,2,2,2],
+[2,2,4,2,0,2,2,2,2,2,4,1,1,2,2,1,2,2,2],
+[2,4,2,4,2,2,2,2,1,2,2,2,2,1,2,2,0,2,2],
+[2,2,4,2,4,2,2,2,1,1,1,4,2,2,1,4,2,2,2],
+[2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,4,2,0,2],
+[2,1,2,2,2,2,2,4,2,2,2,2,2,4,2,2,1,1,2],
+[2,4,2,1,2,2,2,2,1,1,2,2,2,2,2,4,4,2,2],
+[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+];
+var calculateDanger = function(a1, a2, d1, d2) { //0-8
+  return ((typeEffectiveness[typeIndex(a1)][typeIndex(d1)] / 2) * (typeEffectiveness[typeIndex(a2)][typeIndex(d1)] / 2)) * ((typeEffectiveness[typeIndex(a1)][typeIndex(d2)] / 2) * (typeEffectiveness[typeIndex(a2)][typeIndex(d2)] / 2));
+}
+var typeIndex = function(t) {
+  switch(t) {
+    case "normal": return 0;
+    case "fighting": return 1;
+    case "flying": return 2;
+    case "poison": return 3;
+    case "ground": return 4;
+    case "rock": return 5;
+    case "bug": return 6;
+    case "ghost": return 7;
+    case "steel": return 8;
+    case "fire": return 9;
+    case "water": return 10;
+    case "grass": return 11;
+    case "electric": return 12;
+    case "psychic": return 13;
+    case "ice": return 14;
+    case "dragon": return 15;
+    case "dark": return 16;
+    case "fairy": return 17;
+    default: return 18;
+  }
+  // if (t.localeCompare("normal") == 0) return 0;
+  // if (t.localeCompare("fighting") == 0) return 1;
+  // if (t.localeCompare("flying") == 0) return 2;
+  // if (t.localeCompare("poison") == 0) return 3;
+  // if (t.localeCompare("ground") == 0) return 4;
+  // if (t.localeCompare("normal") == 0) return 5;
+}
 
 var update = function(e) {
-  updateMyCurr(e);
+  var enOptions = [game.enCurr.move1, game.enCurr.move2, game.enCurr.move3, game.enCurr.move4]; //[m1, m2, m3, m4, enTeam[0], enTeam[1], enTeam[2], enTeam[3], enTeam[4], enTeam[5]]
+  if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
+  if (enTeam[1].currentHP > 0) enOptions.push(enTeam[1]);
+  if (enTeam[2].currentHP > 0) enOptions.push(enTeam[2]);
+  if (enTeam[3].currentHP > 0) enOptions.push(enTeam[3]);
+  if (enTeam[4].currentHP > 0) enOptions.push(enTeam[4]);
+  if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
+//id|name|type|power|pp|priority|class|category|desc|ailment|ailChance|statChanges|
+//critRate|drain|flinch|healing|statChance|minTurns|maxTurns|minHits|maxHits|accuracy
+// console.log(enOptions);
+  var factor = [];
+  var cap = enOptions.length;
+  for (var i = 0; i < cap; i++) {
+    if (i < 4) {
+      factor.push(calculateDanger(enOptions[i][1], "None", game.myCurr.type[0], game.myCurr.type[1]) * 1.1);
+    }
+    else {
+      if (1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], game.enCurr.type[0], game.enCurr.type[1]) >= 2) break;
+      else if (enOptions[i] == game.enCurr) factor.push(0);
+      else factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
+    }
+  }
+  var max = factor.indexOf(Math.max(...factor));
+  var swap = false;
+  if (max > 3) swap = true;
+  console.log(enTeam);
+  console.log(factor);
+  if (game.myCurr.speStat > game.enCurr.speStat) {
+    var mySmack = true;
+    var enSmack = true;
+    if (e instanceof Pokemon) {
+      updateMyCurr(e);
+      mySmack = false;
+    }
+    if (swap) {
+      updateEnCurr(enOptions[max]);
+      enSmack = false;
+    } //Check for swap
+    if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+    if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+  }
+  else if (game.myCurr.speStat < game.enCurr.speStat) {
+    var mySmack = true;
+    var enSmack = true;
+    if (swap) {
+      updateEnCurr(enOptions[max]);
+      enSmack = false;
+    }
+    if (e instanceof Pokemon) {
+      updateMyCurr(e);
+      mySmack = false;
+    }
+    if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+    if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+  }
+  else { //tied speed
+    var random_boolean = Math.random() >= 0.5;
+    if (random_boolean) {
+      var mySmack = true;
+      var enSmack = true;
+      if (e instanceof Pokemon) {
+        updateMyCurr(e);
+        mySmack = false;
+      }
+      if (swap) {
+        updateEnCurr(enOptions[max]);
+        enSmack = false;
+      } //Check for swap
+      if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+      if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+    }
+    else {
+      var mySmack = true;
+      var enSmack = true;
+      if (swap) {
+        updateEnCurr(enOptions[max]);
+        enSmack = false;
+      }
+      if (e instanceof Pokemon) {
+        updateMyCurr(e);
+        mySmack = false;
+      }
+      if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+      if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+    }
+  }
+  updateMyCurr(game.myCurr);
+  updateEnCurr(game.enCurr);
+  updateHealthBar(game.myCurr, myHealthBar);
+  updateHealthBar(game.enCurr, enHealthBar);
 };
 
 
 
 
 
-m0.addEventListener("click", function(e){});
-m1.addEventListener("click", function(e){});
-m2.addEventListener("click", function(e){});
-m3.addEventListener("click", function(e){});
+m0.addEventListener("click", function(e){update(this)});
+m1.addEventListener("click", function(e){update(this)});
+m2.addEventListener("click", function(e){update(this)});
+m3.addEventListener("click", function(e){update(this)});
 
 one.addEventListener("click", function(e){update(p0)});
 two.addEventListener("click", function(e){update(p1)});
