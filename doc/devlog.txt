@@ -59,6 +59,13 @@ chenB -- 2020-1-9 20:45
 Was able to get all images of your chosen team pokemons (both back and front) to be displayed in the battle page. 
 Was also able to get basic stats of your team pokemon for use in battle page as well.
 
+chenB -- 2020-1-10 14:50
+Messed around with adding team pokemon image to the 6 buttons in battle. Ultimately made the picture the background of the
+button. Attempted to resize the button to fit the image properly but not quite there yet.
+
+chenB -- 2020-1-12 00:39
+Tried requesting api from JavaScript. Didn't work :( Added first 202 moves for damaging in battle.
+
 all -- 2020-01-07 10:00
 Updated design doc (revision 0) 
     - Design doc revisions:
