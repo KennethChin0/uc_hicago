@@ -15,20 +15,6 @@ var pokemon9 = document.getElementById('9');
 var pokemon10 = document.getElementById('10');
 var pokemon11 = document.getElementById('11');
 
-var pList0 = pokemon0.innerText.split(",");
-var pList1 = pokemon1.innerText.split(",");
-var pList2 = pokemon2.innerText.split(",");
-var pList3 = pokemon3.innerText.split(",");
-var pList4 = pokemon4.innerText.split(",");
-var pList5 = pokemon5.innerText.split(",");
-
-var pList6 = pokemon6.innerText.split(",");
-var pList7 = pokemon7.innerText.split(",");
-var pList8 = pokemon8.innerText.split(",");
-var pList9 = pokemon9.innerText.split(",");
-var pList10 = pokemon10.innerText.split(",");
-var pList11 = pokemon11.innerText.split(",");
-
 var base1 = document.getElementById("base1");
 var base2 = document.getElementById("base2");
 var base3 = document.getElementById("base3");
@@ -38,27 +24,6 @@ var base6 = document.getElementById("base6");
 
 var front = document.getElementById("front").children;
 var back = document.getElementById("back").children;
-
-pList0 = pList0.concat(base1.innerText.substring(1, base1.innerText.length - 1).split(","));
-pList1 = pList1.concat(base2.innerText.substring(1, base2.innerText.length - 1).split(","));
-pList2 = pList2.concat(base3.innerText.substring(1, base3.innerText.length - 1).split(","));
-pList3 = pList3.concat(base4.innerText.substring(1, base4.innerText.length - 1).split(","));
-pList4 = pList4.concat(base5.innerText.substring(1, base5.innerText.length - 1).split(","));
-pList5 = pList5.concat(base6.innerText.substring(1, base6.innerText.length - 1).split(","));
-
-pList0.push(front[0].innerText);
-pList1.push(front[1].innerText);
-pList2.push(front[2].innerText);
-pList3.push(front[3].innerText);
-pList4.push(front[4].innerText);
-pList5.push(front[5].innerText);
-
-pList0.push(back[0].innerText);
-pList1.push(back[1].innerText);
-pList2.push(back[2].innerText);
-pList3.push(back[3].innerText);
-pList4.push(back[4].innerText);
-pList5.push(back[5].innerText);
 
 var one = document.getElementById("one");
 var two = document.getElementById("two");
@@ -78,7 +43,13 @@ var enName = document.getElementById("enName");
 var myHealth = document.getElementById("myHealth");
 var enHealth = document.getElementById("enHealth");
 
-var p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, game;
+var myImg = document.getElementById("my");
+var enImg = document.getElementById("en");
+var myHealthBar = document.getElementById("myHP");
+var enHealthBar = document.getElementById("enHP");
+
+var p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, game, streak = 0;
+var s = document.getElementById("streak");
 
 var getEnStats = function(e) {
   var out = [];
@@ -118,20 +89,6 @@ var getMyTypes = function(e) {
   // console.log(out);
   return out;
 };
-
-pList0 = pList0.concat(getMyTypes(pList0));
-pList1 = pList1.concat(getMyTypes(pList1));
-pList2 = pList2.concat(getMyTypes(pList2));
-pList3 = pList3.concat(getMyTypes(pList3));
-pList4 = pList4.concat(getMyTypes(pList4));
-pList5 = pList5.concat(getMyTypes(pList5));
-
-pList6 = pList6.concat(getEnStats(pList6));
-pList7 = pList7.concat(getEnStats(pList7));
-pList8 = pList8.concat(getEnStats(pList8));
-pList9 = pList9.concat(getEnStats(pList9));
-pList10 = pList10.concat(getEnStats(pList10));
-pList11 = pList11.concat(getEnStats(pList11));
 
 function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, spe, b1, b2, b3, b4, b5, b6, i, b, type1, type2) {
   this.name = poke;
@@ -220,14 +177,14 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     // console.log("PEW");
     var d;
     if (name.localeCompare("Quick-attack") == 0) {
-      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP -= Math.round(d);
-      console.log(target.currentHP);
+      // console.log(target.currentHP);
     }
     if (name.localeCompare("Thunderbolt") == 0) {
-      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "electric", "special", 1);
+      d = this.calcDam(180, this.spaStat, target, target.spdStat * target.spdMod, "electric", "special", 1);
       target.currentHP = target.currentHP - Math.round(d);
-      console.log(d);
+      // console.log(d);
     }
 
   }
@@ -282,6 +239,97 @@ function Game(myCurr, enCurr, myTeam, enTeam) {
 
 var myTeam = [], enTeam = [];
 var setup = function() {
+  pokemon0 = document.getElementById('0');
+  pokemon1 = document.getElementById('1');
+  pokemon2 = document.getElementById('2');
+  pokemon3 = document.getElementById('3');
+  pokemon4 = document.getElementById('4');
+  pokemon5 = document.getElementById('5');
+
+  pokemon6 = document.getElementById('6');
+  pokemon7 = document.getElementById('7');
+  pokemon8 = document.getElementById('8');
+  pokemon9 = document.getElementById('9');
+  pokemon10 = document.getElementById('10');
+  pokemon11 = document.getElementById('11');
+
+  base1 = document.getElementById("base1");
+  base2 = document.getElementById("base2");
+  base3 = document.getElementById("base3");
+  base4 = document.getElementById("base4");
+  base5 = document.getElementById("base5");
+  base6 = document.getElementById("base6");
+
+  front = document.getElementById("front").children;
+  back = document.getElementById("back").children;
+
+  one = document.getElementById("one");
+  two = document.getElementById("two");
+  tre = document.getElementById("tre");
+  fou = document.getElementById("for");
+  fiv = document.getElementById("fiv");
+  six = document.getElementById("six");
+
+  m0 = document.getElementById("m0");
+  m1 = document.getElementById("m1");
+  m2 = document.getElementById("m2");
+  m3 = document.getElementById("m3");
+
+  // var screen = document.getElementById("element");
+  // var myName = document.getElementById("myName");
+  // var enName = document.getElementById("enName");
+  // var myHealth = document.getElementById("myHealth");
+  // var enHealth = document.getElementById("enHealth");
+
+  var pList0 = pokemon0.innerText.split(",");
+  var pList1 = pokemon1.innerText.split(",");
+  var pList2 = pokemon2.innerText.split(",");
+  var pList3 = pokemon3.innerText.split(",");
+  var pList4 = pokemon4.innerText.split(",");
+  var pList5 = pokemon5.innerText.split(",");
+
+  var pList6 = pokemon6.innerText.split(",");
+  var pList7 = pokemon7.innerText.split(",");
+  var pList8 = pokemon8.innerText.split(",");
+  var pList9 = pokemon9.innerText.split(",");
+  var pList10 = pokemon10.innerText.split(",");
+  var pList11 = pokemon11.innerText.split(",");
+
+  pList0 = pList0.concat(base1.innerText.substring(1, base1.innerText.length - 1).split(","));
+  pList1 = pList1.concat(base2.innerText.substring(1, base2.innerText.length - 1).split(","));
+  pList2 = pList2.concat(base3.innerText.substring(1, base3.innerText.length - 1).split(","));
+  pList3 = pList3.concat(base4.innerText.substring(1, base4.innerText.length - 1).split(","));
+  pList4 = pList4.concat(base5.innerText.substring(1, base5.innerText.length - 1).split(","));
+  pList5 = pList5.concat(base6.innerText.substring(1, base6.innerText.length - 1).split(","));
+
+  pList0.push(front[0].innerText);
+  pList1.push(front[1].innerText);
+  pList2.push(front[2].innerText);
+  pList3.push(front[3].innerText);
+  pList4.push(front[4].innerText);
+  pList5.push(front[5].innerText);
+
+  pList0.push(back[0].innerText);
+  pList1.push(back[1].innerText);
+  pList2.push(back[2].innerText);
+  pList3.push(back[3].innerText);
+  pList4.push(back[4].innerText);
+  pList5.push(back[5].innerText);
+
+  pList0 = pList0.concat(getMyTypes(pList0));
+  pList1 = pList1.concat(getMyTypes(pList1));
+  pList2 = pList2.concat(getMyTypes(pList2));
+  pList3 = pList3.concat(getMyTypes(pList3));
+  pList4 = pList4.concat(getMyTypes(pList4));
+  pList5 = pList5.concat(getMyTypes(pList5));
+
+  pList6 = pList6.concat(getEnStats(pList6));
+  pList7 = pList7.concat(getEnStats(pList7));
+  pList8 = pList8.concat(getEnStats(pList8));
+  pList9 = pList9.concat(getEnStats(pList9));
+  pList10 = pList10.concat(getEnStats(pList10));
+  pList11 = pList11.concat(getEnStats(pList11));
+
   if (pokemon0) {p0 = new Pokemon(pList0[0].charAt(0).toUpperCase() + pList0[0].slice(1), pList0[1], pList0[2], pList0[3], pList0[4], pList0[5], pList0[6], pList0[7], pList0[8], pList0[9], pList0[10], pList0[11], pList0[12], pList0[13], pList0[14], pList0[15], pList0[16], pList0[17], pList0[18], pList0[19], pList0[20], pList0[21], pList0[22], pList0[23])};
   if (pokemon1) {p1 = new Pokemon(pList1[0].charAt(0).toUpperCase() + pList1[0].slice(1), pList1[1], pList1[2], pList1[3], pList1[4], pList1[5], pList1[6], pList1[7], pList1[8], pList1[9], pList1[10], pList1[11], pList1[12], pList1[13], pList1[14], pList1[15], pList1[16], pList1[17], pList1[18], pList1[19], pList1[20], pList1[21], pList1[22], pList1[23])};
   if (pokemon2) {p2 = new Pokemon(pList2[0].charAt(0).toUpperCase() + pList2[0].slice(1), pList2[1], pList2[2], pList2[3], pList2[4], pList2[5], pList2[6], pList2[7], pList2[8], pList2[9], pList2[10], pList2[11], pList2[12], pList2[13], pList2[14], pList2[15], pList2[16], pList2[17], pList2[18], pList2[19], pList2[20], pList2[21], pList2[22], pList2[23])};
@@ -297,7 +345,7 @@ var setup = function() {
   if (pokemon11) {p11 = new Pokemon(pList11[0], pList11[1], pList11[2], pList11[3], pList11[4], pList11[5], pList11[6], pList11[7], pList11[8], pList11[9], pList11[10], pList11[11], pList11[12], pList11[13], pList11[14], pList11[15], pList11[16], pList11[17], pList11[18], pList11[19], pList11[20], pList11[21], pList11[22], pList11[23])};
   enTeam = [p6, p7, p8, p9, p10, p11];
   game = new Game(p0, p6, myTeam, enTeam);
-  // console.log(game);
+  console.log(game);
   var img = document.createElement("img");
   img.src = p0.sprite[1];
   img.id="my";
@@ -316,21 +364,14 @@ var setup = function() {
   m1.innerText = p0.move2[0];
   m2.innerText = p0.move3[0];
   m3.innerText = p0.move4[0];
-  // one.className = "btn btn-light disabled";
-  //one.innerText = p0.name;
-  //two.innerText = p1.name;
-  //tre.innerText = p2.name;
-  //fou.innerText = p3.name;
-  //fiv.innerText = p4.name;
-  //six.innerText = p5.name;
+  myImg = document.getElementById("my");
+  enImg = document.getElementById("en");
+  myHealthBar = document.getElementById("myHP");
+  enHealthBar = document.getElementById("enHP");
 };
 
 setup();
 
-var myImg = document.getElementById("my");
-var enImg = document.getElementById("en");
-var myHealthBar = document.getElementById("myHP");
-var enHealthBar = document.getElementById("enHP");
 var updateMyCurr = function(e) {
   game.myCurr = e;
   m0.innerText = e.move1[0];
@@ -346,6 +387,7 @@ var updateMyCanvas = function(e) {
 };
 
 var updateEnCurr = function(e) {
+  console.log(e);
   game.enCurr = e;
   enName.innerText = e.name;
   enHealth.innerText = e.currentHP + "/" + e.hpStat;
@@ -354,6 +396,12 @@ var updateEnCurr = function(e) {
 };
 var updateEnCanvas = function(e) {
   enImg.src = e.sprite[0];
+};
+
+var clearCanvas = function(e) {
+  while (screen.childElementCount > 0) {
+    screen.removeChild(screen.children[0]);
+  }
 };
 
 var updateHealthBar = function(e, hb) {
@@ -406,12 +454,70 @@ var typeIndex = function(t) {
     case "fairy": return 17;
     default: return 18;
   }
-  // if (t.localeCompare("normal") == 0) return 0;
-  // if (t.localeCompare("fighting") == 0) return 1;
-  // if (t.localeCompare("flying") == 0) return 2;
-  // if (t.localeCompare("poison") == 0) return 3;
-  // if (t.localeCompare("ground") == 0) return 4;
-  // if (t.localeCompare("normal") == 0) return 5;
+}
+
+function checkTeam(t) {
+  var alive = false;
+  for (var x = 0; x < t.length; x++) {
+    if (t[x].currentHP > 0) {
+      alive = true;
+      break;
+    }
+  }
+  return alive;
+}
+
+var g = document.getElementById("bot").children;
+var generateTeam = function(w){
+  gen = [];
+  info = [];
+  for (var x = 0; x < 6; x++) {
+    var p = g[Math.floor(Math.random()*g.length)];
+    while (gen.includes(p)) p = g[Math.floor(Math.random()*g.length)];
+    gen.push(p);
+  }
+  console.log(gen);
+
+  for (var x = 0; x < 6; x++) {
+    temp = [];
+    var list = gen[x].innerHTML.split("\n");
+    // console.log(list);
+    var poke = list[0];
+    var ability = list[1].split("Ability: ")[1].trim().split("/")[Math.floor(Math.random()*list[1].split("Ability: ")[1].trim().split("/").length)].trim();
+    var mo0 = list[2].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[2].split(/-(.+)/)[1].trim().split("/").length)].trim();
+    var mo1 = list[3].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[3].split(/-(.+)/)[1].trim().split("/").length)].trim();
+    var mo2 = list[4].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[4].split(/-(.+)/)[1].trim().split("/").length)].trim();
+    var mo3 = list[5].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[5].split(/-(.+)/)[1].trim().split("/").length)].trim();
+    var gend = ["male", "female"][Math.floor(Math.random()*["male", "female"].length)];
+    var hap = 255;
+    var po0 = w;
+    var po1 = w;
+    var po2 = w;
+    var po3 = w;
+    var po4 = w;
+    var po5 = w;
+    temp.push(poke);
+    temp.push(ability);
+    temp.push(mo0);
+    temp.push(mo1);
+    temp.push(mo2);
+    temp.push(mo3);
+    temp.push(gend);
+    temp.push(hap);
+    temp.push(po0);
+    temp.push(po1);
+    temp.push(po2);
+    temp.push(po3);
+    temp.push(po4);
+    temp.push(po5);
+    info.push(temp);
+  }
+  pokemon6.innerText = info[0].join(",");
+  pokemon7.innerText = info[1].join(",");
+  pokemon8.innerText = info[2].join(",");
+  pokemon9.innerText = info[3].join(",");
+  pokemon10.innerText = info[4].join(",");
+  pokemon11.innerText = info[5].join(",");
 }
 
 var update = function(e) {
@@ -424,10 +530,8 @@ var update = function(e) {
   if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
 //id|name|type|power|pp|priority|class|category|desc|ailment|ailChance|statChanges|
 //critRate|drain|flinch|healing|statChance|minTurns|maxTurns|minHits|maxHits|accuracy
-// console.log(enOptions);
   var factor = [];
-  var cap = enOptions.length;
-  for (var i = 0; i < cap; i++) {
+  for (var i = 0; i < enOptions.length; i++) {
     if (i < 4) {
       factor.push(calculateDanger(enOptions[i][1], "None", game.myCurr.type[0], game.myCurr.type[1]) * 1.1);
     }
@@ -440,8 +544,8 @@ var update = function(e) {
   var max = factor.indexOf(Math.max(...factor));
   var swap = false;
   if (max > 3) swap = true;
-  console.log(enTeam);
-  console.log(factor);
+  // console.log(enTeam);
+  // console.log(factor);
   if (game.myCurr.speStat > game.enCurr.speStat) {
     var mySmack = true;
     var enSmack = true;
@@ -454,7 +558,34 @@ var update = function(e) {
       enSmack = false;
     } //Check for swap
     if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
-    if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+    if (game.enCurr.currentHP > 0) {
+      if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+    }
+    else {
+      enOptions = [];
+      if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
+      if (enTeam[1].currentHP > 0) enOptions.push(enTeam[1]);
+      if (enTeam[2].currentHP > 0) enOptions.push(enTeam[2]);
+      if (enTeam[3].currentHP > 0) enOptions.push(enTeam[3]);
+      if (enTeam[4].currentHP > 0) enOptions.push(enTeam[4]);
+      if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
+      factor = [];
+      for (var i = 0; i < enOptions.length; i++) {
+          factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
+      }
+      max = factor.indexOf(Math.max(...factor));
+      if (!checkTeam(enTeam)) {
+        streak++;
+        clearCanvas();
+        generateTeam(84);
+        setup();
+        s.innerText = "Streak: " + streak;
+        return;
+      }
+      console.log("max: " + max + ", " + enOptions[max]);
+      console.log(enOptions);
+      updateEnCurr(enOptions[max]);
+    }
   }
   else if (game.myCurr.speStat < game.enCurr.speStat) {
     var mySmack = true;
@@ -469,6 +600,30 @@ var update = function(e) {
     }
     if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
     if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+    if (game.enCurr.currentHP <= 0) {
+      enOptions = [];
+      if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
+      if (enTeam[1].currentHP > 0) enOptions.push(enTeam[1]);
+      if (enTeam[2].currentHP > 0) enOptions.push(enTeam[2]);
+      if (enTeam[3].currentHP > 0) enOptions.push(enTeam[3]);
+      if (enTeam[4].currentHP > 0) enOptions.push(enTeam[4]);
+      if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
+      factor = [];
+      for (var i = 0; i < enOptions.length; i++) {
+          factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
+      }
+      max = factor.indexOf(Math.max(...factor));
+      if (!checkTeam(enTeam)) {
+        streak++;
+        clearCanvas();
+        generateTeam(84);
+        setup();
+        s.innerText = "Streak: " + streak;
+        return;
+      }
+      console.log("max: " + max + ", " + enOptions[max]);
+      updateEnCurr(enOptions[max]);
+    }
   }
   else { //tied speed
     var random_boolean = Math.random() >= 0.5;
@@ -484,7 +639,33 @@ var update = function(e) {
         enSmack = false;
       } //Check for swap
       if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
-      if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+      if (game.enCurr.currentHP > 0) {
+        if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+      }
+      else {
+        enOptions = [];
+        if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
+        if (enTeam[1].currentHP > 0) enOptions.push(enTeam[1]);
+        if (enTeam[2].currentHP > 0) enOptions.push(enTeam[2]);
+        if (enTeam[3].currentHP > 0) enOptions.push(enTeam[3]);
+        if (enTeam[4].currentHP > 0) enOptions.push(enTeam[4]);
+        if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
+        factor = [];
+        for (var i = 0; i < enOptions.length; i++) {
+            factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
+        }
+        max = factor.indexOf(Math.max(...factor));
+        if (!checkTeam(enTeam)) {
+          streak++;
+          clearCanvas();
+          generateTeam(84);
+          setup();
+          s.innerText = "Streak: " + streak;
+          return;
+        }
+        console.log("max: " + max + ", " + enOptions[max]);
+        updateEnCurr(enOptions[max]);
+      }
     }
     else {
       var mySmack = true;
@@ -499,6 +680,30 @@ var update = function(e) {
       }
       if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
       if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+      if (game.enCurr.currentHP <= 0) {
+        enOptions = [];
+        if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
+        if (enTeam[1].currentHP > 0) enOptions.push(enTeam[1]);
+        if (enTeam[2].currentHP > 0) enOptions.push(enTeam[2]);
+        if (enTeam[3].currentHP > 0) enOptions.push(enTeam[3]);
+        if (enTeam[4].currentHP > 0) enOptions.push(enTeam[4]);
+        if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
+        factor = [];
+        for (var i = 0; i < enOptions.length; i++) {
+            factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
+        }
+        max = factor.indexOf(Math.max(...factor));
+        if (!checkTeam(enTeam)) {
+          streak++;
+          clearCanvas();
+          generateTeam(84);
+          setup();
+          s.innerText = "Streak: " + streak;
+          return;
+        }
+        console.log("max: " + max + ", " + enOptions[max]);
+        updateEnCurr(enOptions[max]);
+      }
     }
   }
   updateMyCurr(game.myCurr);
@@ -506,9 +711,6 @@ var update = function(e) {
   updateHealthBar(game.myCurr, myHealthBar);
   updateHealthBar(game.enCurr, enHealthBar);
 };
-
-
-
 
 
 m0.addEventListener("click", function(e){update(this)});
@@ -522,3 +724,7 @@ tre.addEventListener("click", function(e){update(p2)});
 fou.addEventListener("click", function(e){update(p3)});
 fiv.addEventListener("click", function(e){update(p4)});
 six.addEventListener("click", function(e){update(p5)});
+
+generateTeam(84);
+console.log(enTeam);
+s.innerText = "Streak: " + streak;
