@@ -1364,9 +1364,11 @@ var update = function(e) {
 //id|name|type|power|pp|priority|class|category|desc|ailment|ailChance|statChanges|
 //critRate|drain|flinch|healing|statChance|minTurns|maxTurns|minHits|maxHits|accuracy
   var factor = [];
+  var multiplier = 1.1;
   for (var i = 0; i < enOptions.length; i++) {
     if (i < 4) {
-      factor.push(calculateDanger(enOptions[i][1], "None", game.myCurr.type[0], game.myCurr.type[1]) * 1.1);
+      // console.log();
+      factor.push(calculateDanger(enOptions[i][1], "None", game.myCurr.type[0], game.myCurr.type[1]) * multiplier);
     }
     else {
       if (1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], game.enCurr.type[0], game.enCurr.type[1]) >= 2) break;
