@@ -462,7 +462,6 @@ def battle():
         moves = c.execute("SELECT * FROM MOVES;").fetchall()
         gen = generateTeam(84)
         id = c.execute("SELECT * FROM TEAMS WHERE username = (?) AND id = (?);", (session['user'], request.args['id'])).fetchall()
-
         #print("===============================")
         pokemonpics = c.execute("SELECT CONTENT FROM TEAMS WHERE username = (?) AND id = (?);", (session['user'], request.args['id'])).fetchall()
         #print("Content is \n")
@@ -606,7 +605,8 @@ def battle():
             info.append(temp)
             x += 8
         # print(gen)
-        return render_template("battle.html", b = bot_teams, mons = mons, moves = moves, gen = gen, team = info, base1 = base1, base2 = base2, base3 = base3, base4 = base4, base5 = base5, base6 = base6, front = allFrontPics, back = allBackPics)
+        bot_teams = c.execute("SELECT * FROM BOT_TEAMS;").fetchall();
+        return render_template("battle.html", b = bot_teams, mons = mons, moves = moves, gen = gen, team = info, base1 = base1, base2 = base2, base3 = base3, base4 = base4, base5 = base5, base6 = base6, front = allFrontPics, back = allBackPics, bt = bot_teams)
 
 def generateTeam(w):
     with sqlite3.connect(DB_FILE) as connection:
