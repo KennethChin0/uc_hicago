@@ -227,7 +227,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       console.log(target.currentHP);
     }
     else if (name.localeCompare("Thunder-punch") == 0) {
-      d = this.calcDam(75, this.atkStat, target, target.defStat * target.defMod, "eletric", "physical", 1);
+      d = this.calcDam(75, this.atkStat, target, target.defStat * target.defMod, "electric", "physical", 1);
       target.currentHP -= Math.round(d);
       console.log(target.currentHP);
     }
@@ -1020,14 +1020,234 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "dark", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
+    else if (name.localeCompare("Aqua-tail") == 0) {
+      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "water", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Seed-bomb") == 0) {
+      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "grass", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Air-slash") == 0) {
+      d = this.calcDam(75, this.spaStat, target, target.spdStat * target.spdMod, "flying", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("X-scissor") == 0) {
+      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "bug", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Bug-buzz") == 0) {
+      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "bug", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Dragon-pulse") == 0) {
+      d = this.calcDam(85, this.spaStat, target, target.spdStat * target.spdMod, "dragon", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Dragon-rush") == 0) {
+      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "dragon", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Power-gem") == 0) {
+      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "rock", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Drain-punch") == 0) {
+      d = this.calcDam(75, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Vacuum-wave") == 0) {
+      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Focus-blast") == 0) {
+      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Energy-ball") == 0) {
+      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "grass", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Brave-bird") == 0) {
+      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "flying", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Earth-power") == 0) {
+      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "ground", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Giga-impact") == 0) {
+      d = this.calcDam(150, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Bullet-punch") == 0) {
+      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "steel", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Avalanche") == 0) {
+      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "ice", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Ice-shard") == 0) {
+      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "ice", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Shadow-claw") == 0) {
+      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "ghost", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Thunder-fang") == 0) {
+      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "electric", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Ice-fang") == 0) {
+      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "ice", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Fire-fang") == 0) {
+      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "fire", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Shadow-sneak") == 0) {
+      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "ghost", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Mud-bomb") == 0) {
+      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "ground", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Psycho-cut") == 0) {
+      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "psychic", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Zen-headbutt") == 0) {
+      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "psychic", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Mirror-shot") == 0) {
+      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "steel", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Flash-cannon") == 0) {
+      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "steel", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Rock-climb") == 0) {
+      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Draco-meteor") == 0) {
+      d = this.calcDam(130, this.spaStat, target, target.spdStat * target.spdMod, "dragon", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Discharge") == 0) {
+      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "electric", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Lava-plume") == 0) {
+      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "fire", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Leaf-storm") == 0) {
+      d = this.calcDam(130, this.spaStat, target, target.spdStat * target.spdMod, "grass", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Power-whip") == 0) {
+      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "grass", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Rock-wrecker") == 0) {
+      d = this.calcDam(150, this.spaStat, target, target.spdStat * target.spdMod, "rock", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Cross-poison") == 0) {
+      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "poison", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Gunk-shot") == 0) {
+      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "poison", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Iron-head") == 0) {
+      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "steel", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Magnet-bomb") == 0) {
+      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "steel", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Stone-edge") == 0) {
+      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "rock", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Chatter") == 0) {
+      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "flying", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Judgment") == 0) {
+      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "normal", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Bug-bite") == 0) {
+      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "bug", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Charge-beam") == 0) {
+      d = this.calcDam(50, this.spaStat, target, target.spdStat * target.spdMod, "electric", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Wood-hammer") == 0) {
+      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "grass", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Aqua-jet") == 0) {
+      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "water", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Attack-order") == 0) {
+      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "bug", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Head-smash") == 0) {
+      d = this.calcDam(150, this.spaStat, target, target.spdStat * target.spdMod, "rock", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Double-hit") == 0) {
+      d = this.calcDam(35, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Roar-of-time") == 0) {
+      d = this.calcDam(150, this.spaStat, target, target.spdStat * target.spdMod, "dragon", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Space-rend") == 0) {
+      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "dragon", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Magma-storm") == 0) {
+      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "fire", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Seed-flare") == 0) {
+      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "grass", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Ominous-wind") == 0) {
+      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "ghost", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Shadow-force") == 0) {
+      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "ghost", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
   }
   this.calcDam = function(pow, stat, target, targetStat, type, cat, critRate) {
     var weather, crit, rand, stab, eff, burn, other;
     //weather
-    if (type.localeCompare("water") == 0 && game.includes("rain")) weather = 1.5;
-    else if (type.localeCompare("fire") == 0 && game.includes("sun")) weather = 1.5;
-    else if (type.localeCompare("water") == 0 && game.includes("sun")) weather = .5;
-    else if (type.localeCompare("fire") == 0 && game.includes("rain")) weather = .5;
+    if (type.localeCompare("water") == 0 && game.weather.includes("rain")) weather = 1.5;
+    else if (type.localeCompare("fire") == 0 && game.weather.includes("sun")) weather = 1.5;
+    else if (type.localeCompare("water") == 0 && game.weather.includes("sun")) weather = .5;
+    else if (type.localeCompare("fire") == 0 && game.weather.includes("rain")) weather = .5;
     else weather = 1;
     //crit
     var prob = this.spe * this.critical * this.critRate / 512; //HCC = 4, with FE = 8
