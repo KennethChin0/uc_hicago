@@ -1,22 +1,50 @@
 {% extends "template.html" %}
 
+
+{% block css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+  .container {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background-color:#6666ff;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 25px;
+    opacity: 0.9;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 50%;
+  }
+
+</style>
+{% endblock %}
+
 {% block buttons %}
 
-<li class="nav-item">
+<!-- <li class="nav-item">
   <a href="{{ url_for('root') }}" class="nav-link">Home</a>
+</li> -->
+<li class="nav-item">
+  <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
 </li>
 
 {% endblock %}
 
 {% block body %}
 <div class="container" style="text-align:center;">
-  <br><br><br>
+  Choose Your Team
+  <br><br>
   {% for x in t %}
   <div class="row">
     <div class="col" style="text-align:center;">
   <form action="/battle" method="GET">
     <input type="hidden" name="id" value="{{x[0]}}">
-  <button class="btn btn-info" type="+">{{x[1]}}</button> <br> <br>
+  <button class="btn btn-outline-light btn-rounded waves-effect btn-block" type="+">{{x[1]}}</button> <br> <br>
   </form>
 </div>
 

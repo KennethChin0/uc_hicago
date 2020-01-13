@@ -30,8 +30,11 @@
 {% block title %} | Login{% endblock %}
 
 {% block buttons %}
-<li class="nav-item">
+<!-- <li class="nav-item">
   <a href="{{ url_for('root') }}" class="nav-link">Home</a>
+</li> -->
+<li class="nav-item">
+  <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
 </li>
 
 {% endblock %}
