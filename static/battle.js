@@ -968,7 +968,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       d = this.calcDam(30, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
-    else if (name.localeCompare("Pluck"") == 0) {
+    else if (name.localeCompare("Pluck") == 0) {
       d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
