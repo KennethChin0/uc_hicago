@@ -1,6 +1,9 @@
 var list = document.getElementById('mons');
 var moveList = document.getElementById('moves');
 
+var fourMoves =  document.getElementsByClassName("moves")[0];
+var sixMons =  document.getElementsByClassName("team")[0];
+
 var pokemon0 = document.getElementById('0');
 var pokemon1 = document.getElementById('1');
 var pokemon2 = document.getElementById('2');
@@ -49,6 +52,7 @@ var myHealthBar = document.getElementById("myHP");
 var enHealthBar = document.getElementById("enHP");
 
 var p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, game, streak = 0;
+var t1, t2, t3, t4, t5, t6, tm1, tm2, tm3, tm4;
 var s = document.getElementById("streak");
 
 var getEnStats = function(e) {
@@ -437,7 +441,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP -= Math.round(d);
     }
     else if (name.localeCompare("Earthquake") == 0) {
-      d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "rock", "physical", 1);
+      d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "ground", "physical", 1);
       target.currentHP -= Math.round(d);
     }
     else if (name.localeCompare("Dig") == 0) {
@@ -1398,7 +1402,7 @@ var setup = function() {
   if (pokemon11) {p11 = new Pokemon(pList11[0], pList11[1], pList11[2], pList11[3], pList11[4], pList11[5], pList11[6], pList11[7], pList11[8], pList11[9], pList11[10], pList11[11], pList11[12], pList11[13], pList11[14], pList11[15], pList11[16], pList11[17], pList11[18], pList11[19], pList11[20], pList11[21], pList11[22], pList11[23])};
   enTeam = [p6, p7, p8, p9, p10, p11];
   game = new Game(p0, p6, myTeam, enTeam);
-  console.log(game);
+  // console.log(game);
   var img = document.createElement("img");
   img.src = p0.sprite[1];
   img.id="my";
@@ -1427,6 +1431,7 @@ setup();
 
 var updateMyCurr = function(e) {
   game.myCurr = e;
+  console.log(e);
   m0.innerText = e.move1[0];
   m1.innerText = e.move2[0];
   m2.innerText = e.move3[0];
@@ -1440,7 +1445,7 @@ var updateMyCanvas = function(e) {
 };
 
 var updateEnCurr = function(e) {
-  console.log(e);
+  // console.log(e);
   game.enCurr = e;
   enName.innerText = e.name;
   enHealth.innerText = e.currentHP + "/" + e.hpStat;
@@ -1520,6 +1525,47 @@ function checkTeam(t) {
   return alive;
 }
 
+var myOptions = [];
+
+function switchIn(e) {
+  updateMyCurr(e);
+  updateHealthBar(game.myCurr, myHealthBar);
+  while (sixMons.childElementCount > 0) {
+    sixMons.removeChild(sixMons.children[0]);
+  }
+  one = t1;
+  two = t2;
+  tre = t3;
+  fou = t4;
+  fiv = t5;
+  six = t6;
+  m0 = tm1;
+  m1 = tm2;
+  m2 = tm3;
+  m3 = tm4;
+  // m0.addEventListener("click", function(e){update(this)});
+  // m1.addEventListener("click", function(e){update(this)});
+  // m2.addEventListener("click", function(e){update(this)});
+  // m3.addEventListener("click", function(e){update(this)});
+  // one.addEventListener("click", function(e){update(p0)});
+  // two.addEventListener("click", function(e){update(p1)});
+  // tre.addEventListener("click", function(e){update(p2)});
+  // fou.addEventListener("click", function(e){update(p3)});
+  // fiv.addEventListener("click", function(e){update(p4)});
+  // six.addEventListener("click", function(e){update(p5)});
+  sixMons.appendChild(one);
+  sixMons.appendChild(two);
+  sixMons.appendChild(tre);
+  sixMons.appendChild(fou);
+  sixMons.appendChild(fiv);
+  sixMons.appendChild(six);
+  fourMoves.appendChild(tm1);
+  fourMoves.appendChild(tm2);
+  fourMoves.appendChild(tm3);
+  fourMoves.appendChild(tm4);
+  myOptions = [];
+}
+
 var g = document.getElementById("bot").children;
 var generateTeam = function(w){
   gen = [];
@@ -1574,6 +1620,10 @@ var generateTeam = function(w){
 }
 
 var update = function(e) {
+  if (e instanceof Pokemon) {
+    if (e == game.myCurr) return;
+    if (e.currentHP <= 0) return;
+  }
   var enOptions = [game.enCurr.move1, game.enCurr.move2, game.enCurr.move3, game.enCurr.move4]; //[m1, m2, m3, m4, enTeam[0], enTeam[1], enTeam[2], enTeam[3], enTeam[4], enTeam[5]]
   if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
   if (enTeam[1].currentHP > 0) enOptions.push(enTeam[1]);
@@ -1587,7 +1637,10 @@ var update = function(e) {
   var multiplier = 1.1;
   for (var i = 0; i < enOptions.length; i++) {
     if (i < 4) {
-      // console.log();
+      if (enOptions[i][5].localeCompare("status") == 0) {
+        var buff = (game.enCurr.atkMod - 1) + (game.enCurr.defMod - 1) + (game.enCurr.spaMod - 1) + (game.enCurr.spdMod - 1) + (game.enCurr.speMod - 1) + (game.enCurr.accMod - 1) + (game.enCurr.evaMod - 1);
+        multiplier = 3 / buff + 1;
+      }
       factor.push(calculateDanger(enOptions[i][1], "None", game.myCurr.type[0], game.myCurr.type[1]) * multiplier);
     }
     else {
@@ -1615,6 +1668,46 @@ var update = function(e) {
     if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
     if (game.enCurr.currentHP > 0) {
       if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+      if (game.myCurr.currentHP <= 0) {
+        if (myTeam[0].currentHP > 0) myOptions.push(myTeam[0]);
+        if (myTeam[1].currentHP > 0) myOptions.push(myTeam[1]);
+        if (myTeam[2].currentHP > 0) myOptions.push(myTeam[2]);
+        if (myTeam[3].currentHP > 0) myOptions.push(myTeam[3]);
+        if (myTeam[4].currentHP > 0) myOptions.push(myTeam[4]);
+        if (myTeam[5].currentHP > 0) myOptions.push(myTeam[5]);
+        if (myOptions.length <= 0) {console.log("YOU LOSE"); return;}
+        t1 = one;
+        t2 = two;
+        t3 = tre;
+        t4 = fou;
+        t5 = fiv;
+        t6 = six;
+        tm1 = m0;
+        tm2 = m1;
+        tm3 = m2;
+        tm4 = m3;
+        while (fourMoves.childElementCount > 0) {
+          fourMoves.removeChild(fourMoves.children[0]);
+        }
+        while (sixMons.childElementCount > 0) {
+          sixMons.removeChild(sixMons.children[0]);
+        }
+        for (var x = 0; x < myOptions.length; x++) {
+          var b = document.createElement("button");
+          b.innerHTML = "<img src = \'" + (myOptions[x].sprite[0]) + "\' style=\"position:absolute; right:0; top:0; width:5vw;\">";
+          b.className = "btn btn-light";
+          b.style= "position:relative; width:5vw; height:5vw; padding:0; font-size:1vw;";
+          if (myOptions[x] === p0) b.addEventListener('click', function(e) {switchIn(p0)});
+          if (myOptions[x] === p1) b.addEventListener('click', function(e) {switchIn(p1)});
+          if (myOptions[x] === p2) b.addEventListener('click', function(e) {switchIn(p2)});
+          if (myOptions[x] === p3) b.addEventListener('click', function(e) {switchIn(p3)});
+          if (myOptions[x] === p4) b.addEventListener('click', function(e) {switchIn(p4)});
+          if (myOptions[x] === p5) b.addEventListener('click', function(e) {switchIn(p5)});
+          sixMons.appendChild(b);
+        }
+        console.log(myOptions);
+        return;
+      }
     }
     else {
       enOptions = [];
@@ -1637,8 +1730,8 @@ var update = function(e) {
         s.innerText = "Streak: " + streak;
         return;
       }
-      console.log("max: " + max + ", " + enOptions[max]);
-      console.log(enOptions);
+      // console.log("max: " + max + ", " + enOptions[max]);
+      // console.log(enOptions);
       updateEnCurr(enOptions[max]);
     }
   }
@@ -1653,7 +1746,48 @@ var update = function(e) {
       updateMyCurr(e);
       mySmack = false;
     }
+    console.log(enOptions);
     if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+    if (game.myCurr.currentHP <= 0) {
+      if (myTeam[0].currentHP > 0) myOptions.push(myTeam[0]);
+      if (myTeam[1].currentHP > 0) myOptions.push(myTeam[1]);
+      if (myTeam[2].currentHP > 0) myOptions.push(myTeam[2]);
+      if (myTeam[3].currentHP > 0) myOptions.push(myTeam[3]);
+      if (myTeam[4].currentHP > 0) myOptions.push(myTeam[4]);
+      if (myTeam[5].currentHP > 0) myOptions.push(myTeam[5]);
+      if (myOptions.length <= 0) {console.log("YOU LOSE"); return;}
+      t1 = one;
+      t2 = two;
+      t3 = tre;
+      t4 = fou;
+      t5 = fiv;
+      t6 = six;
+      tm1 = m0;
+      tm2 = m1;
+      tm3 = m2;
+      tm4 = m3;
+      while (fourMoves.childElementCount > 0) {
+        fourMoves.removeChild(fourMoves.children[0]);
+      }
+      while (sixMons.childElementCount > 0) {
+        sixMons.removeChild(sixMons.children[0]);
+      }
+      for (var x = 0; x < myOptions.length; x++) {
+        var b = document.createElement("button");
+        b.innerHTML = "<img src = \'" + (myOptions[x].sprite[0]) + "\' style=\"position:absolute; right:0; top:0; width:5vw;\">";
+        b.className = "btn btn-light";
+        b.style= "position:relative; width:5vw; height:5vw; padding:0; font-size:1vw;";
+        if (myOptions[x] === p0) b.addEventListener('click', function(e) {switchIn(p0)});
+        if (myOptions[x] === p1) b.addEventListener('click', function(e) {switchIn(p1)});
+        if (myOptions[x] === p2) b.addEventListener('click', function(e) {switchIn(p2)});
+        if (myOptions[x] === p3) b.addEventListener('click', function(e) {switchIn(p3)});
+        if (myOptions[x] === p4) b.addEventListener('click', function(e) {switchIn(p4)});
+        if (myOptions[x] === p5) b.addEventListener('click', function(e) {switchIn(p5)});
+        sixMons.appendChild(b);
+      }
+      console.log(myOptions);
+      return;
+    }
     if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
     if (game.enCurr.currentHP <= 0) {
       enOptions = [];
@@ -1676,7 +1810,7 @@ var update = function(e) {
         s.innerText = "Streak: " + streak;
         return;
       }
-      console.log("max: " + max + ", " + enOptions[max]);
+      // console.log("max: " + max + ", " + enOptions[max]);
       updateEnCurr(enOptions[max]);
     }
   }
@@ -1696,6 +1830,46 @@ var update = function(e) {
       if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
       if (game.enCurr.currentHP > 0) {
         if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+        if (game.myCurr.currentHP <= 0) {
+          if (myTeam[0].currentHP > 0) myOptions.push(myTeam[0]);
+          if (myTeam[1].currentHP > 0) myOptions.push(myTeam[1]);
+          if (myTeam[2].currentHP > 0) myOptions.push(myTeam[2]);
+          if (myTeam[3].currentHP > 0) myOptions.push(myTeam[3]);
+          if (myTeam[4].currentHP > 0) myOptions.push(myTeam[4]);
+          if (myTeam[5].currentHP > 0) myOptions.push(myTeam[5]);
+          if (myOptions.length <= 0) {console.log("YOU LOSE"); return;}
+          t1 = one;
+          t2 = two;
+          t3 = tre;
+          t4 = fou;
+          t5 = fiv;
+          t6 = six;
+          tm1 = m0;
+          tm2 = m1;
+          tm3 = m2;
+          tm4 = m3;
+          while (fourMoves.childElementCount > 0) {
+            fourMoves.removeChild(fourMoves.children[0]);
+          }
+          while (sixMons.childElementCount > 0) {
+            sixMons.removeChild(sixMons.children[0]);
+          }
+          for (var x = 0; x < myOptions.length; x++) {
+            var b = document.createElement("button");
+            b.innerHTML = "<img src = \'" + (myOptions[x].sprite[0]) + "\' style=\"position:absolute; right:0; top:0; width:5vw;\">";
+            b.className = "btn btn-light";
+            b.style= "position:relative; width:5vw; height:5vw; padding:0; font-size:1vw;";
+            if (myOptions[x] === p0) b.addEventListener('click', function(e) {switchIn(p0)});
+            if (myOptions[x] === p1) b.addEventListener('click', function(e) {switchIn(p1)});
+            if (myOptions[x] === p2) b.addEventListener('click', function(e) {switchIn(p2)});
+            if (myOptions[x] === p3) b.addEventListener('click', function(e) {switchIn(p3)});
+            if (myOptions[x] === p4) b.addEventListener('click', function(e) {switchIn(p4)});
+            if (myOptions[x] === p5) b.addEventListener('click', function(e) {switchIn(p5)});
+            sixMons.appendChild(b);
+          }
+          console.log(myOptions);
+          return;
+        }
       }
       else {
         enOptions = [];
@@ -1718,7 +1892,7 @@ var update = function(e) {
           s.innerText = "Streak: " + streak;
           return;
         }
-        console.log("max: " + max + ", " + enOptions[max]);
+        // console.log("max: " + max + ", " + enOptions[max]);
         updateEnCurr(enOptions[max]);
       }
     }
@@ -1734,6 +1908,46 @@ var update = function(e) {
         mySmack = false;
       }
       if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+      if (game.myCurr.currentHP <= 0) {
+        if (myTeam[0].currentHP > 0) myOptions.push(myTeam[0]);
+        if (myTeam[1].currentHP > 0) myOptions.push(myTeam[1]);
+        if (myTeam[2].currentHP > 0) myOptions.push(myTeam[2]);
+        if (myTeam[3].currentHP > 0) myOptions.push(myTeam[3]);
+        if (myTeam[4].currentHP > 0) myOptions.push(myTeam[4]);
+        if (myTeam[5].currentHP > 0) myOptions.push(myTeam[5]);
+        if (myOptions.length <= 0) {console.log("YOU LOSE"); return;}
+        t1 = one;
+        t2 = two;
+        t3 = tre;
+        t4 = fou;
+        t5 = fiv;
+        t6 = six;
+        tm1 = m0;
+        tm2 = m1;
+        tm3 = m2;
+        tm4 = m3;
+        while (fourMoves.childElementCount > 0) {
+          fourMoves.removeChild(fourMoves.children[0]);
+        }
+        while (sixMons.childElementCount > 0) {
+          sixMons.removeChild(sixMons.children[0]);
+        }
+        for (var x = 0; x < myOptions.length; x++) {
+          var b = document.createElement("button");
+          b.innerHTML = "<img src = \'" + (myOptions[x].sprite[0]) + "\' style=\"position:absolute; right:0; top:0; width:5vw;\">";
+          b.className = "btn btn-light";
+          b.style= "position:relative; width:5vw; height:5vw; padding:0; font-size:1vw;";
+          if (myOptions[x] === p0) b.addEventListener('click', function(e) {switchIn(p0)});
+          if (myOptions[x] === p1) b.addEventListener('click', function(e) {switchIn(p1)});
+          if (myOptions[x] === p2) b.addEventListener('click', function(e) {switchIn(p2)});
+          if (myOptions[x] === p3) b.addEventListener('click', function(e) {switchIn(p3)});
+          if (myOptions[x] === p4) b.addEventListener('click', function(e) {switchIn(p4)});
+          if (myOptions[x] === p5) b.addEventListener('click', function(e) {switchIn(p5)});
+          sixMons.appendChild(b);
+        }
+        console.log(myOptions);
+        return;
+      }
       if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
       if (game.enCurr.currentHP <= 0) {
         enOptions = [];
