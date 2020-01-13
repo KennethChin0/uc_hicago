@@ -255,6 +255,30 @@ def register():
       flash('Please make sure to fill all fields!')
   return render_template("register.html")
 
+
+@app.route("/directions")
+def directions():
+  # # if user already logged in, redirects back to discover
+  # if 'user' in session:
+  #   return redirect(url_for('root'))
+  #
+  # # checking to see if things were submitted
+  # if (request.args):
+  #   if (bool(request.args["username"]) and bool(request.args["password"])):
+  #     # setting request.args to variables to make life easier
+  #     inpUser = request.args["username"]
+  #     inpPass = request.args["password"]
+  #     inpConf = request.args["confirmPass"]
+  #
+  #     if(addUser(inpUser, inpPass, inpConf)):
+  #       flash('Success! Please login.')
+  #       return redirect(url_for("login"))
+  #     else:
+  #       return(redirect(url_for("register")))
+  #   else:
+  #     flash('Please make sure to fill all fields!')
+  return render_template("directions.html")
+
 #logout route: removes the user from session and redirects to root
 @app.route("/logout")
 def logout():
@@ -653,6 +677,7 @@ def generateTeam(w):
             info.append(temp)
         info.reverse()
         return info
+
 
 @app.route("/teambuilder")
 def teambuilder():

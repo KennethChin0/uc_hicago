@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% extends "template.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+  .container {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-600%);
+    background-color: #fdfbfb;
+    opacity: .9;
+    width:50%;
+    padding: 20px;
+    border-radius: 25px;
+  }
+  .row{
+    text-align: center;
+  }
+  .form-control:focus {
+    width: 280px;
+  }
+</style>
+{% endblock %}
+
+{% block title %} | Login{% endblock %}
+
+{% block buttons %}
+<!-- <li class="nav-item">
+  <a href="{{ url_for('root') }}" class="nav-link">Home</a>
+</li> -->
+<li class="nav-item">
+  <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
+</li>
+
+{% endblock %}
+
+{% block body %}
+
+{% if msg %}
+<h3>{{ msg }}</h3>
+{% endif %}
+
+<div class="container" style="text-align:center;">
+  <div class = "row">
+    How to Play
+    </div>
+
+
+
+</div>
+
+{% for message in get_flashed_messages() %}
+<br><br>
+<center><b>{{ message }}</b></center>
+{% endfor %}
+
+{% endblock %}
