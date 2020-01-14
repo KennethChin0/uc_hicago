@@ -1,5 +1,6 @@
 let list = document.getElementById('mons');
 let moveList = document.getElementById('moves');
+let newGame = document.getElementById('newGame');
 
 let fourMoves =  document.getElementsByClassName("moves")[0];
 let sixMons =  document.getElementsByClassName("team")[0];
@@ -1633,6 +1634,17 @@ function indexOfMax(arr) {
     return maxIndex;
 }
 
+function startNewGame() {
+  while (newGame.childElementCount > 0) {
+    newGame.removeChild(newGame.children[0]);
+  }
+  streak++;
+  clearCanvas();
+  generateTeam(84);
+  setup();
+  s.innerText = "Streak: " + streak;
+}
+
 let update = function(e) {
   if (e instanceof Pokemon) {
     if (e == game.myCurr) return;
@@ -1744,11 +1756,13 @@ let update = function(e) {
       max = indexOfMax(factor);
       console.log("max: " + max + ", " + enOptions);
       if (!checkTeam(enTeam)) {
-        streak++;
-        clearCanvas();
-        generateTeam(84);
-        setup();
-        s.innerText = "Streak: " + streak;
+        let b = document.createElement("button");
+        b.innerText = "Next Battle!";
+        b.className = "btn btn-primary";
+        b.type = "button";
+        b.style = "position:absolute; left:50%; top:35%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);";
+        b.addEventListener('click', function(e){startNewGame()});
+        newGame.appendChild(b);
         return;
       }
       updateEnCurr(enOptions[max]);
@@ -1826,11 +1840,13 @@ let update = function(e) {
       max = indexOfMax(factor);
       console.log("max: " + max + ", " + enOptions);
       if (!checkTeam(enTeam)) {
-        streak++;
-        clearCanvas();
-        generateTeam(84);
-        setup();
-        s.innerText = "Streak: " + streak;
+        let b = document.createElement("button");
+        b.innerText = "Next Battle!";
+        b.className = "btn btn-primary";
+        b.type = "button";
+        b.style = "position:absolute; left:50%; top:35%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);";
+        b.addEventListener('click', function(e){startNewGame()});
+        newGame.appendChild(b);
         return;
       }
       // console.log("max: " + max + ", " + enOptions[max]);
@@ -1913,11 +1929,13 @@ let update = function(e) {
         max = indexOfMax(factor);
         console.log("max: " + max + ", " + enOptions);
         if (!checkTeam(enTeam)) {
-          streak++;
-          clearCanvas();
-          generateTeam(84);
-          setup();
-          s.innerText = "Streak: " + streak;
+          let b = document.createElement("button");
+          b.innerText = "Next Battle!";
+          b.className = "btn btn-primary";
+          b.type = "button";
+          b.style = "position:absolute; left:50%; top:35%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);";
+          b.addEventListener('click', function(e){startNewGame()});
+          newGame.appendChild(b);
           return;
         }
         // console.log("max: " + max + ", " + enOptions[max]);
@@ -1995,11 +2013,13 @@ let update = function(e) {
         max = indexOfFMax(factor);
         console.log("max: " + max + ", " + enOptions[max]);
         if (!checkTeam(enTeam)) {
-          streak++;
-          clearCanvas();
-          generateTeam(84);
-          setup();
-          s.innerText = "Streak: " + streak;
+          let b = document.createElement("button");
+          b.innerText = "Next Battle!";
+          b.className = "btn btn-primary";
+          b.type = "button";
+          b.style = "position:absolute; left:50%; top:35%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);";
+          b.addEventListener('click', function(e){startNewGame()});
+          newGame.appendChild(b);
           return;
         }
         updateEnCurr(enOptions[max]);
