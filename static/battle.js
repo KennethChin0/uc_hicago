@@ -1691,7 +1691,11 @@ let clearCanvas = function() {
 };
 
 let clearLog = function() {
-  log.innerText = "";
+  log.innerHTML = "";
+}
+
+let addToLog = function(e) {
+  log.innerHTML += e + "<br>";
 }
 
 let typeEffectiveness = [
@@ -1865,9 +1869,16 @@ function startNewGame() {
 }
 
 let update = function(e) {
+  clearLog();
   if (e instanceof Pokemon) {
-    if (e == game.myCurr) return;
-    if (e.currentHP <= 0) return;
+    if (e == game.myCurr) {
+      addToLog(e.name + " is already in the battle!");
+      return;
+    }
+    if (e.currentHP <= 0)  {
+      addToLog(e.name + " is unable to battle...");
+      return;
+    }
   }
   let enOptions = [game.enCurr.move1, game.enCurr.move2, game.enCurr.move3, game.enCurr.move4]; //[m1, m2, m3, m4, enTeam[0], enTeam[1], enTeam[2], enTeam[3], enTeam[4], enTeam[5]]
   if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
@@ -1906,17 +1917,22 @@ let update = function(e) {
     let mySmack = true;
     let enSmack = true;
     if (e instanceof Pokemon) {
+      addToLog("Come back, " + game.myCurr.name + "!  Go, " + e.name + "!");
       updateMyCurr(e);
       mySmack = false;
     }
     if (swap) {
+      addToLog("Opponent withdrew " + game.enCurr.name + " and sent out " + enOptions[max].name + ".");
       updateEnCurr(enOptions[max]);
       enSmack = false;
     } //Check for swap
-    if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+    if (mySmack) {
+      game.myCurr.attack(e.innerText, game.enCurr);
+    }
     if (game.enCurr.currentHP > 0) {
       if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
       if (game.myCurr.currentHP <= 0) {
+        addToLog(game.myCurr.name + " fainted.");
         updateMyCurr(game.myCurr);
         updateEnCurr(game.enCurr);
         updateHealthBar(game.myCurr, myHealthBar);
@@ -1927,7 +1943,12 @@ let update = function(e) {
         if (myTeam[3].currentHP > 0) myOptions.push(myTeam[3]);
         if (myTeam[4].currentHP > 0) myOptions.push(myTeam[4]);
         if (myTeam[5].currentHP > 0) myOptions.push(myTeam[5]);
-        if (myOptions.length <= 0) {console.log("YOU LOSE"); return;}
+        if (myOptions.length <= 0) {
+          addToLog("You are out of usable Pokemon...");
+          addToLog("GAME OVER");
+          return;
+        }
+        addToLog("Choose your next Pokemon...");
         t1 = one;
         t2 = two;
         t3 = tre;
@@ -1975,6 +1996,7 @@ let update = function(e) {
       max = indexOfMax(factor);
       console.log("max: " + max + ", " + enOptions);
       if (!checkTeam(enTeam)) {
+        addToLog("You have defeated opponent #" + (streak + 1) + "!");
         let b = document.createElement("button");
         b.innerText = "Next Battle!";
         b.className = "btn btn-primary";
@@ -1984,6 +2006,8 @@ let update = function(e) {
         newGame.appendChild(b);
         return;
       }
+      addToLog("Opponent's " + game.enCurr.name + " fainted.";
+      addToLog("Opponent sent in " + enOptions[max].name);
       updateEnCurr(enOptions[max]);
     }
   }
@@ -1992,15 +2016,18 @@ let update = function(e) {
     let mySmack = true;
     let enSmack = true;
     if (swap) {
+      addToLog("Opponent withdrew " + game.enCurr.name + " and sent out " + enOptions[max].name + ".");
       updateEnCurr(enOptions[max]);
       enSmack = false;
     }
     if (e instanceof Pokemon) {
+      addToLog("Come back, " + game.myCurr.name + "!  Go, " + e.name + "!");
       updateMyCurr(e);
       mySmack = false;
     }
     if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
     if (game.myCurr.currentHP <= 0) {
+      addToLog(game.myCurr.name + " fainted.");
       updateMyCurr(game.myCurr);
       updateEnCurr(game.enCurr);
       updateHealthBar(game.myCurr, myHealthBar);
@@ -2011,7 +2038,12 @@ let update = function(e) {
       if (myTeam[3].currentHP > 0) myOptions.push(myTeam[3]);
       if (myTeam[4].currentHP > 0) myOptions.push(myTeam[4]);
       if (myTeam[5].currentHP > 0) myOptions.push(myTeam[5]);
-      if (myOptions.length <= 0) {console.log("YOU LOSE"); return;}
+      if (myOptions.length <= 0) {
+        addToLog("You are out of usable Pokemon...");
+        addToLog("GAME OVER");
+        return;
+      }
+      addToLog("Choose your next Pokemon...");
       t1 = one;
       t2 = two;
       t3 = tre;
@@ -2059,6 +2091,7 @@ let update = function(e) {
       max = indexOfMax(factor);
       console.log("max: " + max + ", " + enOptions);
       if (!checkTeam(enTeam)) {
+        addToLog("You have defeated opponent #" + (streak + 1) + "!");
         let b = document.createElement("button");
         b.innerText = "Next Battle!";
         b.className = "btn btn-primary";
@@ -2068,7 +2101,8 @@ let update = function(e) {
         newGame.appendChild(b);
         return;
       }
-      // console.log("max: " + max + ", " + enOptions[max]);
+      addToLog("Opponent's " + game.enCurr.name + " fainted.";
+      addToLog("Opponent sent in " + enOptions[max].name);
       updateEnCurr(enOptions[max]);
     }
   }
@@ -2079,10 +2113,12 @@ let update = function(e) {
       let mySmack = true;
       let enSmack = true;
       if (e instanceof Pokemon) {
+        addToLog("Come back, " + game.myCurr.name + "!  Go, " + e.name + "!");
         updateMyCurr(e);
         mySmack = false;
       }
       if (swap) {
+        addToLog("Opponent withdrew " + game.enCurr.name + " and sent out " + enOptions[max].name + ".");
         updateEnCurr(enOptions[max]);
         enSmack = false;
       } //Check for swap
@@ -2090,6 +2126,7 @@ let update = function(e) {
       if (game.enCurr.currentHP > 0) {
         if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
         if (game.myCurr.currentHP <= 0) {
+          addToLog(game.myCurr.name + " fainted.");
           updateMyCurr(game.myCurr);
           updateEnCurr(game.enCurr);
           updateHealthBar(game.myCurr, myHealthBar);
@@ -2100,7 +2137,12 @@ let update = function(e) {
           if (myTeam[3].currentHP > 0) myOptions.push(myTeam[3]);
           if (myTeam[4].currentHP > 0) myOptions.push(myTeam[4]);
           if (myTeam[5].currentHP > 0) myOptions.push(myTeam[5]);
-          if (myOptions.length <= 0) {console.log("YOU LOSE"); return;}
+          if (myOptions.length <= 0) {
+            addToLog("You are out of usable Pokemon...");
+            addToLog("GAME OVER");
+            return;
+          }
+          addToLog("Choose your next Pokemon...");
           t1 = one;
           t2 = two;
           t3 = tre;
@@ -2148,6 +2190,7 @@ let update = function(e) {
         max = indexOfMax(factor);
         console.log("max: " + max + ", " + enOptions);
         if (!checkTeam(enTeam)) {
+          addToLog("You have defeated opponent #" + (streak + 1) + "!");
           let b = document.createElement("button");
           b.innerText = "Next Battle!";
           b.className = "btn btn-primary";
@@ -2157,7 +2200,8 @@ let update = function(e) {
           newGame.appendChild(b);
           return;
         }
-        // console.log("max: " + max + ", " + enOptions[max]);
+        addToLog("Opponent's " + game.enCurr.name + " fainted.";
+        addToLog("Opponent sent in " + enOptions[max].name);
         updateEnCurr(enOptions[max]);
       }
     }
@@ -2165,15 +2209,18 @@ let update = function(e) {
       let mySmack = true;
       let enSmack = true;
       if (swap) {
+        addToLog("Opponent withdrew " + game.enCurr.name + " and sent out " + enOptions[max].name + ".");
         updateEnCurr(enOptions[max]);
         enSmack = false;
       }
       if (e instanceof Pokemon) {
+        addToLog("Come back, " + game.myCurr.name + "!  Go, " + e.name + "!");
         updateMyCurr(e);
         mySmack = false;
       }
       if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
       if (game.myCurr.currentHP <= 0) {
+        addToLog(game.myCurr.name + " fainted.");
         updateMyCurr(game.myCurr);
         updateEnCurr(game.enCurr);
         updateHealthBar(game.myCurr, myHealthBar);
@@ -2184,7 +2231,12 @@ let update = function(e) {
         if (myTeam[3].currentHP > 0) myOptions.push(myTeam[3]);
         if (myTeam[4].currentHP > 0) myOptions.push(myTeam[4]);
         if (myTeam[5].currentHP > 0) myOptions.push(myTeam[5]);
-        if (myOptions.length <= 0) {console.log("YOU LOSE"); return;}
+        if (myOptions.length <= 0) {
+          addToLog("You are out of usable Pokemon...");
+          addToLog("GAME OVER");
+          return;
+        }
+        addToLog("Choose your next Pokemon...");
         t1 = one;
         t2 = two;
         t3 = tre;
@@ -2232,6 +2284,7 @@ let update = function(e) {
         max = indexOfFMax(factor);
         console.log("max: " + max + ", " + enOptions[max]);
         if (!checkTeam(enTeam)) {
+          addToLog("You have defeated opponent #" + (streak + 1) + "!");
           let b = document.createElement("button");
           b.innerText = "Next Battle!";
           b.className = "btn btn-primary";
@@ -2241,6 +2294,8 @@ let update = function(e) {
           newGame.appendChild(b);
           return;
         }
+        addToLog("Opponent's " + game.enCurr.name + " fainted.";
+        addToLog("Opponent sent in " + enOptions[max].name);
         updateEnCurr(enOptions[max]);
       }
     }
