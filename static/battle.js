@@ -1,74 +1,74 @@
-var list = document.getElementById('mons');
-var moveList = document.getElementById('moves');
+let list = document.getElementById('mons');
+let moveList = document.getElementById('moves');
 
-var fourMoves =  document.getElementsByClassName("moves")[0];
-var sixMons =  document.getElementsByClassName("team")[0];
+let fourMoves =  document.getElementsByClassName("moves")[0];
+let sixMons =  document.getElementsByClassName("team")[0];
 
-var pokemon0 = document.getElementById('0');
-var pokemon1 = document.getElementById('1');
-var pokemon2 = document.getElementById('2');
-var pokemon3 = document.getElementById('3');
-var pokemon4 = document.getElementById('4');
-var pokemon5 = document.getElementById('5');
+let pokemon0 = document.getElementById('0');
+let pokemon1 = document.getElementById('1');
+let pokemon2 = document.getElementById('2');
+let pokemon3 = document.getElementById('3');
+let pokemon4 = document.getElementById('4');
+let pokemon5 = document.getElementById('5');
 
-var pokemon6 = document.getElementById('6');
-var pokemon7 = document.getElementById('7');
-var pokemon8 = document.getElementById('8');
-var pokemon9 = document.getElementById('9');
-var pokemon10 = document.getElementById('10');
-var pokemon11 = document.getElementById('11');
+let pokemon6 = document.getElementById('6');
+let pokemon7 = document.getElementById('7');
+let pokemon8 = document.getElementById('8');
+let pokemon9 = document.getElementById('9');
+let pokemon10 = document.getElementById('10');
+let pokemon11 = document.getElementById('11');
 
-var base1 = document.getElementById("base1");
-var base2 = document.getElementById("base2");
-var base3 = document.getElementById("base3");
-var base4 = document.getElementById("base4");
-var base5 = document.getElementById("base5");
-var base6 = document.getElementById("base6");
+let base1 = document.getElementById("base1");
+let base2 = document.getElementById("base2");
+let base3 = document.getElementById("base3");
+let base4 = document.getElementById("base4");
+let base5 = document.getElementById("base5");
+let base6 = document.getElementById("base6");
 
-var front = document.getElementById("front").children;
-var back = document.getElementById("back").children;
+let front = document.getElementById("front").children;
+let back = document.getElementById("back").children;
 
-var one = document.getElementById("one");
-var two = document.getElementById("two");
-var tre = document.getElementById("tre");
-var fou = document.getElementById("for");
-var fiv = document.getElementById("fiv");
-var six = document.getElementById("six");
+let one = document.getElementById("one");
+let two = document.getElementById("two");
+let tre = document.getElementById("tre");
+let fou = document.getElementById("for");
+let fiv = document.getElementById("fiv");
+let six = document.getElementById("six");
 
-var m0 = document.getElementById("m0");
-var m1 = document.getElementById("m1");
-var m2 = document.getElementById("m2");
-var m3 = document.getElementById("m3");
+let m0 = document.getElementById("m0");
+let m1 = document.getElementById("m1");
+let m2 = document.getElementById("m2");
+let m3 = document.getElementById("m3");
 
-var screen = document.getElementById("element");
-var myName = document.getElementById("myName");
-var enName = document.getElementById("enName");
-var myHealth = document.getElementById("myHealth");
-var enHealth = document.getElementById("enHealth");
+let screen = document.getElementById("element");
+let myName = document.getElementById("myName");
+let enName = document.getElementById("enName");
+let myHealth = document.getElementById("myHealth");
+let enHealth = document.getElementById("enHealth");
 
-var myImg = document.getElementById("my");
-var enImg = document.getElementById("en");
-var myHealthBar = document.getElementById("myHP");
-var enHealthBar = document.getElementById("enHP");
+let myImg = document.getElementById("my");
+let enImg = document.getElementById("en");
+let myHealthBar = document.getElementById("myHP");
+let enHealthBar = document.getElementById("enHP");
 
-var p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, game, streak = 0;
-var t1, t2, t3, t4, t5, t6, tm1, tm2, tm3, tm4;
-var s = document.getElementById("streak");
+let p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, game, streak = 0;
+let t1, t2, t3, t4, t5, t6, tm1, tm2, tm3, tm4;
+let s = document.getElementById("streak");
 
-var getEnStats = function(e) {
-  var out = [];
+let getEnStats = function(e) {
+  let out = [];
   // console.log(e);
-  var monInfo = document.getElementById(e[0].substring(0, 1).toUpperCase() + e[0].substring(1, e[0].length).toLowerCase()).innerText.split(",");
-  var f = monInfo[3];
-  var b = monInfo[4];
-  var type1 = monInfo[1];
-  var type2 = monInfo[2];
-  var b1 = monInfo[5];
-  var b2 = monInfo[6];
-  var b3 = monInfo[7];
-  var b4 = monInfo[8];
-  var b5 = monInfo[9];
-  var b6 = monInfo[10];
+  let monInfo = document.getElementById(e[0].substring(0, 1).toUpperCase() + e[0].substring(1, e[0].length).toLowerCase()).innerText.split(",");
+  let f = monInfo[3];
+  let b = monInfo[4];
+  let type1 = monInfo[1];
+  let type2 = monInfo[2];
+  let b1 = monInfo[5];
+  let b2 = monInfo[6];
+  let b3 = monInfo[7];
+  let b4 = monInfo[8];
+  let b5 = monInfo[9];
+  let b6 = monInfo[10];
   out.push(b1);
   out.push(b2);
   out.push(b3);
@@ -83,11 +83,11 @@ var getEnStats = function(e) {
   return out;
 };
 
-var getMyTypes = function(e) {
-  var out = [];
-  var monInfo = document.getElementById(e[0].substring(0, 1).toUpperCase() + e[0].substring(1, e[0].length).toLowerCase()).innerText.split(",");
-  var type1 = monInfo[1];
-  var type2 = monInfo[2];
+let getMyTypes = function(e) {
+  let out = [];
+  let monInfo = document.getElementById(e[0].substring(0, 1).toUpperCase() + e[0].substring(1, e[0].length).toLowerCase()).innerText.split(",");
+  let type1 = monInfo[1];
+  let type2 = monInfo[2];
   out.push(type1);
   out.push(type2);
   // console.log(out);
@@ -102,21 +102,21 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   this.move2;
   this.move3;
   this.move4;
-  var search = (m1.substring(0, 1).toUpperCase() + m1.substring(1).toLowerCase()).split(" ").join('-');
+  let search = (m1.substring(0, 1).toUpperCase() + m1.substring(1).toLowerCase()).split(" ").join('-');
   while (search.includes("[")) {
-    var a = search.indexOf("[");
-    var b = search.indexOf("]");
+    let a = search.indexOf("[");
+    let b = search.indexOf("]");
     search = search.substring(0, a) + search.substring(b + 1);
     if (search.charAt(search.length - 1) == "-") search = search.substring(0, search.length - 1);
   }
   // console.log(this.name + ": " + m1 + " " + m2 + " " + m3 + " " + m4 + " ");
   // console.log("1: " + search);
-  var moveInfo = document.getElementById(search).innerText.split(";");
+  let moveInfo = document.getElementById(search).innerText.split(";");
   this.move1 = moveInfo;
   search = (m2.substring(0, 1).toUpperCase() + m2.substring(1).toLowerCase()).split(" ").join('-');
   while (search.includes("[")) {
-    var a = search.indexOf("[");
-    var b = search.indexOf("]");
+    let a = search.indexOf("[");
+    let b = search.indexOf("]");
     search = search.substring(0, a) + search.substring(b + 1);
     if (search.charAt(search.length - 1) == "-") search = search.substring(0, search.length - 1);
   }
@@ -125,8 +125,8 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   this.move2 = moveInfo;
   search = (m3.substring(0, 1).toUpperCase() + m3.substring(1).toLowerCase()).split(" ").join('-');
   while (search.includes("[")) {
-    var a = search.indexOf("[");
-    var b = search.indexOf("]");
+    let a = search.indexOf("[");
+    let b = search.indexOf("]");
     search = search.substring(0, a) + search.substring(b + 1);
     if (search.charAt(search.length - 1) == "-") search = search.substring(0, search.length - 1);if (search.charAt(search.length - 1) == "-") search = search.substring(0, search.length - 1);
   }
@@ -135,8 +135,8 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   this.move3 = moveInfo;
   search = (m4.substring(0, 1).toUpperCase() + m4.substring(1).toLowerCase()).split(" ").join('-');
   while (search.includes("[")) {
-    var a = search.indexOf("[");
-    var b = search.indexOf("]");
+    let a = search.indexOf("[");
+    let b = search.indexOf("]");
     search = search.substring(0, a) + search.substring(b + 1);
     if (search.charAt(search.length - 1) == "-") search = search.substring(0, search.length - 1);
   }
@@ -178,8 +178,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   this.spe = spe;
   //---------------------------------------------------------------------------------------
   this.attack = function(name, target){
-    // console.log("PEW");
-    var d;
+    let d;
     if (name.localeCompare("Quick-attack") == 0) {
       d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP -= Math.round(d);
@@ -445,7 +444,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP -= Math.round(d);
     }
     else if (name.localeCompare("Dig") == 0) {
-      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "rock", "physical", 1);
+      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "ground", "physical", 1);
       target.currentHP -= Math.round(d);
     }
     else if (name.localeCompare("Confusion") == 0) {
@@ -645,59 +644,59 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Rollout") == 0) {
-      d = this.calcDam(30, this.spaStat, target, target.spdStat * target.spdMod, "rock", "physical", 1);
+      d = this.calcDam(30, this.atkStat, target, target.defStat * target.defMod, "rock", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("False-swipe") == 0) {
-      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "normal","physical" , 1);
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical" , 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Spark") == 0) {
-      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "electric", "physical", 1);
+      d = this.calcDam(65, this.atkStat, target, target.defStat * target.defMod, "electric", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Fury-cutter") == 0) {
-      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "bug", "physical", 1);
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "bug", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Steel-wing") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "steel", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "steel", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Sacred-fire") == 0) {
-      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "fire", "physical", 1);
+      d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "fire", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Dynamic-punch") == 0) {
-      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Megahorn") == 0) {
-      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "bug", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "bug", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Dragon-breath") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "rock", "special", 1);
+      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "dragon", "special", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Pursuit") == 0) {
-      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "dark", "physical", 1);
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "dark", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Rapid-spin") == 0) {
-      d = this.calcDam(20, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(20, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Iron-tail") == 0) {
-      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "steel", "physical", 1);
+      d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "steel", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Metal-Claw") == 0) {
-      d = this.calcDam(50, this.spaStat, target, target.spdStat * target.spdMod, "steel", "physical", 1);
+      d = this.calcDam(50, this.atkStat, target, target.defStat * target.defMod, "steel", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Vital-throw") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Hidden-power") == 0) {
@@ -705,15 +704,15 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Cross-chop") == 0) {
-      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Crunch") == 0) {
-      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "dark", "physical", 1);
+      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "dark", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Extreme-speed") == 0) {
-      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Ancient-power") == 0) {
@@ -729,7 +728,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Rock-smash") == 0) {
-      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Whirlpool") == 0) {
@@ -737,7 +736,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Fake-out") == 0) {
-      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Uproar") == 0) {
@@ -749,31 +748,31 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Facade") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Focus-punch") == 0) {
-      d = this.calcDam(150, this.spaStat, target, target.spdStat * target.spdMod, "fighthing", "physical", 1);
+      d = this.calcDam(150, this.atkStat, target, target.defStat * target.defMod, "fighthing", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Smelling-salts") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Superpower") == 0) {
-      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Revenge") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Brick-break") == 0) {
-      d = this.calcDam(75, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(75, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Knock-off") == 0) {
-      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "dark", "physical", 1);
+      d = this.calcDam(65, this.atkStat, target, target.defStat * target.defMod, "dark", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Eruption") == 0) {
@@ -785,11 +784,11 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Dive") == 0) {
-      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "water", "physical", 1);
+      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "water", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Arm-thrust") == 0) {
-      d = this.calcDam(15, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(15, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Luster-purge") == 0) {
@@ -801,15 +800,15 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Blaze-kick") == 0) {
-      d = this.calcDam(85, this.spaStat, target, target.spdStat * target.spdMod, "fire", "physical", 1);
+      d = this.calcDam(85, this.atkStat, target, target.defStat * target.defMod, "fire", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Ice-ball") == 0) {
-      d = this.calcDam(30, this.spaStat, target, target.spdStat * target.spdMod, "ice", "physical", 1);
+      d = this.calcDam(30, this.atkStat, target, target.defStat * target.defMod, "ice", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Needle-arm") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "grass", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "grass", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Hyper-voice") == 0) {
@@ -817,11 +816,11 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Poison-fang") == 0) {
-      d = this.calcDam(50, this.spaStat, target, target.spdStat * target.spdMod, "poison", "physical", 1);
+      d = this.calcDam(50, this.atkStat, target, target.defStat * target.defMod, "poison", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Crush-claw") == 0) {
-      d = this.calcDam(75, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(75, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Blast-burn") == 0) {
@@ -833,11 +832,11 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Meteor-mash") == 0) {
-      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "steel", "physical", 1);
+      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "steel", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Astonish") == 0) {
-      d = this.calcDam(30, this.spaStat, target, target.spdStat * target.spdMod, "ghost", "physical", 1);
+      d = this.calcDam(30, this.atkStat, target, target.defStat * target.defMod, "ghost", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Weather-ball") == 0) {
@@ -853,7 +852,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Rock-tomb") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "rock", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "rock", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Silver-wing") == 0) {
@@ -869,7 +868,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Shadow-punch") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "ghost", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "ghost", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Extrasensory") == 0) {
@@ -877,11 +876,11 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Sky-uppercut") == 0) {
-      d = this.calcDam(85, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(85, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Sand-tomb") == 0) {
-      d = this.calcDam(35, this.spaStat, target, target.spdStat * target.spdMod, "ground", "physical", 1);
+      d = this.calcDam(35, this.atkStat, target, target.defStat * target.defMod, "ground", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Muddy-water") == 0) {
@@ -889,19 +888,19 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Bullet-seed") == 0) {
-      d = this.calcDam(25, this.spaStat, target, target.spdStat * target.spdMod, "grass", "physical", 1);
+      d = this.calcDam(25, this.atkStat, target, target.defStat * target.defMod, "grass", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Aerial-ace") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "flying", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "flying", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Icicle-spear") == 0) {
-      d = this.calcDam(25, this.spaStat, target, target.spdStat * target.spdMod, "ice", "physical", 1);
+      d = this.calcDam(25, this.atkStat, target, target.defStat * target.defMod, "ice", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Dragon-claw") == 0) {
-      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "dragon", "physical", 1);
+      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "dragon", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Frenzy-plant") == 0) {
@@ -909,7 +908,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Bounce") == 0) {
-      d = this.calcDam(85, this.spaStat, target, target.spdStat * target.spdMod, "flying", "physical", 1);
+      d = this.calcDam(85, this.atkStat, target, target.defStat * target.defMod, "flying", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Mud-shot") == 0) {
@@ -917,15 +916,15 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Poison-tail") == 0) {
-      d = this.calcDam(50, this.spaStat, target, target.spdStat * target.spdMod, "poison", "physical", 1);
+      d = this.calcDam(50, this.atkStat, target, target.defStat * target.defMod, "poison", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Covet") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Volt-tackle") == 0) {
-      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "electric", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "electric", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Magical-leaf") == 0) {
@@ -933,11 +932,11 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Leaf-blade") == 0) {
-      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "grass", "physical", 1);
+      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "grass", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Rock-blast") == 0) {
-      d = this.calcDam(25, this.spaStat, target, target.spdStat * target.spdMod, "rock", "physical", 1);
+      d = this.calcDam(25, this.atkStat, target, target.defStat * target.defMod, "rock", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Shock-wave") == 0) {
@@ -957,11 +956,11 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Wake-up-slap") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Hammer-arm") == 0) {
-      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Brine") == 0) {
@@ -969,51 +968,51 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Feint") == 0) {
-      d = this.calcDam(30, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(30, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Pluck") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "flying", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("U-turn") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "bug", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "bug", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Close-combat") == 0) {
-      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Payback") == 0) {
-      d = this.calcDam(50, this.spaStat, target, target.spdStat * target.spdMod, "dark", "physical", 1);
+      d = this.calcDam(50, this.atkStat, target, target.defStat * target.defMod, "dark", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Assurance") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "dark", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "dark", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Last-resort") == 0) {
-      d = this.calcDam(140, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(140, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Sucker-punch") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "dark", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "dark", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Flare-blitz") == 0) {
-      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "fire", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "fire", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Force-palm") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
-    else if (name.localeCompare("Sura-sphere") == 0) {
+    else if (name.localeCompare("Aura-sphere") == 0) {
       d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "special", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Poison-jab") == 0) {
-      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "poison", "physical", 1);
+      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "poison", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Dark-pulse") == 0) {
@@ -1021,15 +1020,15 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Night-slash") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "dark", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "dark", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Aqua-tail") == 0) {
-      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "water", "physical", 1);
+      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "water", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Seed-bomb") == 0) {
-      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "grass", "physical", 1);
+      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "grass", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Air-slash") == 0) {
@@ -1037,7 +1036,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("X-scissor") == 0) {
-      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "bug", "physical", 1);
+      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "bug", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Bug-buzz") == 0) {
@@ -1049,7 +1048,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Dragon-rush") == 0) {
-      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "dragon", "physical", 1);
+      d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "dragon", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Power-gem") == 0) {
@@ -1057,7 +1056,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Drain-punch") == 0) {
-      d = this.calcDam(75, this.spaStat, target, target.spdStat * target.spdMod, "fighting", "physical", 1);
+      d = this.calcDam(75, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Vacuum-wave") == 0) {
@@ -1073,7 +1072,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Brave-bird") == 0) {
-      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "flying", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "flying", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Earth-power") == 0) {
@@ -1081,39 +1080,39 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Giga-impact") == 0) {
-      d = this.calcDam(150, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(150, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Bullet-punch") == 0) {
-      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "steel", "physical", 1);
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "steel", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Avalanche") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "ice", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "ice", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Ice-shard") == 0) {
-      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "ice", "physical", 1);
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "ice", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Shadow-claw") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "ghost", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "ghost", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Thunder-fang") == 0) {
-      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "electric", "physical", 1);
+      d = this.calcDam(65, this.atkStat, target, target.defStat * target.defMod, "electric", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Ice-fang") == 0) {
-      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "ice", "physical", 1);
+      d = this.calcDam(65, this.atkStat, target, target.defStat * target.defMod, "ice", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Fire-fang") == 0) {
-      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "fire", "physical", 1);
+      d = this.calcDam(65, this.atkStat, target, target.defStat * target.defMod, "fire", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Shadow-sneak") == 0) {
-      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "ghost", "physical", 1);
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "ghost", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Mud-bomb") == 0) {
@@ -1121,11 +1120,11 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Psycho-cut") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "psychic", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "psychic", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Zen-headbutt") == 0) {
-      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "psychic", "physical", 1);
+      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "psychic", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Mirror-shot") == 0) {
@@ -1137,7 +1136,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Rock-climb") == 0) {
-      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Draco-meteor") == 0) {
@@ -1157,31 +1156,31 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Power-whip") == 0) {
-      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "grass", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "grass", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Rock-wrecker") == 0) {
-      d = this.calcDam(150, this.spaStat, target, target.spdStat * target.spdMod, "rock", "physical", 1);
+      d = this.calcDam(150, this.atkStat, target, target.defStat * target.defMod, "rock", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Cross-poison") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "poison", "physical", 1);
+      d = this.calcDam(70, this.atkStat, target, target.defStat * target.defMod, "poison", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Gunk-shot") == 0) {
-      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "poison", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "poison", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Iron-head") == 0) {
-      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "steel", "physical", 1);
+      d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "steel", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Magnet-bomb") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "steel", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "steel", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Stone-edge") == 0) {
-      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "rock", "physical", 1);
+      d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "rock", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Chatter") == 0) {
@@ -1193,7 +1192,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Bug-bite") == 0) {
-      d = this.calcDam(60, this.spaStat, target, target.spdStat * target.spdMod, "bug", "physical", 1);
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "bug", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Charge-beam") == 0) {
@@ -1201,30 +1200,30 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Wood-hammer") == 0) {
-      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "grass", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "grass", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Aqua-jet") == 0) {
-      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "water", "physical", 1);
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "water", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Attack-order") == 0) {
-      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "bug", "physical", 1);
+      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "bug", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Head-smash") == 0) {
-      d = this.calcDam(150, this.spaStat, target, target.spdStat * target.spdMod, "rock", "physical", 1);
+      d = this.calcDam(150, this.atkStat, target, target.defStat * target.defMod, "rock", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Double-hit") == 0) {
-      d = this.calcDam(35, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(35, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Roar-of-time") == 0) {
       d = this.calcDam(150, this.spaStat, target, target.spdStat * target.spdMod, "dragon", "special", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
-    else if (name.localeCompare("Space-rend") == 0) {
+    else if (name.localeCompare("Spacial-rend") == 0) {
       d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "dragon", "special", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
@@ -1241,12 +1240,12 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Shadow-force") == 0) {
-      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "ghost", "physical", 1);
+      d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "ghost", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
   }
   this.calcDam = function(pow, stat, target, targetStat, type, cat, critRate) {
-    var weather, crit, rand, stab, eff, burn, other;
+    let weather, crit, rand, stab, eff, burn, other;
     //weather
     if (type.localeCompare("water") == 0 && game.weather.includes("rain")) weather = 1.5;
     else if (type.localeCompare("fire") == 0 && game.weather.includes("sun")) weather = 1.5;
@@ -1254,8 +1253,8 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     else if (type.localeCompare("fire") == 0 && game.weather.includes("rain")) weather = .5;
     else weather = 1;
     //crit
-    var prob = this.spe * this.critical * this.critRate / 512; //HCC = 4, with FE = 8
-    var random_boolean = Math.random() < prob;
+    let prob = this.spe * this.critical * this.critRate / 512; //HCC = 4, with FE = 8
+    let random_boolean = Math.random() < prob;
     if (random_boolean) crit = 2;
     else crit = 1;
     //rand
@@ -1276,8 +1275,8 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     else burn = 1;
     //other
     other = 1; //ATM WIP
-    var mod = weather * crit * rand * stab * eff * burn * other;
-    var dam = (((42 * pow * stat / targetStat) / 50) + 2) * mod;
+    let mod = weather * crit * rand * stab * eff * burn * other;
+    let dam = (((42 * pow * stat / targetStat) / 50) + 2) * mod;
     return dam;
   }
 };
@@ -1294,8 +1293,12 @@ function Game(myCurr, enCurr, myTeam, enTeam) {
   this.enTeam = enTeam;
 }
 
-var myTeam = [], enTeam = [];
-var setup = function() {
+let updateHealthBar = function(e, hb) {
+  hb.style = "background-color:limegreen; width:" + Math.round(100 * e.currentHP / e.hpStat) + "%;";
+};
+
+let myTeam = [], enTeam = [];
+let setup = function() {
   pokemon0 = document.getElementById('0');
   pokemon1 = document.getElementById('1');
   pokemon2 = document.getElementById('2');
@@ -1332,25 +1335,25 @@ var setup = function() {
   m2 = document.getElementById("m2");
   m3 = document.getElementById("m3");
 
-  // var screen = document.getElementById("element");
-  // var myName = document.getElementById("myName");
-  // var enName = document.getElementById("enName");
-  // var myHealth = document.getElementById("myHealth");
-  // var enHealth = document.getElementById("enHealth");
+  // let screen = document.getElementById("element");
+  // let myName = document.getElementById("myName");
+  // let enName = document.getElementById("enName");
+  // let myHealth = document.getElementById("myHealth");
+  // let enHealth = document.getElementById("enHealth");
 
-  var pList0 = pokemon0.innerText.split(",");
-  var pList1 = pokemon1.innerText.split(",");
-  var pList2 = pokemon2.innerText.split(",");
-  var pList3 = pokemon3.innerText.split(",");
-  var pList4 = pokemon4.innerText.split(",");
-  var pList5 = pokemon5.innerText.split(",");
+  let pList0 = pokemon0.innerText.split(",");
+  let pList1 = pokemon1.innerText.split(",");
+  let pList2 = pokemon2.innerText.split(",");
+  let pList3 = pokemon3.innerText.split(",");
+  let pList4 = pokemon4.innerText.split(",");
+  let pList5 = pokemon5.innerText.split(",");
 
-  var pList6 = pokemon6.innerText.split(",");
-  var pList7 = pokemon7.innerText.split(",");
-  var pList8 = pokemon8.innerText.split(",");
-  var pList9 = pokemon9.innerText.split(",");
-  var pList10 = pokemon10.innerText.split(",");
-  var pList11 = pokemon11.innerText.split(",");
+  let pList6 = pokemon6.innerText.split(",");
+  let pList7 = pokemon7.innerText.split(",");
+  let pList8 = pokemon8.innerText.split(",");
+  let pList9 = pokemon9.innerText.split(",");
+  let pList10 = pokemon10.innerText.split(",");
+  let pList11 = pokemon11.innerText.split(",");
 
   pList0 = pList0.concat(base1.innerText.substring(1, base1.innerText.length - 1).split(","));
   pList1 = pList1.concat(base2.innerText.substring(1, base2.innerText.length - 1).split(","));
@@ -1401,37 +1404,38 @@ var setup = function() {
   if (pokemon10) {p10 = new Pokemon(pList10[0], pList10[1], pList10[2], pList10[3], pList10[4], pList10[5], pList10[6], pList10[7], pList10[8], pList10[9], pList10[10], pList10[11], pList10[12], pList10[13], pList10[14], pList10[15], pList10[16], pList10[17], pList10[18], pList10[19], pList10[20], pList10[21], pList10[22], pList10[23])};
   if (pokemon11) {p11 = new Pokemon(pList11[0], pList11[1], pList11[2], pList11[3], pList11[4], pList11[5], pList11[6], pList11[7], pList11[8], pList11[9], pList11[10], pList11[11], pList11[12], pList11[13], pList11[14], pList11[15], pList11[16], pList11[17], pList11[18], pList11[19], pList11[20], pList11[21], pList11[22], pList11[23])};
   enTeam = [p6, p7, p8, p9, p10, p11];
-  game = new Game(p0, p6, myTeam, enTeam);
+  game = new Game(myTeam[0], enTeam[0], myTeam, enTeam);
   // console.log(game);
-  var img = document.createElement("img");
-  img.src = p0.sprite[1];
+  let img = document.createElement("img");
+  img.src = myTeam[0].sprite[1];
   img.id="my";
   img.style="position:absolute; left: 5%; bottom: 7%; width: 35%;";
   screen.appendChild(img);
-  var imgEN = document.createElement("img");
-  imgEN.src = p6.sprite[0];
+  let imgEN = document.createElement("img");
+  imgEN.src = enTeam[0].sprite[0];
   imgEN.id="en";
   imgEN.style="position:absolute; right: 8%; top: 10%; width: 35%;";
   screen.appendChild(imgEN);
-  myName.innerText = p0.name;
-  myHealth.innerText = p0.currentHP + "/" + p0.hpStat;
-  enName.innerText = p6.name;
-  enHealth.innerText = p6.currentHP + "/" + p6.hpStat;
-  m0.innerText = p0.move1[0];
-  m1.innerText = p0.move2[0];
-  m2.innerText = p0.move3[0];
-  m3.innerText = p0.move4[0];
+  myName.innerText = myTeam[0].name;
+  myHealth.innerText = myTeam[0].currentHP + "/" + myTeam[0].hpStat;
+  enName.innerText = enTeam[0].name;
+  enHealth.innerText = enTeam[0].currentHP + "/" + enTeam[0].hpStat;
+  m0.innerText = myTeam[0].move1[0];
+  m1.innerText = myTeam[0].move2[0];
+  m2.innerText = myTeam[0].move3[0];
+  m3.innerText = myTeam[0].move4[0];
   myImg = document.getElementById("my");
   enImg = document.getElementById("en");
   myHealthBar = document.getElementById("myHP");
   enHealthBar = document.getElementById("enHP");
+  updateHealthBar(game.myCurr, myHealthBar);
+  updateHealthBar(game.enCurr, enHealthBar);
 };
 
 setup();
 
-var updateMyCurr = function(e) {
+let updateMyCurr = function(e) {
   game.myCurr = e;
-  console.log(e);
   m0.innerText = e.move1[0];
   m1.innerText = e.move2[0];
   m2.innerText = e.move3[0];
@@ -1440,33 +1444,27 @@ var updateMyCurr = function(e) {
   myHealth.innerText = e.currentHP + "/" + e.hpStat;
   updateMyCanvas(e);
 };
-var updateMyCanvas = function(e) {
+let updateMyCanvas = function(e) {
   myImg.src = e.sprite[1];
 };
 
-var updateEnCurr = function(e) {
-  // console.log(e);
+let updateEnCurr = function(e) {
   game.enCurr = e;
   enName.innerText = e.name;
   enHealth.innerText = e.currentHP + "/" + e.hpStat;
-  // console.log(e);
   updateEnCanvas(e);
 };
-var updateEnCanvas = function(e) {
+let updateEnCanvas = function(e) {
   enImg.src = e.sprite[0];
 };
 
-var clearCanvas = function(e) {
+let clearCanvas = function(e) {
   while (screen.childElementCount > 0) {
     screen.removeChild(screen.children[0]);
   }
 };
 
-var updateHealthBar = function(e, hb) {
-  hb.style = "background-color:limegreen; width:" + Math.round(100 * e.currentHP / e.hpStat) + "%;";
-};
-
-var typeEffectiveness = [
+let typeEffectiveness = [
 [2,2,2,2,2,1,2,0,1,2,2,2,2,2,2,2,2,2,2],
 [4,2,1,1,2,4,1,0,4,2,2,2,2,1,4,2,4,1,2],
 [2,4,2,2,2,1,4,2,1,2,2,4,1,2,2,2,2,2,2],
@@ -1487,10 +1485,10 @@ var typeEffectiveness = [
 [2,4,2,1,2,2,2,2,1,1,2,2,2,2,2,4,4,2,2],
 [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
 ];
-var calculateDanger = function(a1, a2, d1, d2) { //0-8
+let calculateDanger = function(a1, a2, d1, d2) { //0-8
   return ((typeEffectiveness[typeIndex(a1)][typeIndex(d1)] / 2) * (typeEffectiveness[typeIndex(a2)][typeIndex(d1)] / 2)) * ((typeEffectiveness[typeIndex(a1)][typeIndex(d2)] / 2) * (typeEffectiveness[typeIndex(a2)][typeIndex(d2)] / 2));
 }
-var typeIndex = function(t) {
+let typeIndex = function(t) {
   switch(t) {
     case "normal": return 0;
     case "fighting": return 1;
@@ -1515,8 +1513,8 @@ var typeIndex = function(t) {
 }
 
 function checkTeam(t) {
-  var alive = false;
-  for (var x = 0; x < t.length; x++) {
+  let alive = false;
+  for (let x = 0; x < t.length; x++) {
     if (t[x].currentHP > 0) {
       alive = true;
       break;
@@ -1525,9 +1523,10 @@ function checkTeam(t) {
   return alive;
 }
 
-var myOptions = [];
+let myOptions = [];
 
 function switchIn(e) {
+  console.log(e);
   updateMyCurr(e);
   updateHealthBar(game.myCurr, myHealthBar);
   while (sixMons.childElementCount > 0) {
@@ -1566,35 +1565,35 @@ function switchIn(e) {
   myOptions = [];
 }
 
-var g = document.getElementById("bot").children;
-var generateTeam = function(w){
+let g = document.getElementById("bot").children;
+let generateTeam = function(w){
   gen = [];
   info = [];
-  for (var x = 0; x < 6; x++) {
-    var p = g[Math.floor(Math.random()*g.length)];
+  for (let x = 0; x < 6; x++) {
+    let p = g[Math.floor(Math.random()*g.length)];
     while (gen.includes(p)) p = g[Math.floor(Math.random()*g.length)];
     gen.push(p);
   }
   console.log(gen);
 
-  for (var x = 0; x < 6; x++) {
+  for (let x = 0; x < 6; x++) {
     temp = [];
-    var list = gen[x].innerHTML.split("\n");
+    let list = gen[x].innerHTML.split("\n");
     // console.log(list);
-    var poke = list[0];
-    var ability = list[1].split("Ability: ")[1].trim().split("/")[Math.floor(Math.random()*list[1].split("Ability: ")[1].trim().split("/").length)].trim();
-    var mo0 = list[2].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[2].split(/-(.+)/)[1].trim().split("/").length)].trim();
-    var mo1 = list[3].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[3].split(/-(.+)/)[1].trim().split("/").length)].trim();
-    var mo2 = list[4].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[4].split(/-(.+)/)[1].trim().split("/").length)].trim();
-    var mo3 = list[5].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[5].split(/-(.+)/)[1].trim().split("/").length)].trim();
-    var gend = ["male", "female"][Math.floor(Math.random()*["male", "female"].length)];
-    var hap = 255;
-    var po0 = w;
-    var po1 = w;
-    var po2 = w;
-    var po3 = w;
-    var po4 = w;
-    var po5 = w;
+    let poke = list[0];
+    let ability = list[1].split("Ability: ")[1].trim().split("/")[Math.floor(Math.random()*list[1].split("Ability: ")[1].trim().split("/").length)].trim();
+    let mo0 = list[2].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[2].split(/-(.+)/)[1].trim().split("/").length)].trim();
+    let mo1 = list[3].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[3].split(/-(.+)/)[1].trim().split("/").length)].trim();
+    let mo2 = list[4].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[4].split(/-(.+)/)[1].trim().split("/").length)].trim();
+    let mo3 = list[5].split(/-(.+)/)[1].trim().split("/")[Math.floor(Math.random()*list[5].split(/-(.+)/)[1].trim().split("/").length)].trim();
+    let gend = ["male", "female"][Math.floor(Math.random()*["male", "female"].length)];
+    let hap = 255;
+    let po0 = w;
+    let po1 = w;
+    let po2 = w;
+    let po3 = w;
+    let po4 = w;
+    let po5 = w;
     temp.push(poke);
     temp.push(ability);
     temp.push(mo0);
@@ -1619,12 +1618,27 @@ var generateTeam = function(w){
   pokemon11.innerText = info[5].join(",");
 }
 
-var update = function(e) {
+function indexOfMax(arr) {
+    if (arr.length === 0) {
+        return -1;
+    }
+    let max = arr[0];
+    let maxIndex = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            maxIndex = i;
+            max = arr[i];
+        }
+    }
+    return maxIndex;
+}
+
+let update = function(e) {
   if (e instanceof Pokemon) {
     if (e == game.myCurr) return;
     if (e.currentHP <= 0) return;
   }
-  var enOptions = [game.enCurr.move1, game.enCurr.move2, game.enCurr.move3, game.enCurr.move4]; //[m1, m2, m3, m4, enTeam[0], enTeam[1], enTeam[2], enTeam[3], enTeam[4], enTeam[5]]
+  let enOptions = [game.enCurr.move1, game.enCurr.move2, game.enCurr.move3, game.enCurr.move4]; //[m1, m2, m3, m4, enTeam[0], enTeam[1], enTeam[2], enTeam[3], enTeam[4], enTeam[5]]
   if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
   if (enTeam[1].currentHP > 0) enOptions.push(enTeam[1]);
   if (enTeam[2].currentHP > 0) enOptions.push(enTeam[2]);
@@ -1633,12 +1647,15 @@ var update = function(e) {
   if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
 //id|name|type|power|pp|priority|class|category|desc|ailment|ailChance|statChanges|
 //critRate|drain|flinch|healing|statChance|minTurns|maxTurns|minHits|maxHits|accuracy
-  var factor = [];
-  var multiplier = 1.1;
-  for (var i = 0; i < enOptions.length; i++) {
+  let factor = [];
+  let multiplier = 1.1;
+  for (let i = 0; i < enOptions.length; i++) {
     if (i < 4) {
-      if (enOptions[i][5].localeCompare("status") == 0) {
-        var buff = (game.enCurr.atkMod - 1) + (game.enCurr.defMod - 1) + (game.enCurr.spaMod - 1) + (game.enCurr.spdMod - 1) + (game.enCurr.speMod - 1) + (game.enCurr.accMod - 1) + (game.enCurr.evaMod - 1);
+      if ((enOptions[i][6].localeCompare("ailment") == 0) || (enOptions[i][6].localeCompare("whole-field-effect") == 0)) {
+        if (game.myCurr.status.length > 0) multiplier = 0;
+      }
+      else if (enOptions[i][5].localeCompare("status") == 0) {
+        let buff = (game.enCurr.atkMod - 1) + (game.enCurr.defMod - 1) + (game.enCurr.spaMod - 1) + (game.enCurr.spdMod - 1) + (game.enCurr.speMod - 1) + (game.enCurr.accMod - 1) + (game.enCurr.evaMod - 1);
         multiplier = 3 / buff + 1;
       }
       factor.push(calculateDanger(enOptions[i][1], "None", game.myCurr.type[0], game.myCurr.type[1]) * multiplier);
@@ -1649,14 +1666,14 @@ var update = function(e) {
       else factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
     }
   }
-  var max = factor.indexOf(Math.max(...factor));
-  var swap = false;
+  let max = indexOfMax(factor);
+  let swap = false;
   if (max > 3) swap = true;
-  // console.log(enTeam);
-  // console.log(factor);
+  console.log("max: " + max + ", " + enOptions);
   if (game.myCurr.speStat > game.enCurr.speStat) {
-    var mySmack = true;
-    var enSmack = true;
+    console.log("faster");
+    let mySmack = true;
+    let enSmack = true;
     if (e instanceof Pokemon) {
       updateMyCurr(e);
       mySmack = false;
@@ -1667,8 +1684,12 @@ var update = function(e) {
     } //Check for swap
     if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
     if (game.enCurr.currentHP > 0) {
-      if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+      if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
       if (game.myCurr.currentHP <= 0) {
+        updateMyCurr(game.myCurr);
+        updateEnCurr(game.enCurr);
+        updateHealthBar(game.myCurr, myHealthBar);
+        updateHealthBar(game.enCurr, enHealthBar);
         if (myTeam[0].currentHP > 0) myOptions.push(myTeam[0]);
         if (myTeam[1].currentHP > 0) myOptions.push(myTeam[1]);
         if (myTeam[2].currentHP > 0) myOptions.push(myTeam[2]);
@@ -1692,8 +1713,8 @@ var update = function(e) {
         while (sixMons.childElementCount > 0) {
           sixMons.removeChild(sixMons.children[0]);
         }
-        for (var x = 0; x < myOptions.length; x++) {
-          var b = document.createElement("button");
+        for (let x = 0; x < myOptions.length; x++) {
+          let b = document.createElement("button");
           b.innerHTML = "<img src = \'" + (myOptions[x].sprite[0]) + "\' style=\"position:absolute; right:0; top:0; width:5vw;\">";
           b.className = "btn btn-light";
           b.style= "position:relative; width:5vw; height:5vw; padding:0; font-size:1vw;";
@@ -1705,7 +1726,6 @@ var update = function(e) {
           if (myOptions[x] === p5) b.addEventListener('click', function(e) {switchIn(p5)});
           sixMons.appendChild(b);
         }
-        console.log(myOptions);
         return;
       }
     }
@@ -1718,10 +1738,11 @@ var update = function(e) {
       if (enTeam[4].currentHP > 0) enOptions.push(enTeam[4]);
       if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
       factor = [];
-      for (var i = 0; i < enOptions.length; i++) {
+      for (let i = 0; i < enOptions.length; i++) {
           factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
       }
-      max = factor.indexOf(Math.max(...factor));
+      max = indexOfMax(factor);
+      console.log("max: " + max + ", " + enOptions);
       if (!checkTeam(enTeam)) {
         streak++;
         clearCanvas();
@@ -1730,14 +1751,13 @@ var update = function(e) {
         s.innerText = "Streak: " + streak;
         return;
       }
-      // console.log("max: " + max + ", " + enOptions[max]);
-      // console.log(enOptions);
       updateEnCurr(enOptions[max]);
     }
   }
   else if (game.myCurr.speStat < game.enCurr.speStat) {
-    var mySmack = true;
-    var enSmack = true;
+    console.log("slower");
+    let mySmack = true;
+    let enSmack = true;
     if (swap) {
       updateEnCurr(enOptions[max]);
       enSmack = false;
@@ -1746,9 +1766,12 @@ var update = function(e) {
       updateMyCurr(e);
       mySmack = false;
     }
-    console.log(enOptions);
-    if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+    if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
     if (game.myCurr.currentHP <= 0) {
+      updateMyCurr(game.myCurr);
+      updateEnCurr(game.enCurr);
+      updateHealthBar(game.myCurr, myHealthBar);
+      updateHealthBar(game.enCurr, enHealthBar);
       if (myTeam[0].currentHP > 0) myOptions.push(myTeam[0]);
       if (myTeam[1].currentHP > 0) myOptions.push(myTeam[1]);
       if (myTeam[2].currentHP > 0) myOptions.push(myTeam[2]);
@@ -1772,8 +1795,8 @@ var update = function(e) {
       while (sixMons.childElementCount > 0) {
         sixMons.removeChild(sixMons.children[0]);
       }
-      for (var x = 0; x < myOptions.length; x++) {
-        var b = document.createElement("button");
+      for (let x = 0; x < myOptions.length; x++) {
+        let b = document.createElement("button");
         b.innerHTML = "<img src = \'" + (myOptions[x].sprite[0]) + "\' style=\"position:absolute; right:0; top:0; width:5vw;\">";
         b.className = "btn btn-light";
         b.style= "position:relative; width:5vw; height:5vw; padding:0; font-size:1vw;";
@@ -1785,7 +1808,6 @@ var update = function(e) {
         if (myOptions[x] === p5) b.addEventListener('click', function(e) {switchIn(p5)});
         sixMons.appendChild(b);
       }
-      console.log(myOptions);
       return;
     }
     if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
@@ -1798,10 +1820,11 @@ var update = function(e) {
       if (enTeam[4].currentHP > 0) enOptions.push(enTeam[4]);
       if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
       factor = [];
-      for (var i = 0; i < enOptions.length; i++) {
+      for (let i = 0; i < enOptions.length; i++) {
           factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
       }
-      max = factor.indexOf(Math.max(...factor));
+      max = indexOfMax(factor);
+      console.log("max: " + max + ", " + enOptions);
       if (!checkTeam(enTeam)) {
         streak++;
         clearCanvas();
@@ -1815,10 +1838,11 @@ var update = function(e) {
     }
   }
   else { //tied speed
-    var random_boolean = Math.random() >= 0.5;
+    console.log("tied");
+    let random_boolean = Math.random() >= 0.5;
     if (random_boolean) {
-      var mySmack = true;
-      var enSmack = true;
+      let mySmack = true;
+      let enSmack = true;
       if (e instanceof Pokemon) {
         updateMyCurr(e);
         mySmack = false;
@@ -1829,8 +1853,12 @@ var update = function(e) {
       } //Check for swap
       if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
       if (game.enCurr.currentHP > 0) {
-        if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+        if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
         if (game.myCurr.currentHP <= 0) {
+          updateMyCurr(game.myCurr);
+          updateEnCurr(game.enCurr);
+          updateHealthBar(game.myCurr, myHealthBar);
+          updateHealthBar(game.enCurr, enHealthBar);
           if (myTeam[0].currentHP > 0) myOptions.push(myTeam[0]);
           if (myTeam[1].currentHP > 0) myOptions.push(myTeam[1]);
           if (myTeam[2].currentHP > 0) myOptions.push(myTeam[2]);
@@ -1854,8 +1882,8 @@ var update = function(e) {
           while (sixMons.childElementCount > 0) {
             sixMons.removeChild(sixMons.children[0]);
           }
-          for (var x = 0; x < myOptions.length; x++) {
-            var b = document.createElement("button");
+          for (let x = 0; x < myOptions.length; x++) {
+            let b = document.createElement("button");
             b.innerHTML = "<img src = \'" + (myOptions[x].sprite[0]) + "\' style=\"position:absolute; right:0; top:0; width:5vw;\">";
             b.className = "btn btn-light";
             b.style= "position:relative; width:5vw; height:5vw; padding:0; font-size:1vw;";
@@ -1867,7 +1895,6 @@ var update = function(e) {
             if (myOptions[x] === p5) b.addEventListener('click', function(e) {switchIn(p5)});
             sixMons.appendChild(b);
           }
-          console.log(myOptions);
           return;
         }
       }
@@ -1880,10 +1907,11 @@ var update = function(e) {
         if (enTeam[4].currentHP > 0) enOptions.push(enTeam[4]);
         if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
         factor = [];
-        for (var i = 0; i < enOptions.length; i++) {
+        for (let i = 0; i < enOptions.length; i++) {
             factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
         }
-        max = factor.indexOf(Math.max(...factor));
+        max = indexOfMax(factor);
+        console.log("max: " + max + ", " + enOptions);
         if (!checkTeam(enTeam)) {
           streak++;
           clearCanvas();
@@ -1897,8 +1925,8 @@ var update = function(e) {
       }
     }
     else {
-      var mySmack = true;
-      var enSmack = true;
+      let mySmack = true;
+      let enSmack = true;
       if (swap) {
         updateEnCurr(enOptions[max]);
         enSmack = false;
@@ -1907,8 +1935,12 @@ var update = function(e) {
         updateMyCurr(e);
         mySmack = false;
       }
-      if (enSmack) game.enCurr.attack(enOptions[max][0], game.myCurr);
+      if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
       if (game.myCurr.currentHP <= 0) {
+        updateMyCurr(game.myCurr);
+        updateEnCurr(game.enCurr);
+        updateHealthBar(game.myCurr, myHealthBar);
+        updateHealthBar(game.enCurr, enHealthBar);
         if (myTeam[0].currentHP > 0) myOptions.push(myTeam[0]);
         if (myTeam[1].currentHP > 0) myOptions.push(myTeam[1]);
         if (myTeam[2].currentHP > 0) myOptions.push(myTeam[2]);
@@ -1932,8 +1964,8 @@ var update = function(e) {
         while (sixMons.childElementCount > 0) {
           sixMons.removeChild(sixMons.children[0]);
         }
-        for (var x = 0; x < myOptions.length; x++) {
-          var b = document.createElement("button");
+        for (let x = 0; x < myOptions.length; x++) {
+          let b = document.createElement("button");
           b.innerHTML = "<img src = \'" + (myOptions[x].sprite[0]) + "\' style=\"position:absolute; right:0; top:0; width:5vw;\">";
           b.className = "btn btn-light";
           b.style= "position:relative; width:5vw; height:5vw; padding:0; font-size:1vw;";
@@ -1945,7 +1977,6 @@ var update = function(e) {
           if (myOptions[x] === p5) b.addEventListener('click', function(e) {switchIn(p5)});
           sixMons.appendChild(b);
         }
-        console.log(myOptions);
         return;
       }
       if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
@@ -1958,10 +1989,11 @@ var update = function(e) {
         if (enTeam[4].currentHP > 0) enOptions.push(enTeam[4]);
         if (enTeam[5].currentHP > 0) enOptions.push(enTeam[5]);
         factor = [];
-        for (var i = 0; i < enOptions.length; i++) {
+        for (let i = 0; i < enOptions.length; i++) {
             factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
         }
-        max = factor.indexOf(Math.max(...factor));
+        max = indexOfFMax(factor);
+        console.log("max: " + max + ", " + enOptions[max]);
         if (!checkTeam(enTeam)) {
           streak++;
           clearCanvas();
@@ -1970,7 +2002,6 @@ var update = function(e) {
           s.innerText = "Streak: " + streak;
           return;
         }
-        console.log("max: " + max + ", " + enOptions[max]);
         updateEnCurr(enOptions[max]);
       }
     }
@@ -1987,11 +2018,11 @@ m1.addEventListener("click", function(e){update(this)});
 m2.addEventListener("click", function(e){update(this)});
 m3.addEventListener("click", function(e){update(this)});
 
-one.addEventListener("click", function(e){update(p0)});
-two.addEventListener("click", function(e){update(p1)});
-tre.addEventListener("click", function(e){update(p2)});
-fou.addEventListener("click", function(e){update(p3)});
-fiv.addEventListener("click", function(e){update(p4)});
-six.addEventListener("click", function(e){update(p5)});
+one.addEventListener("click", function(e){update(myTeam[0])});
+two.addEventListener("click", function(e){update(myTeam[1])});
+tre.addEventListener("click", function(e){update(myTeam[2])});
+fou.addEventListener("click", function(e){update(myTeam[3])});
+fiv.addEventListener("click", function(e){update(myTeam[4])});
+six.addEventListener("click", function(e){update(myTeam[5])});
 
 s.innerText = "Streak: " + streak;
