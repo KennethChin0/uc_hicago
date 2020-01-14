@@ -40,13 +40,42 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-
+#streaker {
+  position: absolute;
+  width: 25%;
+  height: 9%;
+  top: 5%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border: solid 3px;
+  border-radius: 20px;
+  background-color: black;
+  box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.5);
+}
+#log {
+  position:absolute;
+  width: 100%;
+  height: 19%;
+  bottom:-10%;
+  left: 50.1%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(40,40,40);
+  color: white;
+  font-size: 1.5vh;
+  border: black solid 5px;
+  text-align:left;
+  padding-left:1.5vw;
+  padding-right:1.5vw;
+  padding-top: .5vh;
+}
 #myInfo {
   position:absolute;
   width: 40%;
   height: 15%;
-  bottom: 20%;
-  right: 15%;
+  bottom: 30%;
+  right: 12%;
   border: solid 3px;
   border-radius: 20px;
   background-color: lightgray;
@@ -56,7 +85,7 @@
   position:absolute;
   width: 40%;
   height: 15%;
-  top: 15%;
+  top: 18%;
   left: 12%;
   border: solid 3px;
   border-radius: 20px;
@@ -88,7 +117,7 @@
 .team {
   position:absolute;
   left: 50%;
-  transform: translate(-50%, 150%);
+  transform: translate(-50%, 125%);
   text-align:center;
   width:50%;
   height:25%;
@@ -131,6 +160,8 @@
   <p id="enHealth" style="font-size: 1vw; margin:0; text-align:center;">100/100</p>
 </div>
 <div id="newGame"> </div>
+<div id="log">HELLO</div>
+<div id="streaker"><p id="streak" style="color:white;"></p></div>
 </div>
 <div class="buttons">
   <div class="moves">
@@ -149,9 +180,6 @@
   </div>
 </div>
 
-<center>
-  <p id="streak"></p>
-</center>
 <!-- <button type="button" class="btn btn-primary" style="position:absolute; left:50%; top:35%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);">Next Battle</button> -->
 
 <ul id="mons">
@@ -217,8 +245,6 @@
   <li style="display:none;" id="11">{{gen[5][0]}},{{gen[5][1]}},{{gen[5][2]}},{{gen[5][3]}},{{gen[5][4]}},{{gen[5][5]}},{{gen[5][6]}},{{gen[5][7]}},{{gen[5][8]}},{{gen[5][9]}},{{gen[5][10]}},{{gen[5][11]}},{{gen[5][12]}},{{gen[5][13]}}</li>
 </ul>
 
-
-<br><br>
 
 <script src={{url_for('static', filename='battle.js')}}></script>
 

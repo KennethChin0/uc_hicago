@@ -55,6 +55,7 @@ let enHealthBar = document.getElementById("enHP");
 let p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, game, streak = 0;
 let t1, t2, t3, t4, t5, t6, tm1, tm2, tm3, tm4;
 let s = document.getElementById("streak");
+let log = document.getElementById("log");
 
 let getEnStats = function(e) {
   let out = [];
@@ -1410,12 +1411,12 @@ let setup = function() {
   let img = document.createElement("img");
   img.src = myTeam[0].sprite[1];
   img.id="my";
-  img.style="position:absolute; left: 5%; bottom: 7%; width: 35%;";
+  img.style="position:absolute; left: 8%; bottom: 12%; width: 35%;";
   screen.appendChild(img);
   let imgEN = document.createElement("img");
   imgEN.src = enTeam[0].sprite[0];
   imgEN.id="en";
-  imgEN.style="position:absolute; right: 8%; top: 10%; width: 35%;";
+  imgEN.style="position:absolute; right: 8%; top: 8%; width: 35%;";
   screen.appendChild(imgEN);
   myName.innerText = myTeam[0].name;
   myHealth.innerText = myTeam[0].currentHP + "/" + myTeam[0].hpStat;
@@ -1459,11 +1460,15 @@ let updateEnCanvas = function(e) {
   enImg.src = e.sprite[0];
 };
 
-let clearCanvas = function(e) {
+let clearCanvas = function() {
   while (screen.childElementCount > 0) {
     screen.removeChild(screen.children[0]);
   }
 };
+
+let clearLog = function() {
+  log.innerText = "";
+}
 
 let typeEffectiveness = [
 [2,2,2,2,2,1,2,0,1,2,2,2,2,2,2,2,2,2,2],
@@ -1543,16 +1548,6 @@ function switchIn(e) {
   m1 = tm2;
   m2 = tm3;
   m3 = tm4;
-  // m0.addEventListener("click", function(e){update(this)});
-  // m1.addEventListener("click", function(e){update(this)});
-  // m2.addEventListener("click", function(e){update(this)});
-  // m3.addEventListener("click", function(e){update(this)});
-  // one.addEventListener("click", function(e){update(p0)});
-  // two.addEventListener("click", function(e){update(p1)});
-  // tre.addEventListener("click", function(e){update(p2)});
-  // fou.addEventListener("click", function(e){update(p3)});
-  // fiv.addEventListener("click", function(e){update(p4)});
-  // six.addEventListener("click", function(e){update(p5)});
   sixMons.appendChild(one);
   sixMons.appendChild(two);
   sixMons.appendChild(tre);
