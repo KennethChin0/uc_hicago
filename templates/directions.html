@@ -15,11 +15,17 @@
     padding: 20px;
     border-radius: 25px;
   }
-  .row{
-    text-align: center;
-  }
   .form-control:focus {
     width: 280px;
+  }
+  /* .row{
+    text-align: center;
+    position:absolute;
+    left:50%;
+    top:50%;
+  } */
+  ul{
+    list-style-type: none;
   }
 </style>
 {% endblock %}
@@ -42,14 +48,54 @@
 <h3>{{ msg }}</h3>
 {% endif %}
 
-<div class="container" style="text-align:center;">
-  <div class = "row">
-    How to Play
-    </div>
+<div class="page-container" style="text-align:center;">
 
+  <h1> How to Play </h1>
 
+  <h2>Goal of the Game </h2>
+  <ul>
+  <li>The player will face off against a bot. (Each team will have 6 Pokemon)</li>
+  <li>The purpose is to defeat the enemy's Pokemon before they can defeat you.</li>
+  </ul>
 
+  <h2>Setting Up </h2>
+  <ul>
+  <li>Players can choose their team in the teambuilder tab.</li>
+  <li>Players will be able to store multiple teams.</li>
+  <li>Players will have the option to choose any Pokemon up to generation 5.</li>
+  <li>Yyou can choose the 4 moves for each of the Pokemon to be used in battle in battle. (moves are restricted to certain Pokemon)</li>
+  <li>Players are given points to increase stats.</li>
+  </ul>
+
+  <h2>Battle </h2>
+  <ul>
+  <li>The game is turn-based.</li>
+  <li>Players are given the option to attack or switch out Pokemon.</li>
+  <li>The bot will attack or switch out Pokemon each time the player performs an action.</li>
+  </ul>
+
+  <h2>Mechanics </h2>
+  <ul>
+  <li>Each Pokemon has its own type which makes them invulnerable/weaker/stronger against certain types</li>
+  <br><br>
+  <div class = "row" style="vertical-align: middle;">
+    <div class = "col-sm">
+  <img src = "static/images/wheel1.jpg" style="width:300px;height:500px;">
+  </div>
+  <div class = "col-sm">
+<img src = "static/images/wheel2.jpg" style="width:300px;height:500px;">
 </div>
+<div class = "col-sm">
+<img src = "static/images/wheel3.jpg" style="width:300px;height:500px;">
+</div>
+</div>
+  </ul>
+  <br><br>
+  <br><br>
+  <br><br>
+</div>
+
+
 
 {% for message in get_flashed_messages() %}
 <br><br>
