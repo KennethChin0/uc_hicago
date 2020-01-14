@@ -781,7 +781,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Secret-power") == 0) {
-      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(70, this.spaStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Dive") == 0) {
@@ -813,7 +813,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Hyper-voice") == 0) {
-      d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(90, this.spaStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Poison-fang") == 0) {
@@ -841,7 +841,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Weather-ball") == 0) {
-      d = this.calcDam(50, this.spaStat, target, target.spdStat * target.spdMod, "normal", "physical", 1);
+      d = this.calcDam(50, this.spaStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Air-cutter") == 0) {
@@ -865,7 +865,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Signal-beam") == 0) {
-      d = this.calcDam(75, this.spaStat, target, target.spdStat * target.spdMod, "bug", "physical", 1);
+      d = this.calcDam(75, this.spaStat, target, target.defStat * target.defMod, "bug", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Shadow-punch") == 0) {
@@ -1242,6 +1242,22 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     }
     else if (name.localeCompare("Shadow-force") == 0) {
       d = this.calcDam(120, this.atkStat, target, target.defStat * target.defMod, "ghost", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Psyshock") == 0) {
+      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "psychic", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Venoshock") == 0) {
+      d = this.calcDam(65, this.spaStat, target, target.spdStat * target.spdMod, "poison", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Smack-down") == 0) {
+      d = this.calcDam(50, this.atkStat, target, target.defStat * target.defMod, "rock", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Storm-throw") == 0) {
+      d = this.calcDam(60, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
   }
