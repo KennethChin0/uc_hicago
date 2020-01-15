@@ -195,7 +195,8 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   this.spd = spd;
   this.spe = spe;
   //---------------------------------------------------------------------------------------
-  this.attack = function(name, target){
+  this.attack = function(name, target, e){
+    if (e == null) {console.log("arrack error"); return;}
     let d;
     if (this.status.includes("para") && getRandomFloat(0, 1) < .25) {
       addToLog(this.name + " is paralyzed! It can't move!");
@@ -220,7 +221,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       }
     }
     if (this.status.includes("infat")) {
-      addToLog(this.name + " is in love with foe's + " target.name + "!");
+      addToLog(this.name + " is in love with foe's " + target.name + "!");
       if (getRandomFloat(0, 1) < .5) {
         addToLog(this.name + " is immobilized by love!");
         return;
@@ -1543,6 +1544,101 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "electric", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
+    else if (name.localeCompare("Belch") == 0) {
+      d = this.calcDam(120, this.spaStat, target, target.spdStat * target.spdMod, "poison", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Rototiller") == 0) {
+
+    }
+    else if (name.localeCompare("Sticky-web") == 0) {
+
+    }
+    else if (name.localeCompare("Fell-stinger") == 0) {
+      d = this.calcDam(50, this.atkStat, target, target.defStat * target.defMod, "bug", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Phantom-force") == 0) {
+      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "ghost", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Noble-roar") == 0) {
+
+    }
+    else if (name.localeCompare("Ion-deluge") == 0) {
+
+    }
+    else if (name.localeCompare("Petal-blizzard") == 0) {
+      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "grass", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Freeze-dry") == 0) {
+      d = this.calcDam(70, this.spaStat, target, target.spdStat * target.spdMod, "ice", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Disarming-voice") == 0) {
+      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "fairy", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Crafty-shield") == 0) {
+
+    }
+    else if (name.localeCompare("Flower-shield") == 0) {
+
+    }
+    else if (name.localeCompare("Grassy-terrain") == 0) {
+
+    }
+    else if (name.localeCompare("Misty-terrain") == 0) {
+
+    }
+    else if (name.localeCompare("Play-rough") == 0) {
+      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "fairy", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Fairy-wind") == 0) {
+      d = this.calcDam(40, this.spaStat, target, target.spdStat * target.spdMod, "fairy", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Moonblast") == 0) {
+      d = this.calcDam(95, this.spaStat, target, target.spdStat * target.spdMod, "fairy", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Boomburst") == 0) {
+      d = this.calcDam(140, this.spaStat, target, target.spdStat * target.spdMod, "normal", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Play-nice") == 0) {
+
+    }
+    else if (name.localeCompare("Confide") == 0) {
+
+    }
+    else if (name.localeCompare("Eerie-impulse") == 0) {
+
+    }
+    else if (name.localeCompare("Venom-drench") == 0) {
+
+    }
+    else if (name.localeCompare("Dazzling-gleam") == 0) {
+      d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "fairy", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Baby-doll-eyes") == 0) {
+
+    }
+    else if (name.localeCompare("Nuzzle") == 0) {
+      d = this.calcDam(20, this.atkStat, target, target.defStat * target.defMod, "electric", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Infestation") == 0) {
+      d = this.calcDam(20, this.atkStat, target, target.defStat * target.defMod, "bug", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Power-up-punch") == 0) {
+      d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "fighting", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
   }
   this.calcDam = function(pow, stat, target, targetStat, type, cat, critRate) {
     let weather, crit, rand, stab, eff, burn, other;
@@ -1840,6 +1936,21 @@ function checkTeam(t) {
   return alive;
 }
 
+function indexOfMax(arr) {
+    if (arr.length === 0) {
+        return -1;
+    }
+    let max = arr[0];
+    let maxIndex = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            maxIndex = i;
+            max = arr[i];
+        }
+    }
+    return maxIndex;
+}
+
 let myOptions = [];
 
 function switchIn(e) {
@@ -1925,21 +2036,6 @@ let generateTeam = function(w){
   pokemon11.innerText = info[5].join(",");
 }
 
-function indexOfMax(arr) {
-    if (arr.length === 0) {
-        return -1;
-    }
-    let max = arr[0];
-    let maxIndex = 0;
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > max) {
-            maxIndex = i;
-            max = arr[i];
-        }
-    }
-    return maxIndex;
-}
-
 function startNewGame() {
   while (newGame.childElementCount > 0) {
     newGame.removeChild(newGame.children[0]);
@@ -2021,7 +2117,7 @@ let update = function(e) {
   console.log(enP);
   console.log(myP);
   if (myP == 0 && enP == 0) {
-    if (game.myCurr.speStat > game.enCurr.speStat) {
+    if (game.myCurr.speStat * game.myCurr.speMod > game.enCurr.speStat * game.enCurr.speMod) {
       let mySmack = true;
       let enSmack = true;
       if (e instanceof Pokemon) {
@@ -2035,10 +2131,15 @@ let update = function(e) {
         enSmack = false;
       } //Check for swap
       if (mySmack) {
-        game.myCurr.attack(e.innerText, game.enCurr);
+        var m;
+        if (game.myCurr.move1 !== null && (e.innerText.localeCompare(game.myCurr.move1[0]) == 0)) m = game.myCurr.move1;
+        if (game.myCurr.move2 !== null && (e.innerText.localeCompare(game.myCurr.move2[0]) == 0)) m = game.myCurr.move2;
+        if (game.myCurr.move3 !== null && (e.innerText.localeCompare(game.myCurr.move3[0]) == 0)) m = game.myCurr.move3;
+        if (game.myCurr.move4 !== null && (e.innerText.localeCompare(game.myCurr.move4[0]) == 0)) m = game.myCurr.move4;
+        game.myCurr.attack(e.innerText, game.enCurr, m);
       }
       if (game.enCurr.currentHP > 0) {
-        if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
+        if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr, enOptions[max]); console.log("DETECT: " + game.myCurr.name);}
         if (game.myCurr.currentHP <= 0) {
           addToLog(game.myCurr.name + " fainted.");
           updateMyCurr(game.myCurr);
@@ -2119,7 +2220,7 @@ let update = function(e) {
         updateEnCurr(enOptions[max]);
       }
     }
-    else if (game.myCurr.speStat < game.enCurr.speStat) {
+    else if (game.myCurr.speStat * game.myCurr.speMod < game.enCurr.speStat * game.enCurr.speMod) {
       let mySmack = true;
       let enSmack = true;
       if (swap) {
@@ -2132,7 +2233,7 @@ let update = function(e) {
         updateMyCurr(e);
         mySmack = false;
       }
-      if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
+      if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr, enOptions[max]); console.log("DETECT: " + game.myCurr.name);}
       if (game.myCurr.currentHP <= 0) {
         addToLog(game.myCurr.name + " fainted.");
         updateMyCurr(game.myCurr);
@@ -2182,7 +2283,14 @@ let update = function(e) {
         }
         return;
       }
-      if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+      if (mySmack) {
+        var m;
+        if (game.myCurr.move1 !== null && (e.innerText.localeCompare(game.myCurr.move1[0]) == 0)) m = game.myCurr.move1;
+        if (game.myCurr.move2 !== null && (e.innerText.localeCompare(game.myCurr.move2[0]) == 0)) m = game.myCurr.move2;
+        if (game.myCurr.move3 !== null && (e.innerText.localeCompare(game.myCurr.move3[0]) == 0)) m = game.myCurr.move3;
+        if (game.myCurr.move4 !== null && (e.innerText.localeCompare(game.myCurr.move4[0]) == 0)) m = game.myCurr.move4;
+        game.myCurr.attack(e.innerText, game.enCurr, m);
+      }
       if (game.enCurr.currentHP <= 0) {
         enOptions = [];
         if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
@@ -2229,9 +2337,16 @@ let update = function(e) {
           updateEnCurr(enOptions[max]);
           enSmack = false;
         } //Check for swap
-        if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+        if (mySmack) {
+          var m;
+          if (game.myCurr.move1 !== null && (e.innerText.localeCompare(game.myCurr.move1[0]) == 0)) m = game.myCurr.move1;
+          if (game.myCurr.move2 !== null && (e.innerText.localeCompare(game.myCurr.move2[0]) == 0)) m = game.myCurr.move2;
+          if (game.myCurr.move3 !== null && (e.innerText.localeCompare(game.myCurr.move3[0]) == 0)) m = game.myCurr.move3;
+          if (game.myCurr.move4 !== null && (e.innerText.localeCompare(game.myCurr.move4[0]) == 0)) m = game.myCurr.move4;
+          game.myCurr.attack(e.innerText, game.enCurr, m);
+        }
         if (game.enCurr.currentHP > 0) {
-          if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
+          if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr, enOptions[max]); console.log("DETECT: " + game.myCurr.name);}
           if (game.myCurr.currentHP <= 0) {
             addToLog(game.myCurr.name + " fainted.");
             updateMyCurr(game.myCurr);
@@ -2325,7 +2440,7 @@ let update = function(e) {
           updateMyCurr(e);
           mySmack = false;
         }
-        if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
+        if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr, enOptions[max]); console.log("DETECT: " + game.myCurr.name);}
         if (game.myCurr.currentHP <= 0) {
           addToLog(game.myCurr.name + " fainted.");
           updateMyCurr(game.myCurr);
@@ -2375,7 +2490,14 @@ let update = function(e) {
           }
           return;
         }
-        if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+        if (mySmack) {
+          var m;
+          if (game.myCurr.move1 !== null && (e.innerText.localeCompare(game.myCurr.move1[0]) == 0)) m = game.myCurr.move1;
+          if (game.myCurr.move2 !== null && (e.innerText.localeCompare(game.myCurr.move2[0]) == 0)) m = game.myCurr.move2;
+          if (game.myCurr.move3 !== null && (e.innerText.localeCompare(game.myCurr.move3[0]) == 0)) m = game.myCurr.move3;
+          if (game.myCurr.move4 !== null && (e.innerText.localeCompare(game.myCurr.move4[0]) == 0)) m = game.myCurr.move4;
+          game.myCurr.attack(e.innerText, game.enCurr, m);
+        }
         if (game.enCurr.currentHP <= 0) {
           enOptions = [];
           if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
@@ -2421,7 +2543,14 @@ let update = function(e) {
       updateMyCurr(e);
       mySmack = false;
     }
-    if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+    if (mySmack) {
+      var m;
+      if (game.myCurr.move1 !== null && (e.innerText.localeCompare(game.myCurr.move1[0]) == 0)) m = game.myCurr.move1;
+      if (game.myCurr.move2 !== null && (e.innerText.localeCompare(game.myCurr.move2[0]) == 0)) m = game.myCurr.move2;
+      if (game.myCurr.move3 !== null && (e.innerText.localeCompare(game.myCurr.move3[0]) == 0)) m = game.myCurr.move3;
+      if (game.myCurr.move4 !== null && (e.innerText.localeCompare(game.myCurr.move4[0]) == 0)) m = game.myCurr.move4;
+      game.myCurr.attack(e.innerText, game.enCurr, m);
+    }
     if (game.enCurr.currentHP <= 0) {
       enOptions = [];
       if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
@@ -2451,7 +2580,7 @@ let update = function(e) {
       addToLog("Opponent sent in " + enOptions[max].name + "!");
       updateEnCurr(enOptions[max]);
     }
-    if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
+    if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr, enOptions[max]); console.log("DETECT: " + game.myCurr.name);}
     if (game.myCurr.currentHP <= 0) {
       addToLog(game.myCurr.name + " fainted.");
       updateMyCurr(game.myCurr);
@@ -2515,7 +2644,7 @@ let update = function(e) {
       updateMyCurr(e);
       mySmack = false;
     }
-    if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr); console.log("DETECT: " + game.myCurr.name);}
+    if (enSmack) {game.enCurr.attack(enOptions[max][0], game.myCurr, enOptions[max]); console.log("DETECT: " + game.myCurr.name);}
     if (game.myCurr.currentHP <= 0) {
       addToLog(game.myCurr.name + " fainted.");
       updateMyCurr(game.myCurr);
@@ -2565,7 +2694,14 @@ let update = function(e) {
       }
       return;
     }
-    if (mySmack) game.myCurr.attack(e.innerText, game.enCurr);
+    if (mySmack) {
+      var m;
+      if (game.myCurr.move1 !== null && (e.innerText.localeCompare(game.myCurr.move1[0]) == 0)) m = game.myCurr.move1;
+      if (game.myCurr.move2 !== null && (e.innerText.localeCompare(game.myCurr.move2[0]) == 0)) m = game.myCurr.move2;
+      if (game.myCurr.move3 !== null && (e.innerText.localeCompare(game.myCurr.move3[0]) == 0)) m = game.myCurr.move3;
+      if (game.myCurr.move4 !== null && (e.innerText.localeCompare(game.myCurr.move4[0]) == 0)) m = game.myCurr.move4;
+      game.myCurr.attack(e.innerText, game.enCurr, m);
+    }
     if (game.enCurr.currentHP <= 0) {
       enOptions = [];
       if (enTeam[0].currentHP > 0) enOptions.push(enTeam[0]);
