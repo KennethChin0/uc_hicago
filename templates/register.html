@@ -42,6 +42,10 @@
 {% endif %}
 
 <center>
+  <br>
+  {% for message in get_flashed_messages() %}
+  <center><b>{{ message }}</b></center>
+  {% endfor %}
 <form class="box" action="/register" method="GET" align="center">
 	Username
 	<input class="form-control" type="text" name="username" placeholder="Username"><br>
@@ -54,10 +58,6 @@
 <br><br><br>
 </center>
 
-{% for message in get_flashed_messages() %}
-<br><br>
-<center><b>{{ message }}</b></center>
-{% endfor %}
 
 
 {% endblock %}

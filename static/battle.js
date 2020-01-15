@@ -2510,7 +2510,7 @@ let update = function(e) {
           for (let i = 0; i < enOptions.length; i++) {
               factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
           }
-          max = indexOfFMax(factor);
+          max = indexOfMax(factor);
           console.log("max: " + max + ", " + enOptions[max]);
           if (!checkTeam(enTeam)) {
             addToLog("You have defeated opponent #" + (streak + 1) + "!");
@@ -2563,7 +2563,7 @@ let update = function(e) {
       for (let i = 0; i < enOptions.length; i++) {
           factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
       }
-      max = indexOfFMax(factor);
+      max = indexOfMax(factor);
       console.log("max: " + max + ", " + enOptions[max]);
       if (!checkTeam(enTeam)) {
         addToLog("You have defeated opponent #" + (streak + 1) + "!");
@@ -2714,7 +2714,7 @@ let update = function(e) {
       for (let i = 0; i < enOptions.length; i++) {
           factor.push(1 / calculateDanger(game.myCurr.type[0], game.myCurr.type[1], enOptions[i].type[0], enOptions[i].type[1]));
       }
-      max = indexOfFMax(factor);
+      max = indexOfMax(factor);
       console.log("max: " + max + ", " + enOptions[max]);
       if (!checkTeam(enTeam)) {
         addToLog("You have defeated opponent #" + (streak + 1) + "!");
