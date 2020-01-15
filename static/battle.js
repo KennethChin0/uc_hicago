@@ -1395,7 +1395,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Wild-charge") == 0) {
-      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "eletric", "physical", 1);
+      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "electric", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Drill-run") == 0) {
@@ -1484,6 +1484,34 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     }
     else if (name.localeCompare("Fiery-dance") == 0) {
       d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "fire", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Freeze-shock") == 0) {
+      d = this.calcDam(140, this.atkStat, target, target.defStat * target.defMod, "ice", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Ice-burn") == 0) {
+      d = this.calcDam(140, this.spaStat, target, target.spdStat * target.spdMod, "ice", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Snarl") == 0) {
+      d = this.calcDam(55, this.spaStat, target, target.spdStat * target.spdMod, "dark", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Icicle-crash") == 0) {
+      d = this.calcDam(85, this.atkStat, target, target.defStat * target.defMod, "ice", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("V-create") == 0) {
+      d = this.calcDam(180, this.atkStat, target, target.defStat * target.defMod, "fire", "physical", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Fusion-flare") == 0) {
+      d = this.calcDam(100, this.spaStat, target, target.spdStat * target.spdMod, "fire", "special", 1);
+      target.currentHP = target.currentHP - Math.round(d);
+    }
+    else if (name.localeCompare("Fusion-bolt") == 0) {
+      d = this.calcDam(100, this.atkStat, target, target.defStat * target.defMod, "electric", "physical", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
   }
