@@ -50,7 +50,7 @@
   -ms-transform: translate(-50%, -50%);
   border: solid 3px;
   border-radius: 20px;
-  background-color: black;
+  background-image: linear-gradient(rgb(40,40,40), black);
   box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.5);
 }
 #log {
@@ -61,7 +61,7 @@
   left: 50.1%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: rgb(40,40,40);
+  background-image: linear-gradient(black, rgb(40,40,40));
   color: white;
   font-size: 1.5vh;
   border: black solid 5px;
@@ -69,12 +69,14 @@
   padding-left:1.5vw;
   padding-right:1.5vw;
   padding-top: .5vh;
+  line-height: 1.25em;
+  overflow-y: scroll;
 }
 #myInfo {
   position:absolute;
   width: 40%;
   height: 15%;
-  bottom: 30%;
+  bottom: 27%;
   right: 12%;
   border: solid 3px;
   border-radius: 20px;
@@ -160,7 +162,7 @@
   <p id="enHealth" style="font-size: 1vw; margin:0; text-align:center;">100/100</p>
 </div>
 <div id="newGame"> </div>
-<div id="log">HELLO</div>
+<div id="log"></div>
 <div id="streaker"><p id="streak" style="color:white;"></p></div>
 </div>
 <div class="buttons">

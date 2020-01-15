@@ -181,6 +181,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   //---------------------------------------------------------------------------------------
   this.attack = function(name, target){
     let d;
+    addToLog(this.name + " used " + name + ".");
     if (name.localeCompare("Quick-attack") == 0) {
       d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP -= Math.round(d);
@@ -1493,7 +1494,11 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     else stab = 1;
     //effectiveness
     function effCalc(a1, d1, d2) {
-      return ((typeEffectiveness[typeIndex(a1)][typeIndex(d1)] / 2) * (typeEffectiveness[typeIndex(a1)][typeIndex(d2)] / 2));
+      let temp = ((typeEffectiveness[typeIndex(a1)][typeIndex(d1)] / 2) * (typeEffectiveness[typeIndex(a1)][typeIndex(d2)] / 2));
+      if (temp < 1) addToLog("It's not very effective...");
+      if (temp > 1) addToLog("It's super effective!");
+      if (temp == 0) addToLog("It doesn't affect the opposing " + target.name + "...");
+      return temp;
     }
     eff = effCalc(type, target.type[0], target.type[1]);
     //burn
@@ -1695,6 +1700,7 @@ let clearLog = function() {
 }
 
 let addToLog = function(e) {
+  console.log(e);
   log.innerHTML += e + "<br>";
 }
 
@@ -1747,6 +1753,8 @@ let typeIndex = function(t) {
 }
 
 function checkTeam(t) {
+  updateEnCurr(game.enCurr);
+  updateHealthBar(game.enCurr, enHealthBar);
   let alive = false;
   for (let x = 0; x < t.length; x++) {
     if (t[x].currentHP > 0) {
@@ -1893,6 +1901,11 @@ let update = function(e) {
   let multiplier = 1.1;
   for (let i = 0; i < enOptions.length; i++) {
     if (i < 4) {
+      if ((enOptions[i][6].localeCompare("heal") == 0)) {
+        if (game.enCurr.currentHP < game.enCurr.hpStat * 2 / 3) multiplier = 1.5;
+        else multiplier = 0;
+      }
+      if ((enOptions[i][6].localeCompare("unique") == 0)) multiplier = getRandomFloat(.5, 1.5);
       if ((enOptions[i][6].localeCompare("ailment") == 0) || (enOptions[i][6].localeCompare("whole-field-effect") == 0)) {
         if (game.myCurr.status.length > 0) multiplier = 0;
       }
@@ -1913,7 +1926,6 @@ let update = function(e) {
   if (max > 3) swap = true;
   console.log("max: " + max + ", " + enOptions);
   if (game.myCurr.speStat > game.enCurr.speStat) {
-    console.log("faster");
     let mySmack = true;
     let enSmack = true;
     if (e instanceof Pokemon) {
@@ -2006,13 +2018,12 @@ let update = function(e) {
         newGame.appendChild(b);
         return;
       }
-      addToLog("Opponent's " + game.enCurr.name + " fainted.";
-      addToLog("Opponent sent in " + enOptions[max].name);
+      addToLog("Opponent's " + game.enCurr.name + " fainted.");
+      addToLog("Opponent sent in " + enOptions[max].name + "!");
       updateEnCurr(enOptions[max]);
     }
   }
   else if (game.myCurr.speStat < game.enCurr.speStat) {
-    console.log("slower");
     let mySmack = true;
     let enSmack = true;
     if (swap) {
@@ -2101,8 +2112,8 @@ let update = function(e) {
         newGame.appendChild(b);
         return;
       }
-      addToLog("Opponent's " + game.enCurr.name + " fainted.";
-      addToLog("Opponent sent in " + enOptions[max].name);
+      addToLog("Opponent's " + game.enCurr.name + " fainted.");
+      addToLog("Opponent sent in " + enOptions[max].name + "!");
       updateEnCurr(enOptions[max]);
     }
   }
@@ -2200,8 +2211,8 @@ let update = function(e) {
           newGame.appendChild(b);
           return;
         }
-        addToLog("Opponent's " + game.enCurr.name + " fainted.";
-        addToLog("Opponent sent in " + enOptions[max].name);
+        addToLog("Opponent's " + game.enCurr.name + " fainted.");
+        addToLog("Opponent sent in " + enOptions[max].name + "!");
         updateEnCurr(enOptions[max]);
       }
     }
@@ -2294,8 +2305,8 @@ let update = function(e) {
           newGame.appendChild(b);
           return;
         }
-        addToLog("Opponent's " + game.enCurr.name + " fainted.";
-        addToLog("Opponent sent in " + enOptions[max].name);
+        addToLog("Opponent's " + game.enCurr.name + " fainted.");
+        addToLog("Opponent sent in " + enOptions[max].name + "!");
         updateEnCurr(enOptions[max]);
       }
     }
