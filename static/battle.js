@@ -96,6 +96,10 @@ let getMyTypes = function(e) {
   return out;
 };
 
+function getRandomFloat(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
 function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, spe, b1, b2, b3, b4, b5, b6, i, b, type1, type2) {
   this.name = poke;
   this.type = [type1, type2];
@@ -1485,9 +1489,6 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     if (random_boolean) crit = 2;
     else crit = 1;
     //rand
-    function getRandomFloat(min, max) {
-      return Math.random() * (max - min) + min;
-    }
     rand = parseFloat(getRandomFloat(.85,1).toFixed(2));
     //stab
     if ((type.localeCompare(this.type[0]) == 0) || (type.localeCompare(this.type[1]) == 0)) stab = 1.5;
@@ -1495,9 +1496,9 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     //effectiveness
     function effCalc(a1, d1, d2) {
       let temp = ((typeEffectiveness[typeIndex(a1)][typeIndex(d1)] / 2) * (typeEffectiveness[typeIndex(a1)][typeIndex(d2)] / 2));
-      if (temp < 1) addToLog("It's not very effective...");
-      if (temp > 1) addToLog("It's super effective!");
       if (temp == 0) addToLog("It doesn't affect the opposing " + target.name + "...");
+      else if (temp < 1) addToLog("It's not very effective...");
+      else if (temp > 1) addToLog("It's super effective!");
       return temp;
     }
     eff = effCalc(type, target.type[0], target.type[1]);
@@ -1898,16 +1899,20 @@ let update = function(e) {
 //id|name|type|power|pp|priority|class|category|desc|ailment|ailChance|statChanges|
 //critRate|drain|flinch|healing|statChance|minTurns|maxTurns|minHits|maxHits|accuracy
   let factor = [];
-  let multiplier = 1.1;
+  let multiplier = getRandomFloat(1.1, 1.3);
   for (let i = 0; i < enOptions.length; i++) {
     if (i < 4) {
       if ((enOptions[i][6].localeCompare("heal") == 0)) {
         if (game.enCurr.currentHP < game.enCurr.hpStat * 2 / 3) multiplier = 1.5;
         else multiplier = 0;
       }
-      if ((enOptions[i][6].localeCompare("unique") == 0)) multiplier = getRandomFloat(.5, 1.5);
-      if ((enOptions[i][6].localeCompare("ailment") == 0) || (enOptions[i][6].localeCompare("whole-field-effect") == 0)) {
+      else if ((enOptions[i][6].localeCompare("unique") == 0)) multiplier = getRandomFloat(.5, 2);
+      else if ((enOptions[i][6].localeCompare("ailment") == 0) || (enOptions[i][6].localeCompare("whole-field-effect") == 0)) {
         if (game.myCurr.status.length > 0) multiplier = 0;
+      }
+      else if (enOptions[i][6].localeCompare("field-effect") == 0) {
+        if (game.myCurr.myHazards.length == 1) multiplier * 1.25;
+        else if (game.myCurr.myHazards.length > 1) multiplier * .9 / game.myCurr.myHazards.length;
       }
       else if (enOptions[i][5].localeCompare("status") == 0) {
         let buff = (game.enCurr.atkMod - 1) + (game.enCurr.defMod - 1) + (game.enCurr.spaMod - 1) + (game.enCurr.spdMod - 1) + (game.enCurr.speMod - 1) + (game.enCurr.accMod - 1) + (game.enCurr.evaMod - 1);
@@ -1924,7 +1929,9 @@ let update = function(e) {
   let max = indexOfMax(factor);
   let swap = false;
   if (max > 3) swap = true;
-  console.log("max: " + max + ", " + enOptions);
+  else {
+    console.log(enOptions[max]);
+  }
   if (game.myCurr.speStat > game.enCurr.speStat) {
     let mySmack = true;
     let enSmack = true;
