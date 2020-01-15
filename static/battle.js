@@ -197,6 +197,35 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   //---------------------------------------------------------------------------------------
   this.attack = function(name, target){
     let d;
+    if (this.status.includes("para") && getRandomFloat(0, 1) < .25) {
+      addToLog(this.name + " is paralyzed! It can't move!");
+      return;
+    }
+    if (this.status.includes("freeze")) {
+      if (getRandomFloat(0, 1) < .2) {
+        addToLog(this.name + " thawed out!");
+        status.splice(status.indexOf("freeze"), 1);
+      }
+      else {
+        addToLog(this.name + " is frozen solid!");
+        return;
+      }
+    }
+    if (this.status.includes("con")) {
+      addToLog(this.name + " is confused...");
+      if (getRandomFloat(0, 1) < .5) {
+        addToLog(this.name + " hit itself in confusion!");
+        this.currentHP -= (this.atkStat / (16 * this.hpStat));
+        return;
+      }
+    }
+    if (this.status.includes("infat")) {
+      addToLog(this.name + " is in love with foe's + " target.name + "!");
+      if (getRandomFloat(0, 1) < .5) {
+        addToLog(this.name + " is immobilized by love!");
+        return;
+      }
+    }
     addToLog(this.name + " used " + name + ".");
     if (name.localeCompare("Quick-attack") == 0) {
       d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
@@ -1527,7 +1556,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
 
 function Game(myCurr, enCurr, myTeam, enTeam) {
   this.weather=[]; //sun, rain, sand, hail
-  this.weatherTurnsLeft=[];
+  this.weatherTurnsLeft=0;
   this.myHazards=[];
   this.enHazards=[];
   this.turn = 1;
@@ -2543,6 +2572,7 @@ let update = function(e) {
   updateEnCurr(game.enCurr);
   updateHealthBar(game.myCurr, myHealthBar);
   updateHealthBar(game.enCurr, enHealthBar);
+  if (game.weatherTurnsLeft > 0) game.weatherTurnsLeft--;
 };
 
 
