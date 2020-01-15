@@ -187,6 +187,9 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   this.sprite = [i, b];
   this.priority = 0;
   this.critical = 1;
+  this.conTurns = 0;
+  this.sleepTurns = 0;
+  this.transition = 0;
   // EVS
   this.hp = hp;
   this.atk = atk;
@@ -195,9 +198,36 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
   this.spd = spd;
   this.spe = spe;
   //---------------------------------------------------------------------------------------
+  this.inflict = function(status, chance, target) {
+    if (getRandomFloat(0, 100) < chance) {
+      target.status.push(status);
+      if (status.localeCompare("para") == 0) addToLog(target.name + " was paralyzed! It may be unable to move!");
+      if (status.localeCompare("con") == 0) addToLog(target.name + " was confused!");
+      if (status.localeCompare("bad_poison") == 0) addToLog(target.name + " was badly poisoned!"); //
+      if (status.localeCompare("poison") == 0) addToLog(target.name + " was poisoned!"); //
+      if (status.localeCompare("sleep") == 0) addToLog(target.name + " fell asleep!");
+      if (status.localeCompare("infat") == 0) addToLog(target.name + " fell in love!"); //
+      if (status.localeCompare("freeze") == 0) addToLog(target.name + " was frozen solid!");
+      if (status.localeCompare("leech") == 0) addToLog(target.name + " was seeded!"); //
+    }
+  }
   this.attack = function(name, target, e){
-    if (e == null) {console.log("arrack error"); return;}
+    console.log(e);
+
+    if (e == null) {console.log("attack error"); return;}
     let d;
+    if (target.transition != 0) {
+      addToLog(this.name + " missed!");
+      return;
+    }
+    if (this.status.includes("sleep")) {
+      if (this.sleepTurns > 0) {
+        addToLog(this.name + " is fast asleep!");
+        this.sleepTurns--;
+        return;
+      }
+      else status.splice(status.indexOf("sleep"), 1);
+    }
     if (this.status.includes("para") && getRandomFloat(0, 1) < .25) {
       addToLog(this.name + " is paralyzed! It can't move!");
       return;
@@ -213,11 +243,18 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
       }
     }
     if (this.status.includes("con")) {
-      addToLog(this.name + " is confused...");
-      if (getRandomFloat(0, 1) < .5) {
-        addToLog(this.name + " hit itself in confusion!");
-        this.currentHP -= (this.atkStat / (16 * this.hpStat));
-        return;
+      if (this.conTurns > 0) {
+        addToLog(this.name + " is confused...");
+        this.conTurns--;
+        if (getRandomFloat(0, 1) < .5) {
+          addToLog(this.name + " hit itself in confusion!");
+          this.currentHP -= (this.atkStat / (16 * this.hpStat));
+          return;
+        }
+      }
+      else {
+        status.splice(status.indexOf("con"), 1);
+        addToLog(this.name + " snapped out of confusion!");
       }
     }
     if (this.status.includes("infat")) {
@@ -229,80 +266,150 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     }
     addToLog(this.name + " used " + name + ".");
     if (name.localeCompare("Quick-attack") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP -= Math.round(d);
-      // console.log(target.currentHP);
     }
     else if (name.localeCompare("Thunderbolt") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(90, this.spaStat, target, target.spdStat * target.spdMod, "electric", "special", 1);
       target.currentHP = target.currentHP - Math.round(d);
-      // console.log(d);
+      this.inflct("para", e[9], target);
     }
     else if (name.localeCompare("Pound") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP -= Math.round(d);
-      console.log(target.currentHP);
     }
     else if (name.localeCompare("Karate-chop") == 0) {
-      d = this.calcDam(50, this.atkStat, target, target.defStat * target.defMod, "normal", "fighting", 1);
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
+      d = this.calcDam(50, this.atkStat, target, target.defStat * target.defMod, "normal", "fighting", 2);
       target.currentHP -= Math.round(d);
       console.log(target.currentHP);
     }
     else if (name.localeCompare("Double-slap") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(15, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
-      target.currentHP -= Math.round(d);
-      console.log(target.currentHP);
+      var x;
+      for (x = 0; x < getRandomFloat(parseInt(e[18]), parseInt(e[19])); x++) {
+        target.currentHP -= Math.round(d);
+      }
+      addtoLog("It hit " + x + " times!");
     }
     else if (name.localeCompare("Comet-punch") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(18, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP -= Math.round(d);
-      console.log(target.currentHP);
     }
     else if (name.localeCompare("Mega-punch") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(80, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP -= Math.round(d);
-      console.log(target.currentHP);
     }
     else if (name.localeCompare("Pay-day") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP -= Math.round(d);
       console.log(target.currentHP);
     }
     else if (name.localeCompare("Fire-punch") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(75, this.atkStat, target, target.defStat * target.defMod, "fire", "physical", 1);
       target.currentHP -= Math.round(d);
-      console.log(target.currentHP);
+      this.inflct("burn", e[9], target);
     }
     else if (name.localeCompare("Ice-punch") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(75, this.atkStat, target, target.defStat * target.defMod, "ice", "physical", 1);
       target.currentHP -= Math.round(d);
-      console.log(target.currentHP);
+      this.inflct("freeze", e[9], target);
     }
     else if (name.localeCompare("Thunder-punch") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(75, this.atkStat, target, target.defStat * target.defMod, "electric", "physical", 1);
       target.currentHP -= Math.round(d);
-      console.log(target.currentHP);
+      this.inflct("para", e[9], target);
     }
     else if (name.localeCompare("Scratch") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(40, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP -= Math.round(d);
       console.log(target.currentHP);
     }
     else if (name.localeCompare("Vise-grip") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(55, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
       target.currentHP -= Math.round(d);
     }
     else if (name.localeCompare("Razor-wind") == 0) {
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
       d = this.calcDam(80, this.spaStat, target, target.spdStat * target.spdMod, "normal", "special", 1);
       target.currentHP = target.currentHP - Math.round(d);
     }
     else if (name.localeCompare("Cut") == 0) {
-      d = this.calcDam(50, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
+      if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+        addToLog(this.name + (" missed!"));
+        return;
+      }
+      d = this.calcDam(50, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 2);
       target.currentHP -= Math.round(d);
     }
     else if (name.localeCompare("Fly") == 0) {
-      d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "flying", "physical", 1);
-      target.currentHP -= Math.round(d);
+      if (this.transition == 0) {
+        this.transition = 1;
+        addToLog(this.name + " flew up high!");
+      }
+      else {
+        this.transition = 0;
+        if (getRandomFloat(0, 100 / this.accMod) > parseInt(e[20])) {
+          addToLog(this.name + (" missed!"));
+          return;
+        }
+        d = this.calcDam(90, this.atkStat, target, target.defStat * target.defMod, "flying", "physical", 1);
+        target.currentHP -= Math.round(d);
+      }
     }
     else if (name.localeCompare("Bind") == 0) {
       d = this.calcDam(15, this.atkStat, target, target.defStat * target.defMod, "normal", "physical", 1);
@@ -1651,7 +1758,7 @@ function Pokemon(poke, abil, m1, m2, m3, m4, gend, hap, hp, atk, def, spa, spd, 
     //crit
     let prob = this.spe * this.critical * this.critRate / 512; //HCC = 4, with FE = 8
     let random_boolean = Math.random() < prob;
-    if (random_boolean) crit = 2;
+    if (random_boolean) {crit = 2; addToLog("A critical hit!");}
     else crit = 1;
     //rand
     rand = parseFloat(getRandomFloat(.85,1).toFixed(2));
@@ -2737,6 +2844,7 @@ let update = function(e) {
   updateHealthBar(game.myCurr, myHealthBar);
   updateHealthBar(game.enCurr, enHealthBar);
   if (game.weatherTurnsLeft > 0) game.weatherTurnsLeft--;
+  if (game.myCurr.transition != 0) update(e);
 };
 
 
