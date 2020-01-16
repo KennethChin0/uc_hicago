@@ -19,7 +19,7 @@ Continued work on teambuilder:
         - updates base stats on Pokemon input
         - updates real (calculated) stats on EV inputs
         - updates the number of remaining points to be used on EV inputs
-        
+
 chuC --2019-1-3 15:44
 Continued work on teambuilder:
     - tweaked layout / format
@@ -28,11 +28,11 @@ Updated database to pull accuracy information for moves
 
 chuC --2019-1-4 17:38
 Created a new table in database to store viable Pokemon movesets to be used by the bot
-    - Found sources online for the teams, downloaded them as files, created a simple parsing/reading/writing program to extract the 
+    - Found sources online for the teams, downloaded them as files, created a simple parsing/reading/writing program to extract the
       movesets into Bot_Movesets.txt (found in static directory; sources linked at end of file)
 Continued work on teambuilder:
     - tweaked layout / format
-    
+
 chuC --2019-1-5 20:12
 implemented team saving to DB, displaying teamnames on teams page (on buttons), editting + removing teams
 ran some tests on the editting features (get dem bugs)
@@ -50,7 +50,7 @@ chenB -- 2020-1-6 23:22
 Added a route and button to choose team to battle. Able to select team but battle is empty. All info are brought over though.
 
 all -- 2020-01-07 10:00
-Updated design doc (revision 0) 
+Updated design doc (revision 0)
     - Design doc revisions:
         -clarified arrows in design doc
         -added routes to the component map
@@ -63,19 +63,58 @@ Added css to homepage and background images.
 chenB -- 2020-1-7 19:16
 Edited sitemap for design doc to fix minor detail that could lead to confusion. Added new background picture. Drew flag.
 
+chuC --2019-1-8 18:23
+Prepared route for battle
+Created a generate team function for bot
+Started work on the canvas/display and interface for battle
+Started work on the javascript for the battle page:
+  - linked HTML to js file and set variables to elements from document
+Fixed up typos in the BotMovesets.txt file and updated the database
+
 chenB -- 2020-1-9 20:45
-Was able to get all images of your chosen team pokemons (both back and front) to be displayed in the battle page. 
+Was able to get all images of your chosen team pokemons (both back and front) to be displayed in the battle page.
 Was also able to get basic stats of your team pokemon for use in battle page as well.
+
+chuC --2019-1-9 21:43
+Battle work:
+  - Positioning of sprites within the canvas
+  - Added info bars to the canvas containing health + name
+  - More storage of elements
+  - Created Pokemon Object, initialized teams, and set layout for teams
 
 chenB -- 2020-1-10 14:50
 Messed around with adding team pokemon image to the 6 buttons in battle. Ultimately made the picture the background of the
 button. Attempted to resize the button to fit the image properly but not quite there yet.
 
-chenB -- 2020-1-12 00:39
-Tried requesting api from JavaScript. Didn't work :( Added first 202 moves for damaging in battle.
+chuC --2019-1-10 19:12
+Battle work:
+  - Made a function to get and store stats for enemy team
+  - Created a Game Object to setup the battles
+  - Added buttons for moves and team switches -> got sprites on buttons!
+  - Fiddled with the CSS of the battle page
+  - Made a function to get and store types for user's team
+  - added code to Pokemon constructor
+  - Got correct sprites on the canvas
+  - More bug-testing in the BotMovesets.txt file and updated the database again
 
 chinK -- 2020-1-11 24:00
 Added the instructions page
+
+chuC --2019-1-11 23:51
+Battle work:
+  - Added modifiers to Pokemon Object
+  - Added Update functions to update the page (healthbar, sprites, names...) and run the game
+  - Started move implementation:
+    - type effectiveness chart added
+    - Made a calculateDanger method that spits out type effectiveness based on inputs
+  - Started work on the bot for the game:
+    - gave the bot options to choose from
+    - implemented calculations for the bot to determine the best move
+  - Started the battle simulator itself!
+  - implemented infinite battles
+
+chenB -- 2020-1-12 00:39
+Tried requesting api from JavaScript. Didn't work :( Added first 202 moves for damaging in battle.
 
 chinK -- 2020-1-12 14:03
 Added css and build in bootstrap to the html files and buttons.
@@ -83,7 +122,37 @@ Added css and build in bootstrap to the html files and buttons.
 chinK -- 2020-1-12 16:00
 Added some moves in the javascript file. up to id 400
 
+chuC --2019-1-12 18:10
+Battle work:
+  - Small syntax errors
+
 chenB -- 2020-1-13 22:00
 Added the rest of the moves to javascript and uploaded flag.
 
+chuC --2019-1-13 23:17
+Battle work:
+  - implemented proper response to the user's Pokemon fainting (YOU CAN FINALLY DIE)
+    - created a helper function for this purpose called switchIn()
+  - implemented switch in detection during the game and fixed switching in
+  - added a popup button to start the next battle to make it more obvious and more appealing
+    - uses a helper function called startNewGame()
 
+chuC --2019-1-14 23:52
+Battle work:
+  - fiddled with CSS for the canvas/screen
+  - added a streak counter to the canvas/screen to display user's streak
+  - implemented a log to tell the user what has occurred in the last turn and added it to canvas:
+    - added all log statements to the code
+  - bug-catching and fixing
+  - layed out basis for status moves and the sort
+  - added effects of priority
+
+  chuC --2019-1-16 02:05
+  Battle work:
+    - implemented most status effects
+    - fixed up the bot
+    - added a load of status moves and their functions
+    - added accuracy to all the moves
+    - FINALIZE GAME FOR DEMO!
+  (Note: There are still many aspects missing from the game, like hazards, some of the moves and effects, some statuses, etc.)
+  (THE GAME IS COMPLETELY PLAYABLE, however. Pokemon has a lot of specific functionalities, but we nailed most of the defining ones.)
