@@ -49,6 +49,14 @@ Finalized teambuilder:
 chenB -- 2020-1-6 23:22
 Added a route and button to choose team to battle. Able to select team but battle is empty. All info are brought over though.
 
+all -- 2020-01-07 10:00
+Updated design doc (revision 0) 
+    - Design doc revisions:
+        -clarified arrows in design doc
+        -added routes to the component map
+        -clarified roles and responsibilities
+        -specified details of the project (our vision)
+
 chinK -- 2020-1-7 23:50
 Added css to homepage and background images.
 
@@ -66,13 +74,16 @@ button. Attempted to resize the button to fit the image properly but not quite t
 chenB -- 2020-1-12 00:39
 Tried requesting api from JavaScript. Didn't work :( Added first 202 moves for damaging in battle.
 
+chinK -- 2020-1-11 24:00
+Added the instructions page
+
+chinK -- 2020-1-12 14:03
+Added css and build in bootstrap to the html files and buttons.
+
+chinK -- 2020-1-12 16:00
+Added some moves in the javascript file. up to id 400
+
 chenB -- 2020-1-13 22:00
 Added the rest of the moves to javascript and uploaded flag.
 
-all -- 2020-01-07 10:00
-Updated design doc (revision 0) 
-    - Design doc revisions:
-        -clarified arrows in design doc
-        -added routes to the component map
-        -clarified roles and responsibilities
-        -specified details of the project (our vision)
+
