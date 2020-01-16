@@ -16,8 +16,7 @@
     padding-left: 10px;
     border-radius: 25px;
     opacity: 0.9;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin:0;
     width: 50%;
   }
 
@@ -29,6 +28,9 @@
 <!-- <li class="nav-item">
   <a href="{{ url_for('root') }}" class="nav-link">Home</a>
 </li> -->
+<li>
+   <a href="{{ url_for('root') }}" class="nav-link">Go back</a>
+ </li>
 <li class="nav-item">
   <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
 </li>
@@ -36,6 +38,12 @@
 {% endblock %}
 
 {% block body %}
+
+{% for message in get_flashed_messages() %}
+<br><br>
+<center><b>{{message}}</b></center>
+{% endfor %}
+
 <div class="container" style="text-align:center;">
   Choose Your Team
   <br><br>
@@ -53,5 +61,5 @@
   {% endfor %}
 
 </div>
-  <a href="{{ url_for('root') }}" class="previous">&laquo; Go back</a>
+  <!-- <a href="{{ url_for('root') }}" class="previous">&laquo; Go back</a> -->
 {% endblock %}
