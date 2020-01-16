@@ -4308,7 +4308,7 @@ let update = function(e) {
   }
   // console.log(enP);
   // console.log(myP);
-  if (myP == 0 && enP == 0) {
+  if (myP == enP) {
     if (game.myCurr.speStat * game.myCurr.speMod > game.enCurr.speStat * game.enCurr.speMod) {
       let mySmack = true;
       let enSmack = true;
