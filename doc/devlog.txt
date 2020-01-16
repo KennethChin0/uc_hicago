@@ -66,6 +66,9 @@ button. Attempted to resize the button to fit the image properly but not quite t
 chenB -- 2020-1-12 00:39
 Tried requesting api from JavaScript. Didn't work :( Added first 202 moves for damaging in battle.
 
+chenB -- 2020-1-13 22:00
+Added the rest of the moves to javascript and uploaded flag.
+
 all -- 2020-01-07 10:00
 Updated design doc (revision 0) 
     - Design doc revisions:
