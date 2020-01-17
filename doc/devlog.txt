@@ -156,3 +156,6 @@ Battle work:
     - FINALIZE GAME FOR DEMO!
   (Note: There are still many aspects missing from the game, like hazards, some of the moves and effects, some statuses, etc.)
   (THE GAME IS COMPLETELY PLAYABLE, however. Pokemon has a lot of specific functionalities, but we nailed most of the defining ones.)
+  
+chenB --2019-1-16-20:35
+Recorded demo and voiceover
