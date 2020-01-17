@@ -26,3 +26,5 @@ After activating the virutal environment:
 ### Run the project: 
 `$ python3 app.py`  
   
+### Video demo here:
+https://youtu.be/00LNL3sulzA
